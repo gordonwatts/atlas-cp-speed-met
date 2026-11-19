@@ -1,0 +1,1847 @@
+{
+  "round": 3,
+  "scope": "nominal",
+  "path": "B",
+  "framework": {
+    "arguments": [
+      "taskset",
+      "-c",
+      "0",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/source/components/framework/bridge_entry.py",
+      "--direct-driver",
+      "-i",
+      "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+      "-t",
+      "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+      "-o",
+      "reference",
+      "-e",
+      "20000",
+      "--no-systematics"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 20.154748646,
+    "process_cpu_seconds": 18.219378999999947,
+    "host_cpu0_delta_ticks": [
+      1758,
+      0,
+      74,
+      149,
+      38,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    "samples": [
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.102485906,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.204412152,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.3064403,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.40863156900000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.511298298,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.613562472,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.715866136,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.81847519,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.9210804960000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.023931677,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.1268357740000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.2302510910000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.333152598,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.4359323270000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.5388208120000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.641582968,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.7443776700000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.8471108450000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 1.9498408290000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.0527784540000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.1555416800000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.2581620200000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.360970199,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.464003153,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.5673769220000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.670668032,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.7742973760000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.8781470920000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 2.98135781,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.0846937910000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.187868968,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.2918274010000004,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.3950891050000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.498469528,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.6021045660000004,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.705429837,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.808780033,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 3.9119953960000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.015586607,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.119475089000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.223249468000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.327179622,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.431689006,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.535782899,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.640237262,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.744414131,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.8488162390000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 4.952853426,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.057535270000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.161741603,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.265850714,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.369973391,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.474214446,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.5784093200000004,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.6824691540000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.786524709,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.890666851000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 5.994657696,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.098794081,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.202775388,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.307128223,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.411410224000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.51521169,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.6199494990000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.727716973000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.835044294,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 6.939631439,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.04412031,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.148754,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.2531285400000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.358244439000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.4634406150000006,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.5686827580000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.673938785000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.7792410290000005,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.884982751000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 7.98990132,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.095018320000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.200356379,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.306249753000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.410880789,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.51607008,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.621176832,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.726108551000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.831252982,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 8.936401934000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.041302021,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.146920631,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.252030484,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.357360153,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.462817639,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.568716576,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.674390815,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.780317298,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.886307067,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 9.991408804,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.097358546,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.202963651000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.308413355,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.413764691,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.518950759,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.624423896000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.729580088,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.834949298000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 10.940048003000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.045029062000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.150189948000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.255454332000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.360488591000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.465518404,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.570765925,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.67582511,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.780835219,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.886175582,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 11.991451554000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.097601614,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.203017605000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.308227256,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.413238955,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.518205908,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.623162499000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.728599824000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.833909196,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 12.938988742000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.044099777000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.149245292000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.254766612000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.359756989000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.464745494,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.570040389,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.675516479,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.781217316000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.886314259,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 13.991919780000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.097511990000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.202713082,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.307875455000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.412762344,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.518498092000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.623690048,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.728928132,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.834218974,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 14.939330131,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.044478757,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.149770052000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.254904839000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.359983525,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.465290311,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.570611928000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.675779357000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.780982465000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.886372081000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 15.991562186000001,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.096970616,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.202173355,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.30738857,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.412546948,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.517627469,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.623130131,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.72888173,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.834056067000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 16.939424568,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.044869541,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.150106449000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.25546468,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.360743141,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.46576985,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.570956358,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.676294828,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.781877324,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.887359703,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 17.99251724,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.098020144,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.203169558000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.308327949000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.413969647000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.519151433,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.624222757000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.72957325,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.834722917,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 18.940300061000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.045538657,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.151569265000003,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.257189936,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.363743331000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.469203063000002,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.575287222,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.68162452,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.788159038,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 19.894571929,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 20.000451172,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 20.105827544,
+        "executable": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+      }
+    ],
+    "mapped_named_libraries": [
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libMetAnalysisAlgorithmsLib.so",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libCore.so",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libHist.so",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libMathCore.so",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libRIO.so",
+      "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/libTree.so",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/core-exact-build-001/install/correctionlib/lib/libcorrectionlib.so",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/libAtlasMetFramework.so",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/maker_adapter/libatlas_met_maker_correction.so",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/maker_adapter/libatlas_met_maker_provider.so"
+    ],
+    "valid": true
+  },
+  "framework_valid": true,
+  "framework_seconds": 20.154748646,
+  "startup_diagnostic": {
+    "affects_strict_process_gate": false,
+    "event_processing_log_marker_offset": 35047,
+    "observed_children": {}
+  },
+  "histogram": {
+    "arguments": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+      "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+      "reference.root",
+      "hist-reference.root",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/histogram.npz"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.248119567,
+    "process_cpu_seconds": 0.24751200000002882,
+    "host_cpu0_delta_ticks": [
+      23,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "samples": [
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.10081799500000001,
+        "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+      },
+      {
+        "affinity": "0",
+        "threads": 1,
+        "children": [],
+        "child_processes": {},
+        "log_bytes_visible_at_sample": null,
+        "elapsed_seconds": 0.20133218700000002,
+        "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+      }
+    ],
+    "mapped_named_libraries": [],
+    "valid": true
+  },
+  "histogram_valid": true,
+  "histogram_seconds": 0.248119567,
+  "total_seconds": 20.402868213,
+  "identity_verified": true,
+  "histogram_output": {
+    "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/histogram.npz",
+    "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c"
+  },
+  "histogram_verified": true
+}

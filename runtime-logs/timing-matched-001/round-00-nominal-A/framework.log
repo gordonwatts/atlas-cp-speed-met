@@ -1,0 +1,30 @@
+Py:CPBaseRunner      INFO EventLoopCPRunScript initialized
+Traceback (most recent call last):
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 235, in run
+    self.configureAndSubmit()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 152, in configureAndSubmit
+    self.setupConfig()
+    ~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/CPBaseRunner.py", line 236, in setupConfig
+    self.flags = self._defaultFlagsInitialization()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/CPBaseRunner.py", line 78, in _defaultFlagsInitialization
+    flags.Input.Files = self.inputList
+                        ^^^^^^^^^^^^^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/CPBaseRunner.py", line 34, in inputList
+    raise FileNotFoundError(f'Input file list \"{self.args.input_list}\" is not supported! '
+                            'Please provide a text file with a list of input files or a single root file.')
+FileNotFoundError: Input file list "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/.art/76315e7ffa8dd82d312e0ee59e71336fa4b01af5.art" is not supported! Please provide a text file with a list of input files or a single root file.
+Py:CPBaseRunner     ERROR Job submission failed
+Error in <TFile::TFile>: file /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-001/round-00-nominal-A/workDir/driver.root does not exist
+Traceback (most recent call last):
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py", line 16, in <module>
+    script.run()
+    ~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 240, in run
+    exitCode = self.getExitCode()
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 133, in getExitCode
+    statusCode = ROOT.EL.Driver.retrieve(self.submitDir)
+cppyy.gbl.std.runtime_error: static bool EL::Driver::retrieve(const string& location) =>
+    runtime_error: failed to open driver file

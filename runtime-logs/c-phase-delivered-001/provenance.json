@@ -1,0 +1,79 @@
+{
+  "analysis_cpu": 0,
+  "controller_cpu": 1,
+  "controller_effective_affinity": [
+    1
+  ],
+  "analysis_cpu_thread_siblings": "0",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.34",
+  "python": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/bin/python",
+  "demo": {
+    "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/met_demo.py",
+    "sha256": "2cbf393ddfda27771db50ed3f122a8483e70b06ea1118cd725674a03d71210f3",
+    "bytes": 12042
+  },
+  "wheel": {
+    "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+    "sha256": "8477cb5d507823049b8d86223317d3694e960515eb50a3415cf9758a4d67223a",
+    "bytes": 2411224
+  },
+  "manifest": {
+    "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/bundle.json",
+    "sha256": "f301a7299ea9a986300cca87300841c368fc2089d74a36120ffad64f4a054b49",
+    "bytes": 4730
+  },
+  "input": {
+    "path": "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/.art/76315e7ffa8dd82d312e0ee59e71336fa4b01af5.art",
+    "bytes": 245815772,
+    "dev": 75,
+    "inode": 19970,
+    "mtime_ns": 1781000262000000000
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "ROOT_MAX_THREADS": "1"
+  },
+  "removed_environment_names": [
+    "PYTHONPATH",
+    "PYTHONHOME",
+    "LD_LIBRARY_PATH",
+    "LD_PRELOAD",
+    "ROOTSYS",
+    "ROOT_INCLUDE_PATH",
+    "CMAKE_PREFIX_PATH",
+    "ATLAS_LOCAL_ROOT_BASE",
+    "VIRTUAL_ENV",
+    "AtlasVersion",
+    "AtlasProject",
+    "ROOT_VERSION",
+    "DATAPATH"
+  ],
+  "tools": {
+    "phase_driver.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/scripts/profiling/phase_driver.py",
+      "sha256": "73b9d0fc20b2e7442d998a842bb0b0082b4311f5f57745f09f306b8c9e56f0bb",
+      "bytes": 9507
+    },
+    "decode.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/scripts/profiling/decode.py",
+      "sha256": "bb9e75be007997088cb9edfe4e804bce58cb141a81fd5a25b3820a6f4b46aa4f",
+      "bytes": 9238
+    },
+    "measure.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/scripts/profiling/measure.py",
+      "sha256": "e7ca7b0a1451baf34780cea833581f19fcfb36497565dddd8b7576a16e62abfb",
+      "bytes": 15486
+    },
+    "process.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/scripts/profiling/process.py",
+      "sha256": "5977af1a7cf8daa5090c62880d0fa779b92088b8fd380c8c4dc4d9bdbaf37fdd",
+      "bytes": 7524
+    }
+  },
+  "chunk_size": 2000
+}

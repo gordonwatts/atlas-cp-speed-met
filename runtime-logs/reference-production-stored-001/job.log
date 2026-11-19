@@ -1,0 +1,82 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+Py:CPBaseRunner      INFO EventLoopCPRunScript initialized
+Py:CPBaseRunner      INFO Initialized input files: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:CPBaseRunner      INFO Found YAML config at: /home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-001/config.yaml
+Py:CPBaseRunner      INFO Setting up configuration based on YAML config:
+xAOD::Init                INFO    Environment initialised for data access
+Py:CPBaseRunner      INFO Adding files to the sample handler
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO ====================FLAG CONFIGURATION====================
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO     Input files:     ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1'
+Py:MetaReader        INFO Current mode used: lite
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     isMC:            True
+Py:CPBaseRunner      INFO     RunNumber:       [410000]
+Py:CPBaseRunner      INFO     MCCampaign:      Campaign.MC23a
+Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: generators 
+Py:MetaReader        INFO Current mode used: peeker
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     GeneratorInfo:   {'Powheg': '2_r3631', 'Pythia8': '308', 'EvtGen': '2.1.1'}
+Py:CPBaseRunner      INFO     MaxEvents:       20000
+Py:CPBaseRunner      INFO     SkipEvents:      0
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO Configuring algorithms based on YAML file
+Py:CPBaseRunner      INFO Configuring common services
+Py:getRun3NavigationContainerFromInput    INFO Returning HLTNav_Summary_DAODSlimmed as the Run 3 trigger navigation collection to read in this job.
+Py:CPBaseRunner      INFO Configuring algorithms
+Package.EventLoop        INFO    created submission directory /home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-001/workDir-2026-11-19-0251-5976
+Package.EventLoop        INFO    created sym-link at: /home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-001/workDir
+Package.EventLoop        INFO    submitting job in /home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-001/workDir-2026-11-19-0251-5976
+Package.EventLoop        INFO    Running sample: reference
+Package.EventLoop        INFO    xAODInput = 1
+Package.EventLoop        INFO    calling firstInitialize on all modules
+Package.EventLoop        INFO    calling preFileInitialize on all modules
+Package.EventLoop        INFO    Opening file file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+Package.xAOD::Event      INFO    Using aux mode kClassAccess for file /cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+ELModule.DirectInputMo...INFO    Opened input file: file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+seq1_MetNTupleMaker_an...ERROR   Expression "MET_Core_AnalysisMET.mpx -> core_mpx type=float metTerm=PVSoftTrkCore metTerm=Final" doesn't match "<object>.<variable> -> <branch>"
+seq1_MetNTupleMaker_an...ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/Algorithms/AsgAnalysisAlgorithms/Root/TreeBranchHelpers.cxx:1074 (StatusCode CP::TreeBranchHelpers::ProcessorList::setupTree(const std::vector<std::__cxx11::basic_std::string<char> >&, std::unordered_set<std::__cxx11::basic_std::string<char> >, CP::ISystematicsSvc&, TTree&)): Failed to call "branchConfigs.back().parse( branchDecl, msg() )"
+seq1_MetNTupleMaker_an...ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/Algorithms/AsgAnalysisAlgorithms/Root/AsgxAODNTupleMakerAlg.cxx:29 (StatusCode CP::AsgxAODNTupleMakerAlg::initialize()): Failed to call "m_processorList.setupTree (m_branches, {m_nonContainers.value().begin(), m_nonContainers.value().end()}, *m_systematicsService, *m_tree)"
+Package.EventLoopComp_...ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/AnaAlgorithm/Root/AnaAlgorithmConfig.cxx:94 (StatusCode EL::AnaAlgorithmConfig::makeAlgorithm(std::unique_ptr<EL::AnaAlgorithm>&, const EL::AlgorithmWorkerData&) const): Failed to call "algorithm->sysInitialize()"
+Package.EventLoopComp_...ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/AnaAlgorithm/Root/AnaAlgorithmWrapper.cxx:73 (StatusCode EL::AnaAlgorithmWrapper::initialize(const EL::AlgorithmWorkerData&)): failed to create AnaAlgorithm: seq1_MetNTupleMaker_analysis
+ELModule.AlgorithmStat...ERROR   executing initialize on algorithm seq1_MetNTupleMaker_analysis
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/Worker.cxx:598 (StatusCode EL::Worker::processEvents(EL::EventRange&)): Failed to call "module->onInitialize (*this)"
+ELModule.DirectInputMo...ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/DirectInputModule.cxx:66 (StatusCode EL::Detail::DirectInputModule::processInputs(EL::Detail::ModuleData&, EL::Detail::IInputModuleActions&)): Failed to call "actions.processEvents (eventRange)"
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/Worker.cxx:507 (StatusCode EL::Worker::processInputs()): Failed to call "module->processInputs (*this, *this)"
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/Worker.cxx:854 (StatusCode EL::Worker::directExecute(const SH::Sample&, const EL::Job&, const std::string&, const SH::MetaObject&)): Failed to call "processInputs ()"
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/DirectDriver.cxx:78 (StatusCode EL::DirectDriver::doManagerStep(EL::Detail::ManagerData&) const): Failed to call "worker.directExecute (**sample, *data.job, data.submitDir, data.options)"
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/ManagerData.cxx:67 (StatusCode EL::Detail::ManagerData::run()): while performing manager step 14
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/ManagerData.cxx:68 (StatusCode EL::Detail::ManagerData::run()): on submission directory /home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-001/workDir-2026-11-19-0251-5976
+Traceback (most recent call last):
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 235, in run
+    self.configureAndSubmit()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 189, in configureAndSubmit
+    driver.submit(self.job, self.submitDir)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+cppyy.gbl.std.runtime_error: string EL::Driver::submit(const EL::Job& job, const string& location) =>
+    runtime_error: failed to submit job
+Py:CPBaseRunner     ERROR Job submission failed
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/RetrieveManager.cxx:56 (StatusCode EL::Detail::RetrieveManager::doManagerStep(EL::Detail::ManagerData&) const): job submission was unsuccessful
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/ManagerData.cxx:67 (StatusCode EL::Detail::ManagerData::run()): while performing manager step 24
+Package.EventLoop        ERROR   /build/atnight/localbuilds/nightlies/AnalysisBase/main/athena/PhysicsAnalysis/D3PDTools/EventLoop/Root/ManagerData.cxx:68 (StatusCode EL::Detail::ManagerData::run()): on submission directory workDir
+Traceback (most recent call last):
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py", line 16, in <module>
+    script.run()
+    ~~~~~~~~~~^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 240, in run
+    exitCode = self.getExitCode()
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/AnalysisAlgorithmsConfig/EventLoopCPRunScript.py", line 133, in getExitCode
+    statusCode = ROOT.EL.Driver.retrieve(self.submitDir)
+cppyy.gbl.std.runtime_error: static bool EL::Driver::retrieve(const string& location) =>
+    runtime_error: failed to retrieve job
+xAOD::TFileAccessTracer   INFO    Sending file access statistics to http://rucio-lb-prod.cern.ch:18762/traces/

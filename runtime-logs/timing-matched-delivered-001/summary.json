@@ -1,0 +1,471 @@
+{
+  "label": "delivered-final",
+  "start_utc": "2026-11-19T13:41:28.564027+00:00",
+  "end_utc": "2026-11-19T13:48:15.684062+00:00",
+  "events": 20000,
+  "cpu": 0,
+  "first_round_excluded": true,
+  "identities": {
+    "production.yaml": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+      "sha256": "b2382ae5fef752f3fc58374bd99d0fa3e1304f587fd7cf15543d7e9092cfbd19"
+    },
+    "stored-core.yaml": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+      "sha256": "a9efb70815aaf1c26066299cdec170da9df426e6b091225e2419e2b7409c63cc"
+    },
+    "CPRun.py": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+      "sha256": "33b466f4d041425262d68bb7d6cc79c8698955b46d4109fcf2fda49dceb9d637"
+    },
+    "bridge_entry.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/source/components/framework/bridge_entry.py",
+      "sha256": "a2c1343e1f08eff71c019996f58151a994cf2e60ae357c15f2534296ad066d25"
+    },
+    "libAtlasMetFramework.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/libAtlasMetFramework.so",
+      "sha256": "8d16f5b1026a905c0c6f7ecbde1785a9ec95c5821e3166414fc01b6c1c8867a3"
+    },
+    "libatlas_met_maker_provider.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/maker_adapter/libatlas_met_maker_provider.so",
+      "sha256": "18661d976c7e839e56e1d035e978f654b01ded3b2594ad25069c09397936d107"
+    },
+    "libcorrectionlib.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/core-exact-build-001/install/correctionlib/lib/libcorrectionlib.so",
+      "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca"
+    },
+    "maker.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/maker-component-001/maker.json",
+      "sha256": "c4c745a527342d280edb3e8362d6653783112bb8d929fe4e9b98555b70eb5bf1"
+    },
+    "corrections.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/soft-component-001/bundle/corrections.json",
+      "sha256": "56787692c5a9ad90ed8e6cee83e0cf182b36bd6d8a7605e61c2e141d1dd5fdfb"
+    },
+    "met_significance_event.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/significance-event-payload-001/met_significance_event.json",
+      "sha256": "6fa92432e4ada19659b772bac272ada6b51bc8db8e134e3b96dc5f489c5c9ff3"
+    },
+    "C": {
+      "python": {
+        "path": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14",
+        "sha256": "32b6777d62aba66726091c65e4a4631073a49b069e4267cc83d4a5df14009f91"
+      },
+      "met_demo.py": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/met_demo.py",
+        "sha256": "2cbf393ddfda27771db50ed3f122a8483e70b06ea1118cd725674a03d71210f3"
+      },
+      "bundle.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/bundle.json",
+        "sha256": "f301a7299ea9a986300cca87300841c368fc2089d74a36120ffad64f4a054b49"
+      },
+      "pip-freeze.txt": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-freeze.txt",
+        "sha256": "36ce3e1135d1ea8ac412cbcb42c9e5640636f25ae24da6179bd36c31b8a39f29"
+      },
+      "installed-identities.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/installed-identities.json",
+        "sha256": "f44392eea87a1f8f1e17aa15ccbcc0a4fdc2d37f8fab8c23c6f5ae76f05e5142"
+      },
+      "atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+        "sha256": "8477cb5d507823049b8d86223317d3694e960515eb50a3415cf9758a4d67223a"
+      }
+    },
+    "C-faithful": {
+      "python": {
+        "path": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14",
+        "sha256": "32b6777d62aba66726091c65e4a4631073a49b069e4267cc83d4a5df14009f91"
+      },
+      "met_demo.py": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/met_demo.py",
+        "sha256": "f885d334539f4c1f17257d46fddc973be6fb22da3013b5e7c337fa1676796a0b"
+      },
+      "bundle.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/bundle.json",
+        "sha256": "ff6df1e7a89ec2dfac8fd3472cc3a848e1c1236c5aef3a066b2283e56c796a56"
+      },
+      "pip-freeze.txt": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-freeze.txt",
+        "sha256": "cbd2b7437084b28d449334f759a4ea46ab09f5a0ac4cfd0b84c8841282a8cd8e"
+      },
+      "installed-identities.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/installed-identities.json",
+        "sha256": "a0f36ad4f0ebb57905cdc8a5cc6f3b38e19892cc3983afbfbad31b1628a9db04"
+      },
+      "atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+        "sha256": "e24e2de48bdc94d98eaa9f2b42e859b2122820947e2964236ba9d8ef33c32901"
+      }
+    }
+  },
+  "histogram_reference": {
+    "nominal": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+      "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c"
+    },
+    "full": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-full-002/histogram.npz",
+      "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b"
+    },
+    "stored": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-002/histogram.npz",
+      "sha256": "629fa8fa4e76b41a44ef7175116f48aae30a794bb47c61f297b42cee8a225b8c"
+    }
+  },
+  "cohorts": {
+    "nominal": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            18.306221266,
+            18.846085765,
+            18.623305778000002
+          ],
+          "mean": 18.591870936333336,
+          "sample_sd": 0.27130155044357307,
+          "sd_over_mean": 0.014592482454973346,
+          "max_relative_median_distance": 0.017026220574361067,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.25917476300000003,
+            0.238733134,
+            0.236800217
+          ],
+          "mean": 0.2449027046666667,
+          "sample_sd": 0.012397692480247064,
+          "sd_over_mean": 0.05062293002080713,
+          "max_relative_median_distance": 0.08562543731361569,
+          "process_and_output_valid": true,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            18.565396029000002,
+            19.084818899000002,
+            18.860105995
+          ],
+          "mean": 18.836773641,
+          "sample_sd": 0.2604963119261866,
+          "sd_over_mean": 0.01382913639516228,
+          "max_relative_median_distance": 0.015626103378110903,
+          "process_and_output_valid": false,
+          "qualified": false
+        }
+      },
+      "B": {
+        "framework_seconds": {
+          "retained_seconds": [
+            19.039427558,
+            19.157897766,
+            19.179165275000003
+          ],
+          "mean": 19.125496866333336,
+          "sample_sd": 0.07529290213891524,
+          "sd_over_mean": 0.003936781494626345,
+          "max_relative_median_distance": 0.0061838835057494435,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.24677812100000002,
+            0.24753190200000003,
+            0.23604049000000002
+          ],
+          "mean": 0.24345017100000002,
+          "sample_sd": 0.006428030479105635,
+          "sd_over_mean": 0.026403885660469036,
+          "max_relative_median_distance": 0.04351127626909841,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            19.286205679,
+            19.405429668,
+            19.415205765000003
+          ],
+          "mean": 19.368947037333335,
+          "sample_sd": 0.07182264477358408,
+          "sd_over_mean": 0.003708133675782534,
+          "max_relative_median_distance": 0.006143846904694146,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            2.320970377,
+            2.3497872870000003,
+            2.3284949150000003
+          ],
+          "mean": 2.3330841930000004,
+          "sample_sd": 0.014946560805348848,
+          "sd_over_mean": 0.006406352951253674,
+          "max_relative_median_distance": 0.009144263903191733,
+          "process_and_output_valid": true,
+          "qualified": true,
+          "peak_rss_kib": {
+            "retained": [
+              476280,
+              475928,
+              475316
+            ],
+            "maximum": 476280
+          }
+        }
+      },
+      "C-faithful": {
+        "total_seconds": {
+          "retained_seconds": [
+            3.617498974,
+            3.7437673730000003,
+            3.6909184760000002
+          ],
+          "mean": 3.684061607666667,
+          "sample_sd": 0.06341285066144965,
+          "sd_over_mean": 0.017212755218176914,
+          "max_relative_median_distance": 0.01989193272010924,
+          "process_and_output_valid": true,
+          "qualified": true,
+          "peak_rss_kib": {
+            "retained": [
+              438224,
+              435164,
+              436148
+            ],
+            "maximum": 438224
+          }
+        }
+      },
+      "framework_ratio_B_over_A": null,
+      "framework_budget_1_20": null,
+      "endpoint_ratio_A_over_C": null,
+      "cumulative_columnar_improvement": {
+        "paired_seconds": [
+          1.296528597,
+          1.393980086,
+          1.362423561
+        ],
+        "mean_seconds_saved": 1.3509774146666667,
+        "sample_sd_seconds": 0.0497238260443858,
+        "fraction_saved": 0.36670869234521847
+      }
+    },
+    "full": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            22.394666333,
+            21.234125444,
+            21.922514082000003
+          ],
+          "mean": 21.850435286333333,
+          "sample_sd": 0.5836182856532132,
+          "sd_over_mean": 0.026709686924097368,
+          "max_relative_median_distance": 0.03140098965954003,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.247023754,
+            0.25016577700000003,
+            0.24739676100000002
+          ],
+          "mean": 0.2481954306666667,
+          "sample_sd": 0.0017165319864402087,
+          "sd_over_mean": 0.006916049912077385,
+          "max_relative_median_distance": 0.011192612178136045,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            22.641690087,
+            21.484291221,
+            22.169910843000004
+          ],
+          "mean": 22.098630717000002,
+          "sample_sd": 0.5819825392797059,
+          "sd_over_mean": 0.026335683270728587,
+          "max_relative_median_distance": 0.030925682419534133,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "B": {
+        "framework_seconds": {
+          "retained_seconds": [
+            21.896893955000003,
+            22.080812265000002,
+            21.984734754
+          ],
+          "mean": 21.98748032466667,
+          "sample_sd": 0.09198988970005456,
+          "sd_over_mean": 0.00418373948909715,
+          "max_relative_median_distance": 0.004370191957058747,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.24674245900000003,
+            0.301948861,
+            0.246508515
+          ],
+          "mean": 0.2650666116666667,
+          "sample_sd": 0.031941179054058244,
+          "sd_over_mean": 0.12050246107278774,
+          "max_relative_median_distance": 0.22374098979049237,
+          "process_and_output_valid": true,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            22.143636414000003,
+            22.382761126000002,
+            22.231243269
+          ],
+          "mean": 22.252546936333335,
+          "sample_sd": 0.12097744274722312,
+          "sd_over_mean": 0.005436566119525606,
+          "max_relative_median_distance": 0.00681553681755997,
+          "process_and_output_valid": false,
+          "qualified": false
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            2.594499211,
+            2.676890193,
+            2.594501305
+          ],
+          "mean": 2.6219635696666668,
+          "sample_sd": 0.047567851162288434,
+          "sd_over_mean": 0.018142071733031666,
+          "max_relative_median_distance": 0.03175519235285183,
+          "process_and_output_valid": true,
+          "qualified": true,
+          "peak_rss_kib": {
+            "retained": [
+              480920,
+              480668,
+              480760
+            ],
+            "maximum": 480920
+          }
+        }
+      },
+      "C-faithful": {
+        "total_seconds": {
+          "retained_seconds": [
+            4.172287677,
+            3.997403922,
+            4.192044894
+          ],
+          "mean": 4.120578831,
+          "sample_sd": 0.10712903696601116,
+          "sd_over_mean": 0.025998540826365553,
+          "max_relative_median_distance": 0.04191555533527986,
+          "process_and_output_valid": true,
+          "qualified": true,
+          "peak_rss_kib": {
+            "retained": [
+              437044,
+              436744,
+              438620
+            ],
+            "maximum": 438620
+          }
+        }
+      },
+      "framework_ratio_B_over_A": null,
+      "framework_budget_1_20": null,
+      "endpoint_ratio_A_over_C": 8.428275271501741,
+      "cumulative_columnar_improvement": {
+        "paired_seconds": [
+          1.577788466,
+          1.320513729,
+          1.5975435890000003
+        ],
+        "mean_seconds_saved": 1.4986152613333334,
+        "sample_sd_seconds": 0.15455640745629842,
+        "fraction_saved": 0.363690472333384
+      }
+    },
+    "stored": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            4.817211889,
+            5.233704618,
+            4.718535486
+          ],
+          "mean": 4.923150664333334,
+          "sample_sd": 0.27343569030167425,
+          "sd_over_mean": 0.055540792664061485,
+          "max_relative_median_distance": 0.08645929193005854,
+          "process_and_output_valid": true,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.23914838200000002,
+            0.243249719,
+            0.23750595200000002
+          ],
+          "mean": 0.23996801766666667,
+          "sample_sd": 0.0029583047184369425,
+          "sd_over_mean": 0.012327912474345839,
+          "max_relative_median_distance": 0.017149758512687668,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            5.056360271,
+            5.476954337,
+            4.956041438000001
+          ],
+          "mean": 5.163118682,
+          "sample_sd": 0.27637941461979304,
+          "sd_over_mean": 0.05352954902689433,
+          "max_relative_median_distance": 0.08318119031435599,
+          "process_and_output_valid": true,
+          "qualified": false
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            0.44955852900000004,
+            0.454298378,
+            0.449212806
+          ],
+          "mean": 0.4510232376666667,
+          "sample_sd": 0.002841617365243295,
+          "sd_over_mean": 0.006300379066817442,
+          "max_relative_median_distance": 0.010543341287603427,
+          "process_and_output_valid": true,
+          "qualified": true,
+          "peak_rss_kib": {
+            "retained": [
+              115620,
+              115584,
+              115652
+            ],
+            "maximum": 115652
+          }
+        }
+      },
+      "endpoint_ratio_A_over_C": null
+    }
+  }
+}

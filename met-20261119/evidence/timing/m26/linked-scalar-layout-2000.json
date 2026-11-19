@@ -1,0 +1,483 @@
+{
+  "entries": 2000,
+  "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+  "exact_prepared_transport_columns": 146,
+  "selected_by_species": {
+    "electron": 487,
+    "photon": 35,
+    "muon": 598,
+    "tau": 333
+  },
+  "fast_projection_calls": 81,
+  "fast_gathered_rows": 103775,
+  "fast_calls_and_rows_by_leaf": {
+    "TauTracksAuxDyn.flagSet": 1,
+    "TauTracksAuxDyn.flagSet:rows": 4977,
+    "TruthTausAuxDyn.pdgId": 1,
+    "TruthTausAuxDyn.pdgId:rows": 287,
+    "TruthTausAuxDyn.IsHadronicTau": 1,
+    "TruthTausAuxDyn.IsHadronicTau:rows": 287,
+    "InDetTrackParticlesAuxDyn.qOverP": 1,
+    "InDetTrackParticlesAuxDyn.qOverP:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.qOverP": 1,
+    "InDetForwardTrackParticlesAuxDyn.qOverP:rows": 10,
+    "InDetTrackParticlesAuxDyn.theta": 1,
+    "InDetTrackParticlesAuxDyn.theta:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.theta": 1,
+    "InDetForwardTrackParticlesAuxDyn.theta:rows": 10,
+    "InDetTrackParticlesAuxDyn.phi": 2,
+    "InDetTrackParticlesAuxDyn.phi:rows": 2926,
+    "InDetForwardTrackParticlesAuxDyn.phi": 2,
+    "InDetForwardTrackParticlesAuxDyn.phi:rows": 20,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": 1,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP:rows": 1426,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.theta": 1,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.theta:rows": 1426,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.phi": 2,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.phi:rows": 2852,
+    "CombinedMuonTrackParticlesAuxDyn.qOverP": 1,
+    "CombinedMuonTrackParticlesAuxDyn.qOverP:rows": 1457,
+    "CombinedMuonTrackParticlesAuxDyn.theta": 1,
+    "CombinedMuonTrackParticlesAuxDyn.theta:rows": 1457,
+    "CombinedMuonTrackParticlesAuxDyn.phi": 2,
+    "CombinedMuonTrackParticlesAuxDyn.phi:rows": 2914,
+    "InDetTrackParticlesAuxDyn.d0": 1,
+    "InDetTrackParticlesAuxDyn.d0:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.d0": 1,
+    "InDetForwardTrackParticlesAuxDyn.d0:rows": 10,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.d0": 1,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.d0:rows": 1426,
+    "CombinedMuonTrackParticlesAuxDyn.d0": 1,
+    "CombinedMuonTrackParticlesAuxDyn.d0:rows": 1457,
+    "MuonSpectrometerTrackParticlesAuxDyn.d0": 1,
+    "MuonSpectrometerTrackParticlesAuxDyn.d0:rows": 1350,
+    "MuonSpectrometerTrackParticlesAuxDyn.phi": 1,
+    "MuonSpectrometerTrackParticlesAuxDyn.phi:rows": 1350,
+    "InDetTrackParticlesAuxDyn.z0": 1,
+    "InDetTrackParticlesAuxDyn.z0:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.z0": 1,
+    "InDetForwardTrackParticlesAuxDyn.z0:rows": 10,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.z0": 1,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.z0:rows": 1426,
+    "CombinedMuonTrackParticlesAuxDyn.z0": 1,
+    "CombinedMuonTrackParticlesAuxDyn.z0:rows": 1457,
+    "MuonSpectrometerTrackParticlesAuxDyn.z0": 1,
+    "MuonSpectrometerTrackParticlesAuxDyn.z0:rows": 1350,
+    "InDetTrackParticlesAuxDyn.vz": 1,
+    "InDetTrackParticlesAuxDyn.vz:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.vz": 1,
+    "InDetForwardTrackParticlesAuxDyn.vz:rows": 10,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.vz": 1,
+    "ExtrapolatedMuonTrackParticlesAuxDyn.vz:rows": 1426,
+    "CombinedMuonTrackParticlesAuxDyn.vz": 1,
+    "CombinedMuonTrackParticlesAuxDyn.vz:rows": 1457,
+    "MuonSpectrometerTrackParticlesAuxDyn.vz": 1,
+    "MuonSpectrometerTrackParticlesAuxDyn.vz:rows": 1350,
+    "InDetTrackParticlesAuxDyn.numberOfPixelHits": 1,
+    "InDetTrackParticlesAuxDyn.numberOfPixelHits:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits:rows": 1457,
+    "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": 1,
+    "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors:rows": 1457,
+    "InDetTrackParticlesAuxDyn.numberOfSCTHits": 1,
+    "InDetTrackParticlesAuxDyn.numberOfSCTHits:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits:rows": 1457,
+    "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": 1,
+    "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors:rows": 1457,
+    "InDetTrackParticlesAuxDyn.numberOfPixelHoles": 1,
+    "InDetTrackParticlesAuxDyn.numberOfPixelHoles:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles:rows": 1457,
+    "InDetTrackParticlesAuxDyn.numberOfSCTHoles": 1,
+    "InDetTrackParticlesAuxDyn.numberOfSCTHoles:rows": 1463,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": 1,
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles:rows": 10,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": 1,
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles:rows": 1457,
+    "egammaClustersAuxDyn.calEta": 2,
+    "egammaClustersAuxDyn.calEta:rows": 7216,
+    "egammaClustersAuxDyn.calPhi": 2,
+    "egammaClustersAuxDyn.calPhi:rows": 7216,
+    "egammaClustersAuxDyn.ETACALOFRAME": 2,
+    "egammaClustersAuxDyn.ETACALOFRAME:rows": 7216,
+    "egammaClustersAuxDyn.PHICALOFRAME": 2,
+    "egammaClustersAuxDyn.PHICALOFRAME:rows": 7216,
+    "egammaClustersAuxDyn.samplingPattern": 2,
+    "egammaClustersAuxDyn.samplingPattern:rows": 7216,
+    "GSFTrackParticlesAuxDyn.d0": 1,
+    "GSFTrackParticlesAuxDyn.d0:rows": 1555,
+    "GSFTrackParticlesAuxDyn.phi": 3,
+    "GSFTrackParticlesAuxDyn.phi:rows": 1879,
+    "GSFTrackParticlesAuxDyn.z0": 1,
+    "GSFTrackParticlesAuxDyn.z0:rows": 1555,
+    "GSFTrackParticlesAuxDyn.vz": 1,
+    "GSFTrackParticlesAuxDyn.vz:rows": 1555,
+    "GSFConversionVerticesAuxDyn.x": 1,
+    "GSFConversionVerticesAuxDyn.x:rows": 208,
+    "GSFConversionVerticesAuxDyn.y": 1,
+    "GSFConversionVerticesAuxDyn.y:rows": 208,
+    "GSFConversionVerticesAuxDyn.pt1": 1,
+    "GSFConversionVerticesAuxDyn.pt1:rows": 208,
+    "GSFConversionVerticesAuxDyn.pt2": 1,
+    "GSFConversionVerticesAuxDyn.pt2:rows": 208,
+    "GSFTrackParticlesAuxDyn.qOverP": 2,
+    "GSFTrackParticlesAuxDyn.qOverP:rows": 324,
+    "GSFTrackParticlesAuxDyn.theta": 2,
+    "GSFTrackParticlesAuxDyn.theta:rows": 324,
+    "GSFTrackParticlesAuxDyn.numberOfPixelHits": 2,
+    "GSFTrackParticlesAuxDyn.numberOfPixelHits:rows": 324,
+    "GSFTrackParticlesAuxDyn.numberOfSCTHits": 2,
+    "GSFTrackParticlesAuxDyn.numberOfSCTHits:rows": 324
+  },
+  "attempted_scalar_fallbacks_by_leaf": {},
+  "borrowed_leaves": {
+    "TauTracksAuxDyn.flagSet": {
+      "nbytes": 38792,
+      "dtype": "<u2",
+      "elements": 19396
+    },
+    "TruthTausAuxDyn.pdgId": {
+      "nbytes": 3520,
+      "dtype": "<i4",
+      "elements": 880
+    },
+    "TruthTausAuxDyn.IsHadronicTau": {
+      "nbytes": 880,
+      "dtype": "|i1",
+      "elements": 880
+    },
+    "InDetTrackParticlesAuxDyn.qOverP": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.qOverP": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "InDetTrackParticlesAuxDyn.theta": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.theta": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "InDetTrackParticlesAuxDyn.phi": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.phi": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "CombinedMuonTrackParticlesAuxDyn.qOverP": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "CombinedMuonTrackParticlesAuxDyn.theta": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "CombinedMuonTrackParticlesAuxDyn.phi": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.d0": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.d0": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.d0": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "CombinedMuonTrackParticlesAuxDyn.d0": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.d0": {
+      "nbytes": 12580,
+      "dtype": "<f4",
+      "elements": 3145
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.phi": {
+      "nbytes": 12580,
+      "dtype": "<f4",
+      "elements": 3145
+    },
+    "InDetTrackParticlesAuxDyn.z0": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.z0": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.z0": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "CombinedMuonTrackParticlesAuxDyn.z0": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.z0": {
+      "nbytes": 12580,
+      "dtype": "<f4",
+      "elements": 3145
+    },
+    "InDetTrackParticlesAuxDyn.vz": {
+      "nbytes": 153968,
+      "dtype": "<f4",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.vz": {
+      "nbytes": 100,
+      "dtype": "<f4",
+      "elements": 25
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.vz": {
+      "nbytes": 11700,
+      "dtype": "<f4",
+      "elements": 2925
+    },
+    "CombinedMuonTrackParticlesAuxDyn.vz": {
+      "nbytes": 17440,
+      "dtype": "<f4",
+      "elements": 4360
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.vz": {
+      "nbytes": 12580,
+      "dtype": "<f4",
+      "elements": 3145
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "nbytes": 38492,
+      "dtype": "|u1",
+      "elements": 38492
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "nbytes": 25,
+      "dtype": "|u1",
+      "elements": 25
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "nbytes": 4360,
+      "dtype": "|u1",
+      "elements": 4360
+    },
+    "egammaClustersAuxDyn.calEta": {
+      "nbytes": 28864,
+      "dtype": "<f4",
+      "elements": 7216
+    },
+    "egammaClustersAuxDyn.calPhi": {
+      "nbytes": 28864,
+      "dtype": "<f4",
+      "elements": 7216
+    },
+    "egammaClustersAuxDyn.ETACALOFRAME": {
+      "nbytes": 28864,
+      "dtype": "<f4",
+      "elements": 7216
+    },
+    "egammaClustersAuxDyn.PHICALOFRAME": {
+      "nbytes": 28864,
+      "dtype": "<f4",
+      "elements": 7216
+    },
+    "egammaClustersAuxDyn.samplingPattern": {
+      "nbytes": 28864,
+      "dtype": "<u4",
+      "elements": 7216
+    },
+    "GSFTrackParticlesAuxDyn.d0": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.phi": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.z0": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.vz": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFConversionVerticesAuxDyn.x": {
+      "nbytes": 820,
+      "dtype": "<f4",
+      "elements": 205
+    },
+    "GSFConversionVerticesAuxDyn.y": {
+      "nbytes": 820,
+      "dtype": "<f4",
+      "elements": 205
+    },
+    "GSFConversionVerticesAuxDyn.pt1": {
+      "nbytes": 820,
+      "dtype": "<f4",
+      "elements": 205
+    },
+    "GSFConversionVerticesAuxDyn.pt2": {
+      "nbytes": 820,
+      "dtype": "<f4",
+      "elements": 205
+    },
+    "GSFTrackParticlesAuxDyn.qOverP": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.theta": {
+      "nbytes": 7336,
+      "dtype": "<f4",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+      "nbytes": 1834,
+      "dtype": "|u1",
+      "elements": 1834
+    },
+    "GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+      "nbytes": 1834,
+      "dtype": "|u1",
+      "elements": 1834
+    }
+  },
+  "borrowed_payload_bytes": 1645306,
+  "additional_cached_payload_bytes": 0,
+  "shallow_cached_dictionary_bytes": 1584
+}

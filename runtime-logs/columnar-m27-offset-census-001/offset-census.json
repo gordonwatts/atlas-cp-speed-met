@@ -1,0 +1,61 @@
+{
+  "scope": "Each nominal, production full, or separate correlated file pass",
+  "method": "Source-derived work count on observed original per-chunk jet.ntrk.o lengths. The nonempty monotone list has jet_rows + 1 offsets. Its successful is_sorted call checks one pair per jet row. A failed guard can short circuit.",
+  "input_root_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+  "original_leaf": "AnalysisJetsAuxDyn.NumTrkPt500",
+  "chunk_size": 5000,
+  "chunks": [
+    {
+      "first_entry": 0,
+      "stop_entry": 5000,
+      "events": 5000,
+      "jet_rows": 49249,
+      "offset_values": 49250,
+      "m26_sorted_passes": 5000,
+      "m27_sorted_passes": 1,
+      "m26_adjacent_pairs": 246245000,
+      "m27_adjacent_pairs": 49249
+    },
+    {
+      "first_entry": 5000,
+      "stop_entry": 10000,
+      "events": 5000,
+      "jet_rows": 48947,
+      "offset_values": 48948,
+      "m26_sorted_passes": 5000,
+      "m27_sorted_passes": 1,
+      "m26_adjacent_pairs": 244735000,
+      "m27_adjacent_pairs": 48947
+    },
+    {
+      "first_entry": 10000,
+      "stop_entry": 15000,
+      "events": 5000,
+      "jet_rows": 49688,
+      "offset_values": 49689,
+      "m26_sorted_passes": 5000,
+      "m27_sorted_passes": 1,
+      "m26_adjacent_pairs": 248440000,
+      "m27_adjacent_pairs": 49688
+    },
+    {
+      "first_entry": 15000,
+      "stop_entry": 20000,
+      "events": 5000,
+      "jet_rows": 48722,
+      "offset_values": 48723,
+      "m26_sorted_passes": 5000,
+      "m27_sorted_passes": 1,
+      "m26_adjacent_pairs": 243610000,
+      "m27_adjacent_pairs": 48722
+    }
+  ],
+  "totals": {
+    "events": 20000,
+    "jet_rows": 196606,
+    "m26_sorted_passes": 20000,
+    "m27_sorted_passes": 4,
+    "m26_adjacent_pairs": 983030000,
+    "m27_adjacent_pairs": 196606
+  }
+}

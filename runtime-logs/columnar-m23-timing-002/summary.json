@@ -1,0 +1,234 @@
+{
+  "events": 20000,
+  "workload": "one direct-original histogram pass",
+  "reader_cpu": 0,
+  "excluded_round": 0,
+  "start_utc": "2026-11-19T13:22:20.304963+00:00",
+  "variants": {
+    "baseline": "chunk-5000",
+    "trial": "chunk-10000"
+  },
+  "requested_chunk_size": {
+    "chunk-5000": 5000,
+    "chunk-10000": 10000
+  },
+  "effective_chunk_size": {
+    "chunk-5000": 5000,
+    "chunk-10000": 10000
+  },
+  "end_utc": "2026-11-19T13:23:02.515940+00:00",
+  "identities": {
+    "chunk-5000": {
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/bin/python": {
+        "path": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14",
+        "sha256": "32b6777d62aba66726091c65e4a4631073a49b069e4267cc83d4a5df14009f91"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/met_demo.py": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/met_demo.py",
+        "sha256": "b50713e64c848a4244f86c4639001a5ca711da5852ceb3f81dbb83eadff63ab5"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+        "sha256": "e5c6db04c52fca5d39e18dba1001326913325ca6a5abd9dcb029c95aeebe57c0"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/bundle.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/bundle.json",
+        "sha256": "26432af313d0bd7923d945d2dd0dd3e893697baf6796a3aed260eb083d6576ab"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/installed-identities.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/installed-identities.json",
+        "sha256": "51098020eacb0377beae90119bfc2ef164d95a8007ac163ec507d09f2ccd0f08"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-freeze.txt": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-freeze.txt",
+        "sha256": "28e13ca05fe0df656de880a5469ad751ee9e914da2878285d1fa35f3e5ca38d2"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+        "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+        "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+        "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+        "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+        "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca"
+      }
+    },
+    "chunk-10000": {
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/bin/python": {
+        "path": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14",
+        "sha256": "32b6777d62aba66726091c65e4a4631073a49b069e4267cc83d4a5df14009f91"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/met_demo.py": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/met_demo.py",
+        "sha256": "b50713e64c848a4244f86c4639001a5ca711da5852ceb3f81dbb83eadff63ab5"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+        "sha256": "e5c6db04c52fca5d39e18dba1001326913325ca6a5abd9dcb029c95aeebe57c0"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/bundle.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/bundle/bundle.json",
+        "sha256": "26432af313d0bd7923d945d2dd0dd3e893697baf6796a3aed260eb083d6576ab"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/installed-identities.json": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/installed-identities.json",
+        "sha256": "51098020eacb0377beae90119bfc2ef164d95a8007ac163ec507d09f2ccd0f08"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-freeze.txt": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-freeze.txt",
+        "sha256": "28e13ca05fe0df656de880a5469ad751ee9e914da2878285d1fa35f3e5ca38d2"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+        "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+        "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+        "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+        "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4"
+      },
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so": {
+        "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m22-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+        "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca"
+      }
+    }
+  },
+  "stock_histogram": {
+    "full": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-full-002/histogram.npz",
+      "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b"
+    },
+    "nominal": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+      "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c"
+    }
+  },
+  "results": {
+    "full": {
+      "chunk-5000": {
+        "retained_seconds": [
+          2.804033582,
+          2.7729030050000003,
+          2.787864438
+        ],
+        "mean": 2.7882670083333334,
+        "sample_sd": 0.015569192440303078,
+        "sd_over_mean": 0.005583824072002864,
+        "max_relative_median_distance": 0.005799831505293595,
+        "process_and_output_valid": true,
+        "qualified": true,
+        "peak_rss_kib": {
+          "retained": [
+            481976,
+            482092,
+            481468
+          ],
+          "maximum": 482092
+        }
+      },
+      "chunk-10000": {
+        "retained_seconds": [
+          2.8036717170000003,
+          2.790331833,
+          2.787903124
+        ],
+        "mean": 2.7939688913333334,
+        "sample_sd": 0.00849018705859688,
+        "sd_over_mean": 0.0030387550430259827,
+        "max_relative_median_distance": 0.004780751823935515,
+        "process_and_output_valid": true,
+        "qualified": true,
+        "peak_rss_kib": {
+          "retained": [
+            556612,
+            556408,
+            554640
+          ],
+          "maximum": 556612
+        }
+      },
+      "paired_chunk-5000_minus_chunk-10000_seconds": {
+        "values": [
+          0.00036186499999990573,
+          -0.017428827999999896,
+          -3.868599999989897e-05
+        ],
+        "mean": -0.005701882999999963,
+        "sample_sd": 0.010157806827788555
+      },
+      "mean_fractional_savings": -0.002044955875086089
+    },
+    "nominal": {
+      "chunk-5000": {
+        "retained_seconds": [
+          2.4458865800000003,
+          2.4518357180000003,
+          2.5056661470000003
+        ],
+        "mean": 2.4677961483333335,
+        "sample_sd": 0.0329309984664262,
+        "sd_over_mean": 0.013344294458303084,
+        "max_relative_median_distance": 0.021955153277524772,
+        "process_and_output_valid": true,
+        "qualified": true,
+        "peak_rss_kib": {
+          "retained": [
+            476820,
+            476856,
+            477104
+          ],
+          "maximum": 477104
+        }
+      },
+      "chunk-10000": {
+        "retained_seconds": [
+          2.4765718270000003,
+          2.528721222,
+          2.4365571200000002
+        ],
+        "mean": 2.4806167230000002,
+        "sample_sd": 0.04621500094238567,
+        "sd_over_mean": 0.018630448030880934,
+        "max_relative_median_distance": 0.021057089655732327,
+        "process_and_output_valid": true,
+        "qualified": true,
+        "peak_rss_kib": {
+          "retained": [
+            547220,
+            546604,
+            538644
+          ],
+          "maximum": 547220
+        }
+      },
+      "paired_chunk-5000_minus_chunk-10000_seconds": {
+        "values": [
+          -0.030685247000000082,
+          -0.07688550399999983,
+          0.0691090270000001
+        ],
+        "mean": -0.012820574666666603,
+        "sample_sd": 0.07461876880959986
+      },
+      "mean_fractional_savings": -0.005195151420965297
+    }
+  }
+}

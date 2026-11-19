@@ -1,0 +1,14 @@
+source/* text eol=lf
+inspection/** -text
+evidence/**/*.diff -text -whitespace
+evidence/**/*.patch -text -whitespace
+evidence/**/*.json text eol=lf
+evidence/**/*.yaml text eol=lf
+evidence/**/*.txt text eol=lf
+evidence/**/*.log text eol=lf
+evidence/**/met_demo.py -text
+standalone/** -text
+standalone-offset/** -text
+report.md text eol=lf
+evidence/timing/**/python-calls.txt -whitespace
+evidence/**/transfer/command.txt -whitespace

@@ -1,0 +1,191 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-full-frozen-001/so │
+│ urce/components/columnar/met_demo.py:135 in main                             │
+│                                                                              │
+│   132 │   │   │   │   │   # Nominal corrections are explicitly selected by   │
+│       their declared names                                                   │
+│   133 │   │   │   │   │   # in the raw preparation projections and evaluated │
+│       on each typed batch.                                                   │
+│   134 │   │   │   │   │   evaluate = lambda name, inputs:                    │
+│       bridge.prepare(context,name,inputs)                                    │
+│ ❱ 135 │   │   │   │   │   prepare_chunk(buffers,raw,keys,evaluate)           │
+│   136 │   │   │   │   │   # The native chunk calls shared maker,             │
+│       correct_pvsofttrk, build_final,                                        │
+│   137 │   │   │   │   │   # and met_significance_event in event order, with  │
+│       the explicit labels.                                                   │
+│   138 │   │   │   │   │   terms,sources,significance =                       │
+│       bridge.full(context,buffers,first,last-first,labels,trace)             │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-full-frozen-001/so │
+│ urce/components/columnar/atlas_met_prepare.py:467 in prepare_chunk           │
+│                                                                              │
+│   464 │   if not valid:                                                      │
+│   465 │   │                                                                  │
+│       put(output,"jet.sample",raw[JET+"EnergyPerSampling"],"f4","jet.o","jet │
+│       .sample.o")                                                            │
+│   466 │   positions = primary_positions(data)                                │
+│ ❱ 467 │   prepare_tau(data)                                                  │
+│   468 │   prepare_muon(data,positions)                                       │
+│   469 │   prepare_egamma(data,positions,"electron")                          │
+│   470 │   prepare_egamma(data,positions,"photon")                            │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-full-frozen-001/so │
+│ urce/components/columnar/atlas_met_prepare.py:256 in prepare_tau             │
+│                                                                              │
+│   253 │   flags = tracks.column("flagSet","i8")[0]                           │
+│   254 │   charged =                                                          │
+│       data.evaluate("tau_track_charged",{"flag_set":flags})[:,0].astype("i8" │
+│       )                                                                      │
+│   255 │   counts =                                                           │
+│       dense(ak.sum(ak.unflatten(charged,dense(ak.num(per_tau,axis=1),"i8")), │
+│       axis=1),"i8")                                                          │
+│ ❱ 256 │   truth = data.resolve(TAU,"truthParticleLink",("TruthTaus",))       │
+│   257 │   pdg = truth.column("pdgId","i8")[0]                                │
+│   258 │   hadronic = truth.column("IsHadronicTau","i8",-1)[0]                │
+│   259 │   fields = {name:data.own(TAU,leaf,dtype) for name,leaf,dtype in (   │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-full-frozen-001/so │
+│ urce/components/columnar/atlas_met_prepare.py:224 in resolve                 │
+│                                                                              │
+│   221 │   def resolve(self, owner, field, targets, slot=None):               │
+│   222 │   │   arr = self.raw.get(owner+field)                                │
+│   223 │   │   if arr is not None:                                            │
+│ ❱ 224 │   │   │   arr = ak.flatten(arr, axis=1)                              │
+│   225 │   │   │   if slot is not None:                                       │
+│   226 │   │   │   │   arr = ak.pad_none(arr, slot+1, axis=1)[:,slot]         │
+│   227 │   │   return Resolved(self,None if arr is None else                  │
+│       Link(arr),self.events[owner],targets)                                  │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/_dispatch.py:40 in dispatch          │
+│                                                                              │
+│   37 │   @wraps(func)                                                        │
+│   38 │   def dispatch(*args, **kwargs):                                      │
+│   39 │   │   # NOTE: this decorator assumes that the operation is exposed    │
+│      under `ak.`                                                             │
+│ ❱ 40 │   │   with OperationErrorContext(name, args, kwargs):                 │
+│   41 │   │   │   gen_or_result = func(*args, **kwargs)                       │
+│   42 │   │   │   if isgenerator(gen_or_result):                              │
+│   43 │   │   │   │   array_likes = next(gen_or_result)                       │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/_errors.py:60 in __exit__            │
+│                                                                              │
+│    57 │   │   │   # Is this necessary to do here? (We're about to raise an   │
+│       exception anyway)                                                      │
+│    58 │   │   │   self._slate.__dict__.clear()                               │
+│    59 │   │   │   # Handle caught exception                                  │
+│ ❱  60 │   │   │   raise self.decorate_exception(exception_type,              │
+│       exception_value)                                                       │
+│    61 │   │   else:                                                          │
+│    62 │   │   │   # Step out of the way so that another ErrorContext can     │
+│       become primary.                                                        │
+│    63 │   │   │   if self.primary() is self:                                 │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/_dispatch.py:66 in dispatch          │
+│                                                                              │
+│   63 │   │   │   │                                                           │
+│   64 │   │   │   │   # Failed to find a custom overload, so resume the       │
+│      original function                                                       │
+│   65 │   │   │   │   try:                                                    │
+│ ❱ 66 │   │   │   │   │   next(gen_or_result)                                 │
+│   67 │   │   │   │   except StopIteration as err:                            │
+│   68 │   │   │   │   │   return err.value                                    │
+│   69 │   │   │   │   else:                                                   │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/operations/ak_flatten.py:193 in      │
+│ flatten                                                                      │
+│                                                                              │
+│   190 │   yield (array,)                                                     │
+│   191 │                                                                      │
+│   192 │   # Implementation                                                   │
+│ ❱ 193 │   return _impl(array, axis, highlevel, behavior, attrs)              │
+│   194                                                                        │
+│   195                                                                        │
+│   196 def _impl(array, axis, highlevel, behavior, attrs):                    │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/operations/ak_flatten.py:198 in      │
+│ _impl                                                                        │
+│                                                                              │
+│   195                                                                        │
+│   196 def _impl(array, axis, highlevel, behavior, attrs):                    │
+│   197 │   with HighLevelContext(behavior=behavior, attrs=attrs) as ctx:      │
+│ ❱ 198 │   │   layout = ctx.unwrap(array, allow_record=False,                 │
+│       primitive_policy="error")                                              │
+│   199 │                                                                      │
+│   200 │   # Handle named axis                                                │
+│   201 │   named_axis = _get_named_axis(ctx)                                  │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/_layout.py:197 in unwrap             │
+│                                                                              │
+│   194 │   │                                                                  │
+│   195 │   │   self.update(obj)                                               │
+│   196 │   │                                                                  │
+│ ❱ 197 │   │   return to_layout_impl(                                         │
+│   198 │   │   │   obj,                                                       │
+│   199 │   │   │   allow_record=allow_record,                                 │
+│   200 │   │   │   allow_unknown=allow_unknown,                               │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/operations/ak_to_layout.py:279 in    │
+│ _impl                                                                        │
+│                                                                              │
+│   276 │   # Iterables                                                        │
+│   277 │   elif isinstance(obj, Iterable):                                    │
+│   278 │   │   if use_from_iter:                                              │
+│ ❱ 279 │   │   │   return ak.operations.from_iter(                            │
+│   280 │   │   │   │   obj, highlevel=False, allow_record=allow_record        │
+│   281 │   │   │   )                                                          │
+│   282 │   │   else:                                                          │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/_dispatch.py:41 in dispatch          │
+│                                                                              │
+│   38 │   def dispatch(*args, **kwargs):                                      │
+│   39 │   │   # NOTE: this decorator assumes that the operation is exposed    │
+│      under `ak.`                                                             │
+│   40 │   │   with OperationErrorContext(name, args, kwargs):                 │
+│ ❱ 41 │   │   │   gen_or_result = func(*args, **kwargs)                       │
+│   42 │   │   │   if isgenerator(gen_or_result):                              │
+│   43 │   │   │   │   array_likes = next(gen_or_result)                       │
+│   44 │   │   │   │   assert isinstance(array_likes, Collection)              │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/operations/ak_from_iter.py:71 in     │
+│ from_iter                                                                    │
+│                                                                              │
+│    68 │   Returns:                                                           │
+│    69 │   │   An #ak.Array built from the given Python data.                 │
+│    70 │   """                                                                │
+│ ❱  71 │   return _impl(iterable, highlevel, behavior, allow_record, initial, │
+│       resize, attrs)                                                         │
+│    72                                                                        │
+│    73                                                                        │
+│    74 def _impl(iterable, highlevel, behavior, allow_record, initial,        │
+│       resize, attrs):                                                        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-3 │
+│ 14/lib/python3.14/site-packages/awkward/operations/ak_from_iter.py:92 in     │
+│ _impl                                                                        │
+│                                                                              │
+│    89 │   │   │   │   attrs,                                                 │
+│    90 │   │   │   )[0]                                                       │
+│    91 │   │   else:                                                          │
+│ ❱  92 │   │   │   raise ValueError(                                          │
+│    93 │   │   │   │   "cannot produce an array from a single dict (that      │
+│       would be a record)"                                                    │
+│    94 │   │   │   )                                                          │
+│    95                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ValueError: cannot produce an array from a single dict (that would be a record)
+[NOTE] 
+This error occurred while calling
+
+    ak.flatten(
+        {'AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey': <Array [[394100...
+        axis = 1
+    )

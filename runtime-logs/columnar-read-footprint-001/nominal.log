@@ -1,0 +1,53 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-001/bundl │
+│ e/met_demo.py:125 in main                                                    │
+│                                                                              │
+│   122 │   native_path = runtime/"native"                                     │
+│   123 │   payloads = runtime/"payloads"                                      │
+│   124 │   keys = read_owner_keys(runtime)                                    │
+│ ❱ 125 │   bridge = Native(native_path/"libatlas_met_columnar.so")            │
+│   126 │   # This C++ ABI loads the installed pinned CorrectionLib core, the  │
+│       shared API-v4                                                          │
+│   127 │   # registry and named corrections. Each evaluate below enters       │
+│       CorrectionLib.                                                         │
+│   128 │   context =                                                          │
+│       bridge.open(native_path/"libatlas_met_maker_provider.so",              │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-001/pip-e │
+│ nv/lib/python3.14/site-packages/atlas_met_columnar.py:45 in __init__         │
+│                                                                              │
+│    42                                                                        │
+│    43 class Native:                                                          │
+│    44 │   def __init__(self, library: Path):                                 │
+│ ❱  45 │   │   self.lib = C.CDLL(str(library.resolve(strict=True)))           │
+│    46 │   │   size = C.c_size_t                                              │
+│    47 │   │   self.lib.met_columnar_error.restype = C.c_char_p               │
+│    48 │   │   self.lib.met_columnar_open.argtypes = (C.c_char_p,) * 3        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-0 │
+│ 2/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/lib/python3. │
+│ 14/ctypes/__init__.py:433 in __init__                                        │
+│                                                                              │
+│   430 │   │   if name:                                                       │
+│   431 │   │   │   name = _os.fspath(name)                                    │
+│   432 │   │                                                                  │
+│ ❱ 433 │   │   self._handle = self._load_library(name, mode, handle, winmode) │
+│   434 │                                                                      │
+│   435 │   if _os.name == "nt":                                               │
+│   436 │   │   def _load_library(self, name, mode, handle, winmode):          │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-0 │
+│ 2/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/lib/python3. │
+│ 14/ctypes/__init__.py:475 in _load_library                                   │
+│                                                                              │
+│   472 │   │   │   self._name = name                                          │
+│   473 │   │   │   if handle is not None:                                     │
+│   474 │   │   │   │   return handle                                          │
+│ ❱ 475 │   │   │   return _dlopen(name, mode)                                 │
+│   476 │                                                                      │
+│   477 │   def __repr__(self):                                                │
+│   478 │   │   return "<%s '%s', handle %x at %#x>" % \                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+OSError: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.31' not found (required by 
+/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-001/pip-env/l
+ib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so)

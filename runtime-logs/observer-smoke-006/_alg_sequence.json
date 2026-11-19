@@ -1,0 +1,721 @@
+{
+    "SystematicsSvc": {
+        "Type": "CP::SystematicsSvc",
+        "Properties": {
+            "Tools": {},
+            "sigmaRecommended": 1,
+            "systematicsRegex": "(?:^MET_.*$)|^$"
+        }
+    },
+    "SelectionNameSvc": {
+        "Type": "CP::SelectionNameSvc",
+        "Properties": {
+            "Tools": {}
+        }
+    },
+    "seq1_SystematicsPrinter": {
+        "Type": "CP::SysListDumperAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "histogramName": "systematicsList"
+        }
+    },
+    "seq1_OnlyWeightSystematicsPrinter": {
+        "Type": "CP::SysListDumperAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "histogramName": "systematicsListOnlyWeights",
+            "systematicsRegex": "^(GEN_|EL_EFF_|MUON_EFF_|PH_EFF_|TAUS_TRUEHADTAU_EFF_|FT_EFF_|JET_.*JvtEfficiency_|PRW_).*"
+        }
+    },
+    "seq1_MetadataHistAlg": {
+        "Type": "CP::MetadataHistAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "campaign": "mc23a",
+            "dataType": "fullsim",
+            "etag": "e8514",
+            "histogramName": "metadata",
+            "mcChannelNumber": "601229"
+        }
+    },
+    "seq1_JetPileupLabelAlg_AnaJets": {
+        "Type": "CP::JetDecoratorAlg",
+        "Properties": {
+            "Tools": {
+                "decorator": {
+                    "Type": "JetPileupLabelingTool"
+                }
+            },
+            "jets": "AnalysisJets",
+            "jetsOut": "AnaJets_STEP1_%SYS%"
+        }
+    },
+    "seq1_JetUncertaintiesAlg_AnaJets": {
+        "Type": "CP::JetUncertaintiesAlg",
+        "Properties": {
+            "Tools": {
+                "uncertaintiesTool": {
+                    "Type": "JetUncertaintiesTool"
+                },
+                "uncertaintiesToolPD": {
+                    "Type": "JetUncertaintiesTool"
+                }
+            },
+            "jets": "AnaJets_STEP1_%SYS%",
+            "jetsOut": "AnaJets_STEP2_%SYS%",
+            "preselection": ""
+        }
+    },
+    "seq1_NNJvtUpdateAlg_AnaJets": {
+        "Type": "CP::JetDecoratorAlg",
+        "Properties": {
+            "Tools": {
+                "decorator": {
+                    "Type": "JetPileupTag::JetVertexNNTagger"
+                }
+            },
+            "jets": "AnaJets_STEP2_%SYS%",
+            "jetsOut": "AnaJets_%SYS%"
+        }
+    },
+    "seq1_AsgEnergyDecoratorAlg_AnaJets": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaJets_%SYS%"
+        }
+    },
+    "seq1_MuonShallowCopyAlg_AnaMuons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonJetDr",
+                "DFCommonMuonPassIDCuts",
+                "DFCommonMuonPassPreselection",
+                "neflowisol20_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "PLIT_TPLTmu_pmuxpromp",
+                "PLIT_TPLTmu_pnpxall",
+                "TruthLink"
+            ],
+            "input": "AnalysisMuons",
+            "output": "AnaMuons_STEP1_%SYS%",
+            "outputType": "xAOD::MuonContainer"
+        }
+    },
+    "seq1_MuonEtaCutAlg_AnaMuons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaMuons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_MuonCalibrationAndSmearingAlg_AnaMuons": {
+        "Type": "CP::MuonCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::MuonCalibTool"
+                }
+            },
+            "muons": "AnaMuons_STEP1_%SYS%",
+            "muonsOut": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_MuonPtCutAlg_AnaMuons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaMuons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaMuons_%SYS%"
+        }
+    },
+    "seq1_MuonTrackSelectionAlg_AnaMuons_medium": {
+        "Type": "CP::AsgLeptonTrackSelectionAlg",
+        "Properties": {
+            "Tools": {},
+            "maxD0Significance": 3,
+            "maxDeltaZ0SinTheta": 0.5,
+            "particles": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "trackSelection_medium,as_bits"
+        }
+    },
+    "seq1_MuonSelectionAlg_AnaMuons_medium": {
+        "Type": "CP::MuonSelectionAlgV2",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::MuonSelectionTool"
+                }
+            },
+            "badMuonVetoDecoration": "is_bad_medium,as_char",
+            "muons": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits",
+            "selectionDecoration": "good_muon_medium,as_char"
+        }
+    },
+    "seq1_MuonIsolationAlg_AnaMuons_medium": {
+        "Type": "CP::MuonIsolationAlg",
+        "Properties": {
+            "Tools": {
+                "isolationTool": {
+                    "Type": "CP::IsolationSelectionTool"
+                }
+            },
+            "isolationDecoration": "isolated_muon_medium,as_char",
+            "muons": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits&&good_muon_medium,as_char"
+        }
+    },
+    "seq1_ElectronShallowCopyAlg_AnaElectrons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonElectronsLHLoose",
+                "neflowisol20",
+                "ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt500",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt500",
+                "ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "DFCommonAddAmbiguity",
+                "PLIT_PLITel_pelxpromp",
+                "PLIT_PLITel_pnpxall",
+                "TruthLink"
+            ],
+            "input": "AnalysisElectrons",
+            "output": "AnaElectrons_STEP1_%SYS%",
+            "outputType": "xAOD::ElectronContainer"
+        }
+    },
+    "seq1_ElectronEtaCutAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaElectrons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_ElectronObjectQualityAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::EgammaIsGoodOQSelectionTool"
+                }
+            },
+            "particles": "AnaElectrons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "goodOQ,as_bits"
+        }
+    },
+    "seq1_ElectronCalibrationAndSmearingAlg_AnaElectrons": {
+        "Type": "CP::EgammaCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::EgammaCalibrationAndSmearingTool"
+                }
+            },
+            "egammas": "AnaElectrons_STEP1_%SYS%",
+            "egammasOut": "AnaElectrons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_ElectronPtCutAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaElectrons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_ElectronIsolationCorrectionAlg_AnaElectrons": {
+        "Type": "CP::EgammaIsolationCorrectionAlg",
+        "Properties": {
+            "Tools": {
+                "isolationCorrectionTool": {
+                    "Type": "CP::IsolationCorrectionTool"
+                }
+            },
+            "egammas": "AnaElectrons_STEP2_%SYS%",
+            "egammasOut": "AnaElectrons_%SYS%",
+            "egammasType": "xAOD::ElectronContainer",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaElectrons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaElectrons_%SYS%"
+        }
+    },
+    "seq1_ElectronTrackSelectionAlg_AnaElectrons_loose": {
+        "Type": "CP::AsgLeptonTrackSelectionAlg",
+        "Properties": {
+            "Tools": {},
+            "maxD0Significance": 5,
+            "maxDeltaZ0SinTheta": 0.5,
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "trackSelection_loose,as_bits"
+        }
+    },
+    "seq1_ElectronLikelihoodAlg_AnaElectrons_loose": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool"
+                }
+            },
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits",
+            "selectionDecoration": "selectLikelihood_loose,as_char"
+        }
+    },
+    "seq1_ElectronIsolationSelectionAlg_AnaElectrons_loose": {
+        "Type": "CP::EgammaIsolationSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::IsolationSelectionTool"
+                }
+            },
+            "egammas": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits&&selectLikelihood_loose,as_char",
+            "selectionDecoration": "isolated_loose,as_char"
+        }
+    },
+    "seq1_PtEtaSelectionAlg_AnaElectrons_": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectPtEta"
+        }
+    },
+    "seq1_PhotonShallowCopyAlg_AnaPhotons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonPhotonsCleaning",
+                "ptcone20_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "topoetcone40_CloseByCorr",
+                "TruthLink"
+            ],
+            "input": "AnalysisPhotons",
+            "output": "AnaPhotons_STEP1_%SYS%",
+            "outputType": "xAOD::PhotonContainer"
+        }
+    },
+    "seq1_PhotonEtaCutAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_PhotonObjectQualityAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::EgammaIsGoodOQSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "goodOQ,as_bits"
+        }
+    },
+    "seq1_PhotonCleaningAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "selectionDecoration": "isClean,as_bits"
+        }
+    },
+    "seq1_PhotonOriginCorrectionAlg_AnaPhotons": {
+        "Type": "CP::PhotonOriginCorrectionAlg",
+        "Properties": {
+            "Tools": {},
+            "photons": "AnaPhotons_STEP1_%SYS%",
+            "photonsOut": "AnaPhotons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits"
+        }
+    },
+    "seq1_PhotonCalibrationAndSmearingAlg_AnaPhotons": {
+        "Type": "CP::EgammaCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::EgammaCalibrationAndSmearingTool"
+                }
+            },
+            "egammas": "AnaPhotons_STEP2_%SYS%",
+            "egammasOut": "AnaPhotons_STEP3_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_PhotonPtCutAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_STEP3_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_PhotonIsolationCorrectionAlg_AnaPhotons": {
+        "Type": "CP::EgammaIsolationCorrectionAlg",
+        "Properties": {
+            "Tools": {
+                "isolationCorrectionTool": {
+                    "Type": "CP::IsolationCorrectionTool"
+                }
+            },
+            "egammas": "AnaPhotons_STEP3_%SYS%",
+            "egammasOut": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaPhotons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaPhotons_%SYS%"
+        }
+    },
+    "seq1_PhotonIsEMSelectorAlg_AnaPhotons_tight": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectEM_tight,as_char"
+        }
+    },
+    "seq1_PhotonIsolationSelectionAlg_AnaPhotons_tight": {
+        "Type": "CP::EgammaIsolationSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::IsolationSelectionTool"
+                }
+            },
+            "egammas": "AnaPhotons_%SYS%",
+            "isPhoton": true,
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits&&selectEM_tight,as_char",
+            "selectionDecoration": "isolated_tight,as_char"
+        }
+    },
+    "seq1_PtEtaSelectionAlg_AnaPhotons_": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool"
+                }
+            },
+            "particles": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectPtEta"
+        }
+    },
+    "seq1_TauShallowCopyAlg_AnaTauJets": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "IsTruthMatched",
+                "truthJetLink",
+                "truthParticleLink"
+            ],
+            "input": "AnalysisTauJets",
+            "output": "AnaTauJets_STEP1_%SYS%",
+            "outputType": "xAOD::TauJetContainer"
+        }
+    },
+    "seq1_TauExtraVariablesAlg_AnaTauJets": {
+        "Type": "CP::TauExtraVariablesAlg",
+        "Properties": {
+            "Tools": {},
+            "taus": "AnaTauJets_STEP1_NOSYS"
+        }
+    },
+    "seq1_TauSmearingAlg_AnaTauJets": {
+        "Type": "CP::TauSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "smearingTool": {
+                    "Type": "TauAnalysisTools::TauSmearingTool"
+                }
+            },
+            "preselection": "",
+            "taus": "AnaTauJets_STEP1_%SYS%",
+            "tausOut": "AnaTauJets_%SYS%"
+        }
+    },
+    "seq1_EnergyDecorator_AnaTauJets": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaTauJets_%SYS%"
+        }
+    },
+    "seq1_TauSelectionAlg_AnaTauJets_tight": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "TauAnalysisTools::TauSelectionTool"
+                }
+            },
+            "particles": "AnaTauJets_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selected_tau_tight,as_char"
+        }
+    },
+    "seq1_MetMakerAlg_AnaMET": {
+        "Type": "CP::MetMakerAlg",
+        "Properties": {
+            "Tools": {
+                "makerTool": {
+                    "Type": "met::METMaker"
+                },
+                "systematicsTool": {
+                    "Type": "met::METSystematicsTool"
+                }
+            },
+            "doJetJVT": true,
+            "electrons": "AnaElectrons_%SYS%",
+            "electronsSelection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits&&selectLikelihood_loose,as_char&&isolated_loose,as_char&&selectPtEta",
+            "jets": "AnaJets_%SYS%",
+            "met": "AnaMET_%SYS%",
+            "metAssociation": "METAssoc_AnalysisMET",
+            "metCore": "MET_Core_AnalysisMET",
+            "muons": "AnaMuons_%SYS%",
+            "muonsSelection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits&&good_muon_medium,as_char&&isolated_muon_medium,as_char",
+            "photons": "AnaPhotons_%SYS%",
+            "photonsSelection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits&&selectEM_tight,as_char&&isolated_tight,as_char&&selectPtEta",
+            "softTermKey": "PVSoftTrk",
+            "switchTauMu": false,
+            "taus": "AnaTauJets_%SYS%",
+            "tausSelection": "selected_tau_tight,as_char"
+        }
+    },
+    "seq1_MetBuilderAlg_AnaMET": {
+        "Type": "CP::MetBuilderAlg",
+        "Properties": {
+            "Tools": {},
+            "met": "AnaMET_%SYS%",
+            "softTerm": "PVSoftTrk"
+        }
+    },
+    "seq1_MetSignificanceAlg_AnaMET": {
+        "Type": "CP::MetSignificanceAlg",
+        "Properties": {
+            "Tools": {
+                "significanceTool": {
+                    "Type": "met::METSignificance"
+                }
+            },
+            "METOverSqrtHTDecoration": "METOverSqrtHT_%SYS%",
+            "METOverSqrtSumETDecoration": "METOverSqrtSumET_%SYS%",
+            "met": "AnaMET_%SYS%",
+            "sigDirectionalDecoration": "sigDirectional_%SYS%"
+        }
+    },
+    "seq1_TreeMaker_analysis": {
+        "Type": "CP::TreeMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_NTupleMaker_analysis": {
+        "Type": "CP::AsgxAODNTupleMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "Branches": [
+                "EventInfo.actualInteractionsPerCrossing -> actualInteractionsPerCrossing",
+                "EventInfo.averageInteractionsPerCrossing -> averageInteractionsPerCrossing",
+                "AnaElectrons_NOSYS.eta -> ele_eta type=float",
+                "AnaElectrons_NOSYS.goodOQ -> ele_goodOQ type=uint32",
+                "AnaElectrons_NOSYS.isolated_loose -> ele_isolated_loose type=char",
+                "AnaElectrons_NOSYS.m -> ele_m type=float",
+                "AnaElectrons_NOSYS.originalObjectLink -> ele_originalObjectLink",
+                "AnaElectrons_NOSYS.phi -> ele_phi type=float",
+                "AnaElectrons_NOSYS.pt -> ele_pt type=float",
+                "AnaElectrons_NOSYS.selectEta -> ele_selectEta type=uint32",
+                "AnaElectrons_NOSYS.selectLikelihood_loose -> ele_selectLikelihood_loose type=char",
+                "AnaElectrons_NOSYS.selectPt -> ele_selectPt type=uint32",
+                "AnaElectrons_NOSYS.selectPtEta -> ele_selectPtEta type=char",
+                "AnaElectrons_NOSYS.trackSelection_loose -> ele_trackSelection_loose type=uint32",
+                "EventInfo.eventNumber -> eventNumber",
+                "AnaMET_NOSYS.name -> fullMet_name",
+                "AnaJets_NOSYS.NNJvt -> jet_NNJvt type=float",
+                "AnaJets_NOSYS.NNJvtPass -> jet_NNJvtPass type=char",
+                "AnaJets_NOSYS.eta -> jet_eta type=float",
+                "AnaJets_NOSYS.m -> jet_m type=float",
+                "AnaJets_NOSYS.originalObjectLink -> jet_originalObjectLink",
+                "AnaJets_NOSYS.phi -> jet_phi type=float",
+                "AnaJets_NOSYS.pt -> jet_pt type=float",
+                "EventInfo.mcChannelNumber -> mcChannelNumber",
+                "AnaMuons_NOSYS.eta -> mu_eta type=float",
+                "AnaMuons_NOSYS.good_muon_medium -> mu_good_muon_medium type=char",
+                "AnaMuons_NOSYS.isolated_muon_medium -> mu_isolated_muon_medium type=char",
+                "AnaMuons_NOSYS.m -> mu_m type=float",
+                "AnaMuons_NOSYS.originalObjectLink -> mu_originalObjectLink",
+                "AnaMuons_NOSYS.phi -> mu_phi type=float",
+                "AnaMuons_NOSYS.pt -> mu_pt type=float",
+                "AnaMuons_NOSYS.selectEta -> mu_selectEta type=uint32",
+                "AnaMuons_NOSYS.selectPt -> mu_selectPt type=uint32",
+                "AnaMuons_NOSYS.trackSelection_medium -> mu_trackSelection_medium type=uint32",
+                "AnaPhotons_NOSYS.eta -> pho_eta type=float",
+                "AnaPhotons_NOSYS.goodOQ -> pho_goodOQ type=uint32",
+                "AnaPhotons_NOSYS.isClean -> pho_isClean type=uint32",
+                "AnaPhotons_NOSYS.isolated_tight -> pho_isolated_tight type=char",
+                "AnaPhotons_NOSYS.m -> pho_m type=float",
+                "AnaPhotons_NOSYS.originalObjectLink -> pho_originalObjectLink",
+                "AnaPhotons_NOSYS.phi -> pho_phi type=float",
+                "AnaPhotons_NOSYS.pt -> pho_pt type=float",
+                "AnaPhotons_NOSYS.selectEM_tight -> pho_selectEM_tight type=char",
+                "AnaPhotons_NOSYS.selectEta -> pho_selectEta type=uint32",
+                "AnaPhotons_NOSYS.selectPt -> pho_selectPt type=uint32",
+                "AnaPhotons_NOSYS.selectPtEta -> pho_selectPtEta type=char",
+                "EventInfo.runNumber -> runNumber",
+                "AnaTauJets_NOSYS.eta -> tau_eta type=float",
+                "AnaTauJets_NOSYS.m -> tau_m type=float",
+                "AnaTauJets_NOSYS.originalObjectLink -> tau_originalObjectLink",
+                "AnaTauJets_NOSYS.phi -> tau_phi type=float",
+                "AnaTauJets_NOSYS.pt -> tau_pt type=float",
+                "AnaTauJets_NOSYS.selected_tau_tight -> tau_selected_tau_tight type=char",
+                "AnaMET_%SYS%.METOverSqrtHT_%SYS% -> fullMet_METOverSqrtHT_%SYS% type=float",
+                "AnaMET_%SYS%.METOverSqrtSumET_%SYS% -> fullMet_METOverSqrtSumET_%SYS% type=float",
+                "AnaMET_%SYS%.ConstitObjectLinks -> fullMet_constituentLinks_%SYS%",
+                "AnaMET_%SYS%.ConstitObjectWeights -> fullMet_constituentWeights_%SYS% type=vector_float",
+                "AnaMET_%SYS%.met -> fullMet_met_%SYS% type=float",
+                "AnaMET_%SYS%.mpx -> fullMet_mpx_%SYS% type=float",
+                "AnaMET_%SYS%.mpy -> fullMet_mpy_%SYS% type=float",
+                "AnaMET_%SYS%.phi -> fullMet_phi_%SYS% type=float",
+                "AnaMET_%SYS%.sigDirectional_%SYS% -> fullMet_sigDirectional_%SYS% type=float",
+                "AnaMET_%SYS%.significance_%SYS% -> fullMet_significance_%SYS% type=float",
+                "AnaMET_%SYS%.source -> fullMet_source_%SYS% type=uint64",
+                "AnaMET_%SYS%.sumet -> fullMet_sumet_%SYS% type=float",
+                "AnaMET_%SYS%.name -> fullMet_term_%SYS%"
+            ],
+            "NonContainers": [
+                "EventInfo"
+            ],
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_MetNTupleMaker_analysis": {
+        "Type": "CP::AsgxAODNTupleMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "Branches": [
+                "AnaMET_%SYS%.METOverSqrtHT_%SYS% -> finalMet_METOverSqrtHT_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.METOverSqrtSumET_%SYS% -> finalMet_METOverSqrtSumET_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.met -> finalMet_met_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.phi -> finalMet_phi_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.sigDirectional_%SYS% -> finalMet_sigDirectional_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.significance_%SYS% -> finalMet_significance_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.sumet -> finalMet_sumet_%SYS% type=float metTerm=Final"
+            ],
+            "NonContainers": [
+                "EventInfo"
+            ],
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_TreeFiller_analysis": {
+        "Type": "CP::TreeFillerAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_PrintToolConfigAlg": {
+        "Type": "CP::PrintToolConfigAlg",
+        "Properties": {
+            "Tools": {},
+            "OutputFile": "/home/gwatts/atlas-cp-speed/met-20261119/results/observer-smoke-006/tool_config.txt"
+        }
+    }
+}

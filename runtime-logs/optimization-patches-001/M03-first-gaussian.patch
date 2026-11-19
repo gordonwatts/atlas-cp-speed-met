@@ -1,0 +1,443 @@
+From 101089061b224c3e0037be397444f2a12e65f4a3 Mon Sep 17 00:00:00 2001
+From: MET conversion <met-conversion@localhost>
+Date: Thu, 19 Nov 2026 05:15:17 -0800
+Subject: [PATCH] Trial event-local reuse of the first soft Gaussian in C
+
+Based on accepted 6b19c477e8d5578bb2c8c3a5e0eccc11e3437759. Leave original SoftFile::apply and numerical data layout intact. Record actual physical evaluations separately from stock logical draws.
+---
+ components/columnar/M03.md                    | 58 ++++++++++++
+ .../columnar/check_first_gaussian_trace.py    | 88 +++++++++++++++++++
+ components/columnar/transport.cpp             |  8 +-
+ components/soft/provider.cxx                  | 36 +++++++-
+ components/soft/smoke.cxx                     | 87 ++++++++++++++++++
+ components/soft/soft.hpp                      | 25 ++++++
+ 6 files changed, 297 insertions(+), 5 deletions(-)
+ create mode 100644 components/columnar/M03.md
+ create mode 100644 components/columnar/check_first_gaussian_trace.py
+
+diff --git a/components/columnar/M03.md b/components/columnar/M03.md
+new file mode 100644
+index 0000000..9131deb
+--- /dev/null
++++ b/components/columnar/M03.md
+@@ -0,0 +1,58 @@
++# M03 first soft Gaussian trial
++
++This is a source-only trial based on the faithful C implementation in
++`6b19c477e8d5578bb2c8c3a5e0eccc11e3437759`. The C caller creates one cache for
++each input event. The cache holds the first Gaussian for one nonzero effective
++seed. A different seed replaces the slot. The draw uses the existing
++`root_rng::first_gaussian` on every miss. Seed derivation, recorded setter arguments, table lookups, calculation order,
++and logical draws stay per state. Nominal and any
++earlier-returning status skip the cache. The stock framework entry point
++`SoftFile::apply` and the layout of its result stay unchanged.
++
++Each state has the stock reseed semantics. `first_gaussian` creates a local MT19937, extracts the first
++Gaussian and discards the engine. AnalysisBase 25.2.117
++`MetAnalysisAlgorithms/Root/MetMakerAlg.cxx:199-204` reseeds before every
++correction. `METUtilities/Root/METSystematicsTool.cxx:387-425` takes one
++Gaussian after the shift lookup, and lines 808-811 replace a zero setter
++argument by one. `METSystematicsTool.h:134-167` places the thread-local
++generator in the private implementation. The existing portable soft result
++contains the first value and decision diagnostics. Neither that result nor the soft interface
++exposes later words or owns an engine. Scale-up and scale-down retain a
++logical draw even though their output does not consume the sampled value.
++
++The new optional `firstGaussian` trace shows the seed and physical evaluation,
++reuse, or skip. Existing `gaussian` rows still carry the exact stock logical
++draws. The check uses the independent stock setter, ROOT seed, and Gaussian
++trace to derive expected dispositions. The first physical evaluation belongs
++to whichever active state occurs first. For the frozen input, expect
++80,000 logical draws, 20,000 physical evaluations, and 60,000 hits in production.
++The separate two-state correlated diagnostic expects 20,000 logical and physical
++draws, with no hits. Nominal alone expects no logical or physical draw.
++
++Apply the patch only to an isolated accepted source worktree. Use a fresh
++immutable C build and results directory. Build the existing soft smoke target
++against that snapshot and run it with the accepted soft payload:
++
++```bash
++cmake --build "$snapshot/build" --target met_soft_smoke --parallel 1
++env LD_LIBRARY_PATH="$snapshot/runtime/native" taskset -c 0 \
++    "$snapshot/build/soft/met_soft_smoke" "$snapshot/runtime/payloads/soft.json"
++```
++
++On a first 16-event run and then the full 20,000-event run, capture the existing
++C `--trace` and `--observables` and run the normal complete A/C comparison for
++each workload. Check actual RNG evaluations with the corresponding A trace:
++
++```bash
++"$python314" "$snapshot/source/components/columnar/check_first_gaussian_trace.py" \
++    "$stock_status" "$candidate_status" "$output_json" --entries 20000
++```
++
++For the early smoke set `--entries 16`. A nominal-only trace can use the
++production A status file with `--nominal-only`, which takes only its nominal RNG
++rows. The synthetic soft smoke covers exact momentum and intermediate stages
++for ordered and reordered switches, seed mismatch, effective-one fallback,
++guard cutoffs, and independent event cache lifetimes. If numerical acceptance
++passes, package and time the C candidate independently using a fresh wheel and
++the matched C-only timing harness. Keep the accepted prior C bundle available
++as the fallback.
+diff --git a/components/columnar/check_first_gaussian_trace.py b/components/columnar/check_first_gaussian_trace.py
+new file mode 100644
+index 0000000..e84781f
+--- /dev/null
++++ b/components/columnar/check_first_gaussian_trace.py
+@@ -0,0 +1,88 @@
++#!/usr/bin/env python3
++"""Verify actual first-Gaussian evaluations separately from stock logical draws."""
++from collections import Counter
++from itertools import groupby, zip_longest
++import json
++from pathlib import Path
++import struct
++
++import typer
++
++ACTIONS = {"rootSeed", "setRandomSeed", "gaussian", "firstGaussian"}
++
++
++def events(path, *, stop=None, nominal=False):
++    def load_rows(handle):
++        for line in handle:
++            entry,state,action,*fields = line.rstrip("\n").split("\t")
++            entry,state = int(entry),int(state)
++            if stop is not None and entry >= stop:
++                break
++            if action in ACTIONS and (not nominal or state == 0):
++                yield entry,state,action,fields
++
++    with path.open() as handle:
++        for entry,rows in groupby(load_rows(handle),key=lambda row: row[0]):
++            yield entry,[(state,action,fields) for _,state,action,fields in rows]
++
++
++def main(stock_status: Path, columnar_status: Path, output: Path,
++         entries: int = typer.Option(20000,min=1), nominal_only: bool = False):
++    count = Counter()
++    first_failures = []
++
++    def check(entry, field, expected, actual):
++        if expected != actual:
++            count["failures"] += 1
++            if len(first_failures) < 8:
++                first_failures.append({"entry":entry,"field":field,
++                                       "stock_expected":expected,"candidate":actual})
++
++    stock = events(stock_status,stop=entries,nominal=nominal_only)
++    candidate = events(columnar_status)
++    for entry,a,c in zip_longest(range(entries),stock,candidate):
++        if a is None or c is None or entry is None or a[0] != entry or c[0] != entry:
++            check(entry,"entry",entry,(None if a is None else a[0], None if c is None else c[0]))
++            break
++
++        setters = [(state,fields[0]) for state,action,fields in a[1] if action=="setRandomSeed"]
++        found_setters = [(state,fields[0]) for state,action,fields in c[1] if action=="setRandomSeed"]
++        check(entry,"setter",setters,found_setters)
++        roots = {state:int(fields[0]) % 2**32 for state,action,fields in a[1] if action=="rootSeed"}
++        stock_draws = [(state,fields) for state,action,fields in a[1] if action=="gaussian"]
++        found_draws = [(state,fields) for state,action,fields in c[1] if action=="gaussian"]
++
++        def bits(rows):
++            return [(state,[struct.pack("=d",float.fromhex(value)).hex() for value in values])
++                    for state,values in rows]
++
++        check(entry,"logical_gaussian_bits",bits(stock_draws),bits(found_draws))
++        active = {state for state,_ in stock_draws}
++        expected = []
++        previous = None
++        for state,_ in setters:
++            key = roots[state]
++            use = "skipped"
++            if state in active:
++                use = "reused" if previous == key else "evaluated"
++                previous = key
++            expected.append((state,key,use))
++        observed = [(state,int(fields[0]),fields[1]) for state,action,fields in c[1] if action=="firstGaussian"]
++        check(entry,"first_gaussian_evaluation",expected,observed)
++        count["events"] += 1
++        count["logical_draws"] += len(found_draws)
++        count["physical_evaluations"] += sum(use=="evaluated" for _,_,use in observed)
++        count["cache_hits"] += sum(use=="reused" for _,_,use in observed)
++        count["skipped_states"] += sum(use=="skipped" for _,_,use in observed)
++
++    report = {"passed":count["events"]==entries and not count["failures"],
++              "nominal_only":nominal_only,"counts":dict(count),"first_failures":first_failures}
++    with output.open("x") as handle:
++        json.dump(report,handle,indent=2)
++        handle.write("\n")
++    if not report["passed"]:
++        raise typer.Exit(1)
++
++
++if __name__ == "__main__":
++    typer.run(main)
+diff --git a/components/columnar/transport.cpp b/components/columnar/transport.cpp
+index 82fece9..10b477a 100644
+--- a/components/columnar/transport.cpp
++++ b/components/columnar/transport.cpp
+@@ -790,6 +790,7 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+             }
+             std::vector<AssociationStorage> association_storage;
+             const auto map=association.event(event,objects,association_storage);
++            sf::FirstGaussianCache first_gaussian;
+             m::EventInput input{};
+             input.input_particles=view.originals;
+             input.jets=view.jets;
+@@ -817,7 +818,9 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+                 const auto type=at(cols.get<std::uint32_t>("event.type"),event);
+                 const sf::EventView soft_event{rebuilt,truth_terms,
+                     at(cols.get<float>("event.actual_mu"),event),true,true,(type&1U)!=0,true};
+-                const auto corrected=bundle->soft->apply(soft_event,states[state]);
++                sf::FirstGaussianUse gaussian_use{};
++                const auto corrected=bundle->soft->apply_cached_first_gaussian(
++                    soft_event,states[state],first_gaussian,gaussian_use);
+                 if (corrected.status!=sf::Status::success || !corrected.term_index) {
+                     throw std::runtime_error("C soft status "+std::to_string(static_cast<int>(corrected.status))
+                                              +" "+stamp);
+@@ -853,6 +856,9 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+                     prefix("setRandomSeed") << corrected.seed.setter_argument << '\n';
+                     prefix("seed") << corrected.seed.truncated << '\t' << corrected.seed.effective << '\t'
+                                   << (corrected.drew ? "called" : "skipped") << '\n';
++                    const auto gaussian_label=gaussian_use==sf::FirstGaussianUse::evaluated ? "evaluated"
++                        : gaussian_use==sf::FirstGaussianUse::reused ? "reused" : "skipped";
++                    prefix("firstGaussian") << corrected.seed.effective << '\t' << gaussian_label << '\n';
+                     if (corrected.drew) {
+                         prefix("gaussian") << std::hexfloat << 0. << '\t' << 1. << '\t'
+                             << corrected.gaussian << std::defaultfloat << '\n';
+diff --git a/components/soft/provider.cxx b/components/soft/provider.cxx
+index 0590af6..e54aef4 100644
+--- a/components/soft/provider.cxx
++++ b/components/soft/provider.cxx
+@@ -34,6 +34,8 @@ struct Invocation {
+     std::optional<SoftResult>* corrected = nullptr;
+     std::span<const Term> terms;
+     std::optional<FinalResult>* final = nullptr;
++    FirstGaussianCache* gaussian_cache = nullptr;
++    FirstGaussianUse* gaussian_use = nullptr;
+ };
+ 
+ class Binding {
+@@ -132,11 +134,12 @@ public:
+         if (!binding.event || !binding.corrected || binding.corrected->has_value()) {
+             throw std::logic_error("Wrong or repeated MET soft bound operation");
+         }
+-        return static_cast<double>(binding.corrected->emplace(apply(*binding.event, args)).status);
++        return static_cast<double>(binding.corrected->emplace(apply(binding, args)).status);
+     }
+ 
+ private:
+-    SoftResult apply(const EventView& event, const Args& args) const {
++    SoftResult apply(const Invocation& binding, const Args& args) const {
++        const auto& event = *binding.event;
+         SoftResult result{};
+         const auto state = variation(std::get<std::string>(args.at(state_)));
+         if (!state) {
+@@ -193,7 +196,13 @@ private:
+         coords[njet_] = static_cast<double>(jet.size);
+         coords[mu_] = overflow_nan(event.actual_mu);
+         result.shift = tables_[0]->evaluate(coords);
+-        result.gaussian = root_rng::first_gaussian(result.seed.effective);
++        if (binding.gaussian_cache) {
++            const auto draw = binding.gaussian_cache->first(result.seed.effective);
++            result.gaussian = draw.value;
++            *binding.gaussian_use = draw.use;
++        } else {
++            result.gaussian = root_rng::first_gaussian(result.seed.effective);
++        }
+         result.drew = true;
+ 
+         switch (*state) {
+@@ -311,6 +320,14 @@ Result confirm_result(double evaluated, std::optional<Result> result) {
+ 
+ } // namespace
+ 
++FirstGaussianCache::Draw FirstGaussianCache::first(std::uint32_t effective_seed) {
++    if (seed_ != 0 && seed_ == effective_seed) return {value_, FirstGaussianUse::reused};
++    const double value = root_rng::first_gaussian(effective_seed);
++    seed_ = effective_seed;
++    value_ = value;
++    return {value_, FirstGaussianUse::evaluated};
++}
++
+ struct SoftFile::Impl {
+     explicit Impl(const std::string& path) : domain(std::make_shared<const Domain>()), set(load(path, domain)),
+         correct(set->at("correct_pvsofttrk")), final(set->at("build_final")), decorate(set->at("met_phi")) {}
+@@ -328,9 +345,20 @@ SoftFile::SoftFile(SoftFile&&) noexcept = default;
+ SoftFile& SoftFile::operator=(SoftFile&&) noexcept = default;
+ 
+ SoftResult SoftFile::apply(const EventView& input, std::string_view state) const {
++    return apply_bound(input, state, nullptr, nullptr);
++}
++
++SoftResult SoftFile::apply_cached_first_gaussian(const EventView& input, std::string_view state,
++                                                FirstGaussianCache& cache, FirstGaussianUse& use) const {
++    use = FirstGaussianUse::skipped;
++    return apply_bound(input, state, &cache, &use);
++}
++
++SoftResult SoftFile::apply_bound(const EventView& input, std::string_view state,
++                                 FirstGaussianCache* cache, FirstGaussianUse* use) const {
+     if (!implementation_) throw std::logic_error("Moved-from MET soft provider");
+     std::optional<SoftResult> result;
+-    const Binding binding{*implementation_->domain, {&input, &result, {}, nullptr}};
++    const Binding binding{*implementation_->domain, {&input, &result, {}, nullptr, cache, use}};
+     const double status = implementation_->correct->evaluate({binding.ticket(), std::string(state), 0., 0., 0.});
+     return confirm_result(status, std::move(result));
+ }
+diff --git a/components/soft/smoke.cxx b/components/soft/smoke.cxx
+index b9e1c9a..925ca41 100644
+--- a/components/soft/smoke.cxx
++++ b/components/soft/smoke.cxx
+@@ -74,6 +74,92 @@ void check_wrong_nodes(const char* fixture) {
+             "constant-zero Final substitute passed the bound-node guard");
+ }
+ 
++void same_soft_result(const s::SoftResult& original, const s::SoftResult& cached) {
++    require(original.status == cached.status && original.term_index == cached.term_index &&
++            original.drew == cached.drew && original.jets == cached.jets &&
++            original.recoil.state == cached.recoil.state, "cached soft status or path");
++    require(original.seed.truncated == cached.seed.truncated &&
++            original.seed.setter_argument == cached.seed.setter_argument &&
++            original.seed.effective == cached.seed.effective, "cached soft seed");
++    const auto float_bits = [](s::Momentum q) {
++        return std::array{std::bit_cast<std::uint32_t>(q.mpx), std::bit_cast<std::uint32_t>(q.mpy),
++                          std::bit_cast<std::uint32_t>(q.sumet)};
++    };
++    require(float_bits(original.momentum) == float_bits(cached.momentum), "cached soft float momentum");
++    const auto double_bits = [](const s::SoftResult& value) {
++        std::array output{value.recoil.mpx, value.recoil.mpy, value.recoil.sumet, value.recoil.pt,
++                          value.gaussian, value.shift, value.reso_para, value.reso_perp,
++                          value.varied_para, value.varied_perp};
++        return std::bit_cast<std::array<std::uint64_t,10>>(output);
++    };
++    require(double_bits(original) == double_bits(cached), "cached soft double stages");
++}
++
++void check_cached_first_gaussian(const s::SoftFile& provider, s::EventView input, s::Term& soft,
++                                 s::Term& jet) {
++    using Use = s::FirstGaussianUse;
++    const auto check = [&](s::FirstGaussianCache& cache, std::string_view state, Use expected) {
++        auto use = Use::reused; // Verify that each call resets the disposition.
++        const auto cached = provider.apply_cached_first_gaussian(input, state, cache, use);
++        const auto original = provider.apply(input, state);
++        same_soft_result(original,cached);
++        require(use == expected && cached.drew == (expected != Use::skipped), "cached soft draw disposition");
++        return cached;
++    };
++    constexpr std::array<std::string_view,6> ordered{"NOSYS", "MET_SoftTrk_Scale__1up",
++        "MET_SoftTrk_ResoPara", "MET_SoftTrk_ResoPerp", "MET_SoftTrk_ResoCorr", "MET_SoftTrk_Scale__1down"};
++    constexpr std::array<std::string_view,6> reordered{"MET_SoftTrk_ResoCorr", "MET_SoftTrk_ResoPerp",
++        "NOSYS", "MET_SoftTrk_Scale__1down", "MET_SoftTrk_ResoPara", "MET_SoftTrk_Scale__1up"};
++    for (const auto& states : {ordered,reordered}) {
++        s::FirstGaussianCache cache;
++        bool first = true;
++        for (const auto state : states) {
++            if (state == "NOSYS") check(cache,state,Use::skipped);
++            else {
++                check(cache,state,first ? Use::evaluated : Use::reused);
++                first = false;
++            }
++        }
++    }
++
++    s::FirstGaussianCache cache;
++    const auto before = soft.momentum;
++    constexpr auto active = "MET_SoftTrk_ResoPara";
++    const auto first = check(cache,active,Use::evaluated);
++    soft.momentum.mpy = -soft.momentum.mpy;
++    const auto changed = check(cache,active,Use::evaluated);
++    require(first.seed.effective != changed.seed.effective, "seed-mismatch fixture must change key");
++    check(cache,active,Use::reused);
++    soft.momentum = before;
++    check(cache,active,Use::evaluated); // The intervening seed replaced the single slot.
++
++    soft.momentum = {1.e6f,0.f,before.sumet};
++    const auto zero = check(cache,active,Use::evaluated);
++    soft.momentum.mpy = 1.5f;
++    const auto one = check(cache,active,Use::reused);
++    require(zero.seed.truncated == 0 && one.seed.truncated == 1 &&
++            zero.seed.effective == 1 && one.seed.effective == 1,
++            "zero fallback and signed one share only the effective seed");
++    soft.momentum = before;
++
++    s::FirstGaussianCache next_event;
++    input.event_info_available = false;
++    require(check(next_event,active,Use::skipped).status == s::Status::missing_event_info,
++            "missing EventInfo must skip");
++    input.event_info_available = true;
++    const auto jet_count = jet.constituent_count;
++    jet.constituent_count.reset();
++    require(check(next_event,active,Use::skipped).status == s::Status::unavailable_jet_links,
++            "missing jet links must skip");
++    jet.constituent_count = jet_count;
++    check(next_event,active,Use::evaluated);
++    require(check(next_event,"JES",Use::skipped).status == s::Status::unsupported_state,
++            "unsupported state must skip");
++    input.truth_available = false;
++    require(check(next_event,active,Use::reused).recoil.state == s::RecoilState::missing_truth_container,
++            "missing truth still has a logical draw");
++}
++
+ int main(int argc, char** argv) try {
+     if (argc != 2 && argc != 4 && argc != 5) {
+         throw std::invalid_argument("Usage: met_soft_smoke CORRECTIONS [TABLES TABLE_PROBES_TSV [WRONG_NODE]]");
+@@ -90,6 +176,7 @@ int main(int argc, char** argv) try {
+         s::Term{"SoftClus", 0x11020, {5010.f, 0.f, 5010.f}, {}}
+     };
+     s::EventView event{terms, truth, 46.5f};
++    check_cached_first_gaussian(provider,event,terms[1],terms[0]);
+     require(provider.apply(event, "JES").status == s::Status::unsupported_state, "unsupported variation");
+     const auto nominal = provider.apply(event, "NOSYS");
+     require(nominal.status == s::Status::success && !nominal.drew &&
+diff --git a/components/soft/soft.hpp b/components/soft/soft.hpp
+index 76e2a5b..1d09801 100644
+--- a/components/soft/soft.hpp
++++ b/components/soft/soft.hpp
+@@ -84,6 +84,28 @@ struct SoftResult {
+     double varied_perp{};
+ };
+ 
++enum class FirstGaussianUse { skipped, evaluated, reused };
++
++// A single-slot cache for the first draw of the reseeded ROOT stream. Its
++// owner keeps it within one event and one execution thread.
++class FirstGaussianCache {
++public:
++    struct Draw {
++        double value;
++        FirstGaussianUse use;
++    };
++
++    FirstGaussianCache() = default;
++    FirstGaussianCache(const FirstGaussianCache&) = delete;
++    FirstGaussianCache& operator=(const FirstGaussianCache&) = delete;
++
++    Draw first(std::uint32_t effective_seed);
++
++private:
++    std::uint32_t seed_{};
++    double value_{};
++};
++
+ inline constexpr std::string_view final_name = "Final";
+ inline constexpr std::uint64_t final_source = 0x10040;
+ 
+@@ -114,10 +136,13 @@ public:
+     SoftFile& operator=(SoftFile&&) noexcept;
+ 
+     SoftResult apply(const EventView&, std::string_view state) const;
++    SoftResult apply_cached_first_gaussian(const EventView&, std::string_view state,
++                                           FirstGaussianCache&, FirstGaussianUse&) const;
+     FinalResult build_final(std::span<const Term> terms) const;
+     MetPhi decorate(Momentum) const;
+ 
+ private:
++    SoftResult apply_bound(const EventView&, std::string_view, FirstGaussianCache*, FirstGaussianUse*) const;
+     struct Impl;
+     std::unique_ptr<Impl> implementation_;
+ };
+-- 
+2.39.3
+

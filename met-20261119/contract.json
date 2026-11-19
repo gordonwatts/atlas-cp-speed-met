@@ -1,0 +1,49 @@
+{
+  "freeze": "19 November 2026, before any B or C results. The original stock configuration and observer will supply the resolved ordered labels, object working points, term source masks and storage types before full capture.",
+  "authority": "Unmodified AnalysisBase 25.2.117, original mc23a p7266 DSID 601229 PHYSLITE, entries 0 through 19999 inclusive. Compare B and C to A independently.",
+  "upstream": "Use the same nominal object four-vectors and upstream selections for all MET states. MET reconstruction, its own selection and overlap rules, soft-term corrections, final sum, and significance with the active nominal resolution tools are required.",
+  "state_coverage": {
+    "production": ["NOSYS", "MET_SoftTrk_ResoPara", "MET_SoftTrk_ResoPerp", "MET_SoftTrk_Scale__1down", "MET_SoftTrk_Scale__1up"],
+    "diagnostic": "MET_SoftTrk_ResoCorr is affecting and non-recommended in the previous initialization. Confirm against this release and exercise separately.",
+    "order": "Record the stock job's output order and use that order on the systematic axis."
+  },
+  "identity_and_discrete_checks": [
+    "Exact file UUID, entry, integer run and event numbers, state, term names, source masks, order and shapes",
+    "Exact upstream object identities, selection bits and four-vector storage across the MET variations",
+    "Exact ordered constituent links by identity, including valid, missing and skipped cases, and observed association and JVT decisions",
+    "Exact observed called/skipped states, StatusCode and CorrectionCode outcomes, and availability and nonfinite classifications",
+    "Full entry and state coverage before numerical comparisons; classify inaccessible diagnostics explicitly and do not pass required missing checks"
+  ],
+  "faithful_numerical_checks": {
+    "method": "Compare each finite stored candidate to the stock value in the same units using absolute error <= atol + rtol * abs(stock). Record exact matches, maximum deviations and first failure by state, term and quantity. Check azimuth with wrapped differences. Match signed infinities and NaN classifications separately.",
+    "per_term_mpx_mpy_sumet_met_MeV": {"atol": 0.001, "rtol": 0.0000005},
+    "per_term_phi_rad": {"atol": 0.0000005, "rtol": 0.0},
+    "final_significance_dimensionless": {"atol": 0.000001, "rtol": 0.0000005},
+    "final_directional_significance_dimensionless": {"atol": 0.000001, "rtol": 0.0000005},
+    "final_met_over_sqrt_sumet_and_met_over_sqrt_ht_sqrt_GeV": {"atol": 0.000001, "rtol": 0.0000005},
+    "table_contents": "Exact original ROOT bin values for all center, edge, adjacent-value and flow probes. Verify three shared bin-index axes, lookup units and nonfinite behavior against the release.",
+    "rng": "Exact original integral seed and first Gaussian on the selected platform for every tested source-equivalent draw. Confirm zero seed mapping, signed phi conversion, inactive nominal, scale-state draws, correlated reuse, and independence from state/chunk order.",
+    "rationale": "The public MET decorations use float storage. At 50 GeV the component tolerance is 0.026 MeV. Angle and significance tolerances are defined separately to handle values near zero. Bin membership, link identities and statuses remain exact."
+  },
+  "histogram": {
+    "observable": "Magnitude of the Final missing transverse momentum in GeV, one unit-weight entry for every event and state with a valid Final term. Compare any failures separately and include all events in accounting.",
+    "bins": {"count": 100, "min_GeV": 0, "max_GeV": 500, "underflow": true, "overflow": true},
+    "storage": "Same saved hist axes, state labels, integer entry counts, sum of weights and sum of squared weights, including flow bins. Exact per-event bin assignments. If a nonfinite is encountered, record identity and require the same classification and saved-histogram treatment in every path."
+  },
+  "variants": {
+    "A": "Stock AnalysisBase writes an ntuple, then a separate uproot/Awkward/hist job reads it and saves the histogram.",
+    "B": "Unchanged A analysis configuration, shared CorrectionLib replacement. Time framework-to-ntuple and ntuple-to-histogram to the same endpoint.",
+    "C": "Read the original file with uproot/Awkward, call the shared CorrectionLib implementation and save the identical histogram in Python. Every needed nominal input or selection must come from the original file or a correctly reproduced calculation.",
+    "changed_stream": "Requires a validated original-stream baseline and a separate prespecified distribution, tails, systematic-response and reproducibility contract before experimental use.",
+    "read_control": "Freeze a directly persisted quantity from the original file at discovery. If no Final MET is stored, label a core-term control with its actual physics and branch scope. Keep separate from the Final MET nominal/full comparison."
+  },
+  "timing": {
+    "execution": "One runtime owner, one fixed available logical CPU, one execution thread per calibration job and one build job. Observe effective affinity and thread counts, including analysis descendants. Sequential runs with host activity recorded.",
+    "boundaries": "Warm filesystem policy. Exclude release setup, installation, reference audit and profiling. Include process startup, required imports, initialization, input read, selection, calibration and output close for each executable. No cross-job prepared event cache.",
+    "primary_cohorts": "Four runs per path, scope and workload with first excluded. Keep every raw observation. Calculate arithmetic mean and sample standard deviation from the three retained runs. Use matched ordered cohorts with interleaving where appropriate.",
+    "quality": "For each retained cohort require sample SD/mean <= 0.05 and every retained time within 0.10 of its median in relative terms. Check the full endpoint and each framework leg used for a budget. A flagged result is unqualified. Investigate and retain it, then allow one bounded repeat with fresh matched controls. Do not discard individual slow runs.",
+    "framework_budget": "For the delivered B provider require nominal and full T_B_framework/T_A_framework <= 1.20, at matched ntuple output. If noise obscures the threshold, use a bounded paired comparison; an unresolved budget stays inconclusive.",
+    "standalone_aspiration": "For the full five-state saved histogram, (T_A_framework + T_A_histogram)/T_C_direct >= 10 is an aspiration. A measured ratio needs qualified cohorts and acceptance for the timed identities.",
+    "engineering_gains": "Match the same stream and output end to end for each change. Retained changes require appropriate independent checks. Preserve trials, controls, warm-ups, loaded identities and decisions. Ten consecutive measured gains <= 0.5 percent or no concrete in-scope opportunity permits stopping the optimization loop."
+  }
+}

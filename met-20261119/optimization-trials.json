@@ -1,0 +1,113 @@
+{
+  "workload": "One original 20,000-event file, all five MET states through closed histogram. Matched pairs are within each row.",
+  "trials": [
+    {
+      "label": "Hard terms once per event",
+      "id": "M02",
+      "control": "faithful",
+      "candidate": "m02",
+      "timing": "evidence/timing/m02/summary.json",
+      "acceptance": "evidence/timing/m02/full-acceptance.json",
+      "decision": "Numerically exact. Test repeated with roles reversed because nominal also moved."
+    },
+    {
+      "label": "Hard terms once, reversed order",
+      "id": "M02",
+      "control": "faithful",
+      "candidate": "m02",
+      "timing": "evidence/timing/m02/role-reversed-recheck.json",
+      "acceptance": "evidence/timing/m02/full-acceptance.json",
+      "decision": "Restored faithful. Full paired repeat overlaps the 0.5% improvement threshold."
+    },
+    {
+      "label": "Skip repeated empty link projections",
+      "id": "M21",
+      "control": "faithful",
+      "candidate": "m21",
+      "timing": "evidence/timing/m21/summary.json",
+      "acceptance": "evidence/timing/m21/full-acceptance.json",
+      "decision": "Retained with unchanged faithful native library."
+    },
+    {
+      "label": "Read jet sampling only as fallback",
+      "id": "M22",
+      "control": "m21",
+      "candidate": "m22",
+      "timing": "evidence/timing/m22/summary.json",
+      "acceptance": "evidence/timing/m22/full-acceptance.json",
+      "decision": "Retained on qualified full gain. Intermediate nominal cohorts failed spread screens."
+    },
+    {
+      "label": "5,000 events per chunk",
+      "id": "M23",
+      "control": "chunk-2000",
+      "candidate": "chunk-5000",
+      "timing": "evidence/timing/m23/summary.json",
+      "acceptance": "evidence/timing/m23/full-acceptance.json",
+      "decision": "Retained; exact empty and partial chunks. One larger fixed chunk size tested separately."
+    },
+    {
+      "label": "10,000 events per chunk",
+      "id": "M23b",
+      "control": "chunk-5000",
+      "candidate": "chunk-10000",
+      "timing": "evidence/timing/m23/five-to-ten-thousand.json",
+      "acceptance": "evidence/timing/m23/boundaries-large/",
+      "decision": "Kept 5,000. The larger fixed chunk took longer on average and used an extra 73 MiB."
+    },
+    {
+      "label": "Index recursive branch names once",
+      "id": "M25",
+      "control": "m23",
+      "candidate": "m25",
+      "timing": "evidence/timing/m25/summary.json",
+      "acceptance": "evidence/timing/m25/full-acceptance.json",
+      "decision": "Retained. Both full and nominal qualified; projection order and field inventory matched."
+    },
+    {
+      "label": "Share cluster sampling buffers",
+      "id": "M24",
+      "control": "m25",
+      "candidate": "m24",
+      "timing": "evidence/timing/m24/summary.json",
+      "acceptance": "evidence/timing/m24/full-acceptance.json",
+      "decision": "Retained. The three paired full savings were 21, 56 and 103 ms."
+    },
+    {
+      "label": "Reuse the identical first Gaussian",
+      "id": "M03",
+      "control": "m24",
+      "candidate": "m03",
+      "timing": "evidence/timing/m03/summary.json",
+      "acceptance": "evidence/timing/m03/full-acceptance.json",
+      "decision": "Retained for full. Nominal never invokes the RNG and its timing showed no benefit."
+    },
+    {
+      "label": "Borrow typed scalar link fields",
+      "id": "M26",
+      "control": "m03",
+      "candidate": "m26",
+      "timing": "evidence/timing/m26/summary.json",
+      "acceptance": "evidence/timing/m26/full-acceptance.json",
+      "decision": "Retained. Generic representation remains available and checked."
+    },
+    {
+      "label": "Check jet track offsets once",
+      "id": "M27",
+      "control": "m26",
+      "candidate": "m27",
+      "timing": "evidence/offset-final/trial/paired-primary.json",
+      "acceptance": "evidence/offset-final/acceptance/full/compare.json",
+      "decision": "Retained after qualified primary full measurement, independent operation counts and exact stock acceptance."
+    },
+    {
+      "label": "Check jet track offsets once, reversed order",
+      "id": "M27",
+      "control": "m26",
+      "candidate": "m27",
+      "timing": "evidence/offset-final/trial/paired-order-reversed.json",
+      "acceptance": "evidence/offset-final/acceptance/full/compare.json",
+      "decision": "Reverse full exceeded spread limits. Nominal qualified."
+    }
+  ]
+}

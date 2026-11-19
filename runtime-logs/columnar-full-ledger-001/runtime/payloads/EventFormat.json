@@ -1,0 +1,491 @@
+{
+  "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+  "metadata_branch": "MetaData/EventFormatStreamDAOD_PHYSLITE",
+  "top_level_eventformat_elements": {
+    "HLTNav_RepackedFeatures_MET": {
+      "key": 665996993,
+      "class": "DataVector<xAOD::TrigMissingET_v1>",
+      "parent": ""
+    },
+    "BunchConfKey": {
+      "key": 159035526,
+      "class": "xAOD::BunchConfKey_v1",
+      "parent": ""
+    },
+    "TrigConfKeys": {
+      "key": 470404882,
+      "class": "xAOD::TrigConfKeys_v1",
+      "parent": ""
+    },
+    "TrigConfKeysOnline": {
+      "key": 687429283,
+      "class": "xAOD::TrigConfKeys_v1",
+      "parent": ""
+    },
+    "xTrigDecisionAux.": {
+      "key": 644236368,
+      "class": "xAOD::TrigDecisionAuxInfo_v1",
+      "parent": ""
+    },
+    "EventInfo": {
+      "key": 38292107,
+      "class": "xAOD::EventInfo_v1",
+      "parent": ""
+    },
+    "xTrigDecision": {
+      "key": 148942056,
+      "class": "xAOD::TrigDecision_v1",
+      "parent": ""
+    },
+    "METAssoc_AnalysisMETAux.": {
+      "key": 227374555,
+      "class": "xAOD::MissingETAuxAssociationMap_v2",
+      "parent": ""
+    },
+    "METAssoc_AnalysisMET": {
+      "key": 164497608,
+      "class": "xAOD::MissingETAssociationMap_v1",
+      "parent": ""
+    },
+    "EventInfoAux.": {
+      "key": 1004693582,
+      "class": "xAOD::AuxInfoBase",
+      "parent": ""
+    },
+    "Kt4EMPFlowEventShapeAux.": {
+      "key": 804885368,
+      "class": "xAOD::AuxInfoBase",
+      "parent": ""
+    },
+    "Kt4EMPFlowNeutEventShapeAux.": {
+      "key": 984257307,
+      "class": "xAOD::AuxInfoBase",
+      "parent": ""
+    },
+    "Kt4EMPFlowEventShape": {
+      "key": 594847528,
+      "class": "xAOD::EventShape_v1",
+      "parent": ""
+    },
+    "Kt4EMPFlowNeutEventShape": {
+      "key": 66786015,
+      "class": "xAOD::EventShape_v1",
+      "parent": ""
+    },
+    "AnalysisElectrons": {
+      "key": 956497600,
+      "class": "DataVector<xAOD::Electron_v1>",
+      "parent": ""
+    },
+    "AnalysisSiHitElectrons": {
+      "key": 506439956,
+      "class": "DataVector<xAOD::Electron_v1>",
+      "parent": ""
+    },
+    "FourLeptonVertices": {
+      "key": 891027530,
+      "class": "DataVector<xAOD::Vertex_v1>",
+      "parent": ""
+    },
+    "GSFConversionVertices": {
+      "key": 524191177,
+      "class": "DataVector<xAOD::Vertex_v1>",
+      "parent": ""
+    },
+    "PrimaryVertices": {
+      "key": 936461719,
+      "class": "DataVector<xAOD::Vertex_v1>",
+      "parent": ""
+    },
+    "MET_Core_AnalysisMET": {
+      "key": 726403259,
+      "class": "xAOD::MissingETContainer_v1",
+      "parent": ""
+    },
+    "MET_Truth": {
+      "key": 419726830,
+      "class": "xAOD::MissingETContainer_v1",
+      "parent": ""
+    },
+    "AnalysisPhotons": {
+      "key": 902907695,
+      "class": "DataVector<xAOD::Photon_v1>",
+      "parent": ""
+    },
+    "HLTNav_RepackedFeatures_Particle": {
+      "key": 66153553,
+      "class": "DataVector<xAOD::Particle_v1>",
+      "parent": ""
+    },
+    "AnalysisTauJets": {
+      "key": 518718875,
+      "class": "DataVector<xAOD::TauJet_v3>",
+      "parent": ""
+    },
+    "AnalysisMuons": {
+      "key": 980095599,
+      "class": "DataVector<xAOD::Muon_v1>",
+      "parent": ""
+    },
+    "TruthEvents": {
+      "key": 1044246878,
+      "class": "DataVector<xAOD::TruthEvent_v1>",
+      "parent": ""
+    },
+    "egammaClusters": {
+      "key": 360221983,
+      "class": "DataVector<xAOD::CaloCluster_v1>",
+      "parent": ""
+    },
+    "AnalysisElectronsAux.": {
+      "key": 164670216,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisJetsAux.": {
+      "key": 982622728,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisLargeRJetsAux.": {
+      "key": 382957617,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisMuonsAux.": {
+      "key": 200696525,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisPhotonsAux.": {
+      "key": 625597357,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisSiHitElectronsAux.": {
+      "key": 21211827,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AnalysisTauJetsAux.": {
+      "key": 788942073,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.": {
+      "key": 811663464,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "AntiKt4TruthDressedWZJetsAux.": {
+      "key": 682281433,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "BornLeptonsAux.": {
+      "key": 226189860,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "CombinedMuonTrackParticlesAux.": {
+      "key": 348183643,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "ExtrapolatedMuonTrackParticlesAux.": {
+      "key": 36553883,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "FourLeptonVerticesAux.": {
+      "key": 636974898,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "GSFConversionVerticesAux.": {
+      "key": 323446075,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "GSFTrackParticlesAux.": {
+      "key": 308113400,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "HLTNav_RepackedFeatures_METAux.": {
+      "key": 355456802,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "HLTNav_RepackedFeatures_ParticleAux.": {
+      "key": 919843450,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "HLTNav_Summary_DAODSlimmedAux.": {
+      "key": 809018786,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "InDetForwardTrackParticlesAux.": {
+      "key": 988558742,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "InDetTrackParticlesAux.": {
+      "key": 360752931,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "MET_Core_AnalysisMETAux.": {
+      "key": 447627443,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "MET_TruthAux.": {
+      "key": 364553125,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "MuonSpectrometerTrackParticlesAux.": {
+      "key": 59619305,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "PrimaryVerticesAux.": {
+      "key": 951301671,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TauTracksAux.": {
+      "key": 845911660,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBSMAux.": {
+      "key": 507125511,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBSMWithDecayParticlesAux.": {
+      "key": 233505224,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBSMWithDecayVerticesAux.": {
+      "key": 992020377,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBosonAux.": {
+      "key": 583635687,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBosonsWithDecayParticlesAux.": {
+      "key": 758387001,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBosonsWithDecayVerticesAux.": {
+      "key": 425229245,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthBottomAux.": {
+      "key": 766228021,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthElectronsAux.": {
+      "key": 214062875,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthEventsAux.": {
+      "key": 140835001,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthForwardProtonsAux.": {
+      "key": 543318956,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthMuonsAux.": {
+      "key": 636968018,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthNeutrinosAux.": {
+      "key": 342556294,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthPhotonsAux.": {
+      "key": 642741195,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthPrimaryVerticesAux.": {
+      "key": 829661712,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthTausAux.": {
+      "key": 117865227,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "TruthTopAux.": {
+      "key": 963115938,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "egammaClustersAux.": {
+      "key": 263117317,
+      "class": "xAOD::AuxContainerBase",
+      "parent": ""
+    },
+    "BornLeptons": {
+      "key": 787487105,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBSM": {
+      "key": 1059003550,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBSMWithDecayParticles": {
+      "key": 50252470,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBoson": {
+      "key": 614719239,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBosonsWithDecayParticles": {
+      "key": 921521854,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBottom": {
+      "key": 779635413,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthElectrons": {
+      "key": 394100163,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthForwardProtons": {
+      "key": 865895152,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthMuons": {
+      "key": 342174277,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthNeutrinos": {
+      "key": 368360608,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthPhotons": {
+      "key": 13267281,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthTaus": {
+      "key": 375408000,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthTop": {
+      "key": 660928181,
+      "class": "DataVector<xAOD::TruthParticle_v1>",
+      "parent": ""
+    },
+    "TruthBSMWithDecayVertices": {
+      "key": 620141697,
+      "class": "DataVector<xAOD::TruthVertex_v1>",
+      "parent": ""
+    },
+    "TruthBosonsWithDecayVertices": {
+      "key": 802197236,
+      "class": "DataVector<xAOD::TruthVertex_v1>",
+      "parent": ""
+    },
+    "TruthPrimaryVertices": {
+      "key": 1020295291,
+      "class": "DataVector<xAOD::TruthVertex_v1>",
+      "parent": ""
+    },
+    "AnalysisJets": {
+      "key": 452794649,
+      "class": "DataVector<xAOD::Jet_v1>",
+      "parent": ""
+    },
+    "AnalysisLargeRJets": {
+      "key": 528450063,
+      "class": "DataVector<xAOD::Jet_v1>",
+      "parent": ""
+    },
+    "AntiKt10TruthSoftDropBeta100Zcut10Jets": {
+      "key": 318842244,
+      "class": "DataVector<xAOD::Jet_v1>",
+      "parent": ""
+    },
+    "AntiKt4TruthDressedWZJets": {
+      "key": 106264553,
+      "class": "DataVector<xAOD::Jet_v1>",
+      "parent": ""
+    },
+    "CombinedMuonTrackParticles": {
+      "key": 873304470,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "ExtrapolatedMuonTrackParticles": {
+      "key": 350445215,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "GSFTrackParticles": {
+      "key": 776133387,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "InDetForwardTrackParticles": {
+      "key": 339503174,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "InDetTrackParticles": {
+      "key": 490246363,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "MuonSpectrometerTrackParticles": {
+      "key": 965986547,
+      "class": "DataVector<xAOD::TrackParticle_v1>",
+      "parent": ""
+    },
+    "TauTracks": {
+      "key": 215277022,
+      "class": "DataVector<xAOD::TauTrack_v1>",
+      "parent": ""
+    },
+    "HLTNav_Summary_DAODSlimmed": {
+      "key": 291186431,
+      "class": "DataVector<xAOD::TrigComposite_v1>",
+      "parent": ""
+    }
+  }
+}

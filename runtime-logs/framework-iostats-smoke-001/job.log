@@ -1,0 +1,1222 @@
+Py:CPBaseRunner      INFO EventLoopCPRunScript initialized
+Py:CPBaseRunner      INFO Initialized input files: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:CPBaseRunner      INFO Found YAML config at: /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/diagnostic.yaml
+Py:CPBaseRunner      INFO Setting up configuration based on YAML config:
+xAOD::Init                INFO    Environment initialised for data access
+Py:CPBaseRunner      INFO Adding files to the sample handler
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO ====================FLAG CONFIGURATION====================
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO     Input files:     ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1'
+Py:MetaReader        INFO Current mode used: lite
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     isMC:            True
+Py:CPBaseRunner      INFO     RunNumber:       [410000]
+Py:CPBaseRunner      INFO     MCCampaign:      Campaign.MC23a
+Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: generators 
+Py:MetaReader        INFO Current mode used: peeker
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     GeneratorInfo:   {'Powheg': '2_r3631', 'Pythia8': '308', 'EvtGen': '2.1.1'}
+Py:CPBaseRunner      INFO     MaxEvents:       16
+Py:CPBaseRunner      INFO     SkipEvents:      0
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO Configuring algorithms based on YAML file
+Py:CPBaseRunner      INFO Configuring common services
+Py:getRun3NavigationContainerFromInput    INFO Returning HLTNav_Summary_DAODSlimmed as the Run 3 trigger navigation collection to read in this job.
+Py:CPBaseRunner      INFO Configuring algorithms
+Py:CPAlgCfgSeq       INFO Moving MuonIPCalibration after MuonWorkingPointSelection
+Py:CPAlgCfgSeq       INFO Moving ElectronIPCalibration after ElectronWorkingPointSelection
+Py:CommonServices WARNING [91m
+  ________   _______  ______ _____ _______      __  __  ____  _____  ______       ______ _   _          ____  _      ______ _____
+ |  ____\ \ / /  __ \|  ____|  __ \__   __|    |  \/  |/ __ \|  __ \|  ____|     |  ____| \ | |   /\   |  _ \| |    |  ____|  __ \
+ | |__   \ V /| |__) | |__  | |__) | | |       | \  / | |  | | |  | | |__        | |__  |  \| |  /  \  | |_) | |    | |__  | |  | |
+ |  __|   > < |  ___/|  __| |  _  /  | |       | |\/| | |  | | |  | |  __|       |  __| | . ` | / /\ \ |  _ <| |    |  __| | |  | |
+ | |____ / . \| |    | |____| | \ \  | |       | |  | | |__| | |__| | |____      | |____| |\  |/ ____ \| |_) | |____| |____| |__| |
+ |______/_/ \_\_|    |______|_|  \_\ |_|       |_|  |_|\____/|_____/|______|     |______|_| \_/_/    \_\____/|______|______|_____/
+
+[0m
+Py:CommonServices WARNING [1m[93mThese settings are not recommended for analysis. Make sure you know what you're doing, or disable them with `enableExpertMode: False` in `CommonServices`.[0m
+Py:makePileupAnalysisSequence    INFO Physlite does not need pileup reweighting. Variables will be copied from input instead.
+Py:GeoModelConfigFlags    INFO Deducing LHC Run period from the geometry tag name "ATLAS-R3S-2021-03-02-00" as database access is not available in analysis releases
+Py:GeoModelConfigFlags    INFO Using LHC Run period "RUN3"
+Py:py.warnings    WARNING :0: Run2OnlyFeatureWarning: ECIDS is only available for Run 2 and will not have any effect in Run 3.
+
+Package.EventLoop        INFO    created submission directory /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/workDir-2026-11-19-0426-2abc
+Package.EventLoop        INFO    created sym-link at: /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/workDir
+Package.EventLoop        INFO    submitting job in /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/workDir-2026-11-19-0426-2abc
+Package.EventLoop        INFO    Running sample: reference
+Package.EventLoop        INFO    xAODInput = 1
+Package.EventLoop        INFO    calling firstInitialize on all modules
+Package.EventLoop        INFO    calling preFileInitialize on all modules
+Package.EventLoop        INFO    Opening file file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+Package.xAOD::Event      INFO    Using aux mode kClassAccess for file /cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+ELModule.DirectInputMo...INFO    Opened input file: file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+seq1_JetPileupLabelAlg...INFO    Initializing seq1_JetPileupLabelAlg_AnaJets.decorator
+seq1_JetPileupLabelAlg...INFO    Parameters for seq1_JetPileupLabelAlg_AnaJets.decorator :
+seq1_JetPileupLabelAlg...INFO    HS Truth Jet Container:           AntiKt4TruthDressedWZJets
+seq1_JetPileupLabelAlg...INFO    Name of isHS Label Decoration:    isJvtHS
+seq1_JetPileupLabelAlg...INFO    Name of isPU Label Decoration:    isJvtPU
+seq1_JetUncertaintiesA...INFO    Preparing to initialize the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesTool
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO      Initializing the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesTool
+seq1_JetUncertaintiesA...INFO      Path is: ""
+seq1_JetUncertaintiesA...INFO      CalibArea is: "CalibArea-08"
+seq1_JetUncertaintiesA...INFO      IsData is: "false"
+seq1_JetUncertaintiesA...INFO      Configuration file: "rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config
+seq1_JetUncertaintiesA...INFO      Uncertainty release: rel22_Winter2025_PreRec
+seq1_JetUncertaintiesA...INFO      Jet definition: AntiKt4EMPFlow
+seq1_JetUncertaintiesA...INFO      MC type: MC23
+seq1_JetUncertaintiesA...INFO      UncertaintyFile: "rel22/Winter2025_PreRec/R4_AllComponents.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_AllComponents.root
+seq1_JetUncertaintiesA...INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+seq1_JetUncertaintiesA...INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      ResolutionSmearOnlyMC: "false"
+seq1_JetUncertaintiesA...INFO    
+seq1_JetUncertaintiesA...INFO           JES uncert. comp.                        : Description
+seq1_JetUncertaintiesA...INFO           -----------------                         ------------
+seq1_JetUncertaintiesA...INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+seq1_JetUncertaintiesA...INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+seq1_JetUncertaintiesA...INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+seq1_JetUncertaintiesA...INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+seq1_JetUncertaintiesA...INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+seq1_JetUncertaintiesA...INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+seq1_JetUncertaintiesA...INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+seq1_JetUncertaintiesA...INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+seq1_JetUncertaintiesA...INFO        9. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+seq1_JetUncertaintiesA...INFO       10. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+seq1_JetUncertaintiesA...INFO       11. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+seq1_JetUncertaintiesA...INFO       12. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+seq1_JetUncertaintiesA...INFO       13. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+seq1_JetUncertaintiesA...INFO       14. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+seq1_JetUncertaintiesA...INFO       15. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+seq1_JetUncertaintiesA...INFO       16. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+seq1_JetUncertaintiesA...INFO       17. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+seq1_JetUncertaintiesA...INFO       18. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+seq1_JetUncertaintiesA...INFO       19. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+seq1_JetUncertaintiesA...INFO       20. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+seq1_JetUncertaintiesA...INFO       21. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+seq1_JetUncertaintiesA...INFO       22. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+seq1_JetUncertaintiesA...INFO       23. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+seq1_JetUncertaintiesA...INFO       24. JET_EtaIntercalibration_NonClosure_0p2_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3, Gaussian smoothing 0p2, absolute values
+seq1_JetUncertaintiesA...INFO       25. JET_FCal_MC23_NonClosure_PreRec          : FCal calibration uncertainty, early Run3
+seq1_JetUncertaintiesA...INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+seq1_JetUncertaintiesA...INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+seq1_JetUncertaintiesA...INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+seq1_JetUncertaintiesA...INFO       29. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       30. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+seq1_JetUncertaintiesA...INFO       31. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+seq1_JetUncertaintiesA...INFO       32. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+seq1_JetUncertaintiesA...INFO       33. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+seq1_JetUncertaintiesA...INFO       34. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+seq1_JetUncertaintiesA...INFO       35. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+seq1_JetUncertaintiesA...INFO       36. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+seq1_JetUncertaintiesA...INFO       37. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+seq1_JetUncertaintiesA...INFO       38. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+seq1_JetUncertaintiesA...INFO       39. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+seq1_JetUncertaintiesA...INFO       40. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+seq1_JetUncertaintiesA...INFO       41. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+seq1_JetUncertaintiesA...INFO       42. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+seq1_JetUncertaintiesA...INFO       43. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+seq1_JetUncertaintiesA...INFO       44. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       Found and read in 52 individual components into 44 component groups of which 44 are recommended
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO    Preparing to initialize the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesToolPD
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO      Initializing the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesToolPD
+seq1_JetUncertaintiesA...INFO      Path is: ""
+seq1_JetUncertaintiesA...INFO      CalibArea is: "CalibArea-08"
+seq1_JetUncertaintiesA...INFO      IsData is: "true"
+seq1_JetUncertaintiesA...INFO      Configuration file: "rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config
+seq1_JetUncertaintiesA...INFO      Uncertainty release: rel22_Winter2025_PreRec
+seq1_JetUncertaintiesA...INFO      Jet definition: AntiKt4EMPFlow
+seq1_JetUncertaintiesA...INFO      MC type: MC23
+seq1_JetUncertaintiesA...INFO      UncertaintyFile: "rel22/Winter2025_PreRec/R4_AllComponents.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_AllComponents.root
+seq1_JetUncertaintiesA...INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+seq1_JetUncertaintiesA...INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      ResolutionSmearOnlyMC: "false"
+seq1_JetUncertaintiesA...INFO    
+seq1_JetUncertaintiesA...INFO           JES uncert. comp.                        : Description
+seq1_JetUncertaintiesA...INFO           -----------------                         ------------
+seq1_JetUncertaintiesA...INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+seq1_JetUncertaintiesA...INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+seq1_JetUncertaintiesA...INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+seq1_JetUncertaintiesA...INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+seq1_JetUncertaintiesA...INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+seq1_JetUncertaintiesA...INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+seq1_JetUncertaintiesA...INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+seq1_JetUncertaintiesA...INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+seq1_JetUncertaintiesA...INFO        9. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+seq1_JetUncertaintiesA...INFO       10. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+seq1_JetUncertaintiesA...INFO       11. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+seq1_JetUncertaintiesA...INFO       12. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+seq1_JetUncertaintiesA...INFO       13. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+seq1_JetUncertaintiesA...INFO       14. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+seq1_JetUncertaintiesA...INFO       15. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+seq1_JetUncertaintiesA...INFO       16. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+seq1_JetUncertaintiesA...INFO       17. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+seq1_JetUncertaintiesA...INFO       18. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+seq1_JetUncertaintiesA...INFO       19. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+seq1_JetUncertaintiesA...INFO       20. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+seq1_JetUncertaintiesA...INFO       21. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+seq1_JetUncertaintiesA...INFO       22. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+seq1_JetUncertaintiesA...INFO       23. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+seq1_JetUncertaintiesA...INFO       24. JET_EtaIntercalibration_NonClosure_0p2_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3, Gaussian smoothing 0p2, absolute values
+seq1_JetUncertaintiesA...INFO       25. JET_FCal_MC23_NonClosure_PreRec          : FCal calibration uncertainty, early Run3
+seq1_JetUncertaintiesA...INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+seq1_JetUncertaintiesA...INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+seq1_JetUncertaintiesA...INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+seq1_JetUncertaintiesA...INFO       29. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       30. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+seq1_JetUncertaintiesA...INFO       31. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+seq1_JetUncertaintiesA...INFO       32. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+seq1_JetUncertaintiesA...INFO       33. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+seq1_JetUncertaintiesA...INFO       34. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+seq1_JetUncertaintiesA...INFO       35. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+seq1_JetUncertaintiesA...INFO       36. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+seq1_JetUncertaintiesA...INFO       37. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+seq1_JetUncertaintiesA...INFO       38. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+seq1_JetUncertaintiesA...INFO       39. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+seq1_JetUncertaintiesA...INFO       40. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+seq1_JetUncertaintiesA...INFO       41. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+seq1_JetUncertaintiesA...INFO       42. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+seq1_JetUncertaintiesA...INFO       43. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+seq1_JetUncertaintiesA...INFO       44. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       Found and read in 52 individual components into 44 component groups of which 58 are recommended
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_NNJvtUpdateAlg_An...INFO    Using Classic NN configuration.
+seq1_NNJvtUpdateAlg_An...INFO    Reading JVT NN file from: NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+seq1_NNJvtUpdateAlg_An...INFO    
+ Reading JVT likelihood histogram from:
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+seq1_NNJvtUpdateAlg_An...INFO    Reading JVT NN cut file from: NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+seq1_MuonCalibrationAn...INFO    Initialising...
+seq1_MuonCalibrationAn...INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.MCaST_Own_MST    INFO    Initialising...
+ToolSvc.MCaST_Own_MST    INFO    Is Run-3 geometry: 1
+ToolSvc.MCaST_Own_MST    INFO    Maximum muon |eta|: 2.7
+ToolSvc.MCaST_Own_MST    INFO    Muon quality: 1
+ToolSvc.MCaST_Own_MST    INFO    Initialising tight working point histograms...
+ToolSvc.MCaST_Own_MST    INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+ToolSvc.seq1_MuonCalib...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.seq1_MuonCalib...INFO    Initializing MuonCalibIntScaleSmearTool
+seq1_MuonSelectionAlg_...INFO    Initialising...
+seq1_MuonSelectionAlg_...INFO    Is Run-3 geometry: 1
+seq1_MuonSelectionAlg_...INFO    Maximum muon |eta|: 2.7
+seq1_MuonSelectionAlg_...INFO    Muon quality: 1
+seq1_MuonSelectionAlg_...INFO    Initialising tight working point histograms...
+seq1_MuonSelectionAlg_...INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+seq1_MuonIsolationAlg_...INFO    Initialising...
+seq1_MuonIsolationAlg_...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_ElectronObjectQua...INFO    Selecting e/gamma objects with OQ mask: 0x'Mask': 1446
+seq1_ElectronCalibrati...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+service_mva_egamma_idA...INFO    'MaxConvRadius': 800
+service_mva_egamma_idA...INFO    'RemoveTRTConvBarrel': 0
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_ElectronCalibrati...INFO    ESModel: es2024_Run3_v0
+seq1_ElectronCalibrati...INFO    ResolutionType: SigmaEff90
+seq1_ElectronCalibrati...INFO    decorrelation Model: 1NP_v1
+seq1_ElectronIsolation...INFO    in initialize of seq1_ElectronIsolationCorrectionAlg_AnaElectrons.isolationCorrectionTool...
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v6/isolation_ptcorrections_rel22_mc20.root
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v3/isolation_ddcorrection_shift.root
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v1/isolation_ddcorrection_smearing.root
+seq1_ElectronIsolation...INFO    Initialising...
+seq1_ElectronIsolation...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_PhotonObjectQuali...INFO    Selecting e/gamma objects with OQ mask: 0x'Mask': 34214
+seq1_PhotonCalibration...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+service_mva_egamma_idA...INFO    'MaxConvRadius': 800
+service_mva_egamma_idA...INFO    'RemoveTRTConvBarrel': 1
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_PhotonCalibration...INFO    ESModel: es2024_Run3_v0
+seq1_PhotonCalibration...INFO    ResolutionType: SigmaEff90
+seq1_PhotonCalibration...INFO    decorrelation Model: 1NP_v1
+seq1_PhotonIsolationCo...INFO    in initialize of seq1_PhotonIsolationCorrectionAlg_AnaPhotons.isolationCorrectionTool...
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v5/isolation_ptcorrections_rel20_2.root
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v3/isolation_ddcorrection_shift.root
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v1/isolation_ddcorrection_smearing.root
+seq1_PhotonIsolationSe...INFO    Initialising...
+seq1_PhotonIsolationSe...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_TauSmearingAlg_An...INFO    Initializing TauSmearingTool
+seq1_TauSmearingAlg_An...INFO    Initializing CommonSmearingTool
+seq1_TauSmearingAlg_An...INFO    data loaded from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/TauAnalysisTools/00-04-00/Smearing/TES_TrueHadTau_RNN_mc23_v3.root
+seq1_TauSmearingAlg_An...INFO    Initializing TauResolutionTool
+seq1_TauSmearingAlg_An...INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+seq1_TauSelectionAlg_A...INFO    Initializing TauSelectionTool
+seq1_MetMakerAlg_AnaME...INFO    Initializing seq1_MetMakerAlg_AnaMET.makerTool...
+seq1_MetMakerAlg_AnaME...INFO    Use jet selection criterion: Tight PFlow: 1
+seq1_MetMakerAlg_AnaME...INFO    Suppressing warnings of objects missing in METAssociationMap for objects with pT < 7 GeV.
+seq1_MetMakerAlg_AnaME...INFO    Searching for configFile: TrackSoftTerms-pflow_Dec24.config
+seq1_MetMakerAlg_AnaME...INFO    Configuring from file : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/TrackSoftTerms-pflow_Dec24.config
+seq1_MetMakerAlg_AnaME...INFO    Will read histograms from : METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+seq1_MetMakerAlg_AnaME...INFO    Extracted histogram path : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+seq1_MetMakerAlg_AnaME...INFO    AffectingSystematics are:
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoCorr
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoPara
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoPerp
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_Scale__1down
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_Scale__1up
+seq1_MetSignificanceAl...INFO    Initialising...
+seq1_MetSignificanceAl...INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.seq1_MetSignif...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.seq1_MetSignif...INFO    Initializing MuonCalibIntScaleSmearTool
+seq1_MetSignificanceAl...INFO    Initializing seq1_MetSignificanceAlg_AnaMET.significanceTool...
+seq1_MetSignificanceAl...INFO    Set up JER tools
+seq1_MetSignificanceAl...INFO    Initializing seq1_MetSignificanceAlg_AnaMET.significanceTool.MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow to calibrate AntiKt4EMPFlowJets
+seq1_MetSignificanceAl...INFO    Reading global JES settings from: JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config
+seq1_MetSignificanceAl...INFO      Calibration sequence: JetArea_Residual_EtaJES_GSC_Smear
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_MetSignificanceAl...INFO    ESModel: es2024_Run3_v0
+seq1_MetSignificanceAl...INFO    ResolutionType: SigmaEff90
+seq1_MetSignificanceAl...INFO    decorrelation Model: 1NP_v1
+seq1_MetSignificanceAl...INFO    Initializing TauResolutionTool
+seq1_MetSignificanceAl...INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+Package.EventLoop        INFO    Processing events 0-16 in file file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+ELModule.DirectInputMo...INFO    Reached maximum number of events, stopping.
+SystematicsSvc           INFO    no systematics were run.
+seq1_SystematicsPrinter  INFO    Systematics regex '' matched:
+seq1_SystematicsPrinter  INFO      ''
+seq1_SystematicsPrinter  INFO      'MET_SoftTrk_ResoPara'
+seq1_SystematicsPrinter  INFO      'MET_SoftTrk_ResoPerp'
+seq1_SystematicsPrinter  INFO      'MET_SoftTrk_Scale__1down'
+seq1_SystematicsPrinter  INFO      'MET_SoftTrk_Scale__1up'
+seq1_OnlyWeightSystema...INFO    systematics regex '^(GEN_|EL_EFF_|MUON_EFF_|PH_EFF_|TAUS_TRUEHADTAU_EFF_|FT_EFF_|JET_.*JvtEfficiency_|PRW_).*' did not match any systematics
+xAOD::ReadStats::Print    INFO    Printing xAOD I/O statistics
+xAOD::ReadStats::Print    INFO      Number of variables in the input xAOD : 0
+xAOD::ReadStats::Print    INFO      Processed events                      : 0/0 (-nan%)
+xAOD::ReadStats::Print    INFO      TTreeCache size used                  : 0 bytes
+xAOD::ReadStats::Print    INFO      Total number of bytes read            : 34.863868 MB
+xAOD::ReadStats::Print    INFO      Data reading speed per process        : N/A
+xAOD::ReadStats::Print    INFO      Total number of file read operations  : 9663
+xAOD::ReadStats::Print    INFO      Data read in one go (on average)      : 3.607 kB
+xAOD::ReadStats::Print    INFO      Cumulative time spent processing data : 0ms (N/A/event)
+xAOD::ReadStats::Print    INFO      Cumulative time spent reading data    : 68ms (N/A/event)
+xAOD::ReadStats::Print    INFO      Cumulative time spent unzipping data  : 82ms (N/A/event)
+xAOD::ReadStats::Print    INFO    Containers, sorted by number of bytes read:
+xAOD::ReadStats::Print    INFO    Variables, sorted by number of bytes read:
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.vz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_Core_AnalysisMETAux.name", type "std::string", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_TruthAux.mpx", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_TruthAux.mpy", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_TruthAux.sumet", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_TruthAux.source", type "unsigned long", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_TruthAux.name", type "std::string", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.phi", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.qOverP", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.theta", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.d0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MuonSpectrometerTrackParticlesAux.z0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.trackParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.neutralParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::NeutralParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.vertexType", type "short", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.z", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "PrimaryVerticesAux.sumPt2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TauTracksAux.trackLinks", type "std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TauTracksAux.flagSet", type "unsigned short", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.pdgId", type "int", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.ptcone30", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.etcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.e_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.pt_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.eta_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.phi_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayParticlesAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.incomingParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.outgoingParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBosonsWithDecayVerticesAux.t", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_Core_AnalysisMETAux.source", type "unsigned long", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthBottomAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfPrecisionHoleLayers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_ParticleAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.linkColNames", type "std::vector<std::string>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.linkColKeys", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.linkColIndices", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.linkColClids", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.name", type "std::string", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_Summary_DAODSlimmedAux.decisions", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfPrecisionLayers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_ParticleAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfPixelHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfSCTHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfPixelHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfPixelDeadSensors", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfSCTHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfSCTDeadSensors", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.qOverP", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.theta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.d0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.z0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.chiSquared", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberDoF", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.numberOfInnermostPixelLayerHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.pt2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.phi", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.numberOfPixelHits", type "unsigned char", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.numberOfSCTHits", type "unsigned char", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.qOverP", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.theta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.d0", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.z0", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.chiSquared", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.vz", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.originalTrackParticle", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.vz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.numberOfNextToInnermostPixelLayerHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.expectInnermostPixelLayerHit", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFTrackParticlesAux.expectNextToInnermostPixelLayerHit", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.ex", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.ey", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.ez", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.sumEt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.sumE", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.flag", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_METAux.roiWord", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_ParticleAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "HLTNav_RepackedFeatures_ParticleAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jettrkpy", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "Kt4EMPFlowNeutEventShapeAux.Density", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jetLink", type "ElementLink<DataVector<xAOD::Jet_v1> >", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.calpx", type "std::vector<float>", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.calpy", type "std::vector<float>", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.calpz", type "std::vector<float>", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.cale", type "std::vector<float>", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.calsumpt", type "std::vector<float>", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trkpx", type "std::vector<float>", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trkpy", type "std::vector<float>", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trkpz", type "std::vector<float>", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trke", type "std::vector<float>", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trksumpt", type "std::vector<float>", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jettrkpx", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "Kt4EMPFlowEventShapeAux.Density", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jettrkpz", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jettrke", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.jettrksumpt", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.objectLinks", type "std::vector<ElementLink<DataVector<xAOD::IParticle> > >", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.calkey", type "std::vector<unsigned long>", read 15 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.trkkey", type "std::vector<unsigned long>", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.overlapIndices", type "std::vector<std::vector<unsigned long> >", read 11 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.overlapTypes", type "std::vector<std::vector<unsigned char> >", read 11 times
+xAOD::BranchStats::Print  INFO    Branch name "METAssoc_AnalysisMETAux.isMisc", type "char", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_Core_AnalysisMETAux.mpx", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_Core_AnalysisMETAux.mpy", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "MET_Core_AnalysisMETAux.sumet", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.theta", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfTRTHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetForwardTrackParticlesAux.numberOfTRTOutliers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.phi", type "float", read 4 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.truthParticleLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfPixelHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfSCTHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfPixelHoles", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfPixelDeadSensors", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfSCTHoles", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfSCTDeadSensors", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.qOverP", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthElectronsAux.nPhotons_dressed", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.d0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.z0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.chiSquared", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberDoF", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.vz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfTRTHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfTRTOutliers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfInnermostPixelLayerHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfPixelSharedHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.numberOfSCTSharedHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.TTVA_AMVFVertices", type "std::vector<ElementLink<DataVector<xAOD::Vertex_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "InDetTrackParticlesAux.TTVA_AMVFWeights", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.m_invis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pt_vis_neutral", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.eta_vis_neutral", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.phi_vis_neutral", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.m_vis_neutral", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.DecayModeVector", type "std::vector<int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.decay_vertex_x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.decay_vertex_y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.decay_vertex_z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.prod_vertex_x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.prod_vertex_y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.prod_vertex_z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.phi_invis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.m_vis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.nPhotons_dressed", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pt_vis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.eta_vis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.phi_vis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.originalTruthParticle", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pt_vis_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.eta_vis_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.phi_vis_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.m_vis_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.numCharged", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.numChargedPion", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.numNeutral", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.numNeutralPion", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.IsHadronicTau", type "char", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pt_invis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.eta_invis", type "double", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efErrorBits", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.eta_sampl", type "std::vector<float>", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.ETACALOFRAME", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.PHICALOFRAME", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.calM", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.ETA2CALOFRAME", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.PHI2CALOFRAME", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.constituentClusterLinks", type "std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.smk", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.bgCode", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.tav", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.tap", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.tbp", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2ErrorBits", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.samplingPattern", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2Truncated", type "bool", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efTruncated", type "bool", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2PassedPhysics", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efPassedPhysics", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2PassedRaw", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efPassedRaw", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2PassedThrough", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efPassedThrough", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2Prescaled", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efPrescaled", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.lvl2Resurrected", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "xTrigDecisionAux.efResurrected", type "std::vector<unsigned int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNmcChannelNumber", type "unsigned int", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTopAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNname", type "std::string", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNcycle", type "int", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNinputStream", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNproductionRelease", type "std::string", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNdataType", type "std::string", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNrunNumbers", type "std::vector<unsigned int>", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNlumiBlocks", type "std::vector<unsigned int>", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNkey", type "unsigned int", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNpayload", type "std::string", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNweightNames", type "std::vector<std::string>", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pdgId", type "int", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNlhefGenerator", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNgenerators", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNevgenProcess", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNevgenTune", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNhadronizationModel", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNpartonShowerModel", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNhardPDF", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "UNKNOWNsoftPDF", type "std::string", read 1 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.calE", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.calEta", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.calPhi", type "float", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "egammaClustersAux.e_sampl", type "std::vector<float>", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.pdgId", type "int", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.ptcone30", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.etcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.e_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.pt_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.eta_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.phi_dressed", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthMuonsAux.nPhotons_dressed", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.crossSection", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.PDFID1", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.PDFID2", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.PDGID1", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.PDGID2", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.Q", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.X1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.X2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.XF1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthEventsAux.XF2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthForwardProtonsAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPrimaryVerticesAux.x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.ptcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.etcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.etcone40", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPrimaryVerticesAux.y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPrimaryVerticesAux.z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPrimaryVerticesAux.t", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthTausAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.pt1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthNeutrinosAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.parentLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.childLinks", type "std::vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "TruthPhotonsAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.neflowisol20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptcone30", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone30", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.topoetcone40", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.topoetcone30", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.EnergyLoss", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.MuonSpectrometerPt", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.InnerDetectorPt", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.etaLayer1STGCHits", type "unsigned char", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.etaLayer2STGCHits", type "unsigned char", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.MMHits", type "unsigned char", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.inDetTrackParticleLink", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.muonType", type "unsigned short", read 11 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.truthParticleLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.combinedTrackParticleLink", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extrapolatedMuonSpectrometerTrackParticleLink", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.numberOfPrecisionLayers", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.numberOfPrecisionHoleLayers", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.DFCommonMuonPassIDCuts", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.DFCommonMuonPassPreselection", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptcone20_Nonprompt_All_MaxWeightTTVA_pt500", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.allAuthors", type "unsigned short", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.quality", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.muonSegmentLinks", type "std::vector<ElementLink<DataVector<xAOD::MuonSegment_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.ECF3", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Tau1_wta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Tau2_wta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Tau3_wta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.C2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GN2Xv01_phcc", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GhostBHadronsFinalCount", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GhostCHadronsFinalCount", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Split12", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Split23", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.Qw", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.R10TruthLabel_R21Precision_2022v1", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.R10TruthLabel_R22v1", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.energyLossType", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.pt", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.eta", type "float", read 15 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.phi", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.charge", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.topoetcone20", type "float", read 4 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.neflowisol20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.topoetcone20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.author", type "unsigned short", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.TruthLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerOutBoundsPrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.CaloMuonScore", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.CaloMuonIDTag", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.combinedTrackOutBoundsPrecisionHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedClosePrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedOutBoundsPrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerClosePrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerOutBoundsPrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.isEndcapGoodLayers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.isSmallGoodSectors", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleClosePrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleOutBoundsPrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.numberOfGoodPrecisionLayers", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerClosePrecisionHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.CaloLRLikelihood", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptcone40", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptvarcone40", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.ptcone20_Nonprompt_All_MaxWeightTTVA_pt1000", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.DFCommonJetDr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.ambiguityLink", type "ElementLink<DataVector<xAOD::Egamma_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.pt", type "float", read 40 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.eta", type "float", read 40 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.phi", type "float", read 40 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone20", type "float", read 7 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.f1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerLargeHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerSmallHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerLargeHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleSmallHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleLargeHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerSmallHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerLargeHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedSmallHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedLargeHits", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerSmallHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.innerLargeHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleSmallHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.middleLargeHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.outerSmallHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.ECF2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedSmallHoles", type "unsigned char", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.extendedLargeHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.phiLayer1STGCHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.phiLayer2STGCHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.muonSpectrometerTrackParticleLink", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink", type "ElementLink<DataVector<xAOD::TrackParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.clusterLink", type "ElementLink<DataVector<xAOD::CaloCluster_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.spectrometerFieldIntegral", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.scatteringCurvatureSignificance", type "float", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.scatteringNeighbourSignificance", type "float", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.momentumBalanceSignificance", type "float", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisMuonsAux.segmentDeltaEta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonAddAmbiguity", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHVeryLoose", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHVeryLooseIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHLooseIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHLooseBL", type "char", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHMedium", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHMediumIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHTight", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHTightIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNMedium", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNTight", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNVeryLooseNoCF97", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNMediumNoCF", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNTightNoCF", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt500", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsECIDS", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsECIDSResult", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.Eadded_Lr2", type "float", read 19 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.Eadded_Lr3", type "float", read 19 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.truthPdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.firstEgMotherTruthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.firstEgMotherTruthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.firstEgMotherPdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.firstEgMotherTruthParticleLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.pt", type "float", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.eta", type "float", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.phi", type "float", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ambiguityLink", type "ElementLink<DataVector<xAOD::Egamma_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.pt", type "float", read 30 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.eta", type "float", read 12 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.phi", type "float", read 12 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.charge", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.topoetcone20", type "float", read 28 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.f1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000", type "float", read 9 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.neflowisol20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.topoetcone20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.m", type "float", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.author", type "unsigned short", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.caloClusterLinks", type "std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1> > >", read 21 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.E_mva_only", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHLoose", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsDNNLoose", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.DFCommonElectronsLHLooseBLIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.TruthLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.OQ", type "unsigned int", read 12 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ambiguityType", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.topoetcone20ptCorrection", type "float", read 28 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt500", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GN2v01_pu", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GN2v01_ptau", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GhostTrack", type "std::vector<ElementLink<DataVector<xAOD::IParticle> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.DFCommonJets_jetClean_LooseBad", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.DFCommonJets_jetClean_TightBad", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.PartonTruthLabelID", type "int", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GhostMuonSegmentCount", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.DetectorY", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.NNJvtPass", type "char", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.isJvtHS", type "char", read 33 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.pt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.eta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GN2v01_pc", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.numConstit", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.JetConstitScaleMomentum_pt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.JetConstitScaleMomentum_eta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.JetConstitScaleMomentum_phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.JetConstitScaleMomentum_m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.DetectorEta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.DetectorY", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GN2Xv01_phbb", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GN2Xv01_ptop", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.GN2Xv01_pqcd", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.D2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisLargeRJetsAux.ECF1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.NumTrkPt1000", type "std::vector<int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.numConstit", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.JetConstitScaleMomentum_pt", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.JetConstitScaleMomentum_eta", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.JetConstitScaleMomentum_phi", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.JetConstitScaleMomentum_m", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.ActiveArea4vec_eta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.ActiveArea4vec_m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.ActiveArea4vec_phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.ActiveArea4vec_pt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.DetectorEta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.EMFrac", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.JVFCorr", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.Timing", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.NumTrkPt500", type "std::vector<int>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.EnergyPerSampling", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.SumPtChargedPFOPt500", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.SumPtTrkPt500", type "std::vector<float>", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.TrackWidthPt1000", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.PSFrac", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.Width", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.DFCommonJets_fJvt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.HadronConeExclTruthLabelID", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.HadronConeExclExtendedTruthLabelID", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.QGTransformer_ConstScore", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisJetsAux.GN2v01_pb", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.trtFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.averageInteractionsPerCrossing", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.mcChannelNumber", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.RandomRunNumber", type "unsigned int", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.PileupWeight_NOSYS", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.eventTypeBitmask", type "unsigned int", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.runNumber", type "unsigned int", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.lumiBlock", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.timeStamp", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.timeStampNSOffset", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.bcid", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.detDescrTags", type "std::vector<std::pair<std::string,std::string> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.pixelFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.sctFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.actualInteractionsPerCrossing", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.larFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.tileFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.muonFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.forwardDetFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.coreFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.lumiFlags", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosSigmaX", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosSigmaXY", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosSigmaY", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosSigmaZ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosX", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosY", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamPosZ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.qOverP", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.polarizationPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.polarizationTheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.phi", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfPixelHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfSCTHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfPixelHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfPixelDeadSensors", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfSCTHoles", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfSCTDeadSensors", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamStatus", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.theta", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.d0", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.z0", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.chiSquared", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberDoF", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.vz", type "float", read 8 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfTRTHits", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "CombinedMuonTrackParticlesAux.numberOfTRTOutliers", type "unsigned char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.eventNumber", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.mcEventNumber", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.pileUpMixtureIDLowBits", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.pileUpMixtureIDHighBits", type "unsigned long", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.vertexType", type "short", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.qOverP", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.theta", type "float", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.d0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.z0", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.vz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FileMetaDataAux.generatorsInfo", type "std::string", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "FileMetaDataAux.mcCampaign", type "std::string", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "FileMetaDataAux.mcProcID", type "float", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "FileMetaDataAux.simFlavour", type "std::string", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.trackParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.chiSquared", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.numberDoF", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.x", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.y", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "FourLeptonVerticesAux.z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.trackParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.neutralParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::NeutralParticle_v1> > >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.x", type "float", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.y", type "float", read 2 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.z", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "GSFConversionVerticesAux.minRfirstHit", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDGapAfterTrain", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamTiltXZ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.beamTiltYZ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.mcEventWeights", type "std::vector<float>", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.GenFiltHT", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.GenFiltHTinclNu", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.GenFiltMET", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.GenFiltPTZ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.GenFiltFatJ", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.hardScatterVertexLink", type "ElementLink<DataVector<xAOD::Vertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_isBadBatman", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDDistanceFromFront", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDDistanceTail", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDGapBeforeTrain", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.barcode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDGapBeforeTrainMinus12", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDGapAfterTrainMinus12", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_BCIDTypeMinus12", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.HTXS_prodMode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.HF_Classification", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.HF_SimpleClassification", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_eventClean_LooseBad_EMTopo", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "EventInfoAux.DFCommonJets_eventClean_LooseBad", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.definingParametersCovMatrixDiag", type "std::vector<float>", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.definingParametersCovMatrixOffDiag", type "std::vector<float>", read 6 times
+xAOD::BranchStats::Print  INFO    Branch name "ExtrapolatedMuonTrackParticlesAux.phi", type "float", read 4 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.d0Normalized", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.charge", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.topoetcone20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.truthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.truthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.author", type "unsigned short", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.E_mva_only", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.OQ", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.DFCommonElectronsLHVeryLoose", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.firstEgMotherTruthType", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.firstEgMotherTruthOrigin", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.z0stheta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.eta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.nInnerExpPix", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.clEta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.clPhi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.pt", type "float", read 16 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.eta", type "float", read 18 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.phi", type "float", read 18 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.m", type "float", read 18 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.vertexLink", type "ElementLink<DataVector<xAOD::Vertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.tauTrackLinks", type "std::vector<ElementLink<DataVector<xAOD::TauTrack_v1> > >", read 27 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.charge", type "float", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.truthParticleLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.EleRNNLoose_v1", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMLoose", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.author", type "unsigned short", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.caloClusterLinks", type "std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1> > >", read 29 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.E_mva_only", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.TruthLink", type "ElementLink<DataVector<xAOD::TruthParticle_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.OQ", type "unsigned int", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone20ptCorrection", type "float", read 7 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.Eadded_Lr2", type "float", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.Eadded_Lr3", type "float", read 5 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.ptcone20", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone40", type "float", read 7 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.ptcone20_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone40_CloseByCorr", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsCleaning", type "char", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.EleRNNMedium_v1", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.topoetcone40ptCorrection", type "float", read 7 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.vertexLinks", type "std::vector<ElementLink<DataVector<xAOD::Vertex_v1> > >", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMMedium", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMTight", type "char", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMTightIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMTightNF", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsIsEMTightNFIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsNFBDTTight", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsNFBDTTightIsEMValue", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsNFBDTScore", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisPhotonsAux.DFCommonPhotonsCleaningNoTime", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisSiHitElectronsAux.pt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.decayVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.Tau3_wta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.pt", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.eta", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.phi", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.m", type "float", read 17 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.numConstit", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.HadronConeExclTruthLabelID", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.HadronConeExclExtendedTruthLabelID", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.PartonTruthLabelID", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.GhostBHadronsFinalCount", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.GhostCHadronsFinalCount", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt4TruthDressedWZJetsAux.TrueFlavor", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.prodVtxLink", type "ElementLink<DataVector<xAOD::TruthVertex_v1> >", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.Tau2_wta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.px", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.py", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.pz", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.e", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.pdgId", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.classifierParticleType", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.classifierParticleOutCome", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.Classification", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.uid", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.classifierParticleOrigin", type "unsigned int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "BornLeptonsAux.status", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.RNNJetScoreSigTrans", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.EleRNNTight_v1", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.GNTauVL_v0prune", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.GNTauL_v0prune", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.GNTauM_v0prune", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.GNTauT_v0prune", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.IsTruthMatched", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.truthJetLink", type "ElementLink<DataVector<xAOD::Jet_v1> >", read 9 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.ptTauEnergyScale", type "float", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.etaTauEnergyScale", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.ptFinalCalib", type "float", read 13 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.etaFinalCalib", type "float", read 3 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.isTauFlags", type "unsigned int", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.PanTau_DecayMode", type "int", read 14 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisElectronsAux.trackParticleLinks", type "std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >", read 10 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.NNDecayMode", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.RNNEleScoreSigTrans_v1", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.GNTauScoreSigTrans_v0prune", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.trackWidth", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AnalysisTauJetsAux.passTATTauMuonOLR", type "char", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.pt", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.eta", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.phi", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.m", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.numConstit", type "int", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.D2", type "float", read 0 times
+xAOD::BranchStats::Print  INFO    Branch name "AntiKt10TruthSoftDropBeta100Zcut10JetsAux.Tau1_wta", type "float", read 0 times
+ELModule.LeakCheckModule INFO    Memory increase/change during the job:
+ELModule.LeakCheckModule INFO      - resident: 324.267 kB/event (4864 kB total)
+ELModule.LeakCheckModule INFO      - virtual : 388.533 kB/event (5828 kB total)
+Real time 0:00:05, CP time 5.530
+Package.EventLoop        INFO    worker finished successfully
+Package.EventLoop        INFO    done
+Package.EventLoop        INFO    done
+Package.EventLoop        INFO    done
+Py:CPBaseRunner      INFO Moving the analysis root file and the hist file to the top level.
+Py:CPBaseRunner      INFO Moving /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/workDir-2026-11-19-0426-2abc/data-ANALYSIS/reference.root to /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/reference.root
+Py:CPBaseRunner      INFO Moving /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/workDir-2026-11-19-0426-2abc/hist-reference.root to /home/gwatts/atlas-cp-speed/met-20261119/results/framework-iostats-smoke-001/hist-reference.root
+xAOD::TFileAccessTracer   INFO    Sending file access statistics to http://rucio-lb-prod.cern.ch:18762/traces/

@@ -1,0 +1,392 @@
+{
+  "arguments": [
+    "taskset",
+    "-c",
+    "0",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/bin/python",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/met_demo.py",
+    "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m21-timing-001/round-01-full-faithful/histogram.npz",
+    "--stop",
+    "20000"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 3.9220841940000004,
+  "process_cpu_seconds": 3.917383,
+  "peak_rss_kib": 439956,
+  "host_cpu0_delta_ticks": [
+    382,
+    0,
+    10,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "samples": [
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.000722347,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.10110661200000001,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.20167479500000002,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.302371019,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.403064187,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.503696298,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.604370465,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.705120421,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.805804771,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 0.906421459,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.00711346,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.1078159010000002,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.208568702,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.309333764,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.4100601000000001,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.51070883,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.6113948710000001,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.71210974,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.812826284,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 1.9134761200000001,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.014211929,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.114977606,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.215626667,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.3163060200000003,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.4171268940000004,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.517858145,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.618566768,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.719271677,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.819952353,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 2.9209994380000004,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.022038209,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.1227589800000004,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.223552196,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.3242738640000002,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.42493381,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.525680673,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.626438948,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.727169479,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    },
+    {
+      "affinity": "0",
+      "threads": 1,
+      "children": [],
+      "child_processes": {},
+      "log_bytes_visible_at_sample": null,
+      "elapsed_seconds": 3.8277908210000002,
+      "executable": "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-02/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/bin/python3.14"
+    }
+  ],
+  "mapped_named_libraries": [
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so"
+  ],
+  "valid": true,
+  "native_identity_verified": true,
+  "histogram_verified": true
+}

@@ -1,0 +1,571 @@
+{
+  "affects_strict_process_gate": false,
+  "event_processing_log_marker_offset": 35020,
+  "observed_children": {
+    "1843774": {
+      "samples": [
+        {
+          "name": "python",
+          "arguments": [
+            "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+            "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+            "--direct-driver",
+            "-i",
+            "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+            "-t",
+            "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+            "-o",
+            "reference",
+            "-e",
+            "16",
+            "--no-systematics"
+          ],
+          "state": "R",
+          "start_since_boot_seconds": 173401.45,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {},
+          "elapsed_seconds": 0.10888256800000001,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LD_DEBUG=libs LD_PRELOAD=DOESNOTEXIST ls 2>&1"
+          ],
+          "state": "D",
+          "start_since_boot_seconds": 173401.45,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {},
+          "elapsed_seconds": 0.11019919500000001,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LD_DEBUG=libs LD_PRELOAD=DOESNOTEXIST ls 2>&1"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.45,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843775": {
+              "name": "ls",
+              "arguments": [
+                "/usr/bin/coreutils",
+                "--coreutils-prog-shebang=ls",
+                "/usr/bin/ls"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.45,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.111542019,
+          "before_processing_log_marker": true
+        },
+        {
+          "state": "exited_or_unreadable",
+          "elapsed_seconds": 0.112891054,
+          "before_processing_log_marker": true
+        }
+      ],
+      "verified_startup_commands": [
+        "ROOT shared library search"
+      ]
+    },
+    "1843776": {
+      "samples": [
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+          ],
+          "state": "R",
+          "start_since_boot_seconds": 173401.46,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843777": {
+              "name": "sh",
+              "arguments": [
+                "sh",
+                "-c",
+                "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            },
+            "1843778": {
+              "name": "sh",
+              "arguments": [
+                "sh",
+                "-c",
+                "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.12118231400000001,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.46,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843777": {
+              "name": "g++",
+              "arguments": [
+                "g++",
+                "-xc++",
+                "-E",
+                "-v",
+                "/dev/null"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            },
+            "1843778": {
+              "name": "sed",
+              "arguments": [
+                "sed",
+                "-n",
+                "-e",
+                "/^.include/,${",
+                "-e",
+                "/^ \\/.*++/p",
+                "-e",
+                "}"
+              ],
+              "state": "S",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.122718428,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.46,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843777": {
+              "name": "g++",
+              "arguments": [
+                "g++",
+                "-xc++",
+                "-E",
+                "-v",
+                "/dev/null"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {
+                "1843779": {
+                  "name": "cc1plus",
+                  "arguments": [
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../libexec/gcc/x86_64-pc-linux-gnu/15.2.0/cc1plus",
+                    "-E",
+                    "-quiet",
+                    "-v",
+                    "-iprefix",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.0/",
+                    "-isystem",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include",
+                    "-D_GNU_SOURCE",
+                    "/dev/null",
+                    "-mtune=generic",
+                    "-march=x86-64",
+                    "-dumpbase",
+                    "null"
+                  ],
+                  "state": "R",
+                  "start_since_boot_seconds": 173401.46,
+                  "affinity": "0",
+                  "threads": 1,
+                  "descendants": {}
+                }
+              }
+            },
+            "1843778": {
+              "name": "sed",
+              "arguments": [
+                "sed",
+                "-n",
+                "-e",
+                "/^.include/,${",
+                "-e",
+                "/^ \\/.*++/p",
+                "-e",
+                "}"
+              ],
+              "state": "S",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.12416082900000001,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.46,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843777": {
+              "name": "g++",
+              "arguments": [
+                "g++",
+                "-xc++",
+                "-E",
+                "-v",
+                "/dev/null"
+              ],
+              "state": "S",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {
+                "1843779": {
+                  "name": "cc1plus",
+                  "arguments": [
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../libexec/gcc/x86_64-pc-linux-gnu/15.2.0/cc1plus",
+                    "-E",
+                    "-quiet",
+                    "-v",
+                    "-iprefix",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.0/",
+                    "-isystem",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include",
+                    "-D_GNU_SOURCE",
+                    "/dev/null",
+                    "-mtune=generic",
+                    "-march=x86-64",
+                    "-dumpbase",
+                    "null"
+                  ],
+                  "state": "R",
+                  "start_since_boot_seconds": 173401.46,
+                  "affinity": "0",
+                  "threads": 1,
+                  "descendants": {}
+                }
+              }
+            },
+            "1843778": {
+              "name": "sed",
+              "arguments": [
+                "sed",
+                "-n",
+                "-e",
+                "/^.include/,${",
+                "-e",
+                "/^ \\/.*++/p",
+                "-e",
+                "}"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.125733699,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LC_ALL=C g++   -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \\/.*++/p' -e '}'"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.46,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843777": {
+              "name": "g++",
+              "arguments": [
+                "g++",
+                "-xc++",
+                "-E",
+                "-v",
+                "/dev/null"
+              ],
+              "state": "S",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {
+                "1843779": {
+                  "name": "cc1plus",
+                  "arguments": [
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../libexec/gcc/x86_64-pc-linux-gnu/15.2.0/cc1plus",
+                    "-E",
+                    "-quiet",
+                    "-v",
+                    "-iprefix",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/../lib/gcc/x86_64-pc-linux-gnu/15.2.0/",
+                    "-isystem",
+                    "/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include",
+                    "-D_GNU_SOURCE",
+                    "/dev/null",
+                    "-mtune=generic",
+                    "-march=x86-64",
+                    "-dumpbase",
+                    "null"
+                  ],
+                  "state": "R",
+                  "start_since_boot_seconds": 173401.46,
+                  "affinity": "0",
+                  "threads": 1,
+                  "descendants": {}
+                }
+              }
+            },
+            "1843778": {
+              "name": "sed",
+              "arguments": [
+                "sed",
+                "-n",
+                "-e",
+                "/^.include/,${",
+                "-e",
+                "/^ \\/.*++/p",
+                "-e",
+                "}"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.46,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.12724716900000002,
+          "before_processing_log_marker": true
+        },
+        {
+          "state": "exited_or_unreadable",
+          "elapsed_seconds": 0.128699701,
+          "before_processing_log_marker": true
+        }
+      ],
+      "verified_startup_commands": [
+        "Cling compiler include-path query"
+      ]
+    },
+    "1843780": {
+      "samples": [
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LD_DEBUG=libs LD_PRELOAD=DOESNOTEXIST ls 2>&1"
+          ],
+          "state": "R",
+          "start_since_boot_seconds": 173401.61,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {},
+          "elapsed_seconds": 0.268062823,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "LD_DEBUG=libs LD_PRELOAD=DOESNOTEXIST ls 2>&1"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173401.61,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843781": {
+              "name": "ls",
+              "arguments": [
+                "/usr/bin/coreutils",
+                "--coreutils-prog-shebang=ls",
+                "/usr/bin/ls"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173401.61,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.269593668,
+          "before_processing_log_marker": true
+        }
+      ],
+      "verified_startup_commands": [
+        "ROOT shared library search"
+      ]
+    },
+    "1843782": {
+      "samples": [
+        {
+          "name": "sh",
+          "arguments": [
+            "sh",
+            "-c",
+            "ldd '/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13'"
+          ],
+          "state": "R",
+          "start_since_boot_seconds": 173402.22,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {},
+          "elapsed_seconds": 0.880992836,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "ldd",
+          "arguments": [
+            "/usr/bin/bash",
+            "/usr/bin/ldd",
+            "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+          ],
+          "state": "R",
+          "start_since_boot_seconds": 173402.22,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {},
+          "elapsed_seconds": 0.882406095,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "ldd",
+          "arguments": [
+            "/usr/bin/bash",
+            "/usr/bin/ldd",
+            "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173402.22,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843783": {
+              "name": "ldd",
+              "arguments": [
+                "/usr/bin/bash",
+                "/usr/bin/ldd",
+                "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+              ],
+              "state": "R",
+              "start_since_boot_seconds": 173402.22,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {}
+            }
+          },
+          "elapsed_seconds": 0.8837467120000001,
+          "before_processing_log_marker": true
+        },
+        {
+          "name": "ldd",
+          "arguments": [
+            "/usr/bin/bash",
+            "/usr/bin/ldd",
+            "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+          ],
+          "state": "S",
+          "start_since_boot_seconds": 173402.22,
+          "affinity": "0",
+          "threads": 1,
+          "descendants": {
+            "1843784": {
+              "name": "ldd",
+              "arguments": [
+                "/usr/bin/bash",
+                "/usr/bin/ldd",
+                "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+              ],
+              "state": "S",
+              "start_since_boot_seconds": 173402.22,
+              "affinity": "0",
+              "threads": 1,
+              "descendants": {
+                "1843785": {
+                  "name": "ldd",
+                  "arguments": [
+                    "/usr/bin/bash",
+                    "/usr/bin/ldd",
+                    "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python3.13"
+                  ],
+                  "state": "R",
+                  "start_since_boot_seconds": 173402.22,
+                  "affinity": "0",
+                  "threads": 1,
+                  "descendants": {}
+                }
+              }
+            }
+          },
+          "elapsed_seconds": 0.8851671000000001,
+          "before_processing_log_marker": true
+        }
+      ],
+      "verified_startup_commands": [
+        "ROOT ldd query of release Python"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[  8%] Building CXX object CMakeFiles/met_significance_numeric.dir/resolution.cxx.o
+In file included from /home/gwatts/atlas-cp-speed/met-20261119/components/significance/resolution.cxx:9:
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:166:10: error: 'span' in namespace 'std' does not name a template type
+  166 |     std::span<const Constituent> links = {};
+      |          ^~~~
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:166:5: note: 'std::span' is only available from C++20 onwards
+  166 |     std::span<const Constituent> links = {};
+      |     ^~~
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:211:20: error: 'span' is not a member of 'std'
+  211 | Result reduce(std::span<const Term>, State&);
+      |                    ^~~~
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:211:20: note: 'std::span' is only available from C++20 onwards
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:211:25: error: expected primary-expression before 'const'
+  211 | Result reduce(std::span<const Term>, State&);
+      |                         ^~~~~
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:211:43: error: expected primary-expression before '&' token
+  211 | Result reduce(std::span<const Term>, State&);
+      |                                           ^
+/home/gwatts/atlas-cp-speed/met-20261119/components/significance/significance.hpp:211:44: error: expected primary-expression before ')' token
+  211 | Result reduce(std::span<const Term>, State&);
+      |                                            ^
+gmake[2]: *** [CMakeFiles/met_significance_numeric.dir/build.make:79: CMakeFiles/met_significance_numeric.dir/resolution.cxx.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:99: CMakeFiles/met_significance_numeric.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

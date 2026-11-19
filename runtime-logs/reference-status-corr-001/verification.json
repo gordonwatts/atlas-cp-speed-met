@@ -1,0 +1,73 @@
+{
+  "entries": 20000,
+  "states": {
+    "NOSYS": {
+      "calls_by_action": {
+        "associationFlag": 12915,
+        "rebuildMET": 80000,
+        "jetJvt": 196606,
+        "rebuildJetMET": 20000,
+        "applySystematicVariation": 20000,
+        "rootSeed": 20001,
+        "setRandomSeed": 20000,
+        "applyCorrection": 20000,
+        "varianceMET": 20000
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 10018,
+      "jet_jvt_accept": 191779,
+      "selected_leptons_by_term": {
+        "RefEle": 4741,
+        "RefGamma": 355,
+        "RefTau": 3049,
+        "Muons": 6240
+      },
+      "lazy_constructor_seed": 4357
+    },
+    "MET_SoftTrk_ResoCorr": {
+      "calls_by_action": {
+        "associationFlag": 12915,
+        "rebuildMET": 80000,
+        "jetJvt": 196606,
+        "rebuildJetMET": 20000,
+        "applySystematicVariation": 20000,
+        "rootSeed": 20000,
+        "setRandomSeed": 20000,
+        "gaussian": 20000,
+        "applyCorrection": 20000,
+        "varianceMET": 20000
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 10018,
+      "jet_jvt_accept": 191779,
+      "selected_leptons_by_term": {
+        "RefEle": 4741,
+        "RefGamma": 355,
+        "RefTau": 3049,
+        "Muons": 6240
+      }
+    }
+  },
+  "algorithm_calls": {
+    "makerAlg": 20000,
+    "builderAlg": 20000,
+    "significanceAlg": 20000
+  },
+  "maximum_executed_association_flag_slot": 4,
+  "physics_branch_payloads_exact_to_stock": 93,
+  "trace_rows_aligned_with_entries_and_states": true,
+  "status_code": {
+    "SUCCESS": 1,
+    "FAILURE": 0,
+    "RECOVERABLE": 2
+  },
+  "correction_code": {
+    "Ok": 2,
+    "Error": 0,
+    "OutOfValidityRange": 1
+  },
+  "remaining_unobservables": [
+    "Individual private significance subtool return codes and covariance intermediates",
+    "Uncalled options and deliberately unexercised malformed-input failure paths"
+  ]
+}

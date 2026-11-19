@@ -1,0 +1,529 @@
+{
+  "schema": 1,
+  "mode": "passes",
+  "success": true,
+  "pid": 1890973,
+  "worker_affinity": [
+    0
+  ],
+  "argv": [
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/met_demo.py",
+    "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/.art/76315e7ffa8dd82d312e0ee59e71336fa4b01af5.art",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/c-native-delivered-002/sampled/histogram.npz",
+    "-n",
+    "31",
+    "--chunk-size",
+    "5000"
+  ],
+  "script_span": {
+    "wall_ns": 74703051363,
+    "cpu_ns": 74664298247
+  },
+  "script_start_monotonic_ns": 177832910540312,
+  "script_end_monotonic_ns": 177907613591675,
+  "worker_cpu_at_exec_finish_ns": 74682199442,
+  "exclusive": {},
+  "inclusive": {},
+  "unassigned_in_script": {
+    "wall_ns": 74703051363,
+    "cpu_ns": 74664298247
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177833112470966,
+      "end_monotonic_ns": 177835579815141,
+      "wall_ns": 2467344175,
+      "cpu_ns": 2451419451
+    },
+    {
+      "pass": 2,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177835579844067,
+      "end_monotonic_ns": 177837916956226,
+      "wall_ns": 2337112159,
+      "cpu_ns": 2333653870
+    },
+    {
+      "pass": 3,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177837916980130,
+      "end_monotonic_ns": 177840293792006,
+      "wall_ns": 2376811876,
+      "cpu_ns": 2376157578
+    },
+    {
+      "pass": 4,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177840293819950,
+      "end_monotonic_ns": 177842675589061,
+      "wall_ns": 2381769111,
+      "cpu_ns": 2381543866
+    },
+    {
+      "pass": 5,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177842675618165,
+      "end_monotonic_ns": 177845196519140,
+      "wall_ns": 2520900975,
+      "cpu_ns": 2520563362
+    },
+    {
+      "pass": 6,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177845196543988,
+      "end_monotonic_ns": 177847572088808,
+      "wall_ns": 2375544820,
+      "cpu_ns": 2375364766
+    },
+    {
+      "pass": 7,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177847572109089,
+      "end_monotonic_ns": 177849948141557,
+      "wall_ns": 2376032468,
+      "cpu_ns": 2375858523
+    },
+    {
+      "pass": 8,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177849948172318,
+      "end_monotonic_ns": 177852328307877,
+      "wall_ns": 2380135559,
+      "cpu_ns": 2379789172
+    },
+    {
+      "pass": 9,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177852328338568,
+      "end_monotonic_ns": 177854700700736,
+      "wall_ns": 2372362168,
+      "cpu_ns": 2372187946
+    },
+    {
+      "pass": 10,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177854700728971,
+      "end_monotonic_ns": 177857092719165,
+      "wall_ns": 2391990194,
+      "cpu_ns": 2391807390
+    },
+    {
+      "pass": 11,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177857092745608,
+      "end_monotonic_ns": 177859468801746,
+      "wall_ns": 2376056138,
+      "cpu_ns": 2375480682
+    },
+    {
+      "pass": 12,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177859468824137,
+      "end_monotonic_ns": 177861921199870,
+      "wall_ns": 2452375733,
+      "cpu_ns": 2451962197
+    },
+    {
+      "pass": 13,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177861921230546,
+      "end_monotonic_ns": 177864296576343,
+      "wall_ns": 2375345797,
+      "cpu_ns": 2373250692
+    },
+    {
+      "pass": 14,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177864296599906,
+      "end_monotonic_ns": 177866779440771,
+      "wall_ns": 2482840865,
+      "cpu_ns": 2480359848
+    },
+    {
+      "pass": 15,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177866779465447,
+      "end_monotonic_ns": 177869168946833,
+      "wall_ns": 2389481386,
+      "cpu_ns": 2387801002
+    },
+    {
+      "pass": 16,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177869168969678,
+      "end_monotonic_ns": 177871552065984,
+      "wall_ns": 2383096306,
+      "cpu_ns": 2382780885
+    },
+    {
+      "pass": 17,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177871552088565,
+      "end_monotonic_ns": 177873919557535,
+      "wall_ns": 2367468970,
+      "cpu_ns": 2367176127
+    },
+    {
+      "pass": 18,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177873919581760,
+      "end_monotonic_ns": 177876302052051,
+      "wall_ns": 2382470291,
+      "cpu_ns": 2382279545
+    },
+    {
+      "pass": 19,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177876302076124,
+      "end_monotonic_ns": 177878692077522,
+      "wall_ns": 2390001398,
+      "cpu_ns": 2389766683
+    },
+    {
+      "pass": 20,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177878692101902,
+      "end_monotonic_ns": 177881080756979,
+      "wall_ns": 2388655077,
+      "cpu_ns": 2386880600
+    },
+    {
+      "pass": 21,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177881080784538,
+      "end_monotonic_ns": 177883474471326,
+      "wall_ns": 2393686788,
+      "cpu_ns": 2393391157
+    },
+    {
+      "pass": 22,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177883474503829,
+      "end_monotonic_ns": 177885826463329,
+      "wall_ns": 2351959500,
+      "cpu_ns": 2351786710
+    },
+    {
+      "pass": 23,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177885826484528,
+      "end_monotonic_ns": 177888231621451,
+      "wall_ns": 2405136923,
+      "cpu_ns": 2404964246
+    },
+    {
+      "pass": 24,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177888231645307,
+      "end_monotonic_ns": 177890703566881,
+      "wall_ns": 2471921574,
+      "cpu_ns": 2470175179
+    },
+    {
+      "pass": 25,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177890703595445,
+      "end_monotonic_ns": 177893093118889,
+      "wall_ns": 2389523444,
+      "cpu_ns": 2389150696
+    },
+    {
+      "pass": 26,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177893093143864,
+      "end_monotonic_ns": 177895535613376,
+      "wall_ns": 2442469512,
+      "cpu_ns": 2442283186
+    },
+    {
+      "pass": 27,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177895535639525,
+      "end_monotonic_ns": 177897950232285,
+      "wall_ns": 2414592760,
+      "cpu_ns": 2413041461
+    },
+    {
+      "pass": 28,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177897950256431,
+      "end_monotonic_ns": 177900341075279,
+      "wall_ns": 2390818848,
+      "cpu_ns": 2390474934
+    },
+    {
+      "pass": 29,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177900341098638,
+      "end_monotonic_ns": 177902732012850,
+      "wall_ns": 2390914212,
+      "cpu_ns": 2390076105
+    },
+    {
+      "pass": 30,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177902732040770,
+      "end_monotonic_ns": 177905123901472,
+      "wall_ns": 2391860702,
+      "cpu_ns": 2391540802
+    },
+    {
+      "pass": 31,
+      "entries": 20000,
+      "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 177905123925898,
+      "end_monotonic_ns": 177907607069897,
+      "wall_ns": 2483143999,
+      "cpu_ns": 2482886808
+    }
+  ]
+}

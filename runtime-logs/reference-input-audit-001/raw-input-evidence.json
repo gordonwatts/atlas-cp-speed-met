@@ -1,0 +1,159 @@
+{
+  "input": {
+    "uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+    "events": 20000,
+    "bytes": 245815772,
+    "uproot": "5.7.7",
+    "awkward": "2.15.0"
+  },
+  "association_leaves": {
+    "jetLink": {
+      "typename": "std::vector<ElementLink<DataVector<xAOD::Jet_v1>>>",
+      "interpretation": "AsJagged(AsStridedObjects(Model_ElementLink_3c_DataVector_3c_xAOD_3a3a_Jet_5f_v1_3e3e__v1), header_bytes=10)",
+      "observed_shape": "memberwise blocks of uint32 key and index"
+    },
+    "objectLinks": {
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::IParticle>>>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, Model_ElementLink_3c_DataVector_3c_xAOD_3a3a_IParticle_3e3e_)))",
+      "observed_shape": "20000 * var * var * struct[{m_persKey: uint32, m_persIndex: uint32}, parameters={\"__record__\": \"ElementLink<DataVector<xAOD::IParticle>>\"}]"
+    },
+    "calpx": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "calpy": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "calpz": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "cale": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "calsumpt": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "calkey": {
+      "typename": "std::vector<std::vector<uint64_t>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>u8'))))",
+      "observed_shape": "20000 * var * var * uint64"
+    },
+    "trkpx": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "trkpy": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "trkpz": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "trke": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "trksumpt": {
+      "typename": "std::vector<std::vector<float>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>f4'))))",
+      "observed_shape": "20000 * var * var * float32"
+    },
+    "trkkey": {
+      "typename": "std::vector<std::vector<uint64_t>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, dtype('>u8'))))",
+      "observed_shape": "20000 * var * var * uint64"
+    },
+    "jettrkpx": {
+      "typename": "std::vector<float>",
+      "interpretation": "AsJagged(AsDtype('>f4'), header_bytes=10)",
+      "observed_shape": "20000 * var * float32"
+    },
+    "jettrkpy": {
+      "typename": "std::vector<float>",
+      "interpretation": "AsJagged(AsDtype('>f4'), header_bytes=10)",
+      "observed_shape": "20000 * var * float32"
+    },
+    "jettrkpz": {
+      "typename": "std::vector<float>",
+      "interpretation": "AsJagged(AsDtype('>f4'), header_bytes=10)",
+      "observed_shape": "20000 * var * float32"
+    },
+    "jettrke": {
+      "typename": "std::vector<float>",
+      "interpretation": "AsJagged(AsDtype('>f4'), header_bytes=10)",
+      "observed_shape": "20000 * var * float32"
+    },
+    "jettrksumpt": {
+      "typename": "std::vector<float>",
+      "interpretation": "AsJagged(AsDtype('>f4'), header_bytes=10)",
+      "observed_shape": "20000 * var * float32"
+    },
+    "overlapIndices": {
+      "typename": "std::vector<std::vector<std::vector<uint64_t>>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, AsVector(False, dtype('>u8')))))",
+      "observed_shape": "20000 * var * var * var * uint64"
+    },
+    "overlapTypes": {
+      "typename": "std::vector<std::vector<std::vector<uint8_t>>>",
+      "interpretation": "AsObjects(AsVector(True, AsVector(False, AsVector(False, dtype('uint8')))))",
+      "observed_shape": "20000 * var * var * var * uint8"
+    },
+    "isMisc": {
+      "typename": "std::vector<int8_t>",
+      "interpretation": "AsJagged(AsDtype('int8'), header_bytes=10)",
+      "observed_shape": "20000 * var * int8"
+    }
+  },
+  "absent_fields": [
+    "AnalysisJetsAuxDyn.constituentLinks",
+    "AnalysisJetsAuxDyn.originalObjectLink",
+    "AnalysisJetsAuxDyn.NNJvt",
+    "MET_Core_AnalysisMETAuxDyn.softConstituents"
+  ],
+  "links": {
+    "jet_links": 216606,
+    "object_links": 68168,
+    "invalid_object_links": 0,
+    "source_container_names_from_root": {
+      "452794649": "AnalysisJets",
+      "956497600": "AnalysisElectrons",
+      "518718875": "AnalysisTauJets",
+      "980095599": "AnalysisMuons",
+      "902907695": "AnalysisPhotons"
+    },
+    "events_compared_to_root": 20000,
+    "default_jet_link_rows_mismatching_root": 20000,
+    "memberwise_jet_link_rows_mismatching_root": 0,
+    "object_link_rows_mismatching_root": 0
+  },
+  "core_and_truth_fields": {
+    "MET_Core_AnalysisMETAuxDyn": {
+      "mpx": "20000 * var * float32",
+      "mpy": "20000 * var * float32",
+      "sumet": "20000 * var * float32",
+      "source": "20000 * var * uint64",
+      "name": "20000 * var * string"
+    },
+    "MET_TruthAuxDyn": {
+      "mpx": "20000 * var * float32",
+      "mpy": "20000 * var * float32",
+      "sumet": "20000 * var * float32",
+      "source": "20000 * var * uint64",
+      "name": "20000 * var * string"
+    }
+  }
+}

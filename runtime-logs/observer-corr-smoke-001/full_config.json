@@ -1,0 +1,1607 @@
+{
+    "SystematicsSvc": {
+        "Type": "CP::SystematicsSvc",
+        "Properties": {
+            "Tools": {},
+            "sigmaRecommended": 0,
+            "systematicsList": [
+                "",
+                "MET_SoftTrk_ResoCorr"
+            ],
+            "systematicsRegex": "(?:^MET_.*$)|^$"
+        }
+    },
+    "SelectionNameSvc": {
+        "Type": "CP::SelectionNameSvc",
+        "Properties": {
+            "Tools": {}
+        }
+    },
+    "seq1_SystematicsPrinter": {
+        "Type": "CP::SysListDumperAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "histogramName": "systematicsList"
+        }
+    },
+    "seq1_OnlyWeightSystematicsPrinter": {
+        "Type": "CP::SysListDumperAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "histogramName": "systematicsListOnlyWeights",
+            "systematicsRegex": "^(GEN_|EL_EFF_|MUON_EFF_|PH_EFF_|TAUS_TRUEHADTAU_EFF_|FT_EFF_|JET_.*JvtEfficiency_|PRW_).*"
+        }
+    },
+    "seq1_MetadataHistAlg": {
+        "Type": "CP::MetadataHistAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "campaign": "mc23a",
+            "dataType": "fullsim",
+            "etag": "e8514",
+            "histogramName": "metadata",
+            "mcChannelNumber": "601229"
+        }
+    },
+    "seq1_JetPileupLabelAlg_AnaJets": {
+        "Type": "CP::JetDecoratorAlg",
+        "Properties": {
+            "Tools": {
+                "decorator": {
+                    "Type": "JetPileupLabelingTool"
+                }
+            },
+            "jets": "AnalysisJets",
+            "jetsOut": "AnaJets_STEP1_%SYS%"
+        }
+    },
+    "seq1_JetUncertaintiesAlg_AnaJets": {
+        "Type": "CP::JetUncertaintiesAlg",
+        "Properties": {
+            "Tools": {
+                "uncertaintiesTool": {
+                    "Type": "JetUncertaintiesTool"
+                },
+                "uncertaintiesToolPD": {
+                    "Type": "JetUncertaintiesTool"
+                }
+            },
+            "jets": "AnaJets_STEP1_%SYS%",
+            "jetsOut": "AnaJets_STEP2_%SYS%",
+            "preselection": ""
+        }
+    },
+    "seq1_NNJvtUpdateAlg_AnaJets": {
+        "Type": "CP::JetDecoratorAlg",
+        "Properties": {
+            "Tools": {
+                "decorator": {
+                    "Type": "JetPileupTag::JetVertexNNTagger",
+                    "Properties": {
+                        "Name": "seq1_NNJvtUpdateAlg_AnaJets.decorator",
+                        "DNumTrkName": "''",
+                        "DTrackWidthName": "''",
+                        "DrptPerVertexName": "''",
+                        "JVFCorrName": "'AnaJets_NOSYS.JVFCorr'",
+                        "JVTName": "'AnaJets_NOSYS.NNJvt'",
+                        "JetContainer": "'AnaJets_NOSYS'",
+                        "MaxPtForCut": "60000",
+                        "NNConfigDir": "'JetPileupTag/NNJvt/2022-03-22'",
+                        "NNCutFile": "'NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json'",
+                        "NNParamFile": "'NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json'",
+                        "NumTrkName": "''",
+                        "NumTrkSortedName": "''",
+                        "OutputLevel": "3",
+                        "RpTName": "'AnaJets_NOSYS.NNJvtRpt'",
+                        "SumPtTrkName": "'AnaJets_NOSYS.SumPtTrkPt500'",
+                        "SuppressInputDependence": "1",
+                        "SuppressOutputDependence": "1",
+                        "TrackWidthName": "''",
+                        "TrkAugNNConfigDir": "'JetPileupTag/NNJvt/HLT-2025-02-05'",
+                        "TrkAugNNCutFile": "'TrkAugNNJVT.Cuts.HLT.json'",
+                        "TrkAugNNParamFile": "'TrkAugNNJVT.Network.graph.HLT.json'",
+                        "TrkWidthSortedName": "''",
+                        "UseTrkAugNN": "0",
+                        "VertexContainer": "'PrimaryVertices'",
+                        "passJvtName": "'AnaJets_NOSYS.NNJvtPass'",
+                        "rptPerVertexName": "''"
+                    }
+                }
+            },
+            "jets": "AnaJets_STEP2_%SYS%",
+            "jetsOut": "AnaJets_%SYS%"
+        }
+    },
+    "seq1_AsgEnergyDecoratorAlg_AnaJets": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaJets_%SYS%"
+        }
+    },
+    "seq1_MuonShallowCopyAlg_AnaMuons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonJetDr",
+                "DFCommonMuonPassIDCuts",
+                "DFCommonMuonPassPreselection",
+                "neflowisol20_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "PLIT_TPLTmu_pmuxpromp",
+                "PLIT_TPLTmu_pnpxall",
+                "TruthLink"
+            ],
+            "input": "AnalysisMuons",
+            "output": "AnaMuons_STEP1_%SYS%",
+            "outputType": "xAOD::MuonContainer"
+        }
+    },
+    "seq1_MuonEtaCutAlg_AnaMuons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_MuonEtaCutAlg_AnaMuons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "2.7",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "0",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaMuons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_MuonCalibrationAndSmearingAlg_AnaMuons": {
+        "Type": "CP::MuonCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::MuonCalibTool",
+                    "Properties": {
+                        "Name": "seq1_MuonCalibrationAndSmearingAlg_AnaMuons.calibrationAndSmearingTool",
+                        "EventInfoContName": "'EventInfo'",
+                        "ExcludeNSWFromPrecisionLayers": "0",
+                        "HighPtSmearingTool": "''",
+                        "HighPtSystThr": "300",
+                        "IsRun3Geo": "1",
+                        "MuonSelectionTool": "''",
+                        "OutputLevel": "3",
+                        "SagittaTool": "''",
+                        "ScaleAndSmearTool": "''",
+                        "applyCorrectionOnData": "1",
+                        "calibMode": "0",
+                        "do2StationsHighPt": "0",
+                        "doEtaSagittaSys": "0",
+                        "doExtraSmearing": "0",
+                        "expertMode_EvtNumber": "0",
+                        "expertMode_RunNumber": "0",
+                        "expertMode_isData": "0",
+                        "expert_validationMode": "0",
+                        "release": "'Recs2025_12_11_Run2Run3'",
+                        "skipResolutionCategory": "0",
+                        "systematicScheme": "'Corr_Scale'",
+                        "useRandomRunNumber": "0"
+                    }
+                }
+            },
+            "muons": "AnaMuons_STEP1_%SYS%",
+            "muonsOut": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_MuonPtCutAlg_AnaMuons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_MuonPtCutAlg_AnaMuons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "0",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "3000",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaMuons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaMuons_%SYS%"
+        }
+    },
+    "seq1_MuonTrackSelectionAlg_AnaMuons_medium": {
+        "Type": "CP::AsgLeptonTrackSelectionAlg",
+        "Properties": {
+            "Tools": {},
+            "maxD0Significance": 3,
+            "maxDeltaZ0SinTheta": 0.5,
+            "particles": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "trackSelection_medium,as_bits"
+        }
+    },
+    "seq1_MuonSelectionAlg_AnaMuons_medium": {
+        "Type": "CP::MuonSelectionAlgV2",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::MuonSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_MuonSelectionAlg_AnaMuons_medium.selectionTool",
+                        "AllowSettingGeometryOnTheFly": "0",
+                        "BMVcutFile": "'MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root'",
+                        "CalculateTightNNScore": "0",
+                        "CalibrationRelease": "'PreRec2016_2016-04-13'",
+                        "CaloScoreWP": "4",
+                        "CustomInputFolder": "''",
+                        "DisablePtCuts": "0",
+                        "DoBadMuonVetoMimic": "0",
+                        "EventInfoContName": "'EventInfo'",
+                        "ExcludeNSWFromPrecisionLayers": "0",
+                        "ExpertDevelopMode": "0",
+                        "IsRun3Geo": "1",
+                        "MVAreaderFile_EVEN_MuGirl": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuGirl_EVEN.weights.xml'",
+                        "MVAreaderFile_EVEN_MuidCB": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuidCB_EVEN.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin1": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin1.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin2": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin2.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin3": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin3.weights.xml'",
+                        "MVAreaderFile_ODD_MuGirl": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuGirl_ODD.weights.xml'",
+                        "MVAreaderFile_ODD_MuidCB": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuidCB_ODD.weights.xml'",
+                        "MaxEta": "2.7",
+                        "MuQuality": "1",
+                        "ORTInferenceTool": "'AthOnnx::OnnxRuntimeInferenceTool'",
+                        "OutputLevel": "3",
+                        "PixCutOff": "0",
+                        "RecalcPrecisionLayerswNSW": "1",
+                        "SctCutOff": "0",
+                        "SiHolesCutOff": "0",
+                        "ToroidOff": "0",
+                        "TrtCutOff": "1",
+                        "TurnOffMomCorr": "0",
+                        "Use2stationMuonsHighPt": "1",
+                        "UseAllAuthors": "1",
+                        "UseBEEBISInHighPtRun3": "1",
+                        "UseCaloScore": "1",
+                        "UseLRT": "0",
+                        "UseMVALowPt": "0",
+                        "UseSegmentTaggedLowPt": "0",
+                        "expertMode_EvtNumber": "0",
+                        "expertMode_RunNumber": "0"
+                    }
+                }
+            },
+            "badMuonVetoDecoration": "is_bad_medium,as_char",
+            "muons": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits",
+            "selectionDecoration": "good_muon_medium,as_char"
+        }
+    },
+    "seq1_MuonIsolationAlg_AnaMuons_medium": {
+        "Type": "CP::MuonIsolationAlg",
+        "Properties": {
+            "Tools": {
+                "isolationTool": {
+                    "Type": "CP::IsolationSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_MuonIsolationAlg_AnaMuons_medium.isolationTool",
+                        "CalibFileName": "''",
+                        "ElectronKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "ElectronWP": "'Undefined'",
+                        "ElectronWPVec": "[]",
+                        "InElectronContainer": "''",
+                        "InMuonContainer": "''",
+                        "InPhotonContainer": "''",
+                        "IsoDecSuffix": "''",
+                        "IsolationDecors": "[]",
+                        "MuonKey": "'/Muons/DFCommonGoodMuon/mu_cutValues_'",
+                        "MuonWP": "'Loose_VarRad'",
+                        "MuonWPVec": "[]",
+                        "OutputLevel": "3",
+                        "PhotonKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "PhotonWP": "'Undefined'",
+                        "PhotonWPVec": "[]",
+                        "doCutInterpolationElec": "1",
+                        "doCutInterpolationMuon": "0",
+                        "filePathName": "'ElectronIsolationSelection/2022_2025/v3/'"
+                    }
+                }
+            },
+            "isolationDecoration": "isolated_muon_medium,as_char",
+            "muons": "AnaMuons_%SYS%",
+            "preselection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits&&good_muon_medium,as_char"
+        }
+    },
+    "seq1_ElectronShallowCopyAlg_AnaElectrons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonElectronsLHLoose",
+                "neflowisol20",
+                "ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt500",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt500",
+                "ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr",
+                "ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "DFCommonAddAmbiguity",
+                "PLIT_PLITel_pelxpromp",
+                "PLIT_PLITel_pnpxall",
+                "TruthLink"
+            ],
+            "input": "AnalysisElectrons",
+            "output": "AnaElectrons_STEP1_%SYS%",
+            "outputType": "xAOD::ElectronContainer"
+        }
+    },
+    "seq1_ElectronEtaCutAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronEtaCutAlg_AnaElectrons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "2.47",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "0",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "1",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaElectrons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_ElectronObjectQualityAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::EgammaIsGoodOQSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronObjectQualityAlg_AnaElectrons.selectionTool",
+                        "Mask": "1446",
+                        "OutputLevel": "3",
+                        "deadHVTool": "24AsgDeadHVCellRemovalTool/seq1_ElectronObjectQualityAlg_AnaElectrons.selectionTool.deadHVTool"
+                    }
+                }
+            },
+            "particles": "AnaElectrons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "goodOQ,as_bits"
+        }
+    },
+    "seq1_ElectronCalibrationAndSmearingAlg_AnaElectrons": {
+        "Type": "CP::EgammaCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::EgammaCalibrationAndSmearingTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronCalibrationAndSmearingAlg_AnaElectrons.calibrationAndSmearingTool",
+                        "DoElectronMVACalibration": "1",
+                        "DoFwdElectronCalibration": "0",
+                        "DoPhotonMVACalibration": "0",
+                        "ESModel": "'es2024_Run3_v0'",
+                        "FixForMissingCells": "1",
+                        "MVACalibSvc": "''",
+                        "MVAfolder": "'egammaMVACalib/offline/v10'",
+                        "OutputLevel": "3",
+                        "PrimaryVerticesKey": "'PrimaryVertices'",
+                        "ResolutionType": "'SigmaEff90'",
+                        "decorateEmva": "0",
+                        "decorrelationModel": "'1NP_v1'",
+                        "decorrelationModelResolution": "''",
+                        "decorrelationModelScale": "''",
+                        "doADCLinearityCorrection": "1",
+                        "doLeakageCorrection": "1",
+                        "doScaleCorrection": "2",
+                        "doSmearing": "2",
+                        "layerRecalibrationTune": "''",
+                        "onlyElectrons": "0",
+                        "onlyPhotons": "0",
+                        "randomRunNumber": "0",
+                        "useAFII": "-1",
+                        "useCaloDistPhiUnifCorrection": "1",
+                        "useEPCombination": "0",
+                        "useFastSim": "0",
+                        "useGainCorrection": "0",
+                        "useGainInterpolation": "1",
+                        "useIntermoduleCorrection": "1",
+                        "useLayerCorrection": "2",
+                        "useMVACalibration": "2",
+                        "usePSCorrection": "2",
+                        "usePhiUniformCorrection": "1",
+                        "useS12Correction": "2",
+                        "useSaccCorrection": "2",
+                        "use_full_statistical_error": "0",
+                        "use_temp_correction201215": "2",
+                        "use_uA2MeV_2015_first2weeks_correction": "2",
+                        "varSF": "1"
+                    }
+                }
+            },
+            "egammas": "AnaElectrons_STEP1_%SYS%",
+            "egammasOut": "AnaElectrons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_ElectronPtCutAlg_AnaElectrons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronPtCutAlg_AnaElectrons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "0",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "10000",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0",
+                        "decorator": "21JetPileupLabelingTool/seq1_JetPileupLabelAlg_AnaJets.decorator",
+                        "RecoJetContainer": "'AnaJets_STEP1_NOSYS'",
+                        "SuppressOutputDependence": "1",
+                        "TruthJetContainer": "'AntiKt4TruthDressedWZJets'",
+                        "isHSLabel": "'AnaJets_STEP1_NOSYS.isJvtHS'",
+                        "isHSMaxDR": "0.3",
+                        "isHSMinPt": "10000",
+                        "isPULabel": "'AnaJets_STEP1_NOSYS.isJvtPU'",
+                        "isPUMinDR": "0.6",
+                        "isPUMinPt": "0",
+                        "uncertaintiesTool": "20JetUncertaintiesTool/seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesTool",
+                        "AbsEtaGluonFraction": "1",
+                        "AnalysisFile": "'analysisInputs/UnknownFlavourComp.root'",
+                        "AnalysisHistPattern": "''",
+                        "CalibArea": "'CalibArea-08'",
+                        "ConfigFile": "'rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config'",
+                        "IsData": "1",
+                        "JetDefinition": "'AntiKt4EMPFlow'",
+                        "MCType": "'MC23'",
+                        "NJetAccessorName": "'Njet'",
+                        "Path": "''",
+                        "PseudoDataJERsmearingMode": "1",
+                        "VariablesToShift": "[]",
+                        "uncertaintiesToolPD": "20JetUncertaintiesTool/seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesToolPD"
+                    }
+                }
+            },
+            "particles": "AnaElectrons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_ElectronIsolationCorrectionAlg_AnaElectrons": {
+        "Type": "CP::EgammaIsolationCorrectionAlg",
+        "Properties": {
+            "Tools": {
+                "isolationCorrectionTool": {
+                    "Type": "CP::IsolationCorrectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronIsolationCorrectionAlg_AnaElectrons.isolationCorrectionTool",
+                        "AFII_corr": "0",
+                        "Apply_SC_leakcorr": "0",
+                        "Apply_ddshifts": "0",
+                        "Apply_etaEDParPU_correction": "0",
+                        "Apply_etaEDPar_mc_correction": "0",
+                        "CentralEventShapeKey": "''",
+                        "CorrFile": "'IsolationCorrections/v6/isolation_ptcorrections_rel22_mc20.root'",
+                        "CorrFile_ddshift": "'IsolationCorrections/v3/isolation_ddcorrection_shift.root'",
+                        "CorrFile_ddsmearing": "'IsolationCorrections/v1/isolation_ddcorrection_smearing.root'",
+                        "CorrFile_etaEDParPU_correction": "'IsolationCorrections/v6/zetas.root'",
+                        "CorrFile_etaEDPar_mc_correction": "'IsolationCorrections/v6/zetas_correction.root'",
+                        "Correct_etcone": "0",
+                        "DataDrivenVer": "'2017'",
+                        "EventInfoKey": "'EventInfo'",
+                        "FixTimingIssueInCore": "1",
+                        "ForcePartType": "0",
+                        "ForwardEventShape": "''",
+                        "IsMC": "1",
+                        "LogLogFitForLeakage": "0",
+                        "OutputLevel": "3",
+                        "ToolVer": "'REL22'",
+                        "Trouble_categories": "1"
+                    }
+                }
+            },
+            "egammas": "AnaElectrons_STEP2_%SYS%",
+            "egammasOut": "AnaElectrons_%SYS%",
+            "egammasType": "xAOD::ElectronContainer",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaElectrons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaElectrons_%SYS%"
+        }
+    },
+    "seq1_ElectronTrackSelectionAlg_AnaElectrons_loose": {
+        "Type": "CP::AsgLeptonTrackSelectionAlg",
+        "Properties": {
+            "Tools": {},
+            "maxD0Significance": 5,
+            "maxDeltaZ0SinTheta": 0.5,
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "trackSelection_loose,as_bits"
+        }
+    },
+    "seq1_ElectronLikelihoodAlg_AnaElectrons_loose": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronLikelihoodAlg_AnaElectrons_loose.selectionTool",
+                        "OutputLevel": "3",
+                        "invertFlags": "[0]",
+                        "selectionFlags": "['DFCommonElectronsLHLooseBL']"
+                    }
+                }
+            },
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits",
+            "selectionDecoration": "selectLikelihood_loose,as_char"
+        }
+    },
+    "seq1_ElectronIsolationSelectionAlg_AnaElectrons_loose": {
+        "Type": "CP::EgammaIsolationSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::IsolationSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_ElectronIsolationSelectionAlg_AnaElectrons_loose.selectionTool",
+                        "CalibFileName": "''",
+                        "ElectronKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "ElectronWP": "'Tight_VarRad'",
+                        "ElectronWPVec": "[]",
+                        "InElectronContainer": "''",
+                        "InMuonContainer": "''",
+                        "InPhotonContainer": "''",
+                        "IsoDecSuffix": "''",
+                        "IsolationDecors": "[]",
+                        "MuonKey": "'/Muons/DFCommonGoodMuon/mu_cutValues_'",
+                        "MuonWP": "'Undefined'",
+                        "MuonWPVec": "[]",
+                        "OutputLevel": "3",
+                        "PhotonKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "PhotonWP": "'Undefined'",
+                        "PhotonWPVec": "[]",
+                        "doCutInterpolationElec": "1",
+                        "doCutInterpolationMuon": "0",
+                        "filePathName": "'ElectronIsolationSelection/2022_2025/v3/'"
+                    }
+                }
+            },
+            "egammas": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits&&selectLikelihood_loose,as_char",
+            "selectionDecoration": "isolated_loose,as_char"
+        }
+    },
+    "seq1_PtEtaSelectionAlg_AnaElectrons_": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PtEtaSelectionAlg_AnaElectrons_.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "0",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "10000",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaElectrons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectPtEta"
+        }
+    },
+    "seq1_PhotonShallowCopyAlg_AnaPhotons": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "DFCommonPhotonsCleaning",
+                "ptcone20_CloseByCorr",
+                "topoetcone20_CloseByCorr",
+                "topoetcone40_CloseByCorr",
+                "TruthLink"
+            ],
+            "input": "AnalysisPhotons",
+            "output": "AnaPhotons_STEP1_%SYS%",
+            "outputType": "xAOD::PhotonContainer"
+        }
+    },
+    "seq1_PhotonEtaCutAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonEtaCutAlg_AnaPhotons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "2.37",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "0",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "1",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selectEta,as_bits"
+        }
+    },
+    "seq1_PhotonObjectQualityAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::EgammaIsGoodOQSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonObjectQualityAlg_AnaPhotons.selectionTool",
+                        "Mask": "34214",
+                        "OutputLevel": "3",
+                        "deadHVTool": "24AsgDeadHVCellRemovalTool/seq1_PhotonObjectQualityAlg_AnaPhotons.selectionTool.deadHVTool"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits",
+            "selectionDecoration": "goodOQ,as_bits"
+        }
+    },
+    "seq1_PhotonCleaningAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonCleaningAlg_AnaPhotons.selectionTool",
+                        "OutputLevel": "3",
+                        "invertFlags": "[0]",
+                        "selectionFlags": "['DFCommonPhotonsCleaning']"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_STEP1_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits",
+            "selectionDecoration": "isClean,as_bits"
+        }
+    },
+    "seq1_PhotonOriginCorrectionAlg_AnaPhotons": {
+        "Type": "CP::PhotonOriginCorrectionAlg",
+        "Properties": {
+            "Tools": {},
+            "photons": "AnaPhotons_STEP1_%SYS%",
+            "photonsOut": "AnaPhotons_STEP2_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits"
+        }
+    },
+    "seq1_PhotonCalibrationAndSmearingAlg_AnaPhotons": {
+        "Type": "CP::EgammaCalibrationAndSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "calibrationAndSmearingTool": {
+                    "Type": "CP::EgammaCalibrationAndSmearingTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonCalibrationAndSmearingAlg_AnaPhotons.calibrationAndSmearingTool",
+                        "DoElectronMVACalibration": "0",
+                        "DoFwdElectronCalibration": "0",
+                        "DoPhotonMVACalibration": "1",
+                        "ESModel": "'es2024_Run3_v0'",
+                        "FixForMissingCells": "1",
+                        "MVACalibSvc": "''",
+                        "MVAfolder": "'egammaMVACalib/offline/v10'",
+                        "OutputLevel": "3",
+                        "PrimaryVerticesKey": "'PrimaryVertices'",
+                        "ResolutionType": "'SigmaEff90'",
+                        "decorateEmva": "0",
+                        "decorrelationModel": "'1NP_v1'",
+                        "decorrelationModelResolution": "''",
+                        "decorrelationModelScale": "''",
+                        "doADCLinearityCorrection": "1",
+                        "doLeakageCorrection": "1",
+                        "doScaleCorrection": "2",
+                        "doSmearing": "2",
+                        "layerRecalibrationTune": "''",
+                        "onlyElectrons": "0",
+                        "onlyPhotons": "0",
+                        "randomRunNumber": "0",
+                        "useAFII": "-1",
+                        "useCaloDistPhiUnifCorrection": "1",
+                        "useEPCombination": "0",
+                        "useFastSim": "0",
+                        "useGainCorrection": "0",
+                        "useGainInterpolation": "1",
+                        "useIntermoduleCorrection": "1",
+                        "useLayerCorrection": "2",
+                        "useMVACalibration": "2",
+                        "usePSCorrection": "2",
+                        "usePhiUniformCorrection": "1",
+                        "useS12Correction": "2",
+                        "useSaccCorrection": "2",
+                        "use_full_statistical_error": "0",
+                        "use_temp_correction201215": "2",
+                        "use_uA2MeV_2015_first2weeks_correction": "2",
+                        "varSF": "1"
+                    }
+                }
+            },
+            "egammas": "AnaPhotons_STEP2_%SYS%",
+            "egammasOut": "AnaPhotons_STEP3_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits",
+            "skipNominal": true
+        }
+    },
+    "seq1_PhotonPtCutAlg_AnaPhotons": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonPtCutAlg_AnaPhotons.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "0",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "10000",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_STEP3_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits",
+            "selectionDecoration": "selectPt,as_bits"
+        }
+    },
+    "seq1_PhotonIsolationCorrectionAlg_AnaPhotons": {
+        "Type": "CP::EgammaIsolationCorrectionAlg",
+        "Properties": {
+            "Tools": {
+                "isolationCorrectionTool": {
+                    "Type": "CP::IsolationCorrectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonIsolationCorrectionAlg_AnaPhotons.isolationCorrectionTool",
+                        "AFII_corr": "0",
+                        "Apply_SC_leakcorr": "0",
+                        "Apply_ddshifts": "0",
+                        "Apply_etaEDParPU_correction": "0",
+                        "Apply_etaEDPar_mc_correction": "0",
+                        "CentralEventShapeKey": "''",
+                        "CorrFile": "'IsolationCorrections/v5/isolation_ptcorrections_rel20_2.root'",
+                        "CorrFile_ddshift": "'IsolationCorrections/v3/isolation_ddcorrection_shift.root'",
+                        "CorrFile_ddsmearing": "'IsolationCorrections/v1/isolation_ddcorrection_smearing.root'",
+                        "CorrFile_etaEDParPU_correction": "'IsolationCorrections/v6/zetas.root'",
+                        "CorrFile_etaEDPar_mc_correction": "'IsolationCorrections/v6/zetas_correction.root'",
+                        "Correct_etcone": "0",
+                        "DataDrivenVer": "'2017'",
+                        "EventInfoKey": "'EventInfo'",
+                        "FixTimingIssueInCore": "1",
+                        "ForcePartType": "0",
+                        "ForwardEventShape": "''",
+                        "IsMC": "1",
+                        "LogLogFitForLeakage": "0",
+                        "OutputLevel": "3",
+                        "ToolVer": "'REL21'",
+                        "Trouble_categories": "1"
+                    }
+                }
+            },
+            "egammas": "AnaPhotons_STEP3_%SYS%",
+            "egammasOut": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits"
+        }
+    },
+    "seq1_EnergyDecorator_AnaPhotons": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaPhotons_%SYS%"
+        }
+    },
+    "seq1_PhotonIsEMSelectorAlg_AnaPhotons_tight": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgFlagSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonIsEMSelectorAlg_AnaPhotons_tight.selectionTool",
+                        "OutputLevel": "3",
+                        "invertFlags": "[0]",
+                        "selectionFlags": "['DFCommonPhotonsIsEMTight']"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectEM_tight,as_char"
+        }
+    },
+    "seq1_PhotonIsolationSelectionAlg_AnaPhotons_tight": {
+        "Type": "CP::EgammaIsolationSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::IsolationSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PhotonIsolationSelectionAlg_AnaPhotons_tight.selectionTool",
+                        "CalibFileName": "''",
+                        "ElectronKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "ElectronWP": "'Undefined'",
+                        "ElectronWPVec": "[]",
+                        "InElectronContainer": "''",
+                        "InMuonContainer": "''",
+                        "InPhotonContainer": "''",
+                        "IsoDecSuffix": "''",
+                        "IsolationDecors": "[]",
+                        "MuonKey": "'/Muons/DFCommonGoodMuon/mu_cutValues_'",
+                        "MuonWP": "'Undefined'",
+                        "MuonWPVec": "[]",
+                        "OutputLevel": "3",
+                        "PhotonKey": "'/ElectronPhoton/LHTight/el_cutValues_'",
+                        "PhotonWP": "'FixedCutTight'",
+                        "PhotonWPVec": "[]",
+                        "doCutInterpolationElec": "1",
+                        "doCutInterpolationMuon": "0",
+                        "filePathName": "'ElectronIsolationSelection/2022_2025/v3/'"
+                    }
+                }
+            },
+            "egammas": "AnaPhotons_%SYS%",
+            "isPhoton": true,
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits&&selectEM_tight,as_char",
+            "selectionDecoration": "isolated_tight,as_char"
+        }
+    },
+    "seq1_PtEtaSelectionAlg_AnaPhotons_": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "CP::AsgPtEtaSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_PtEtaSelectionAlg_AnaPhotons_.selectionTool",
+                        "OutputLevel": "3",
+                        "etaGapHigh": "0",
+                        "etaGapLow": "0",
+                        "maxEta": "0",
+                        "maxPt": "0",
+                        "maxRapidity": "0",
+                        "minEta": "0",
+                        "minPt": "10000",
+                        "minRapidity": "0",
+                        "printCastWarning": "1",
+                        "printClusterWarning": "1",
+                        "useClusterEta": "0",
+                        "useConstituentMomentum": "0",
+                        "useDressedProperties": "0"
+                    }
+                }
+            },
+            "particles": "AnaPhotons_%SYS%",
+            "preselection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits",
+            "selectionDecoration": "selectPtEta"
+        }
+    },
+    "seq1_TauShallowCopyAlg_AnaTauJets": {
+        "Type": "CP::AsgShallowCopyAlg",
+        "Properties": {
+            "Tools": {},
+            "declareDecorations": [
+                "IsTruthMatched",
+                "truthJetLink",
+                "truthParticleLink"
+            ],
+            "input": "AnalysisTauJets",
+            "output": "AnaTauJets_STEP1_%SYS%",
+            "outputType": "xAOD::TauJetContainer"
+        }
+    },
+    "seq1_TauExtraVariablesAlg_AnaTauJets": {
+        "Type": "CP::TauExtraVariablesAlg",
+        "Properties": {
+            "Tools": {},
+            "taus": "AnaTauJets_STEP1_NOSYS"
+        }
+    },
+    "seq1_TauSmearingAlg_AnaTauJets": {
+        "Type": "CP::TauSmearingAlg",
+        "Properties": {
+            "Tools": {
+                "smearingTool": {
+                    "Type": "TauAnalysisTools::TauSmearingTool",
+                    "Properties": {
+                        "Name": "seq1_TauSmearingAlg_AnaTauJets.smearingTool",
+                        "ApplyFading": "1",
+                        "ApplyInsituCorrection": "1",
+                        "Campaign": "'mc23'",
+                        "InputFilePath": "'TauAnalysisTools/00-04-00/Smearing/TES_TrueHadTau_RNN_mc23_v3.root'",
+                        "MVATESQualityCheck": "1",
+                        "OutputLevel": "3",
+                        "RecommendationTag": "'2025-prerec'",
+                        "SkipTruthMatchCheck": "0",
+                        "Tool": "''",
+                        "useFastSim": "0",
+                        "useGNTau": "0",
+                        "Tools": {
+                            "TauSmearingTool": {
+                                "Properties": {
+                                    "Name": "seq1_TauSmearingAlg_AnaTauJets.smearingTool.TauSmearingTool",
+                                    "ApplyFading": "1",
+                                    "ApplyInsituCorrection": "1",
+                                    "InputFilePath": "'TauAnalysisTools/00-04-00/Smearing/TES_TrueHadTau_RNN_mc23_v3.root'",
+                                    "MVATESQualityCheck": "1",
+                                    "OutputLevel": "3",
+                                    "SkipTruthMatchCheck": "0",
+                                    "Tools": {
+                                        "TauResolutionTool": {
+                                            "Properties": {
+                                                "Name": "seq1_TauSmearingAlg_AnaTauJets.smearingTool.TauSmearingTool.TauResolutionTool",
+                                                "OutputLevel": "3",
+                                                "WeightFileName": "'tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root'",
+                                                "ElectronTool": "18egammaMVACalibTool/service_mva_egamma_idAnaElectrons.ElectronTool",
+                                                "CalibrationType": "0",
+                                                "ParticleType": "1",
+                                                "ShiftType": "1",
+                                                "folder": "'egammaMVACalib/offline/v10'",
+                                                "useClusterIf0": "1",
+                                                "use_layer_corrected": "1",
+                                                "ConvertedPhotonTool": "18egammaMVACalibTool/service_mva_egamma_idAnaPhotons.ConvertedPhotonTool",
+                                                "UnconvertedPhotonTool": "18egammaMVACalibTool/service_mva_egamma_idAnaPhotons.UnconvertedPhotonTool"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "preselection": "",
+            "taus": "AnaTauJets_STEP1_%SYS%",
+            "tausOut": "AnaTauJets_%SYS%"
+        }
+    },
+    "seq1_EnergyDecorator_AnaTauJets": {
+        "Type": "CP::AsgEnergyDecoratorAlg",
+        "Properties": {
+            "Tools": {},
+            "particles": "AnaTauJets_%SYS%"
+        }
+    },
+    "seq1_TauSelectionAlg_AnaTauJets_tight": {
+        "Type": "CP::AsgSelectionAlg",
+        "Properties": {
+            "Tools": {
+                "selectionTool": {
+                    "Type": "TauAnalysisTools::TauSelectionTool",
+                    "Properties": {
+                        "Name": "seq1_TauSelectionAlg_AnaTauJets_tight.selectionTool",
+                        "AbsCharge": "1",
+                        "AbsCharges": "[]",
+                        "AbsEtaMax": "nan",
+                        "AbsEtaMin": "nan",
+                        "AbsEtaRegion": "[]",
+                        "ConfigPath": "'TauAnalysisAlgorithms/tau_selection_tight_noeleid.conf'",
+                        "CreateControlPlots": "0",
+                        "EleIDVersion": "1",
+                        "EleIDWP": "1",
+                        "EleRNNSigTransMin": "nan",
+                        "GNTauDecorName": "''",
+                        "GNTauSigTransMin": "nan",
+                        "JetIDWP": "9",
+                        "JetRNNSigTransMin": "nan",
+                        "MuonContainerName": "''",
+                        "MuonOLR": "0",
+                        "NTrack": "nan",
+                        "NTracks": "[]",
+                        "OutputLevel": "3",
+                        "PtMin": "20",
+                        "SelectionCuts": "187",
+                        "TauContainerName": "'AnaTauJets_NOSYS'",
+                        "eVetoDecorName": "'AnaTauJets_NOSYS.RNNEleScoreSigTrans_v1'"
+                    }
+                }
+            },
+            "particles": "AnaTauJets_%SYS%",
+            "preselection": "",
+            "selectionDecoration": "selected_tau_tight,as_char"
+        }
+    },
+    "seq1_MetMakerAlg_AnaMET": {
+        "Type": "CP::MetMakerAlg",
+        "Properties": {
+            "Tools": {
+                "makerTool": {
+                    "Type": "met::METMaker",
+                    "Properties": {
+                        "Name": "seq1_MetMakerAlg_AnaMET.makerTool",
+                        "CorrectJetPhi": "0",
+                        "CustomCentralJetPt": "20000",
+                        "CustomForwardJetPt": "20000",
+                        "CustomJetJvtPtMax": "60000",
+                        "CustomJetJvtWP": "'FixedEffPt'",
+                        "DoJetTruth": "0",
+                        "DoMuonEloss": "0",
+                        "DoPFlow": "1",
+                        "DoRemoveElecTrks": "1",
+                        "DoRemoveElecTrksEM": "0",
+                        "DoRemoveMuonJets": "1",
+                        "DoSetMuonJetEMScale": "1",
+                        "DoSoftTruth": "0",
+                        "GreedyPhotons": "0",
+                        "JetConstitScaleMom": "'JetConstitScaleMomentum'",
+                        "JetContainer": "''",
+                        "JetEmfMuOlap": "0.9",
+                        "JetEtaForw": "2.5",
+                        "JetEtaMax": "4.5",
+                        "JetMinEFrac": "0",
+                        "JetMinWeightedPt": "20000",
+                        "JetPsEMuOlap": "2500",
+                        "JetRejectionDec": "''",
+                        "JetSelection": "'Tight'",
+                        "JetTrkNMuOlap": "5",
+                        "JetTrkPtMuPt": "0.8",
+                        "JetWidthMuOlap": "0.1",
+                        "JvtSelTool": "'seq1_MetMakerAlg_AnaMET.makerTool.JvtSelTool'",
+                        "MissingObjWarnThreshold": "7000",
+                        "ORCaloTaggedMuons": "1",
+                        "OutputLevel": "3",
+                        "TrackSelectorTool": "''",
+                        "UseGhostMuons": "0",
+                        "VeryGreedyPhotons": "0",
+                        "muIDPTJetPtRatioMuOlap": "2",
+                        "skipSystematicJetSelection": "0",
+                        "Tools": {
+                            "JvtSelTool": {
+                                "Properties": {
+                                    "Name": "seq1_MetMakerAlg_AnaMET.makerTool.JvtSelTool",
+                                    "ConfigDir": "'JetPileupTag/NNJvt/2022-03-22'",
+                                    "ConfigFile": "'NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json'",
+                                    "JetContainer": "'AnaJets_%SYS%'",
+                                    "JetEtaName": "'eta'",
+                                    "JvtMomentName": "'AnaJets_%SYS%.NNJvt'",
+                                    "MaxEtaForJvt": "2.5",
+                                    "MaxPtForJvt": "60000",
+                                    "MinEtaForJvt": "-1",
+                                    "MinPtForJvt": "20000",
+                                    "OutputLevel": "3",
+                                    "PassFlagName": "''",
+                                    "WorkingPoint": "'FixedEffPt'"
+                                }
+                            }
+                        }
+                    }
+                },
+                "systematicsTool": {
+                    "Type": "met::METSystematicsTool",
+                    "Properties": {
+                        "Name": "seq1_MetMakerAlg_AnaMET.systematicsTool",
+                        "ConfigJetTrkFile": "''",
+                        "ConfigPrefix": "'METUtilities/R22_PreRecs/'",
+                        "ConfigSoftCaloFile": "''",
+                        "ConfigSoftTrkFile": "'TrackSoftTerms-pflow_Dec24.config'",
+                        "EventInfo": "'EventInfo'",
+                        "OutputLevel": "3",
+                        "TruthContainer": "'MET_Truth'",
+                        "UseDevArea": "0",
+                        "VertexContainer": "'PrimaryVertices'"
+                    }
+                }
+            },
+            "doJetJVT": true,
+            "electrons": "AnaElectrons_%SYS%",
+            "electronsSelection": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits&&selectLikelihood_loose,as_char&&isolated_loose,as_char&&selectPtEta",
+            "jets": "AnaJets_%SYS%",
+            "met": "AnaMET_%SYS%",
+            "metAssociation": "METAssoc_AnalysisMET",
+            "metCore": "MET_Core_AnalysisMET",
+            "muons": "AnaMuons_%SYS%",
+            "muonsSelection": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits&&good_muon_medium,as_char&&isolated_muon_medium,as_char",
+            "photons": "AnaPhotons_%SYS%",
+            "photonsSelection": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits&&selectEM_tight,as_char&&isolated_tight,as_char&&selectPtEta",
+            "softTermKey": "PVSoftTrk",
+            "switchTauMu": false,
+            "taus": "AnaTauJets_%SYS%",
+            "tausSelection": "selected_tau_tight,as_char"
+        }
+    },
+    "seq1_MetBuilderAlg_AnaMET": {
+        "Type": "CP::MetBuilderAlg",
+        "Properties": {
+            "Tools": {},
+            "met": "AnaMET_%SYS%",
+            "softTerm": "PVSoftTrk"
+        }
+    },
+    "seq1_MetSignificanceAlg_AnaMET": {
+        "Type": "CP::MetSignificanceAlg",
+        "Properties": {
+            "Tools": {
+                "significanceTool": {
+                    "Type": "met::METSignificance",
+                    "Properties": {
+                        "Name": "seq1_MetSignificanceAlg_AnaMET.significanceTool",
+                        "ApplyBias": "0",
+                        "ConfigJetPhiResoFile": "'jet_unc.root'",
+                        "ConfigPrefix": "'METUtilities/data17_13TeV/metsig_Aug15/'",
+                        "DoJerForEMu": "0",
+                        "DoPhiReso": "0",
+                        "EMuResoAux": "''",
+                        "EgammaDecorrelationModel": "'1NP_v1'",
+                        "EgammaESModel": "'es2024_Run3_v0'",
+                        "EgammaUseFastsim": "0",
+                        "IsDataJet": "0",
+                        "IsDataMuon": "0",
+                        "JetCalibArea": "'00-04-81'",
+                        "JetCalibConfig": "'JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config'",
+                        "JetCalibSequence": "'JetArea_Residual_EtaJES_GSC_Smear'",
+                        "JetCollection": "'AntiKt4EMPFlow'",
+                        "JetEtaThr": "-1",
+                        "JetPtThr": "-1",
+                        "JetResoAux": "''",
+                        "MuonCalibMode": "-1",
+                        "MuonCalibTool": "'seq1_MetSignificanceAlg_AnaMET.significanceTool.MuonCalibTool'",
+                        "OutputLevel": "3",
+                        "ScalarBias": "0",
+                        "SoftTermParam": "0",
+                        "SoftTermReso": "8.5",
+                        "TauTESConfig": "'tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root'",
+                        "TreatPUJets": "0",
+                        "egammaCalibTool": "''",
+                        "jetCalibTool": "''",
+                        "tauResolutionTool": "''",
+                        "Tools": {
+                            "METSigAutoConf_EgammaCalibrationAndSmearingTool": {
+                                "Properties": {
+                                    "Name": "seq1_MetSignificanceAlg_AnaMET.significanceTool.METSigAutoConf_EgammaCalibrationAndSmearingTool",
+                                    "DoElectronMVACalibration": "1",
+                                    "DoFwdElectronCalibration": "0",
+                                    "DoPhotonMVACalibration": "1",
+                                    "ESModel": "'es2024_Run3_v0'",
+                                    "FixForMissingCells": "1",
+                                    "MVACalibSvc": "''",
+                                    "MVAfolder": "''",
+                                    "OutputLevel": "3",
+                                    "PrimaryVerticesKey": "'PrimaryVertices'",
+                                    "ResolutionType": "'SigmaEff90'",
+                                    "decorateEmva": "0",
+                                    "decorrelationModel": "'1NP_v1'",
+                                    "decorrelationModelResolution": "''",
+                                    "decorrelationModelScale": "''",
+                                    "doADCLinearityCorrection": "1",
+                                    "doLeakageCorrection": "1",
+                                    "doScaleCorrection": "2",
+                                    "doSmearing": "2",
+                                    "layerRecalibrationTune": "''",
+                                    "onlyElectrons": "0",
+                                    "onlyPhotons": "0",
+                                    "randomRunNumber": "0",
+                                    "useAFII": "-1",
+                                    "useCaloDistPhiUnifCorrection": "1",
+                                    "useEPCombination": "0",
+                                    "useFastSim": "0",
+                                    "useGainCorrection": "0",
+                                    "useGainInterpolation": "1",
+                                    "useIntermoduleCorrection": "1",
+                                    "useLayerCorrection": "2",
+                                    "useMVACalibration": "0",
+                                    "usePSCorrection": "2",
+                                    "usePhiUniformCorrection": "1",
+                                    "useS12Correction": "2",
+                                    "useSaccCorrection": "2",
+                                    "use_full_statistical_error": "0",
+                                    "use_temp_correction201215": "2",
+                                    "use_uA2MeV_2015_first2weeks_correction": "2",
+                                    "varSF": "1"
+                                }
+                            },
+                            "METSigAutoConf_TauPerfTool": {
+                                "Properties": {
+                                    "Name": "seq1_MetSignificanceAlg_AnaMET.significanceTool.METSigAutoConf_TauPerfTool",
+                                    "OutputLevel": "3",
+                                    "WeightFileName": "'tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root'",
+                                    "MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow": "18JetCalibrationTool/seq1_MetSignificanceAlg_AnaMET.significanceTool.MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow",
+                                    "CalibArea": "'00-04-81'",
+                                    "CalibSequence": "'JetArea_Residual_EtaJES_GSC_Smear'",
+                                    "ConfigDir": "'JetCalibTools/CalibrationConfigs/'",
+                                    "ConfigFile": "'JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config'",
+                                    "DEVmode": "0",
+                                    "EventInfoKey": "'EventInfo'",
+                                    "EventInfoName": "'EventInfo'",
+                                    "ForceCalibFileFastSim": "''",
+                                    "ForceCalibFileMC2MC": "''",
+                                    "ForceCalibFilePtResidual": "''",
+                                    "ForceCampaign": "''",
+                                    "GSCDepth": "'auto'",
+                                    "IsData": "0",
+                                    "JetCollection": "'AntiKt4EMPFlow'",
+                                    "OriginScale": "'JetOriginConstitScaleMomentum'",
+                                    "PrimaryVerticesContainerName": "'PrimaryVertices'",
+                                    "RhoKey": "'Kt4EMPFlowEventShape'",
+                                    "actualInteractionsPerCrossing": "'EventInfo.actualInteractionsPerCrossing'",
+                                    "averageInteractionsPerCrossingKey": "'EventInfo.averageInteractionsPerCrossing'",
+                                    "useOriginVertex": "0"
+                                }
+                            },
+                            "MuonCalibTool": {
+                                "Properties": {
+                                    "Name": "seq1_MetSignificanceAlg_AnaMET.significanceTool.MuonCalibTool",
+                                    "EventInfoContName": "'EventInfo'",
+                                    "ExcludeNSWFromPrecisionLayers": "0",
+                                    "HighPtSmearingTool": "''",
+                                    "HighPtSystThr": "300",
+                                    "IsRun3Geo": "0",
+                                    "MuonSelectionTool": "''",
+                                    "OutputLevel": "3",
+                                    "SagittaTool": "''",
+                                    "ScaleAndSmearTool": "''",
+                                    "applyCorrectionOnData": "1",
+                                    "calibMode": "0",
+                                    "do2StationsHighPt": "0",
+                                    "doEtaSagittaSys": "0",
+                                    "doExtraSmearing": "0",
+                                    "expertMode_EvtNumber": "0",
+                                    "expertMode_RunNumber": "0",
+                                    "expertMode_isData": "0",
+                                    "expert_validationMode": "0",
+                                    "release": "'Recs2025_12_11_Run2Run3'",
+                                    "skipResolutionCategory": "0",
+                                    "systematicScheme": "'Corr_Scale'",
+                                    "useRandomRunNumber": "0"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "METOverSqrtHTDecoration": "METOverSqrtHT_%SYS%",
+            "METOverSqrtSumETDecoration": "METOverSqrtSumET_%SYS%",
+            "met": "AnaMET_%SYS%",
+            "sigDirectionalDecoration": "sigDirectional_%SYS%"
+        }
+    },
+    "seq1_TreeMaker_analysis": {
+        "Type": "CP::TreeMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_NTupleMaker_analysis": {
+        "Type": "CP::AsgxAODNTupleMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "Branches": [
+                "EventInfo.actualInteractionsPerCrossing -> actualInteractionsPerCrossing",
+                "EventInfo.averageInteractionsPerCrossing -> averageInteractionsPerCrossing",
+                "AnaElectrons_NOSYS.eta -> ele_eta type=float",
+                "AnaElectrons_NOSYS.goodOQ -> ele_goodOQ type=uint32",
+                "AnaElectrons_NOSYS.isolated_loose -> ele_isolated_loose type=char",
+                "AnaElectrons_NOSYS.m -> ele_m type=float",
+                "AnaElectrons_NOSYS.originalObjectLink -> ele_originalObjectLink",
+                "AnaElectrons_NOSYS.phi -> ele_phi type=float",
+                "AnaElectrons_NOSYS.pt -> ele_pt type=float",
+                "AnaElectrons_NOSYS.selectEta -> ele_selectEta type=uint32",
+                "AnaElectrons_NOSYS.selectLikelihood_loose -> ele_selectLikelihood_loose type=char",
+                "AnaElectrons_NOSYS.selectPt -> ele_selectPt type=uint32",
+                "AnaElectrons_NOSYS.selectPtEta -> ele_selectPtEta type=uint32",
+                "AnaElectrons_NOSYS.trackSelection_loose -> ele_trackSelection_loose type=uint32",
+                "EventInfo.eventNumber -> eventNumber",
+                "AnaMET_NOSYS.name -> fullMet_name",
+                "AnaJets_NOSYS.NNJvt -> jet_NNJvt type=float",
+                "AnaJets_NOSYS.NNJvtPass -> jet_NNJvtPass type=char",
+                "AnaJets_NOSYS.eta -> jet_eta type=float",
+                "AnaJets_NOSYS.m -> jet_m type=float",
+                "AnaJets_NOSYS.originalObjectLink -> jet_originalObjectLink",
+                "AnaJets_NOSYS.phi -> jet_phi type=float",
+                "AnaJets_NOSYS.pt -> jet_pt type=float",
+                "EventInfo.mcChannelNumber -> mcChannelNumber",
+                "AnaMuons_NOSYS.eta -> mu_eta type=float",
+                "AnaMuons_NOSYS.good_muon_medium -> mu_good_muon_medium type=char",
+                "AnaMuons_NOSYS.isolated_muon_medium -> mu_isolated_muon_medium type=char",
+                "AnaMuons_NOSYS.m -> mu_m type=float",
+                "AnaMuons_NOSYS.originalObjectLink -> mu_originalObjectLink",
+                "AnaMuons_NOSYS.phi -> mu_phi type=float",
+                "AnaMuons_NOSYS.pt -> mu_pt type=float",
+                "AnaMuons_NOSYS.selectEta -> mu_selectEta type=uint32",
+                "AnaMuons_NOSYS.selectPt -> mu_selectPt type=uint32",
+                "AnaMuons_NOSYS.trackSelection_medium -> mu_trackSelection_medium type=uint32",
+                "AnaPhotons_NOSYS.eta -> pho_eta type=float",
+                "AnaPhotons_NOSYS.goodOQ -> pho_goodOQ type=uint32",
+                "AnaPhotons_NOSYS.isClean -> pho_isClean type=uint32",
+                "AnaPhotons_NOSYS.isolated_tight -> pho_isolated_tight type=char",
+                "AnaPhotons_NOSYS.m -> pho_m type=float",
+                "AnaPhotons_NOSYS.originalObjectLink -> pho_originalObjectLink",
+                "AnaPhotons_NOSYS.phi -> pho_phi type=float",
+                "AnaPhotons_NOSYS.pt -> pho_pt type=float",
+                "AnaPhotons_NOSYS.selectEM_tight -> pho_selectEM_tight type=char",
+                "AnaPhotons_NOSYS.selectEta -> pho_selectEta type=uint32",
+                "AnaPhotons_NOSYS.selectPt -> pho_selectPt type=uint32",
+                "AnaPhotons_NOSYS.selectPtEta -> pho_selectPtEta type=uint32",
+                "EventInfo.runNumber -> runNumber",
+                "AnaTauJets_NOSYS.eta -> tau_eta type=float",
+                "AnaTauJets_NOSYS.m -> tau_m type=float",
+                "AnaTauJets_NOSYS.originalObjectLink -> tau_originalObjectLink",
+                "AnaTauJets_NOSYS.phi -> tau_phi type=float",
+                "AnaTauJets_NOSYS.pt -> tau_pt type=float",
+                "AnaTauJets_NOSYS.selected_tau_tight -> tau_selected_tau_tight type=char",
+                "AnaMET_%SYS%.METOverSqrtHT_%SYS% -> fullMet_METOverSqrtHT_%SYS% type=float",
+                "AnaMET_%SYS%.METOverSqrtSumET_%SYS% -> fullMet_METOverSqrtSumET_%SYS% type=float",
+                "AnaMET_%SYS%.ConstitObjectLinks -> fullMet_constituentLinks_%SYS%",
+                "AnaMET_%SYS%.ConstitObjectWeights -> fullMet_constituentWeights_%SYS% type=vector_float",
+                "AnaMET_%SYS%.met -> fullMet_met_%SYS% type=float",
+                "AnaMET_%SYS%.mpx -> fullMet_mpx_%SYS% type=float",
+                "AnaMET_%SYS%.mpy -> fullMet_mpy_%SYS% type=float",
+                "AnaMET_%SYS%.phi -> fullMet_phi_%SYS% type=float",
+                "AnaMET_%SYS%.sigDirectional_%SYS% -> fullMet_sigDirectional_%SYS% type=float",
+                "AnaMET_%SYS%.significance_%SYS% -> fullMet_significance_%SYS% type=float",
+                "AnaMET_%SYS%.source -> fullMet_source_%SYS% type=uint64",
+                "AnaMET_%SYS%.sumet -> fullMet_sumet_%SYS% type=float",
+                "AnaMET_%SYS%.name -> fullMet_term_%SYS%"
+            ],
+            "NonContainers": [
+                "EventInfo"
+            ],
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_MetNTupleMaker_analysis": {
+        "Type": "CP::AsgxAODNTupleMakerAlg",
+        "Properties": {
+            "Tools": {},
+            "Branches": [
+                "AnaMET_%SYS%.METOverSqrtHT_%SYS% -> finalMet_METOverSqrtHT_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.METOverSqrtSumET_%SYS% -> finalMet_METOverSqrtSumET_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.met -> finalMet_met_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.phi -> finalMet_phi_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.sigDirectional_%SYS% -> finalMet_sigDirectional_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.significance_%SYS% -> finalMet_significance_%SYS% type=float metTerm=Final",
+                "AnaMET_%SYS%.sumet -> finalMet_sumet_%SYS% type=float metTerm=Final"
+            ],
+            "NonContainers": [
+                "EventInfo"
+            ],
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_TreeFiller_analysis": {
+        "Type": "CP::TreeFillerAlg",
+        "Properties": {
+            "Tools": {},
+            "RootStreamName": "ANALYSIS",
+            "TreeName": "analysis"
+        }
+    },
+    "seq1_PrintToolConfigAlg": {
+        "Type": "CP::PrintToolConfigAlg",
+        "Properties": {
+            "Tools": {},
+            "OutputFile": "/home/gwatts/atlas-cp-speed/met-20261119/results/observer-corr-smoke-001/tool_config.txt"
+        }
+    },
+    "ToolSvc": {
+        "Properties": {
+            "Tools": {
+                "MCaST_Own_MST": {
+                    "Properties": {
+                        "Name": "ToolSvc.MCaST_Own_MST",
+                        "AllowSettingGeometryOnTheFly": "0",
+                        "BMVcutFile": "'MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root'",
+                        "CalculateTightNNScore": "0",
+                        "CalibrationRelease": "'PreRec2016_2016-04-13'",
+                        "CaloScoreWP": "4",
+                        "CustomInputFolder": "''",
+                        "DisablePtCuts": "0",
+                        "DoBadMuonVetoMimic": "0",
+                        "EventInfoContName": "'EventInfo'",
+                        "ExcludeNSWFromPrecisionLayers": "0",
+                        "ExpertDevelopMode": "0",
+                        "IsRun3Geo": "1",
+                        "MVAreaderFile_EVEN_MuGirl": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuGirl_EVEN.weights.xml'",
+                        "MVAreaderFile_EVEN_MuidCB": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuidCB_EVEN.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin1": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin1.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin2": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin2.weights.xml'",
+                        "MVAreaderFile_MuTagIMO_etaBin3": "'dev/MuonSelectorTools/181121_MuTagIMO_BDT/BDT_NOV2021_MuTagIMO_etaBin3.weights.xml'",
+                        "MVAreaderFile_ODD_MuGirl": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuGirl_ODD.weights.xml'",
+                        "MVAreaderFile_ODD_MuidCB": "'MuonSelectorTools/190118_PrelimLowPtMVA/LowPtMVA_Weights/BDTG_9JAN2019_MuidCB_ODD.weights.xml'",
+                        "MaxEta": "2.7",
+                        "MuQuality": "1",
+                        "ORTInferenceTool": "'AthOnnx::OnnxRuntimeInferenceTool'",
+                        "OutputLevel": "3",
+                        "PixCutOff": "0",
+                        "RecalcPrecisionLayerswNSW": "1",
+                        "SctCutOff": "0",
+                        "SiHolesCutOff": "0",
+                        "ToroidOff": "0",
+                        "TrtCutOff": "1",
+                        "TurnOffMomCorr": "1",
+                        "Use2stationMuonsHighPt": "1",
+                        "UseAllAuthors": "1",
+                        "UseBEEBISInHighPtRun3": "1",
+                        "UseCaloScore": "1",
+                        "UseLRT": "0",
+                        "UseMVALowPt": "0",
+                        "UseSegmentTaggedLowPt": "0",
+                        "expertMode_EvtNumber": "0",
+                        "expertMode_RunNumber": "0"
+                    }
+                },
+                "seq1_MetSignificanceAlg_AnaMET": {
+                    "Properties": {
+                        "Tools": {
+                            "significanceTool": {
+                                "Properties": {
+                                    "Tools": {
+                                        "MuonCalibTool_MCaST_Sagitta": {
+                                            "Properties": {
+                                                "Name": "ToolSvc.seq1_MetSignificanceAlg_AnaMET.significanceTool.MuonCalibTool_MCaST_Sagitta",
+                                                "EventInfoContName": "'EventInfo'",
+                                                "OutputLevel": "3",
+                                                "applyCorrectionOnData": "1",
+                                                "calibMode": "0",
+                                                "doEtaSagittaSys": "0",
+                                                "extraRebias": "2e-05",
+                                                "fixedRhoValue": "1",
+                                                "release": "'Recs2025_12_11_Run2Run3'",
+                                                "systematicScheme": "'Corr_Scale'",
+                                                "useFixedRho": "1"
+                                            }
+                                        },
+                                        "MuonCalibTool_MCaST_ScaleSmear": {
+                                            "Properties": {
+                                                "Name": "ToolSvc.seq1_MetSignificanceAlg_AnaMET.significanceTool.MuonCalibTool_MCaST_ScaleSmear",
+                                                "EventInfoContName": "'EventInfo'",
+                                                "OutputLevel": "3",
+                                                "calibMode": "0",
+                                                "release": "'Recs2025_12_11_Run2Run3'",
+                                                "systematicScheme": "'Corr_Scale'"
+                                            }
+                                        }
+                                    }
+                                },
+                                "Type": ""
+                            }
+                        }
+                    },
+                    "Type": ""
+                },
+                "seq1_MuonCalibrationAndSmearingAlg_AnaMuons": {
+                    "Properties": {
+                        "Tools": {
+                            "calibrationAndSmearingTool_MCaST_Sagitta": {
+                                "Properties": {
+                                    "Name": "ToolSvc.seq1_MuonCalibrationAndSmearingAlg_AnaMuons.calibrationAndSmearingTool_MCaST_Sagitta",
+                                    "EventInfoContName": "'EventInfo'",
+                                    "OutputLevel": "3",
+                                    "applyCorrectionOnData": "1",
+                                    "calibMode": "0",
+                                    "doEtaSagittaSys": "0",
+                                    "extraRebias": "2e-05",
+                                    "fixedRhoValue": "1",
+                                    "release": "'Recs2025_12_11_Run2Run3'",
+                                    "systematicScheme": "'Corr_Scale'",
+                                    "useFixedRho": "1"
+                                }
+                            },
+                            "calibrationAndSmearingTool_MCaST_ScaleSmear": {
+                                "Properties": {
+                                    "Name": "ToolSvc.seq1_MuonCalibrationAndSmearingAlg_AnaMuons.calibrationAndSmearingTool_MCaST_ScaleSmear",
+                                    "EventInfoContName": "'EventInfo'",
+                                    "OutputLevel": "3",
+                                    "calibMode": "0",
+                                    "release": "'Recs2025_12_11_Run2Run3'",
+                                    "systematicScheme": "'Corr_Scale'"
+                                }
+                            }
+                        }
+                    },
+                    "Type": ""
+                }
+            }
+        },
+        "Type": ""
+    }
+}

@@ -1,0 +1,1157 @@
+{
+  "label": "bounded-repeat-local-memmap",
+  "start_utc": "2026-11-19T11:03:34.214764+00:00",
+  "events": 20000,
+  "meters": "Fresh subprocess starts to exit, separate framework and histogram legs.",
+  "trials": [
+    {
+      "scope": "stored",
+      "round": 0,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 6.987017022000001,
+        "process_cpu_seconds": 5.8163469999999995,
+        "host_cpu0_delta_ticks": [
+          525,
+          0,
+          55,
+          115,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 70,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz",
+          "--stored"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.38092757600000005,
+        "process_cpu_seconds": 0.3799789999999996,
+        "host_cpu0_delta_ticks": [
+          32,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 6.987017022000001,
+      "histogram_seconds": 0.38092757600000005,
+      "total_seconds": 7.367944598000001
+    },
+    {
+      "scope": "nominal",
+      "round": 0,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 22.878234737,
+        "process_cpu_seconds": 21.737721,
+        "host_cpu0_delta_ticks": [
+          2081,
+          0,
+          102,
+          111,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 226,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.344224823,
+        "process_cpu_seconds": 0.34087800000000357,
+        "host_cpu0_delta_ticks": [
+          30,
+          0,
+          4,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 22.878234737,
+      "histogram_seconds": 0.344224823,
+      "total_seconds": 23.22245956
+    },
+    {
+      "scope": "full",
+      "round": 0,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 30.613614559000002,
+        "process_cpu_seconds": 29.164412999999993,
+        "host_cpu0_delta_ticks": [
+          2821,
+          0,
+          105,
+          105,
+          6,
+          0,
+          18,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 303,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.38476090900000004,
+        "process_cpu_seconds": 0.38199700000000547,
+        "host_cpu0_delta_ticks": [
+          35,
+          0,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 30.613614559000002,
+      "histogram_seconds": 0.38476090900000004,
+      "total_seconds": 30.998375468000003
+    },
+    {
+      "scope": "nominal",
+      "round": 1,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 32.647409438000004,
+        "process_cpu_seconds": 30.718781999999997,
+        "host_cpu0_delta_ticks": [
+          2865,
+          0,
+          169,
+          149,
+          2,
+          0,
+          76,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 324,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.301851332,
+        "process_cpu_seconds": 0.30083700000000135,
+        "host_cpu0_delta_ticks": [
+          24,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 3,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 32.647409438000004,
+      "histogram_seconds": 0.301851332,
+      "total_seconds": 32.94926077
+    },
+    {
+      "scope": "full",
+      "round": 1,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 28.540973332,
+        "process_cpu_seconds": 27.385267999999996,
+        "host_cpu0_delta_ticks": [
+          2626,
+          0,
+          106,
+          110,
+          1,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 283,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.33919071300000003,
+        "process_cpu_seconds": 0.3364450000000119,
+        "host_cpu0_delta_ticks": [
+          29,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 28.540973332,
+      "histogram_seconds": 0.33919071300000003,
+      "total_seconds": 28.880164045
+    },
+    {
+      "scope": "stored",
+      "round": 1,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 5.900513138,
+        "process_cpu_seconds": 4.942342999999994,
+        "host_cpu0_delta_ticks": [
+          451,
+          0,
+          49,
+          94,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 58,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz",
+          "--stored"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.26836121,
+        "process_cpu_seconds": 0.2679590000000047,
+        "host_cpu0_delta_ticks": [
+          25,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 3,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 5.900513138,
+      "histogram_seconds": 0.26836121,
+      "total_seconds": 6.168874348
+    },
+    {
+      "scope": "full",
+      "round": 2,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 30.084401124000003,
+        "process_cpu_seconds": 28.490038000000013,
+        "host_cpu0_delta_ticks": [
+          2756,
+          0,
+          88,
+          122,
+          25,
+          0,
+          23,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 298,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.375867481,
+        "process_cpu_seconds": 0.3643149999999764,
+        "host_cpu0_delta_ticks": [
+          31,
+          0,
+          6,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 30.084401124000003,
+      "histogram_seconds": 0.375867481,
+      "total_seconds": 30.460268605000003
+    },
+    {
+      "scope": "stored",
+      "round": 2,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 7.7258244000000005,
+        "process_cpu_seconds": 5.9460149999999885,
+        "host_cpu0_delta_ticks": [
+          520,
+          0,
+          74,
+          109,
+          64,
+          0,
+          17,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 76,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz",
+          "--stored"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.33006569900000005,
+        "process_cpu_seconds": 0.3272530000000131,
+        "host_cpu0_delta_ticks": [
+          31,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 7.7258244000000005,
+      "histogram_seconds": 0.33006569900000005,
+      "total_seconds": 8.055890099
+    },
+    {
+      "scope": "nominal",
+      "round": 2,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 22.804240507000003,
+        "process_cpu_seconds": 21.512689999999992,
+        "host_cpu0_delta_ticks": [
+          2072,
+          0,
+          82,
+          107,
+          14,
+          0,
+          12,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 226,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.274638846,
+        "process_cpu_seconds": 0.27131800000000794,
+        "host_cpu0_delta_ticks": [
+          24,
+          0,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 3,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 22.804240507000003,
+      "histogram_seconds": 0.274638846,
+      "total_seconds": 23.078879353
+    },
+    {
+      "scope": "stored",
+      "round": 3,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 5.670017614000001,
+        "process_cpu_seconds": 4.6030039999999985,
+        "host_cpu0_delta_ticks": [
+          428,
+          0,
+          34,
+          104,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 56,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz",
+          "--stored"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.273881233,
+        "process_cpu_seconds": 0.2704230000000223,
+        "host_cpu0_delta_ticks": [
+          26,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 3,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 5.670017614000001,
+      "histogram_seconds": 0.273881233,
+      "total_seconds": 5.943898847000001
+    },
+    {
+      "scope": "nominal",
+      "round": 3,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000",
+          "--no-systematics"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 25.490442028,
+        "process_cpu_seconds": 24.261000999999993,
+        "host_cpu0_delta_ticks": [
+          2347,
+          0,
+          88,
+          112,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 253,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.340331975,
+        "process_cpu_seconds": 0.3375029999999981,
+        "host_cpu0_delta_ticks": [
+          32,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 4,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 25.490442028,
+      "histogram_seconds": 0.340331975,
+      "total_seconds": 25.830774003000002
+    },
+    {
+      "scope": "full",
+      "round": 3,
+      "framework": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python",
+          "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+          "--direct-driver",
+          "-i",
+          "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+          "-t",
+          "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+          "-o",
+          "reference",
+          "-e",
+          "20000"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 23.992297527,
+        "process_cpu_seconds": 22.914698999999985,
+        "host_cpu0_delta_ticks": [
+          2221,
+          0,
+          74,
+          97,
+          1,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 238,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "histogram": {
+        "arguments": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/columnar-reference-314/bin/python",
+          "/home/gwatts/atlas-cp-speed/met-20261119/scripts/histogram_reference.py",
+          "reference.root",
+          "hist-reference.root",
+          "histogram.npz"
+        ],
+        "exit_code": 0,
+        "wall_seconds": 0.31521469100000005,
+        "process_cpu_seconds": 0.3146849999999972,
+        "host_cpu0_delta_ticks": [
+          28,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid": true,
+        "sample_count": 3,
+        "observed_thread_counts": [
+          1
+        ],
+        "observed_affinity": [
+          "0"
+        ],
+        "observed_has_children": false
+      },
+      "framework_seconds": 23.992297527,
+      "histogram_seconds": 0.31521469100000005,
+      "total_seconds": 24.307512218000003
+    }
+  ],
+  "cohorts": {
+    "stored": {
+      "framework_seconds": {
+        "retained_seconds": [
+          5.900513138,
+          7.7258244000000005,
+          5.670017614000001
+        ],
+        "mean": 6.432118384000001,
+        "sample_sd": 1.1262941394333688,
+        "sd_over_mean": 0.17510469680331814,
+        "maximum_fractional_deviation_from_median": 0.3093478853974209,
+        "qualified": false
+      },
+      "histogram_seconds": {
+        "retained_seconds": [
+          0.26836121,
+          0.33006569900000005,
+          0.273881233
+        ],
+        "mean": 0.2907693806666667,
+        "sample_sd": 0.034143346927273194,
+        "sd_over_mean": 0.11742414847461045,
+        "maximum_fractional_deviation_from_median": 0.20514171556982894,
+        "qualified": false
+      },
+      "total_seconds": {
+        "retained_seconds": [
+          6.168874348,
+          8.055890099,
+          5.943898847000001
+        ],
+        "mean": 6.722887764666667,
+        "sample_sd": 1.159881421316911,
+        "sd_over_mean": 0.17252726237865731,
+        "maximum_fractional_deviation_from_median": 0.30589304377901405,
+        "qualified": false
+      }
+    },
+    "nominal": {
+      "framework_seconds": {
+        "retained_seconds": [
+          32.647409438000004,
+          22.804240507000003,
+          25.490442028
+        ],
+        "mean": 26.980697324333335,
+        "sample_sd": 5.0879897098203815,
+        "sd_over_mean": 0.18857888099250972,
+        "maximum_fractional_deviation_from_median": 0.28077062775680495,
+        "qualified": false
+      },
+      "histogram_seconds": {
+        "retained_seconds": [
+          0.301851332,
+          0.274638846,
+          0.340331975
+        ],
+        "mean": 0.30560738433333334,
+        "sample_sd": 0.033007237786593334,
+        "sd_over_mean": 0.10800536727408243,
+        "maximum_fractional_deviation_from_median": 0.12748210433605103,
+        "qualified": false
+      },
+      "total_seconds": {
+        "retained_seconds": [
+          32.94926077,
+          23.078879353,
+          25.830774003000002
+        ],
+        "mean": 27.28630470866667,
+        "sample_sd": 5.093626856731715,
+        "sd_over_mean": 0.1866733847296618,
+        "maximum_fractional_deviation_from_median": 0.27558162857114754,
+        "qualified": false
+      }
+    },
+    "full": {
+      "framework_seconds": {
+        "retained_seconds": [
+          28.540973332,
+          30.084401124000003,
+          23.992297527
+        ],
+        "mean": 27.539223994333334,
+        "sample_sd": 3.167184532164457,
+        "sd_over_mean": 0.11500631001135542,
+        "maximum_fractional_deviation_from_median": 0.15937353474557384,
+        "qualified": false
+      },
+      "histogram_seconds": {
+        "retained_seconds": [
+          0.33919071300000003,
+          0.375867481,
+          0.31521469100000005
+        ],
+        "mean": 0.34342429500000005,
+        "sample_sd": 0.030547219940758385,
+        "sd_over_mean": 0.08894891941398142,
+        "maximum_fractional_deviation_from_median": 0.10813022466213562,
+        "qualified": false
+      },
+      "total_seconds": {
+        "retained_seconds": [
+          28.880164045,
+          30.460268605000003,
+          24.307512218000003
+        ],
+        "mean": 27.882648289333336,
+        "sample_sd": 3.1953686878895136,
+        "sd_over_mean": 0.11460061665347333,
+        "maximum_fractional_deviation_from_median": 0.1583319201329695,
+        "qualified": false
+      }
+    }
+  },
+  "full_result": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-timing-002/benchmark.json"
+}

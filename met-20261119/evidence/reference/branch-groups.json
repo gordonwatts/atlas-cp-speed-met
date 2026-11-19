@@ -1,0 +1,81 @@
+{
+  "file_bytes": 245815772,
+  "unit": "Sum of stored basket bytes for the named branches, excluding unrelated file metadata. These overlapping groups do not measure physical I/O from a warm file.",
+  "groups": {
+    "stored_control": {
+      "branches": [
+        "MET_Core_AnalysisMETAuxDyn.name",
+        "MET_Core_AnalysisMETAuxDyn.mpx",
+        "MET_Core_AnalysisMETAuxDyn.mpy"
+      ],
+      "compressed_bytes": 514303,
+      "uncompressed_bytes": 1726998,
+      "basket_count": 234
+    },
+    "nnjvt_update": {
+      "branches": [
+        "AnalysisJetsAuxDyn.pt",
+        "AnalysisJetsAuxDyn.eta",
+        "AnalysisJetsAuxDyn.SumPtTrkPt500",
+        "AnalysisJetsAuxDyn.JVFCorr",
+        "PrimaryVerticesAuxDyn.vertexType"
+      ],
+      "compressed_bytes": 8030695,
+      "uncompressed_bytes": 27350701,
+      "basket_count": 806
+    },
+    "association_inputs": {
+      "branches": [
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jetLink",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.objectLinks",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpx",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpy",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpz",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.cale",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calsumpt",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calkey",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpx",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpy",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpz",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trke",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trksumpt",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkkey",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpx",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpy",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpz",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrke",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrksumpt",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapIndices",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapTypes",
+        "METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.isMisc"
+      ],
+      "compressed_bytes": 8204347,
+      "uncompressed_bytes": 30823566,
+      "basket_count": 888
+    },
+    "all_core_inputs": {
+      "branches": [
+        "MET_Core_AnalysisMETAuxDyn.mpx",
+        "MET_Core_AnalysisMETAuxDyn.mpy",
+        "MET_Core_AnalysisMETAuxDyn.sumet",
+        "MET_Core_AnalysisMETAuxDyn.source",
+        "MET_Core_AnalysisMETAuxDyn.name"
+      ],
+      "compressed_bytes": 790017,
+      "uncompressed_bytes": 2785805,
+      "basket_count": 394
+    },
+    "all_truth_inputs": {
+      "branches": [
+        "MET_TruthAuxDyn.mpx",
+        "MET_TruthAuxDyn.mpy",
+        "MET_TruthAuxDyn.sumet",
+        "MET_TruthAuxDyn.source",
+        "MET_TruthAuxDyn.name"
+      ],
+      "compressed_bytes": 1184770,
+      "uncompressed_bytes": 3584797,
+      "basket_count": 426
+    }
+  }
+}

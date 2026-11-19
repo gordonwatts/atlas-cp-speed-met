@@ -1,0 +1,18 @@
+[
+  "taskset",
+  "-c",
+  "0",
+  "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/bin/python",
+  "-c",
+  "import sys; sys.path.insert(0,sys.argv[1]); from phase_driver import run; run(sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5:])",
+  "/home/gwatts/atlas-cp-speed/met-20261119/scripts/profiling",
+  "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/bundle/met_demo.py",
+  "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-delivered-001/full/phase_timed/phase_receipt.json",
+  "phases",
+  "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/.art/76315e7ffa8dd82d312e0ee59e71336fa4b01af5.art",
+  "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-delivered-001/full/phase_timed/histogram.npz",
+  "-n",
+  "1",
+  "--chunk-size",
+  "2000"
+]

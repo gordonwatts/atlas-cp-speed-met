@@ -1,0 +1,353 @@
+From 0a78da3a2e55aa1b18d640ab45df8e73f3d8c3db Mon Sep 17 00:00:00 2001
+From: MET conversion <met-conversion@localhost>
+Date: Thu, 19 Nov 2026 05:31:11 -0800
+Subject: [PATCH] Trial borrowing canonical linked scalar buffers in C
+
+Based on 8c1c39f. Keep M21 empty validation, nested columns, and sampling on their established path. Check ownership and projection bits in independent topology and original-input diagnostics.
+---
+ components/columnar/M26.md                    |  45 +++++++
+ components/columnar/atlas_met_prepare.py      |  46 +++++++
+ components/columnar/check_scalar_borrow.py    |  98 +++++++++++++++
+ .../columnar/tests/test_scalar_borrow.py      | 112 ++++++++++++++++++
+ 4 files changed, 301 insertions(+)
+ create mode 100644 components/columnar/M26.md
+ create mode 100644 components/columnar/check_scalar_borrow.py
+ create mode 100644 components/columnar/tests/test_scalar_borrow.py
+
+diff --git a/components/columnar/M26.md b/components/columnar/M26.md
+new file mode 100644
+index 0000000..f04dc54
+--- /dev/null
++++ b/components/columnar/M26.md
+@@ -0,0 +1,45 @@
++# M26 linked scalar projection trial
++
++The trial is based on the retained C source at `8c1c39f`. For each chunk and
++original leaf, it can borrow the one-dimensional primitive NumPy content of an
++untagged Awkward `ListOffsetArray`. Both arrays must have native dtype, aligned
++contiguous full spans, and the leaf offsets must match the verified parent
++container offsets. Each selected row is bounds checked before the vectorized
++gather. Presence is true for a gathered row because this layout cannot carry
++an option mask. NaN remains a numeric value. The gather and cast still use
++the requested dtype.
++
++Nested slot and length requests, option layouts, unknown types, slices, field
++alignment mismatches and invalid row indices use the established generalized
++projection. Empty location checks still follow the M21 path, including the
++first shape, conversion and scatter check. The sampling projection is
++independent of this trial.
++
++The chunk cache holds references to original payload arrays and misses.
++Successful classification does not flatten, copy, or cast whole leaves.
++Each successful projection creates the output gather just as the established
++path did. The diagnostic reports original bytes referenced and actual
++cached dictionary size. Compare process peak RSS in the standard matched
++production harness. Peak RSS of the differential checker includes both
++outputs and does not represent the standalone worker.
++
++After archiving the trial in its own snapshot, run its lightweight topology
++tests and the separate original-input diagnostic with the pinned CPython 3.14
++environment:
++
++```bash
++source="$snapshot/source/components/columnar"
++runtime="$snapshot/runtime"
++PYTHONPATH="$source" "$python314" -m unittest discover -s "$source/tests"
++env LD_LIBRARY_PATH="$runtime/native" taskset -c 0 \
++    "$python314" "$source/check_scalar_borrow.py" "$input" "$runtime" \
++    "$fresh/linked-scalar-layout.json" --entries 2000
++```
++
++The diagnostic builds two sets of prepared transport columns from the same
++unmodified original branch arrays. It forces the generalized path in one
++set, checks identical field inventory, shapes, dtypes and numeric bits, and
++requires selected electrons, photons, muons and taus. It verifies every
++borrow by NumPy array identity and reports exact accepted and fallback calls.
++Retain separate full independent A/C acceptance, clean installations, and
++matched production timing before deciding whether to adopt the trial.
+diff --git a/components/columnar/atlas_met_prepare.py b/components/columnar/atlas_met_prepare.py
+index 59486a4..1891a92 100644
+--- a/components/columnar/atlas_met_prepare.py
++++ b/components/columnar/atlas_met_prepare.py
+@@ -86,2 +86,32 @@ def dense(array, dtype, default=0):
+ 
++def full_numpy_span(array):
++    if (type(array) is not np.ndarray or array.ndim!=1 or
++            not array.flags.c_contiguous or not array.flags.aligned or not array.dtype.isnative):
++        return False
++    # Reject subviews, including trimmed empty events whose offset values
++    # still span the full content. The raw NumPy allocation remains the owner.
++    base = array.base
++    return base is None or (type(base) is np.ndarray and base.nbytes==array.nbytes and
++                            base.ctypes.data==array.ctypes.data)
++
++
++def original_scalar_view(array, owner_offsets):
++    if type(array) is not ak.Array or array.behavior or array.attrs:
++        return None
++    layout = ak.to_layout(array)
++    if type(layout) is not ak.contents.ListOffsetArray or layout.parameters:
++        return None
++    content = layout.content
++    if type(content) is not ak.contents.NumpyArray or content.parameters:
++        return None
++    offsets, values = layout.offsets.data, content.data
++    if (not full_numpy_span(offsets) or offsets.dtype!=np.dtype("i8") or
++            not full_numpy_span(values) or values.dtype.kind not in "biuf"):
++        return None
++    if (not offsets.size or offsets[0]!=0 or offsets[-1]!=values.size or
++            not np.array_equal(offsets,owner_offsets) or np.any(offsets[1:]<offsets[:-1])):
++        return None
++    return values
++
++
+ def roles_for_events(offs):
+@@ -141,2 +171,9 @@ class Resolved:
+                 continue
++            if (rows.size and rows.dtype==np.dtype("i8") and slot is None and not lengths and
++                    output.dtype.kind in "biuf" and type(default) in (bool,int,float)):
++                values = self.data.scalar_view(name,target,rows)
++                if values is not None:
++                    output[local] = np.ascontiguousarray(values[rows],dtype=output.dtype)
++                    present[local] = True
++                    continue
+             source = ak.flatten(self.data.raw[name], axis=1)[rows]
+@@ -209,4 +246,13 @@ class Data:
+         self.validated_empty_columns = set()
++        self.scalar_views = {}
+         self.events = {owner: roles_for_events(output[short+".o"]) for short,owner in OWNERS.items()}
+ 
++    def scalar_view(self, name, target, rows):
++        if name not in self.scalar_views:
++            self.scalar_views[name] = original_scalar_view(self.raw[name],self.offset(self.anchors[target]))
++        values = self.scalar_views[name]
++        if values is None or rows.min()<0 or rows.max()>=values.size:
++            return None
++        return values
++
+     def offset(self, anchor):
+diff --git a/components/columnar/check_scalar_borrow.py b/components/columnar/check_scalar_borrow.py
+new file mode 100644
+index 0000000..8cd6734
+--- /dev/null
++++ b/components/columnar/check_scalar_borrow.py
+@@ -0,0 +1,98 @@
++#!/usr/bin/env python3
++"""Compare actual borrowed linked columns with the original Awkward projection."""
++from collections import Counter
++import json
++from pathlib import Path
++import sys
++from unittest.mock import patch
++
++import awkward as ak
++import numpy as np
++import typer
++import uproot
++
++from atlas_met_columnar import ASSOC, MemberwiseJets, Native, pack_raw, read_associations
++from atlas_met_prepare import Data, prepare_chunk
++from met_demo import UUID, projected_fields, read_branch_names, read_owner_keys
++
++
++def main(input_file: Path, runtime: Path, output: Path, entries: int = typer.Option(2000,min=1)):
++    native, payloads = runtime/"native",runtime/"payloads"
++    keys = read_owner_keys(runtime)
++    bridge = Native(native/"libatlas_met_columnar.so")
++    context = bridge.open(native/"libatlas_met_maker_provider.so",payloads/"maker.json",payloads/"nnjvt.json")
++    try:
++        bridge.configure(context,payloads/"soft.json",payloads/"significance.json",
++                         native/"libmet_preparation_provider.so",payloads/"preparation.json")
++        with uproot.open(input_file,handler=uproot.source.file.MemmapSource,
++                         num_workers=1,num_fallback_workers=1) as original:
++            if str(original.file.uuid) != UUID:
++                raise ValueError("Unexpected original file UUID")
++            tree = original["CollectionTree"]
++            if entries > tree.num_entries:
++                raise ValueError("Requested entries exceed the original tree")
++            fields = projected_fields(read_branch_names(tree))
++            raw = tree.arrays(fields,entry_start=0,entry_stop=entries,library="ak",how=dict)
++            associations = read_associations(tree,0,entries)
++            jet_links = MemberwiseJets(bridge,tree[ASSOC][ASSOC+"jetLink"]).read(0,entries)
++            candidate = pack_raw(raw,associations,jet_links)
++            generic = dict(candidate)
++
++            borrowed = {}
++            hits = Counter()
++            misses = Counter()
++            cache_size = 0
++            access = Data.scalar_view
++
++            def observe(data,name,target,rows):
++                nonlocal cache_size
++                view = access(data,name,target,rows)
++                cache_size = max(cache_size,sys.getsizeof(data.scalar_views))
++                if view is None:
++                    misses[name] += 1
++                else:
++                    if view is not ak.to_layout(data.raw[name]).content.data:
++                        raise AssertionError(f"Cached array was copied: {name}")
++                    borrowed[name] = {"nbytes":view.nbytes,"dtype":view.dtype.str,"elements":view.size}
++                    hits[name] += 1
++                    hits[name+":rows"] += rows.size
++                return view
++
++            evaluate = lambda name, values: bridge.prepare(context,name,values)
++            with patch.object(Data,"scalar_view",observe):
++                prepare_chunk(candidate,raw,keys,evaluate,capture_preparation=True)
++            with patch.object(Data,"scalar_view",return_value=None):
++                prepare_chunk(generic,raw,keys,evaluate,capture_preparation=True)
++
++        if candidate.keys() != generic.keys():
++            raise AssertionError("Projection branch inventory changed")
++        for name,values in candidate.items():
++            stock = generic[name]
++            if values.shape != stock.shape or values.dtype != stock.dtype:
++                raise AssertionError(f"Projection shape or dtype changed: {name}")
++            if values.dtype.hasobject:
++                np.testing.assert_array_equal(values,stock)
++            elif values.tobytes() != stock.tobytes():
++                raise AssertionError(f"Projection bits changed: {name}")
++        selected = {role:int(np.count_nonzero(candidate[role+".selected"]))
++                    for role in ("electron","photon","muon","tau")}
++        report = {
++            "entries":entries,"input_uuid":UUID,"exact_prepared_transport_columns":len(candidate),
++            "selected_by_species":selected,
++            "fast_projection_calls":sum(n for name,n in hits.items() if not name.endswith(":rows")),
++            "fast_gathered_rows":sum(n for name,n in hits.items() if name.endswith(":rows")),
++            "fast_calls_and_rows_by_leaf":dict(hits),"attempted_scalar_fallbacks_by_leaf":dict(misses),
++            "borrowed_leaves":borrowed,"borrowed_payload_bytes":sum(item["nbytes"] for item in borrowed.values()),
++            "additional_cached_payload_bytes":0,"shallow_cached_dictionary_bytes":cache_size,
++        }
++        with output.open("x") as handle:
++            json.dump(report,handle,indent=2)
++            handle.write("\n")
++        if not hits or not all(selected.values()):
++            raise ValueError("Raw witness lacks verified borrows or a selected species")
++    finally:
++        bridge.lib.met_columnar_close(context)
++
++
++if __name__ == "__main__":
++    typer.run(main)
+diff --git a/components/columnar/tests/test_scalar_borrow.py b/components/columnar/tests/test_scalar_borrow.py
+new file mode 100644
+index 0000000..5e259ef
+--- /dev/null
++++ b/components/columnar/tests/test_scalar_borrow.py
+@@ -0,0 +1,112 @@
++"""Test native scalar borrowing against the generalized linked-column path."""
++from unittest import TestCase, mock
++
++import awkward as ak
++import numpy as np
++
++from atlas_met_prepare import Data, Resolved, original_scalar_view
++from test_empty_projection import branch, dataset, link
++
++CLUSTER = "egammaClusters"
++GSF = "GSFTrackParticles"
++MU = "CombinedMuonTrackParticles"
++TAU = "TauTracks"
++PDG = "TruthTaus"
++
++
++def scalar(counts, values, dtype="f4"):
++    offsets = np.array([0,*np.cumsum(counts)],dtype="i8")
++    content = np.array(values,dtype=dtype)
++    return ak.Array(ak.contents.ListOffsetArray(ak.index.Index64(offsets),ak.contents.NumpyArray(content)))
++
++
++def same_columns(test, resolved, field, *args, **kwargs):
++    fast = resolved.column(field,*args,**kwargs)
++    with mock.patch.object(Data,"scalar_view",return_value=None):
++        ordinary = resolved.column(field,*args,**kwargs)
++    for observed,expected in zip(fast,ordinary,strict=True):
++        test.assertEqual((observed.shape,observed.dtype),(expected.shape,expected.dtype))
++        test.assertEqual(observed.tobytes(),expected.tobytes())
++    return fast
++
++
++class ScalarBorrow(TestCase):
++    def test_routes_used_by_electron_photon_muon_and_tau(self):
++        counts = [2,1]
++        raw = {
++            branch(CLUSTER,"calEta"):scalar(counts,[1.,2.,3.]),
++            branch(CLUSTER,"ETACALOFRAME"):scalar(counts,[np.nan,-0.,0.75]),
++            branch(GSF,"qOverP"):scalar(counts,[-1.,3.,2.]),
++            branch(GSF,"phi"):scalar(counts,[0.125,-0.25,0.5]),
++            branch(MU,"qOverP"):scalar(counts,[0.125,-0.25,0.5]),
++            branch(MU,"numberOfPixelHits"):scalar(counts,[6,7,9],"u1"),
++            branch(TAU,"flagSet"):scalar(counts,[0,32,0xffffffff],"u4"),
++            branch(PDG,"pdgId"):scalar(counts,[15,-15,22],"i4"),
++            branch(PDG,"IsHadronicTau"):scalar(counts,[False,True,False],"?"),
++        }
++        data = dataset(raw)
++        data.keys = {target:i+101 for i,target in enumerate((CLUSTER,GSF,MU,TAU,PDG))}
++        events = np.array([0,0,1,1],"i8")
++        roles = (
++            (CLUSTER,"ETACALOFRAME","f4",0,[0,1,0,3]),  # electron first cluster
++            (CLUSTER,"ETACALOFRAME","f4",0,[1,0,0,3]),  # photon first cluster
++            (GSF,"phi","f4",0,[0,1,0,3]),             # electron GSF track
++            (MU,"numberOfPixelHits","i8",-1,[0,1,0,3]),
++            (TAU,"flagSet","i8",0,[0,1,0,3]),
++            (PDG,"IsHadronicTau","i8",-1,[0,1,0,3]),
++        )
++        for target,field,dtype,default,indices in roles:
++            resolved = Resolved(data,link([data.keys[target]]*4,indices),events,(target,))
++            with self.subTest(target=target,field=field):
++                _,present = same_columns(self,resolved,field,dtype,default)
++                np.testing.assert_array_equal(present,[True,True,True,False])
++                name = branch(target,field)
++                owned = ak.to_layout(raw[name]).content.data
++                self.assertIs(data.scalar_views[name],owned)
++        self.assertEqual(len(data.scalar_views),5)  # shared clusters use only one borrow
++
++    def test_options_nested_empty_shapes_and_bad_rows_keep_generic_behavior(self):
++        raw = {
++            branch(GSF,"qOverP"):scalar([2,1],[2.,3.,4.]),
++            branch(GSF,"option"):ak.Array([[None,7.],[9.]]),
++            branch(GSF,"nested"):ak.Array([[[3.,4.],[]],[[8.,None]]]),
++            branch(GSF,"unaligned"):scalar([1,2],[2.,3.,4.]),
++            branch(GSF,"short"):scalar([1,1],[5.,8.]),
++        }
++        data = dataset(raw)
++        resolved = Resolved(data,link([12,12,12],[0,1,0]),np.array([0,0,1]),(GSF,))
++        _,present = same_columns(self,resolved,"option","f4",-1.)
++        np.testing.assert_array_equal(present,[False,True,True])
++        same_columns(self,resolved,"nested","f4",-1.,slot=1)
++        same_columns(self,resolved,"nested","i8",-1,lengths=True)
++        same_columns(self,resolved,"unaligned","f4",0.)
++        self.assertIsNone(data.scalar_views[branch(GSF,"option")])
++        self.assertIsNone(data.scalar_views[branch(GSF,"unaligned")])
++        self.assertNotIn(branch(GSF,"nested"),data.scalar_views)
++        with self.assertRaises(IndexError):
++            resolved.column("short")
++
++        empty = Resolved(data,link([12],[0xffffffff]),np.array([0]),(GSF,))
++        _,present = same_columns(self,empty,"nested","f4",-1.,slot=1)
++        self.assertFalse(present.any())
++        self.assertIn((branch(GSF,"nested"),"f4",float,-1.,1,False),data.validated_empty_columns)
++
++        # An invalid resolved row must take the original branch and raise.
++        force = Resolved(data,link([12],[0]),np.array([0]),(GSF,))
++        force.locations = [(GSF,np.array([0],"i8"),np.array([123],"i8"))]
++        with self.assertRaises(IndexError):
++            force.column("qOverP")
++        self.assertIsNotNone(data.scalar_views[branch(GSF,"qOverP")])
++
++    def test_slices_tagged_and_noncontiguous_arrays_do_not_borrow(self):
++        leaf = scalar([1,2,1],[1.,2.,3.,4.])
++        self.assertIsNone(original_scalar_view(leaf[1:],np.array([0,2,3],"i8")))
++        padded_empty = scalar([0,1],[3.])
++        self.assertIsNone(original_scalar_view(padded_empty[1:],np.array([0,1],"i8")))
++        self.assertIsNone(original_scalar_view(ak.Array([[],[]]),np.array([0,0,0],"i8")))
++        tagged = ak.with_parameter(leaf,"test","unrecognized vector")
++        self.assertIsNone(original_scalar_view(tagged,np.array([0,1,3,4],"i8")))
++        source = np.arange(8.,dtype="f4")[::2]
++        stride = ak.Array(ak.contents.ListOffsetArray(ak.index.Index64(np.array([0,1,3,4],"i8")),
++                                                       ak.contents.NumpyArray(source)))
++        self.assertIsNone(original_scalar_view(stride,np.array([0,1,3,4],"i8")))
+-- 
+2.39.3
+

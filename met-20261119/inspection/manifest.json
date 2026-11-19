@@ -1,0 +1,213 @@
+{
+  "checkout": "/home/gwatts/atlas-cp-speed/met-20261119",
+  "files": [
+    {
+      "file": "components/maker/include/met_maker/maker.hpp",
+      "wsl_commit": "ececb38463919f584c89f7e319b8962baeb958d1",
+      "sha256": "4f2bc45371b1c68875a2697f189fca786c6898e2b92833ef74251eb402be058d"
+    },
+    {
+      "file": "components/maker/src/maker.cpp",
+      "wsl_commit": "ececb38463919f584c89f7e319b8962baeb958d1",
+      "sha256": "568baac8fee232bdd6301e6979b2e00cb251b79aac9d6bab29a67a3ade5fed15"
+    },
+    {
+      "file": "components/soft/soft.cxx",
+      "wsl_commit": "945b32338f0d8ae953b08dd725a8d9de6440a157",
+      "sha256": "126770f0b3d1eb6a277e002c6e4eb181bf3bb99bd20afab6d23c2f54164f18c8"
+    },
+    {
+      "file": "components/soft/provider.cxx",
+      "wsl_commit": "945b32338f0d8ae953b08dd725a8d9de6440a157",
+      "sha256": "8f7c467b6f5406c961429d340923209d2ecaa08f947680f06969ab60b6e3cdaa"
+    },
+    {
+      "file": "components/soft/root_rng.hpp",
+      "wsl_commit": "945b32338f0d8ae953b08dd725a8d9de6440a157",
+      "sha256": "d5de8cacb24a87b7aebaf0906c401e8a00b99966a4ea301e062401193655890e"
+    },
+    {
+      "file": "components/soft/export_soft.py",
+      "wsl_commit": "945b32338f0d8ae953b08dd725a8d9de6440a157",
+      "sha256": "99722cda4ff138e2af072220cbe17982328e9bbd598e176205ee75d5e2657762"
+    },
+    {
+      "file": "components/significance/reduction.cxx",
+      "wsl_commit": "6e7a568ac0acb4a0c664f2ec2e84086d7bffb96d",
+      "sha256": "646e7f25a252f64ac8bd87a898f62d30742eacc78eac4787f0c16de1b5e78008"
+    },
+    {
+      "file": "components/significance/resolution.cxx",
+      "wsl_commit": "6e7a568ac0acb4a0c664f2ec2e84086d7bffb96d",
+      "sha256": "4167728ebbf154272a768c89989173fcfee8dfe74d5f32b7d72d4de2ebea4fff"
+    },
+    {
+      "file": "components/significance/export_resolution.py",
+      "wsl_commit": "6e7a568ac0acb4a0c664f2ec2e84086d7bffb96d",
+      "sha256": "2aeaf9887e3a95687991b212265cd1eeb54e13afa60d4ef576de9964505c0f6c"
+    },
+    {
+      "file": "observer/status_trace.cxx",
+      "wsl_commit": "ef8adfabc75a46ac91ca6ed991b476d867db2c5b",
+      "sha256": "cc2e274d3f2164290e28c6b018aca35a2a84a3dc1ccabb5226d632c9ead4a5c7"
+    },
+    {
+      "file": "scripts/verify_status_trace.py",
+      "wsl_commit": "ef8adfabc75a46ac91ca6ed991b476d867db2c5b",
+      "sha256": "1cebfb57fff61df7e09a5b538c792cab96f63eb22154e4c9d5a905b48dfe6f28"
+    },
+    {
+      "file": "scripts/benchmark_reference.py",
+      "wsl_commit": "ef8adfabc75a46ac91ca6ed991b476d867db2c5b",
+      "sha256": "3345b8113e78d73a56f390b8fe6c61ad07ecb169a3580e4ed3841d23dcb37e1c"
+    },
+    {
+      "file": "components/framework/src/execute_maker.cpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "b032f1a5f31c2e3d0559cb5b77cee44426bc839402bf3efc596ce9d2dfce6317"
+    },
+    {
+      "file": "components/framework/src/execute_builder.cpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "df3c5e5dc98206135dbff11828d5dbce4c877f4322be95ca336e57606a5f484c"
+    },
+    {
+      "file": "components/framework/src/execute_significance.cpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "77508c8bc0970b435bbea4ae5db27c73494cc2f748694793797cf3378469a867"
+    },
+    {
+      "file": "components/framework/bridge_entry.py",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "a2c1343e1f08eff71c019996f58151a994cf2e60ae357c15f2534296ad066d25"
+    },
+    {
+      "file": "components/maker_adapter/src/maker_correction.cpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "438eadb6b886fe2440f4796fe984ea3db4cb02b02fededd1a05d794f7d3ddb1b"
+    },
+    {
+      "file": "components/maker_adapter/src/significance_correction.cpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "88407076b972efcbae91c32c83300fb013a87f1c5c75e23e06d08721ac59107e"
+    },
+    {
+      "file": "components/maker_adapter/src/invocation.hpp",
+      "wsl_commit": "ec41c0182a1572a8148b0bc9b2e5d92b12c3753a",
+      "sha256": "f4e727a3920f02b2b424c80013e9cc6f7cd6dee481e464ce3f63d6fee4ba54f2"
+    },
+    {
+      "file": "components/framework/src/bridge.hpp",
+      "wsl_commit": "98e5d868f5d21da6c30d3a86244f9946a711f656",
+      "sha256": "90d30ff0ed38baadcc4ecba7f20a992304c1f87613823fb3e1935b0f2140f525"
+    },
+    {
+      "file": "components/framework/src/soft_xaod.cpp",
+      "wsl_commit": "98e5d868f5d21da6c30d3a86244f9946a711f656",
+      "sha256": "0de1c255c20f3b79175b39f198f288e763d5e570452689d66dca225044d176c6"
+    },
+    {
+      "file": "components/maker_adapter/export_significance.py",
+      "wsl_commit": "98e5d868f5d21da6c30d3a86244f9946a711f656",
+      "sha256": "b3fdf6804d8b778ade63f8610bec4e1091fb9472e542ab89299e5d32dde5c7a4"
+    },
+    {
+      "file": "components/columnar/atlas_met_prepare.py",
+      "wsl_commit": "6b19c477e8d5578bb2c8c3a5e0eccc11e3437759",
+      "sha256": "5ce4182e9d4c9d997f0a1a8f69291fbb54f99a176ad8e510aff731a3031b6ec4"
+    },
+    {
+      "file": "components/columnar/atlas_met_columnar.py",
+      "wsl_commit": "6b19c477e8d5578bb2c8c3a5e0eccc11e3437759",
+      "sha256": "61ad734fc3804a1aabe7415a97a338db360c7583696ff50c0c2b497f1e7afbd1"
+    },
+    {
+      "file": "components/columnar/transport.cpp",
+      "wsl_commit": "6b19c477e8d5578bb2c8c3a5e0eccc11e3437759",
+      "sha256": "e581a80177cf21892209af7770548d8c837240a3d57a47db9662d67847b4c065"
+    },
+    {
+      "file": "components/columnar/compare.py",
+      "wsl_commit": "6b19c477e8d5578bb2c8c3a5e0eccc11e3437759",
+      "sha256": "02893f33c3d8521062646f239c86c21cc5ff0e63eef4a55e59490074ae08e6e6"
+    },
+    {
+      "file": "components/columnar/combine_preparation.py",
+      "wsl_commit": "6b19c477e8d5578bb2c8c3a5e0eccc11e3437759",
+      "sha256": "2a3d6e41394477fea4a1923993375264c77f5bab1b80f2c6d2957a44efee7e44"
+    },
+    {
+      "file": "scripts/benchmark_matched.py",
+      "wsl_commit": "8bb5950556ff096d60694474f9f2df7b90ebd55a",
+      "sha256": "f4caea39f2557f4867aece1371abdeedeec657d07cbc6f5224ba8b3084588fde"
+    },
+    {
+      "file": "scripts/histogram_reference.py",
+      "wsl_commit": "8bb5950556ff096d60694474f9f2df7b90ebd55a",
+      "sha256": "a0b7419a7d27fcb27fb200715b2c85334646c462e50137ffa967cf6f337fc3f7"
+    },
+    {
+      "file": "scripts/release_environment.sh",
+      "wsl_commit": "8bb5950556ff096d60694474f9f2df7b90ebd55a",
+      "sha256": "6b4ed5fd1cf534eb3cf24b6839091cb3beeafdaf4355dcb64a868fec3a8dc76a"
+    },
+    {
+      "file": "scripts/build_framework_full.sh",
+      "wsl_commit": "8bb5950556ff096d60694474f9f2df7b90ebd55a",
+      "sha256": "ebde6d082e5d15f8917a5b652fef5c2557ca2f6d146c0c69d612b2f33bbdf189"
+    },
+    {
+      "file": "scripts/profiling/phase_driver.py",
+      "wsl_commit": "8bb5950556ff096d60694474f9f2df7b90ebd55a",
+      "sha256": "73b9d0fc20b2e7442d998a842bb0b0082b4311f5f57745f09f306b8c9e56f0bb"
+    },
+    {
+      "file": "final/components/columnar/atlas_met_columnar.py",
+      "source_file": "components/columnar/atlas_met_columnar.py",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "61ad734fc3804a1aabe7415a97a338db360c7583696ff50c0c2b497f1e7afbd1"
+    },
+    {
+      "file": "final/components/columnar/atlas_met_prepare.py",
+      "source_file": "components/columnar/atlas_met_prepare.py",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "68cefce4eaf95f2bde381894d0d9a0d593137ad3ec730140707d8089f91e3ea9"
+    },
+    {
+      "file": "final/components/columnar/transport.cpp",
+      "source_file": "components/columnar/transport.cpp",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "8e9fe3fd395c7ea9b81151428d6a64437669286b099ef3e264e901b52077880a"
+    },
+    {
+      "file": "final/components/soft/soft.hpp",
+      "source_file": "components/soft/soft.hpp",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "7d3f15358cb1b71750c0a4209af38ddfd64f19b257d870e7fee9abfc13e957f8"
+    },
+    {
+      "file": "final/components/soft/provider.cxx",
+      "source_file": "components/soft/provider.cxx",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "96e30f92c140d36edf984a6e8ee70983779fdfa96b58072122a354780421975e"
+    },
+    {
+      "file": "final/components/soft/root_rng.hpp",
+      "source_file": "components/soft/root_rng.hpp",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "d5de8cacb24a87b7aebaf0906c401e8a00b99966a4ea301e062401193655890e"
+    },
+    {
+      "file": "final/scripts/run_columnar_portability.sh",
+      "source_file": "scripts/run_columnar_portability.sh",
+      "wsl_commit": "6a0e8945c30e32e286ed894440b478fb676ee4d7",
+      "sha256": "7686e25b62d5aa450d234df0d7f6f1dd22862512add183da71ca90335d253db5"
+    },
+    {
+      "file": "offset-final/components/columnar/transport.cpp",
+      "source_file": "components/columnar/transport.cpp",
+      "wsl_commit": "51d6b22bfcfb1b097952f101266cb2ed1aa6b1e9",
+      "sha256": "361c4251169a70f2119a4ac33dd56677664d12ba934478288e24796db7703444"
+    }
+  ]
+}

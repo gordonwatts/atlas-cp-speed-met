@@ -1,0 +1,341 @@
+{
+  "nominal": {
+    "events": 20000,
+    "unique_actual_branches": 224,
+    "unique_branch_basket_extents": 18379,
+    "unique_basket_compressed_bytes_including_key": 75603463,
+    "unique_basket_uncompressed_bytes_including_key": 220271520,
+    "basket_compressed_KB_per_event_including_key": 3.78017315,
+    "basket_uncompressed_KB_per_event_including_key": 11.013575999999999,
+    "duplicate_basket_requests": 0,
+    "logical_duplicate_basket_requested_bytes": 0,
+    "planned_ranges_not_requested": 0,
+    "non_basket_range_count": 5,
+    "non_basket_bytes_outside_baskets": 527130
+  },
+  "full": {
+    "events": 20000,
+    "unique_actual_branches": 224,
+    "unique_branch_basket_extents": 18379,
+    "unique_basket_compressed_bytes_including_key": 75603463,
+    "unique_basket_uncompressed_bytes_including_key": 220271520,
+    "basket_compressed_KB_per_event_including_key": 3.78017315,
+    "basket_uncompressed_KB_per_event_including_key": 11.013575999999999,
+    "duplicate_basket_requests": 0,
+    "logical_duplicate_basket_requested_bytes": 0,
+    "planned_ranges_not_requested": 0,
+    "non_basket_range_count": 5,
+    "non_basket_bytes_outside_baskets": 527130
+  },
+  "same_projected_basket_and_branch_census": true,
+  "count_leaves": {
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.combinedTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 41117,
+      "uncompressed_bytes_including_key": 149360,
+      "compressed_payload_bytes": 32273,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.combinedTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 35261,
+      "uncompressed_bytes_including_key": 149228,
+      "compressed_payload_bytes": 26549,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 42243,
+      "uncompressed_bytes_including_key": 150680,
+      "compressed_payload_bytes": 32079,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 37258,
+      "uncompressed_bytes_including_key": 150548,
+      "compressed_payload_bytes": 27226,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.inDetTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 50245,
+      "uncompressed_bytes_including_key": 149162,
+      "compressed_payload_bytes": 41599,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.inDetTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 35215,
+      "uncompressed_bytes_including_key": 149030,
+      "compressed_payload_bytes": 26701,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 43141,
+      "uncompressed_bytes_including_key": 151076,
+      "compressed_payload_bytes": 32581,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 40010,
+      "uncompressed_bytes_including_key": 150944,
+      "compressed_payload_bytes": 29582,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 42918,
+      "uncompressed_bytes_including_key": 149888,
+      "compressed_payload_bytes": 33546,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 38121,
+      "uncompressed_bytes_including_key": 149756,
+      "compressed_payload_bytes": 28881,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex": {
+      "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthJetLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 64107,
+      "uncompressed_bytes_including_key": 196894,
+      "compressed_payload_bytes": 55989,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey": {
+      "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthJetLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 53535,
+      "uncompressed_bytes_including_key": 196762,
+      "compressed_payload_bytes": 45549,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex": {
+      "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 60602,
+      "uncompressed_bytes_including_key": 197224,
+      "compressed_payload_bytes": 52154,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey": {
+      "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 59621,
+      "uncompressed_bytes_including_key": 197092,
+      "compressed_payload_bytes": 51305,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    }
+  }
+}

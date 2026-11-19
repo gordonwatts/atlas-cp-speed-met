@@ -1,0 +1,214 @@
+/*
+  Copyright (C) 2002-2026 CERN for the benefit of the ATLAS collaboration
+*/
+
+/// @author Nils Krumnack
+
+
+
+//
+// includes
+//
+
+#include <MetAnalysisAlgorithms/MetMakerAlg.h>
+
+#include <xAODMissingET/MissingETAuxContainer.h>
+#include <xAODMissingET/MissingETAssociationHelper.h>
+
+#include "AthContainers/ConstDataVector.h"
+#include <AsgDataHandles/ReadHandle.h>
+#include "AthContainers/Decorator.h"
+
+//
+// method implementations
+//
+
+namespace CP
+{
+
+  StatusCode MetMakerAlg ::
+  initialize ()
+  {
+    ANA_CHECK (m_makerTool.retrieve());
+    ANA_CHECK (m_metCoreKey.initialize());
+    ANA_CHECK (m_metAssociationKey.initialize());
+
+    for (auto* handle : {&m_electronsHandle, &m_photonsHandle,
+                         &m_muonsHandle, &m_tausHandle}) {
+      ANA_CHECK (handle->initialize (m_systematicsList, SG::AllowEmpty));
+    }
+    ANA_CHECK (m_invisHandles.initialize(m_systematicsList, SG::AllowEmpty));
+    ANA_CHECK (m_electronsSelection.initialize(m_systematicsList, m_electronsHandle, SG::AllowEmpty));
+    ANA_CHECK (m_muonsSelection.initialize(m_systematicsList, m_muonsHandle, SG::AllowEmpty));
+    ANA_CHECK (m_photonsSelection.initialize(m_systematicsList, m_photonsHandle, SG::AllowEmpty));
+    ANA_CHECK (m_tausSelection.initialize(m_systematicsList, m_tausHandle, SG::AllowEmpty));
+
+    // Initialize invisible selections - need to pair each selection with its corresponding handle
+    if (m_invisSelectionKeys.size() != m_invisHandles.size()) {
+      ATH_MSG_ERROR("Number of invisible selections (" << m_invisSelectionKeys.size()
+                    << ") doesn't match number of invisible handles (" << m_invisHandles.size() << ")");
+      return StatusCode::FAILURE;
+    }
+    m_invisSelections.clear();
+    m_invisSelections.reserve(m_invisHandles.size());
+    for (size_t i = 0; i < m_invisHandles.size(); ++i) {
+      m_invisSelections.emplace_back(m_invisSelectionKeys[i], this);
+      ANA_CHECK (m_invisSelections.back().initialize(m_systematicsList, m_invisHandles.at(i), SG::AllowEmpty));
+    }
+
+    ANA_CHECK (m_jetsHandle.initialize (m_systematicsList));
+    ANA_CHECK (m_metHandle.initialize (m_systematicsList));
+
+    if (!m_systematicsTool.empty())
+    {
+      ANA_CHECK (m_systematicsTool.retrieve());
+      ANA_CHECK (m_systematicsList.addSystematics (*m_systematicsTool));
+    }
+
+    ANA_CHECK (m_systematicsList.initialize());
+
+    return StatusCode::SUCCESS;
+  }
+
+
+
+  StatusCode MetMakerAlg ::
+  execute (const EventContext& ctx)
+  {
+    SG::ReadHandle<xAOD::MissingETContainer> metcoreHandle (m_metCoreKey, ctx);
+    ANA_CHECK (metcoreHandle.isValid());
+    const xAOD::MissingETContainer* metcore = metcoreHandle.cptr();
+
+    SG::ReadHandle<xAOD::MissingETAssociationMap> metMapHandle (m_metAssociationKey, ctx);
+    ANA_CHECK (metMapHandle.isValid());
+    const xAOD::MissingETAssociationMap* metMap = metMapHandle.cptr();
+
+    // Helper keeps track of object selection flags for this map
+    xAOD::MissingETAssociationHelper metHelper(metMap);
+
+    for (const auto& sys : m_systematicsList.systematicsVector())
+    {
+      auto met = std::make_unique<xAOD::MissingETContainer> ();
+      auto aux = std::make_unique<xAOD::MissingETAuxContainer> ();
+      met->setStore (aux.get());
+
+      metHelper.resetObjSelectionFlags();
+
+      ConstDataVector<xAOD::IParticleContainer> invisSelected(SG::VIEW_ELEMENTS);
+      for (size_t i = 0; i < m_invisHandles.size(); ++i) {
+        const xAOD::IParticleContainer* invisible = nullptr;
+        ATH_CHECK( m_invisHandles.at(i).retrieve(invisible, sys, ctx) );
+        for (const xAOD::IParticle *invisParticle : *invisible) {
+          if (m_invisSelections.at(i).getBool(*invisParticle, sys))
+            invisSelected.push_back(invisParticle);
+        }
+      }
+      if (!invisSelected.empty())
+        ANA_CHECK (m_makerTool->markInvisible (invisSelected.asDataVector(), metHelper, met.get() ) );
+
+      // Lambda helping with calculating the MET terms coming from the leptons
+      // (and photons).
+      auto processParticles =
+        [&] (SysReadHandle<xAOD::IParticleContainer>& handle,
+             SysReadSelectionHandle &selection,
+             xAOD::Type::ObjectType type,
+             const std::string& term) -> StatusCode {
+          if (!handle) {
+            // The NN MET input vector needs a term for every hard-object type,
+            // so a missing handle is a configuration error on the NN path.
+            if (m_evaluateNNMET) {
+              ANA_MSG_ERROR ("evaluateNNMET requires a container for every "
+                             "hard-object type, but the handle for term \""
+                             << term << "\" is not configured");
+              return StatusCode::FAILURE;
+            }
+            return StatusCode::SUCCESS;
+          }
+          const xAOD::IParticleContainer* particles = nullptr;
+          ANA_CHECK (handle.retrieve (particles, sys, ctx));
+          ConstDataVector<xAOD::IParticleContainer> selected(SG::VIEW_ELEMENTS);
+          for (const xAOD::IParticle *particle : *particles)
+              if (selection.getBool(*particle, sys))
+                  selected.push_back(particle);
+          ANA_CHECK (m_makerTool->rebuildMET (term, type, met.get(),
+                                              selected.asDataVector(), metHelper));
+          return StatusCode::SUCCESS;
+        };
+
+      // Calculate the terms coming from the user's selected objects.
+      ANA_CHECK (processParticles (m_electronsHandle, m_electronsSelection,
+                                   xAOD::Type::Electron, m_electronsKey));
+      ANA_CHECK (processParticles (m_photonsHandle, m_photonsSelection,
+                                   xAOD::Type::Photon, m_photonsKey));
+      // a muon overlapping with tau is not removed. So if a true muon passes an (extremely loose) tau ID selection, it is double-counted. # https://its.cern.ch/jira/browse/ATLHMBS-651 
+      if (!m_switchTauMuonOrder)
+      {
+        ANA_CHECK (processParticles (m_tausHandle, m_tausSelection,
+                                     xAOD::Type::Tau, m_tausKey));
+      }
+      ANA_CHECK (processParticles (m_muonsHandle, m_muonsSelection,
+                                   xAOD::Type::Muon, m_muonsKey));
+      if (m_switchTauMuonOrder)
+      {
+        ANA_CHECK (processParticles (m_tausHandle, m_tausSelection,
+                                     xAOD::Type::Tau, m_tausKey));
+      }
+
+
+      const xAOD::JetContainer *jets {nullptr};
+      ANA_CHECK (m_jetsHandle.retrieve (jets, sys, ctx));
+
+      if (m_doTrackMet)
+      {
+        ANA_CHECK (m_makerTool->rebuildTrackMET (m_jetsKey, m_softTermKey, met.get(), jets, metcore, metHelper, m_doJetJVT));
+      } else
+      {
+        ANA_CHECK (m_makerTool->rebuildJetMET (m_jetsKey, m_softTermKey, met.get(), jets, metcore, metHelper, m_doJetJVT));
+      }
+
+      // Optionally run the NN-based MET (e.g. met::METNet). For NN tools,
+      // rebuildJetMET only assembles the network inputs; evaluateNNMET runs the
+      // inference and adds the total term directly. We then decorate met/phi on
+      // every term exactly as MetBuilderAlg would, so the NN path needs no
+      // builder afterwards (a builder sum would clobber the NN Final term).
+      if (m_evaluateNNMET)
+      {
+        ANA_CHECK (m_makerTool->evaluateNNMET (m_finalKey, met.get()));
+        static const SG::Decorator<float> met_met_dec ("met");
+        static const SG::Decorator<float> met_phi_dec ("phi");
+        for (const xAOD::MissingET *metTerm : *met)
+        {
+          if (!metTerm) continue;
+          met_met_dec (*metTerm) = metTerm->met();
+          met_phi_dec (*metTerm) = metTerm->phi();
+        }
+      }
+
+      // Systematics
+      if (!m_systematicsTool.empty())
+      {
+        ANA_CHECK (m_systematicsTool->applySystematicVariation (sys));
+
+        xAOD::MissingET *softTerm = (*met)[m_softTermKey];
+        if (softTerm == nullptr)
+        {
+          ANA_MSG_ERROR ("failed to find MET soft-term \"" << m_softTermKey << "\"");
+          return StatusCode::FAILURE;
+        }
+
+        // Set the seed for reproducibility
+        m_systematicsTool->setRandomSeed(static_cast<int>(1e6 * softTerm->phi()));
+
+        // This returns a `CorrectionCode`, so in principle this could
+        // return an `OutOfValidity` result, but I have no idea what
+        // that would mean or how to handle it, so I'm implicitly
+        // converting it into a `FAILURE` instead.
+        ANA_CHECK (m_systematicsTool->applyCorrection (*softTerm, metHelper));
+      }
+
+      ANA_CHECK (m_metHandle.record (std::move (met), std::move (aux), sys, ctx));
+    }
+
+    return StatusCode::SUCCESS;
+  }
+}

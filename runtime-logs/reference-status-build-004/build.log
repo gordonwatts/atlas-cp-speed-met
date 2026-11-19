@@ -1,0 +1,13 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+/home/gwatts/atlas-cp-speed/met-20261119/observer/status_trace.cxx:124:12: error: redefinition of 'StatusCode met::METSystematicsTool::applySystematicVariation(const CP::SystematicSet&)'
+  124 | StatusCode met::METSystematicsTool::applySystematicVariation(const CP::SystematicSet& state) {
+      |            ^~~
+In file included from /home/gwatts/atlas-cp-speed/met-20261119/observer/status_trace.cxx:6:
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METUtilities/METSystematicsTool.h:129:16: note: 'virtual StatusCode met::METSystematicsTool::applySystematicVariation(const CP::SystematicSet&)' previously defined here
+  129 |     StatusCode applySystematicVariation(const CP::SystematicSet& set){            return CP::SystematicsTool::applySystematicVariation(set) ;}
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~

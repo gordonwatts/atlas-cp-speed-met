@@ -1,0 +1,136 @@
+{
+  "config": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/TrackSoftTerms-pflow_Dec24.config",
+  "config_sha256": "368cb13d92c9d45fe7da4c807466a6a720303f22400a2f1b89e387a061d3ddcd",
+  "source": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root",
+  "source_sha256": "d402bcdb1d68790d26176a924554567e28e9cace3cfb35d22d75dd3904bea987",
+  "inventory": [
+    {
+      "correction": "shiftpara",
+      "object": "//shiftpara_TST",
+      "class": "TH3D",
+      "axis_bins": [
+        16,
+        1,
+        1
+      ],
+      "edges": [
+        [
+          0.0,
+          2500.0,
+          5000.0,
+          10000.0,
+          15000.0,
+          20000.0,
+          25000.0,
+          30000.0,
+          35000.0,
+          40000.0,
+          50000.0,
+          60000.0,
+          70000.0,
+          80000.0,
+          90000.0,
+          100000.0,
+          502500.0
+        ],
+        [
+          0.0,
+          500.0
+        ],
+        [
+          0.0,
+          500.0
+        ]
+      ],
+      "errors_exported": false,
+      "errors_consumed": false,
+      "flow": "ROOT under/overflow retained; pt-hard overflow clamps to last ordinary bin"
+    },
+    {
+      "correction": "resopara",
+      "object": "//resopara_TST",
+      "class": "TH3D",
+      "axis_bins": [
+        16,
+        1,
+        1
+      ],
+      "edges": [
+        [
+          0.0,
+          2500.0,
+          5000.0,
+          10000.0,
+          15000.0,
+          20000.0,
+          25000.0,
+          30000.0,
+          35000.0,
+          40000.0,
+          50000.0,
+          60000.0,
+          70000.0,
+          80000.0,
+          90000.0,
+          100000.0,
+          502500.0
+        ],
+        [
+          0.0,
+          500.0
+        ],
+        [
+          0.0,
+          500.0
+        ]
+      ],
+      "errors_exported": false,
+      "errors_consumed": false,
+      "flow": "ROOT under/overflow retained; pt-hard overflow clamps to last ordinary bin"
+    },
+    {
+      "correction": "resoperp",
+      "object": "//resoperp_TST",
+      "class": "TH3D",
+      "axis_bins": [
+        16,
+        1,
+        1
+      ],
+      "edges": [
+        [
+          0.0,
+          2500.0,
+          5000.0,
+          10000.0,
+          15000.0,
+          20000.0,
+          25000.0,
+          30000.0,
+          35000.0,
+          40000.0,
+          50000.0,
+          60000.0,
+          70000.0,
+          80000.0,
+          90000.0,
+          100000.0,
+          502500.0
+        ],
+        [
+          0.0,
+          500.0
+        ],
+        [
+          0.0,
+          500.0
+        ]
+      ],
+      "errors_exported": false,
+      "errors_consumed": false,
+      "flow": "ROOT under/overflow retained; pt-hard overflow clamps to last ordinary bin"
+    }
+  ],
+  "probe_count": 747,
+  "status": "candidate table conversion only; no complete MET recipe"
+}

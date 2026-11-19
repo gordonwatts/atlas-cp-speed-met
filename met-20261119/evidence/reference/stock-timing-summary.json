@@ -1,0 +1,248 @@
+{
+  "reference-timing-001": {
+    "sha256": "8458f459a0d7b65b769e031e496cf54d74e134797a3de67ecf5c80be4fb8f70d",
+    "journal": "reference-timing-001/benchmark.json",
+    "cohorts": {
+      "stored": {
+        "all_four_process_observations_valid": false,
+        "framework_seconds": {
+          "retained_seconds": [
+            5.333645860000001,
+            5.347292822,
+            4.829711132
+          ],
+          "mean": 5.170216604666667,
+          "sample_sd": 0.2949653243686791,
+          "sd_over_mean": 0.05705086400102497,
+          "maximum_fractional_deviation_from_median": 0.09448222495972028,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.294164513,
+            0.30286449600000004,
+            0.264212745
+          ],
+          "mean": 0.2870805846666667,
+          "sample_sd": 0.020276242115228167,
+          "sd_over_mean": 0.07062909579472676,
+          "maximum_fractional_deviation_from_median": 0.10181978680752694,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            5.627810373000001,
+            5.650157318,
+            5.093923877
+          ],
+          "mean": 5.4572971893333335,
+          "sample_sd": 0.3148888209746133,
+          "sd_over_mean": 0.05770050815449182,
+          "maximum_fractional_deviation_from_median": 0.0948657578374311,
+          "qualified": false
+        }
+      },
+      "nominal": {
+        "all_four_process_observations_valid": false,
+        "framework_seconds": {
+          "retained_seconds": [
+            21.171474760000002,
+            19.713449049,
+            19.744700245
+          ],
+          "mean": 20.20987468466667,
+          "sample_sd": 0.8329166752885089,
+          "sd_over_mean": 0.0412133518037322,
+          "maximum_fractional_deviation_from_median": 0.07226113829513858,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.30149477,
+            0.26640739,
+            0.31236595
+          ],
+          "mean": 0.29342270333333337,
+          "sample_sd": 0.024019075846537747,
+          "sd_over_mean": 0.0818582733158574,
+          "maximum_fractional_deviation_from_median": 0.1163780718318928,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            21.472969530000004,
+            19.979856439000002,
+            20.057066195
+          ],
+          "mean": 20.503297388000004,
+          "sample_sd": 0.840647597887217,
+          "sd_over_mean": 0.04100060502362045,
+          "maximum_fractional_deviation_from_median": 0.07059374094068512,
+          "qualified": false
+        }
+      },
+      "full": {
+        "all_four_process_observations_valid": false,
+        "framework_seconds": {
+          "retained_seconds": [
+            25.695634228000003,
+            25.783209822,
+            23.15844828
+          ],
+          "mean": 24.879097443333336,
+          "sample_sd": 1.4907691064098048,
+          "sd_over_mean": 0.05992054614542598,
+          "maximum_fractional_deviation_from_median": 0.09873996202963077,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.263931342,
+            0.25691120900000003,
+            0.341268626
+          ],
+          "mean": 0.28737039233333334,
+          "sample_sd": 0.04680902969646318,
+          "sd_over_mean": 0.16288744750770068,
+          "maximum_fractional_deviation_from_median": 0.29302046287477296,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            25.959565570000002,
+            26.040121030999998,
+            23.499716906000003
+          ],
+          "mean": 25.16646783566667,
+          "sample_sd": 1.4440104887890353,
+          "sd_over_mean": 0.05737835353845487,
+          "maximum_fractional_deviation_from_median": 0.09475692716686702,
+          "qualified": false
+        }
+      }
+    }
+  },
+  "reference-timing-002": {
+    "sha256": "06c5705421085f519b861b99ab47533e167eae005966866a70d4647c9d0908ed",
+    "journal": "reference-timing-002/benchmark.json",
+    "cohorts": {
+      "stored": {
+        "all_four_process_observations_valid": true,
+        "framework_seconds": {
+          "retained_seconds": [
+            5.900513138,
+            7.7258244000000005,
+            5.670017614000001
+          ],
+          "mean": 6.432118384000001,
+          "sample_sd": 1.1262941394333688,
+          "sd_over_mean": 0.17510469680331814,
+          "maximum_fractional_deviation_from_median": 0.3093478853974209,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.26836121,
+            0.33006569900000005,
+            0.273881233
+          ],
+          "mean": 0.2907693806666667,
+          "sample_sd": 0.034143346927273194,
+          "sd_over_mean": 0.11742414847461045,
+          "maximum_fractional_deviation_from_median": 0.20514171556982894,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            6.168874348,
+            8.055890099,
+            5.943898847000001
+          ],
+          "mean": 6.722887764666667,
+          "sample_sd": 1.159881421316911,
+          "sd_over_mean": 0.17252726237865731,
+          "maximum_fractional_deviation_from_median": 0.30589304377901405,
+          "qualified": false
+        }
+      },
+      "nominal": {
+        "all_four_process_observations_valid": true,
+        "framework_seconds": {
+          "retained_seconds": [
+            32.647409438000004,
+            22.804240507000003,
+            25.490442028
+          ],
+          "mean": 26.980697324333335,
+          "sample_sd": 5.0879897098203815,
+          "sd_over_mean": 0.18857888099250972,
+          "maximum_fractional_deviation_from_median": 0.28077062775680495,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.301851332,
+            0.274638846,
+            0.340331975
+          ],
+          "mean": 0.30560738433333334,
+          "sample_sd": 0.033007237786593334,
+          "sd_over_mean": 0.10800536727408243,
+          "maximum_fractional_deviation_from_median": 0.12748210433605103,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            32.94926077,
+            23.078879353,
+            25.830774003000002
+          ],
+          "mean": 27.28630470866667,
+          "sample_sd": 5.093626856731715,
+          "sd_over_mean": 0.1866733847296618,
+          "maximum_fractional_deviation_from_median": 0.27558162857114754,
+          "qualified": false
+        }
+      },
+      "full": {
+        "all_four_process_observations_valid": true,
+        "framework_seconds": {
+          "retained_seconds": [
+            28.540973332,
+            30.084401124000003,
+            23.992297527
+          ],
+          "mean": 27.539223994333334,
+          "sample_sd": 3.167184532164457,
+          "sd_over_mean": 0.11500631001135542,
+          "maximum_fractional_deviation_from_median": 0.15937353474557384,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.33919071300000003,
+            0.375867481,
+            0.31521469100000005
+          ],
+          "mean": 0.34342429500000005,
+          "sample_sd": 0.030547219940758385,
+          "sd_over_mean": 0.08894891941398142,
+          "maximum_fractional_deviation_from_median": 0.10813022466213562,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            28.880164045,
+            30.460268605000003,
+            24.307512218000003
+          ],
+          "mean": 27.882648289333336,
+          "sample_sd": 3.1953686878895136,
+          "sd_over_mean": 0.11460061665347333,
+          "maximum_fractional_deviation_from_median": 0.1583319201329695,
+          "qualified": false
+        }
+      }
+    }
+  }
+}

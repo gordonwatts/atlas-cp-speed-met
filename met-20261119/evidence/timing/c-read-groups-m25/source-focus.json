@@ -1,0 +1,2032 @@
+{
+  "events": 20000,
+  "histogram_identical_to_stock": true,
+  "meters": "Instrumented scopes overlap. Use their times for direction and the application phase control for whole-pass elapsed.",
+  "resolved_init_locations": {
+    "electron/CombinedMuonTrackParticles/empty": 8,
+    "electron/ExtrapolatedMuonTrackParticles/empty": 8,
+    "electron/GSFTrackParticles/empty": 8,
+    "electron/GSFTrackParticles/nonempty": 4,
+    "electron/InDetForwardTrackParticles/empty": 12,
+    "electron/InDetTrackParticles/empty": 12,
+    "electron/MuonSpectrometerTrackParticles/empty": 8,
+    "electron/egammaClusters/nonempty": 4,
+    "muon/CombinedMuonTrackParticles/empty": 16,
+    "muon/CombinedMuonTrackParticles/nonempty": 4,
+    "muon/ExtrapolatedMuonTrackParticles/empty": 16,
+    "muon/ExtrapolatedMuonTrackParticles/nonempty": 4,
+    "muon/GSFTrackParticles/empty": 20,
+    "muon/InDetForwardTrackParticles/empty": 16,
+    "muon/InDetForwardTrackParticles/nonempty": 4,
+    "muon/InDetTrackParticles/empty": 16,
+    "muon/InDetTrackParticles/nonempty": 4,
+    "muon/MuonSpectrometerTrackParticles/empty": 16,
+    "muon/MuonSpectrometerTrackParticles/nonempty": 4,
+    "photon/CombinedMuonTrackParticles/empty": 8,
+    "photon/ExtrapolatedMuonTrackParticles/empty": 8,
+    "photon/GSFConversionVertices/nonempty": 4,
+    "photon/GSFTrackParticles/nonempty": 8,
+    "photon/InDetForwardTrackParticles/empty": 8,
+    "photon/InDetTrackParticles/empty": 8,
+    "photon/MuonSpectrometerTrackParticles/empty": 8,
+    "photon/egammaClusters/nonempty": 4,
+    "tau/TauTracks/nonempty": 4,
+    "tau/TruthTaus/nonempty": 4
+  },
+  "resolved_field_accesses": {
+    "electron/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "electron/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "electron/column/CombinedMuonTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "electron/column/CombinedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/CombinedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/ExtrapolatedMuonTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "electron/column/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/ExtrapolatedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "electron/column/GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.phi/nonempty_rows": 4,
+    "electron/column/GSFTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/GSFTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "electron/column/GSFTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.d0/empty_rows": 4,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 8,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.phi/empty_rows": 12,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.vz/empty_rows": 4,
+    "electron/column/InDetForwardTrackParticlesAuxDyn.z0/empty_rows": 4,
+    "electron/column/InDetTrackParticlesAuxDyn.d0/empty_rows": 4,
+    "electron/column/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 8,
+    "electron/column/InDetTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "electron/column/InDetTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "electron/column/InDetTrackParticlesAuxDyn.phi/empty_rows": 12,
+    "electron/column/InDetTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/InDetTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/InDetTrackParticlesAuxDyn.vz/empty_rows": 4,
+    "electron/column/InDetTrackParticlesAuxDyn.z0/empty_rows": 4,
+    "electron/column/MuonSpectrometerTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "electron/column/MuonSpectrometerTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "electron/column/MuonSpectrometerTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "electron/column/egammaClustersAuxDyn.ETACALOFRAME/nonempty_rows": 4,
+    "electron/column/egammaClustersAuxDyn.PHICALOFRAME/nonempty_rows": 4,
+    "electron/column/egammaClustersAuxDyn.calEta/nonempty_rows": 4,
+    "electron/column/egammaClustersAuxDyn.calPhi/nonempty_rows": 4,
+    "electron/column/egammaClustersAuxDyn.samplingPattern/nonempty_rows": 4,
+    "electron/sampling/egammaClustersAuxDyn.e_sampl/nonempty_rows": 24,
+    "electron/sampling/egammaClustersAuxDyn.eta_sampl/nonempty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.d0/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 48,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.phi/empty_rows": 24,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.phi/nonempty_rows": 8,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.qOverP/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.theta/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.vz/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.z0/empty_rows": 16,
+    "muon/column/CombinedMuonTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.d0/empty_rows": 16,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 48,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 16,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.phi/empty_rows": 24,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.phi/nonempty_rows": 8,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP/nonempty_rows": 4,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.theta/nonempty_rows": 4,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.vz/empty_rows": 16,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.z0/empty_rows": 16,
+    "muon/column/ExtrapolatedMuonTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "muon/column/GSFTrackParticlesAuxDyn.d0/empty_rows": 20,
+    "muon/column/GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 64,
+    "muon/column/GSFTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 20,
+    "muon/column/GSFTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 20,
+    "muon/column/GSFTrackParticlesAuxDyn.phi/empty_rows": 32,
+    "muon/column/GSFTrackParticlesAuxDyn.qOverP/empty_rows": 12,
+    "muon/column/GSFTrackParticlesAuxDyn.theta/empty_rows": 12,
+    "muon/column/GSFTrackParticlesAuxDyn.vz/empty_rows": 20,
+    "muon/column/GSFTrackParticlesAuxDyn.z0/empty_rows": 20,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.d0/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 48,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.phi/empty_rows": 24,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.phi/nonempty_rows": 8,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.qOverP/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.theta/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.vz/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.z0/empty_rows": 16,
+    "muon/column/InDetForwardTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.d0/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 48,
+    "muon/column/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelHits/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelHoles/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfPixelHoles/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTHits/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTHoles/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.numberOfSCTHoles/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.phi/empty_rows": 24,
+    "muon/column/InDetTrackParticlesAuxDyn.phi/nonempty_rows": 8,
+    "muon/column/InDetTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "muon/column/InDetTrackParticlesAuxDyn.qOverP/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "muon/column/InDetTrackParticlesAuxDyn.theta/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.vz/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "muon/column/InDetTrackParticlesAuxDyn.z0/empty_rows": 16,
+    "muon/column/InDetTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.d0/empty_rows": 16,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.d0/nonempty_rows": 4,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag/empty_rows": 56,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag/nonempty_rows": 8,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.phi/empty_rows": 28,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.phi/nonempty_rows": 4,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.qOverP/empty_rows": 12,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.theta/empty_rows": 12,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.vz/empty_rows": 16,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.vz/nonempty_rows": 4,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.z0/empty_rows": 16,
+    "muon/column/MuonSpectrometerTrackParticlesAuxDyn.z0/nonempty_rows": 4,
+    "photon/column/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "photon/column/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "photon/column/CombinedMuonTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "photon/column/CombinedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "photon/column/CombinedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "photon/column/ExtrapolatedMuonTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "photon/column/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "photon/column/ExtrapolatedMuonTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "photon/column/GSFConversionVerticesAuxDyn.pt1/nonempty_rows": 4,
+    "photon/column/GSFConversionVerticesAuxDyn.pt2/nonempty_rows": 4,
+    "photon/column/GSFConversionVerticesAuxDyn.x/nonempty_rows": 4,
+    "photon/column/GSFConversionVerticesAuxDyn.y/nonempty_rows": 4,
+    "photon/column/GSFTrackParticlesAuxDyn.numberOfPixelHits/nonempty_rows": 8,
+    "photon/column/GSFTrackParticlesAuxDyn.numberOfSCTHits/nonempty_rows": 8,
+    "photon/column/GSFTrackParticlesAuxDyn.phi/nonempty_rows": 8,
+    "photon/column/GSFTrackParticlesAuxDyn.qOverP/nonempty_rows": 8,
+    "photon/column/GSFTrackParticlesAuxDyn.theta/nonempty_rows": 8,
+    "photon/column/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "photon/column/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "photon/column/InDetForwardTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "photon/column/InDetForwardTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "photon/column/InDetForwardTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "photon/column/InDetTrackParticlesAuxDyn.numberOfPixelHits/empty_rows": 8,
+    "photon/column/InDetTrackParticlesAuxDyn.numberOfSCTHits/empty_rows": 8,
+    "photon/column/InDetTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "photon/column/InDetTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "photon/column/InDetTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "photon/column/MuonSpectrometerTrackParticlesAuxDyn.phi/empty_rows": 8,
+    "photon/column/MuonSpectrometerTrackParticlesAuxDyn.qOverP/empty_rows": 8,
+    "photon/column/MuonSpectrometerTrackParticlesAuxDyn.theta/empty_rows": 8,
+    "photon/column/egammaClustersAuxDyn.ETACALOFRAME/nonempty_rows": 4,
+    "photon/column/egammaClustersAuxDyn.PHICALOFRAME/nonempty_rows": 4,
+    "photon/column/egammaClustersAuxDyn.calEta/nonempty_rows": 4,
+    "photon/column/egammaClustersAuxDyn.calPhi/nonempty_rows": 4,
+    "photon/column/egammaClustersAuxDyn.samplingPattern/nonempty_rows": 4,
+    "photon/link_fields/GSFConversionVerticesAuxDyn.trackParticleLinks/nonempty_rows": 8,
+    "photon/sampling/egammaClustersAuxDyn.e_sampl/nonempty_rows": 24,
+    "photon/sampling/egammaClustersAuxDyn.eta_sampl/nonempty_rows": 16,
+    "tau/column/TauTracksAuxDyn.flagSet/nonempty_rows": 4,
+    "tau/column/TruthTausAuxDyn.IsHadronicTau/nonempty_rows": 4,
+    "tau/column/TruthTausAuxDyn.pdgId/nonempty_rows": 4
+  },
+  "calorimeter_sampling_accesses": {
+    "electron/egammaClustersAuxDyn.e_sampl": 24,
+    "electron/egammaClustersAuxDyn.eta_sampl": 16,
+    "photon/egammaClustersAuxDyn.e_sampl": 24,
+    "photon/egammaClustersAuxDyn.eta_sampl": 16
+  },
+  "diagnostic_scopes": {
+    "read": {
+      "plain_collection_branches": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 2453819411
+      },
+      "nested_association_projection": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 380546712
+      },
+      "memberwise_jet_link_projection": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 4325542
+      }
+    },
+    "awkward": {
+      "outside_object_preparation/flat/to_packed": {
+        "calls": 228,
+        "rows": 0,
+        "elapsed_ns": 28753349
+      },
+      "outside_object_preparation/dense/fill_none": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 11814421
+      },
+      "outside_object_preparation/dense/to_numpy": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 1130934
+      },
+      "outside_object_preparation/own/flatten": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 982388
+      },
+      "tau/prepare_tau/flatten": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 715682
+      },
+      "tau/prepare_tau/num": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 980156
+      },
+      "tau/dense/fill_none": {
+        "calls": 100,
+        "rows": 0,
+        "elapsed_ns": 26832699
+      },
+      "tau/dense/to_numpy": {
+        "calls": 100,
+        "rows": 0,
+        "elapsed_ns": 2564990
+      },
+      "tau/flat/to_packed": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 842988
+      },
+      "tau/column/flatten": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 1051397
+      },
+      "tau/column/is_none": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 753293
+      },
+      "tau/resolve/flatten": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 344042
+      },
+      "tau/own/flatten": {
+        "calls": 60,
+        "rows": 0,
+        "elapsed_ns": 4635349
+      },
+      "muon/own/flatten": {
+        "calls": 120,
+        "rows": 0,
+        "elapsed_ns": 9227882
+      },
+      "muon/dense/fill_none": {
+        "calls": 744,
+        "rows": 0,
+        "elapsed_ns": 206283713
+      },
+      "muon/dense/to_numpy": {
+        "calls": 744,
+        "rows": 0,
+        "elapsed_ns": 20180694
+      },
+      "muon/resolve/flatten": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 1769752
+      },
+      "muon/flat/to_packed": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 2328907
+      },
+      "muon/column/flatten": {
+        "calls": 568,
+        "rows": 0,
+        "elapsed_ns": 46561826
+      },
+      "muon/column/is_none": {
+        "calls": 568,
+        "rows": 0,
+        "elapsed_ns": 33908964
+      },
+      "muon/column/pad_none": {
+        "calls": 84,
+        "rows": 0,
+        "elapsed_ns": 10753501
+      },
+      "muon/column/num": {
+        "calls": 60,
+        "rows": 0,
+        "elapsed_ns": 5206145
+      },
+      "muon/primary_z/flatten": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 292028
+      },
+      "electron/own/flatten": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 3443779
+      },
+      "electron/dense/fill_none": {
+        "calls": 208,
+        "rows": 0,
+        "elapsed_ns": 58182536
+      },
+      "electron/dense/to_numpy": {
+        "calls": 208,
+        "rows": 0,
+        "elapsed_ns": 5759984
+      },
+      "electron/primary_z/flatten": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 295311
+      },
+      "electron/resolve/flatten": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 695021
+      },
+      "electron/resolve/pad_none": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 1165489
+      },
+      "electron/flat/to_packed": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 438397
+      },
+      "electron/column/flatten": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 3708705
+      },
+      "electron/column/is_none": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 2622454
+      },
+      "electron/sampling/flatten": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 11445823
+      },
+      "electron/sampling/num": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 4059617
+      },
+      "electron/column/pad_none": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 368443
+      },
+      "electron/column/num": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 405800
+      },
+      "photon/own/flatten": {
+        "calls": 56,
+        "rows": 0,
+        "elapsed_ns": 4584399
+      },
+      "photon/dense/fill_none": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 79317820
+      },
+      "photon/dense/to_numpy": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 7613336
+      },
+      "photon/primary_z/flatten": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 302421
+      },
+      "photon/resolve/flatten": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 761054
+      },
+      "photon/resolve/pad_none": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 1203950
+      },
+      "photon/column/flatten": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 6144993
+      },
+      "photon/column/is_none": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 4457923
+      },
+      "photon/sampling/flatten": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 13227146
+      },
+      "photon/sampling/num": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 4391867
+      },
+      "photon/flat/to_packed": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 446359
+      },
+      "photon/link_fields/flatten": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 712230
+      },
+      "photon/link_fields/pad_none": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 1359122
+      },
+      "photon/prepare_egamma/flatten": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 567015
+      },
+      "photon/prepare_egamma/num": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 513615
+      }
+    },
+    "link_and_gather": {
+      "own": {
+        "calls": 320,
+        "rows": 0,
+        "elapsed_ns": 112266996
+      },
+      "offset": {
+        "calls": 248,
+        "rows": 0,
+        "elapsed_ns": 5416382
+      },
+      "resolve": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 49897301
+      }
+    },
+    "species": {
+      "tau": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 52240291
+      },
+      "muon": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 486839856
+      },
+      "electron": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 139431099
+      },
+      "photon": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 198220761
+      }
+    },
+    "candidate_group": {
+      "tau/column/nonempty_rows": {
+        "calls": 12,
+        "rows": 54274,
+        "elapsed_ns": 7603969
+      },
+      "muon/column/nonempty_rows": {
+        "calls": 272,
+        "rows": 747675,
+        "elapsed_ns": 184844581
+      },
+      "muon/column/empty_rows": {
+        "calls": 1208,
+        "rows": 0,
+        "elapsed_ns": 195440238
+      },
+      "muon/column/absent_field": {
+        "calls": 320,
+        "rows": 170466,
+        "elapsed_ns": 1406605
+      },
+      "electron/column/nonempty_rows": {
+        "calls": 44,
+        "rows": 163306,
+        "elapsed_ns": 28496049
+      },
+      "electron/sampling/nonempty_rows": {
+        "calls": 40,
+        "rows": 148460,
+        "elapsed_ns": 54107920
+      },
+      "electron/column/empty_rows": {
+        "calls": 256,
+        "rows": 0,
+        "elapsed_ns": 1965858
+      },
+      "electron/column/absent_field": {
+        "calls": 36,
+        "rows": 14846,
+        "elapsed_ns": 163690
+      },
+      "photon/column/nonempty_rows": {
+        "calls": 76,
+        "rows": 288226,
+        "elapsed_ns": 45548213
+      },
+      "photon/sampling/nonempty_rows": {
+        "calls": 40,
+        "rows": 525960,
+        "elapsed_ns": 61187949
+      },
+      "photon/link_fields/nonempty_rows": {
+        "calls": 8,
+        "rows": 4288,
+        "elapsed_ns": 11810154
+      },
+      "photon/column/empty_rows": {
+        "calls": 168,
+        "rows": 0,
+        "elapsed_ns": 1348631
+      },
+      "photon/column/absent_field": {
+        "calls": 36,
+        "rows": 52596,
+        "elapsed_ns": 180904
+      }
+    },
+    "candidate_detail": {
+      "tau/column/nonempty_rows/TauTracksAuxDyn.flagSet": {
+        "calls": 4,
+        "rows": 48720,
+        "elapsed_ns": 2793212
+      },
+      "tau/column/nonempty_rows/TruthTausAuxDyn.pdgId": {
+        "calls": 4,
+        "rows": 2777,
+        "elapsed_ns": 2443578
+      },
+      "tau/column/nonempty_rows/TruthTausAuxDyn.IsHadronicTau": {
+        "calls": 4,
+        "rows": 2777,
+        "elapsed_ns": 2313349
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.qOverP": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2419350
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.qOverP": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2279282
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.qOverP": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 2328076
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2243199
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2226978
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.qOverP": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 2267023
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.theta": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2351371
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.theta": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2244163
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.theta": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 2295331
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2220671
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2212618
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.theta": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 2369576
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 16,
+        "rows": 59200,
+        "elapsed_ns": 15945183
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 16,
+        "rows": 500,
+        "elapsed_ns": 14170949
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 64,
+        "rows": 0,
+        "elapsed_ns": 10739908
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 10602001
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 10417763
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 56,
+        "rows": 0,
+        "elapsed_ns": 10408246
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 29600,
+        "elapsed_ns": 4881896
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 250,
+        "elapsed_ns": 4628453
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.phi": {
+        "calls": 32,
+        "rows": 0,
+        "elapsed_ns": 2424366
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 2332090
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 2323394
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.phi": {
+        "calls": 28,
+        "rows": 0,
+        "elapsed_ns": 2376345
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2293615
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2231184
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 4,
+        "rows": 14557,
+        "elapsed_ns": 2339896
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2256980
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 2256361
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 4,
+        "rows": 14557,
+        "elapsed_ns": 2320179
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 9967748
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 9918866
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 16,
+        "rows": 58228,
+        "elapsed_ns": 14600727
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.phi": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 2352229
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.phi": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 2355718
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 29114,
+        "elapsed_ns": 4588939
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2290276
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2331631
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 16,
+        "rows": 58988,
+        "elapsed_ns": 14026930
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 29494,
+        "elapsed_ns": 5059154
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2560727
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2326232
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.d0": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 2302762
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.d0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2265909
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.d0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2308251
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.d0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2309108
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.d0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2312370
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.d0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2234687
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 14557,
+        "elapsed_ns": 2255927
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2317390
+      },
+      "muon/column/nonempty_rows/MuonSpectrometerTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 13854,
+        "elapsed_ns": 2306788
+      },
+      "muon/column/nonempty_rows/MuonSpectrometerTrackParticlesAuxDyn.phi": {
+        "calls": 4,
+        "rows": 13854,
+        "elapsed_ns": 2371618
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2356125
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2225559
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.z0": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 2341446
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.z0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2265942
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.z0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2228050
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.z0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2228176
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.z0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2269220
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.z0": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2216287
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 14557,
+        "elapsed_ns": 2237115
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2365698
+      },
+      "muon/column/nonempty_rows/MuonSpectrometerTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 13854,
+        "elapsed_ns": 2326384
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2443077
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2271244
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.vz": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 2367093
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.vz": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2327086
+      },
+      "muon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.vz": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2394333
+      },
+      "muon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.vz": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2302434
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.vz": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2281509
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.vz": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2296926
+      },
+      "muon/column/nonempty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 14557,
+        "elapsed_ns": 2299273
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2341422
+      },
+      "muon/column/nonempty_rows/MuonSpectrometerTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 13854,
+        "elapsed_ns": 2408242
+      },
+      "muon/column/nonempty_rows/MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 8,
+        "rows": 27708,
+        "elapsed_ns": 6743296
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2421766
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2334230
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 2350266
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2345461
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 28659
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 26864
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2317498
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2357781
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2347141
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2461821
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2285237
+      },
+      "muon/column/absent_field/GSFTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 29068
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2395394
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 28527
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 38067
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2302439
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2313044
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2322236
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2394045
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2226314
+      },
+      "muon/column/empty_rows/GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 2283668
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2344557
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 29306
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 27758
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2299962
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2703405
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2375472
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2373511
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2305996
+      },
+      "muon/column/absent_field/GSFTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 28794
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2303053
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 28485
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 26030
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2338554
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2340774
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2808476
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2400642
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2865843
+      },
+      "muon/column/absent_field/GSFTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 28414
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2392039
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 29740
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 27050
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2282988
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2296589
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2325826
+      },
+      "muon/column/nonempty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 4,
+        "rows": 14800,
+        "elapsed_ns": 2330122
+      },
+      "muon/column/nonempty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 4,
+        "rows": 125,
+        "elapsed_ns": 2267916
+      },
+      "muon/column/absent_field/GSFTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 20,
+        "rows": 0,
+        "elapsed_ns": 29176
+      },
+      "muon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2376789
+      },
+      "muon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 20,
+        "rows": 14557,
+        "elapsed_ns": 28364
+      },
+      "muon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 20,
+        "rows": 13854,
+        "elapsed_ns": 25827
+      },
+      "muon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2315810
+      },
+      "muon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 2335347
+      },
+      "muon/column/nonempty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+        "calls": 4,
+        "rows": 14747,
+        "elapsed_ns": 2311684
+      },
+      "electron/column/nonempty_rows/egammaClustersAuxDyn.calEta": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2441451
+      },
+      "electron/column/nonempty_rows/egammaClustersAuxDyn.calPhi": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2335367
+      },
+      "electron/column/nonempty_rows/egammaClustersAuxDyn.ETACALOFRAME": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2304008
+      },
+      "electron/column/nonempty_rows/egammaClustersAuxDyn.PHICALOFRAME": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2312958
+      },
+      "electron/column/nonempty_rows/egammaClustersAuxDyn.samplingPattern": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2346705
+      },
+      "electron/sampling/nonempty_rows/egammaClustersAuxDyn.e_sampl": {
+        "calls": 24,
+        "rows": 89076,
+        "elapsed_ns": 32397688
+      },
+      "electron/sampling/nonempty_rows/egammaClustersAuxDyn.eta_sampl": {
+        "calls": 16,
+        "rows": 59384,
+        "elapsed_ns": 21557480
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 25335
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 20185
+      },
+      "electron/column/nonempty_rows/GSFTrackParticlesAuxDyn.d0": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2571259
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.phi": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 56063
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.phi": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 59669
+      },
+      "electron/column/nonempty_rows/GSFTrackParticlesAuxDyn.phi": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2386926
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 22234
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 21377
+      },
+      "electron/column/nonempty_rows/GSFTrackParticlesAuxDyn.z0": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2354502
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 33357
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 30254
+      },
+      "electron/column/nonempty_rows/GSFTrackParticlesAuxDyn.vz": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2440799
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 20511
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 17621
+      },
+      "electron/column/nonempty_rows/GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+        "calls": 8,
+        "rows": 29692,
+        "elapsed_ns": 6834367
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 43289
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36620
+      },
+      "electron/column/empty_rows/GSFTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 35289
+      },
+      "electron/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34218
+      },
+      "electron/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34217
+      },
+      "electron/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 32896
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 61696
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34351
+      },
+      "electron/column/empty_rows/GSFTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 35381
+      },
+      "electron/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33489
+      },
+      "electron/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33916
+      },
+      "electron/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 32672
+      },
+      "electron/column/empty_rows/GSFTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34268
+      },
+      "electron/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33634
+      },
+      "electron/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34072
+      },
+      "electron/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33974
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 37606
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34337
+      },
+      "electron/column/empty_rows/GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 32536
+      },
+      "electron/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34165
+      },
+      "electron/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 11560
+      },
+      "electron/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 10570
+      },
+      "electron/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34864
+      },
+      "electron/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34434
+      },
+      "electron/column/empty_rows/GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33712
+      },
+      "electron/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 41862
+      },
+      "electron/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 11197
+      },
+      "electron/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 11049
+      },
+      "electron/column/absent_field/egammaClustersAuxDyn.etaCalo": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 7970
+      },
+      "photon/column/nonempty_rows/egammaClustersAuxDyn.calEta": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2658907
+      },
+      "photon/column/nonempty_rows/egammaClustersAuxDyn.calPhi": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2434463
+      },
+      "photon/column/nonempty_rows/egammaClustersAuxDyn.ETACALOFRAME": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2350655
+      },
+      "photon/column/nonempty_rows/egammaClustersAuxDyn.PHICALOFRAME": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2454101
+      },
+      "photon/column/nonempty_rows/egammaClustersAuxDyn.samplingPattern": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2668923
+      },
+      "photon/sampling/nonempty_rows/egammaClustersAuxDyn.e_sampl": {
+        "calls": 24,
+        "rows": 315576,
+        "elapsed_ns": 37276397
+      },
+      "photon/sampling/nonempty_rows/egammaClustersAuxDyn.eta_sampl": {
+        "calls": 16,
+        "rows": 210384,
+        "elapsed_ns": 23750102
+      },
+      "photon/column/nonempty_rows/GSFConversionVerticesAuxDyn.x": {
+        "calls": 4,
+        "rows": 2144,
+        "elapsed_ns": 2448604
+      },
+      "photon/column/nonempty_rows/GSFConversionVerticesAuxDyn.y": {
+        "calls": 4,
+        "rows": 2144,
+        "elapsed_ns": 2256579
+      },
+      "photon/column/nonempty_rows/GSFConversionVerticesAuxDyn.pt1": {
+        "calls": 4,
+        "rows": 2144,
+        "elapsed_ns": 2284370
+      },
+      "photon/column/nonempty_rows/GSFConversionVerticesAuxDyn.pt2": {
+        "calls": 4,
+        "rows": 2144,
+        "elapsed_ns": 2267013
+      },
+      "photon/link_fields/nonempty_rows/GSFConversionVerticesAuxDyn.trackParticleLinks": {
+        "calls": 8,
+        "rows": 4288,
+        "elapsed_ns": 11780497
+      },
+      "photon/column/empty_rows/InDetTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 45411
+      },
+      "photon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 38570
+      },
+      "photon/column/nonempty_rows/GSFTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 3334,
+        "elapsed_ns": 4851825
+      },
+      "photon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 41762
+      },
+      "photon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 37304
+      },
+      "photon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.qOverP": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 35869
+      },
+      "photon/column/empty_rows/InDetTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 35603
+      },
+      "photon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 34832
+      },
+      "photon/column/nonempty_rows/GSFTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 3334,
+        "elapsed_ns": 4637153
+      },
+      "photon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 42099
+      },
+      "photon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36147
+      },
+      "photon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.theta": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33852
+      },
+      "photon/column/empty_rows/InDetTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36170
+      },
+      "photon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 33720
+      },
+      "photon/column/nonempty_rows/GSFTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 3334,
+        "elapsed_ns": 4633481
+      },
+      "photon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 55220
+      },
+      "photon/column/empty_rows/ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 39559
+      },
+      "photon/column/empty_rows/MuonSpectrometerTrackParticlesAuxDyn.phi": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 39333
+      },
+      "photon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 39462
+      },
+      "photon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36383
+      },
+      "photon/column/nonempty_rows/GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 3334,
+        "elapsed_ns": 4593115
+      },
+      "photon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 40732
+      },
+      "photon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 12246
+      },
+      "photon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfPixelHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 11037
+      },
+      "photon/column/empty_rows/InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36814
+      },
+      "photon/column/empty_rows/InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 36440
+      },
+      "photon/column/nonempty_rows/GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 3334,
+        "elapsed_ns": 4739806
+      },
+      "photon/column/empty_rows/CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 42273
+      },
+      "photon/column/absent_field/ExtrapolatedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 12360
+      },
+      "photon/column/absent_field/MuonSpectrometerTrackParticlesAuxDyn.numberOfSCTHits": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 11735
+      },
+      "photon/column/absent_field/egammaClustersAuxDyn.etaCalo": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 9237
+      }
+    },
+    "typed_scalar_candidate": {
+      "tau/nonempty_rows/<u2": {
+        "calls": 4,
+        "rows": 48720,
+        "elapsed_ns": 2775194
+      },
+      "tau/nonempty_rows/<i4": {
+        "calls": 4,
+        "rows": 2777,
+        "elapsed_ns": 2427846
+      },
+      "tau/nonempty_rows/|i1": {
+        "calls": 4,
+        "rows": 2777,
+        "elapsed_ns": 2297704
+      },
+      "muon/nonempty_rows/<f4": {
+        "calls": 128,
+        "rows": 365019,
+        "elapsed_ns": 74725476
+      },
+      "muon/empty_rows/<f4": {
+        "calls": 568,
+        "rows": 0,
+        "elapsed_ns": 80962100
+      },
+      "muon/nonempty_rows/|u1": {
+        "calls": 72,
+        "rows": 178032,
+        "elapsed_ns": 42924591
+      },
+      "muon/empty_rows/|u1": {
+        "calls": 328,
+        "rows": 0,
+        "elapsed_ns": 46050639
+      },
+      "electron/nonempty_rows/<f4": {
+        "calls": 32,
+        "rows": 118768,
+        "elapsed_ns": 19037788
+      },
+      "electron/nonempty_rows/<u4": {
+        "calls": 4,
+        "rows": 14846,
+        "elapsed_ns": 2331345
+      },
+      "electron/empty_rows/<f4": {
+        "calls": 176,
+        "rows": 0,
+        "elapsed_ns": 310349
+      },
+      "electron/empty_rows/|u1": {
+        "calls": 64,
+        "rows": 0,
+        "elapsed_ns": 111962
+      },
+      "photon/nonempty_rows/<f4": {
+        "calls": 56,
+        "rows": 228962,
+        "elapsed_ns": 33090713
+      },
+      "photon/nonempty_rows/<u4": {
+        "calls": 4,
+        "rows": 52596,
+        "elapsed_ns": 2653068
+      },
+      "photon/empty_rows/<f4": {
+        "calls": 120,
+        "rows": 0,
+        "elapsed_ns": 244374
+      },
+      "photon/empty_rows/|u1": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 94850
+      },
+      "photon/nonempty_rows/|u1": {
+        "calls": 16,
+        "rows": 6668,
+        "elapsed_ns": 9284252
+      }
+    },
+    "candidate_awkward_operations": {
+      "tau/column/nonempty_rows/flatten": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 1004039
+      },
+      "tau/column/nonempty_rows/is_none": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 705018
+      },
+      "tau/column/nonempty_rows/fill_none": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 3281759
+      },
+      "tau/column/nonempty_rows/to_numpy": {
+        "calls": 12,
+        "rows": 0,
+        "elapsed_ns": 296974
+      },
+      "muon/column/nonempty_rows/flatten": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 21478397
+      },
+      "muon/column/nonempty_rows/is_none": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 16029432
+      },
+      "muon/column/nonempty_rows/fill_none": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 78012397
+      },
+      "muon/column/nonempty_rows/to_numpy": {
+        "calls": 272,
+        "rows": 0,
+        "elapsed_ns": 6625123
+      },
+      "muon/column/empty_rows/flatten": {
+        "calls": 296,
+        "rows": 0,
+        "elapsed_ns": 23197114
+      },
+      "muon/column/empty_rows/is_none": {
+        "calls": 296,
+        "rows": 0,
+        "elapsed_ns": 15814482
+      },
+      "muon/column/empty_rows/fill_none": {
+        "calls": 296,
+        "rows": 0,
+        "elapsed_ns": 80825027
+      },
+      "muon/column/empty_rows/to_numpy": {
+        "calls": 296,
+        "rows": 0,
+        "elapsed_ns": 7275636
+      },
+      "muon/column/nonempty_rows/pad_none": {
+        "calls": 36,
+        "rows": 0,
+        "elapsed_ns": 4433959
+      },
+      "muon/column/empty_rows/pad_none": {
+        "calls": 48,
+        "rows": 0,
+        "elapsed_ns": 5978869
+      },
+      "muon/column/nonempty_rows/num": {
+        "calls": 36,
+        "rows": 0,
+        "elapsed_ns": 3577830
+      },
+      "muon/column/empty_rows/num": {
+        "calls": 24,
+        "rows": 0,
+        "elapsed_ns": 1389606
+      },
+      "electron/column/nonempty_rows/flatten": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 3562412
+      },
+      "electron/column/nonempty_rows/is_none": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 2454433
+      },
+      "electron/column/nonempty_rows/fill_none": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 12085335
+      },
+      "electron/column/nonempty_rows/to_numpy": {
+        "calls": 44,
+        "rows": 0,
+        "elapsed_ns": 1084822
+      },
+      "electron/sampling/nonempty_rows/flatten": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 11159817
+      },
+      "electron/sampling/nonempty_rows/num": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 3877346
+      },
+      "electron/sampling/nonempty_rows/fill_none": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 22056455
+      },
+      "electron/sampling/nonempty_rows/to_numpy": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 2113373
+      },
+      "electron/column/nonempty_rows/pad_none": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 350743
+      },
+      "electron/column/nonempty_rows/num": {
+        "calls": 4,
+        "rows": 0,
+        "elapsed_ns": 387975
+      },
+      "photon/column/nonempty_rows/flatten": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 5904440
+      },
+      "photon/column/nonempty_rows/is_none": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 4176552
+      },
+      "photon/column/nonempty_rows/fill_none": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 20959085
+      },
+      "photon/column/nonempty_rows/to_numpy": {
+        "calls": 76,
+        "rows": 0,
+        "elapsed_ns": 1870346
+      },
+      "photon/sampling/nonempty_rows/flatten": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 12938065
+      },
+      "photon/sampling/nonempty_rows/num": {
+        "calls": 40,
+        "rows": 0,
+        "elapsed_ns": 4220839
+      },
+      "photon/sampling/nonempty_rows/fill_none": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 22862899
+      },
+      "photon/sampling/nonempty_rows/to_numpy": {
+        "calls": 80,
+        "rows": 0,
+        "elapsed_ns": 2136086
+      },
+      "photon/link_fields/nonempty_rows/flatten": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 685819
+      },
+      "photon/link_fields/nonempty_rows/pad_none": {
+        "calls": 8,
+        "rows": 0,
+        "elapsed_ns": 1327571
+      },
+      "photon/link_fields/nonempty_rows/fill_none": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 5864888
+      },
+      "photon/link_fields/nonempty_rows/to_numpy": {
+        "calls": 16,
+        "rows": 0,
+        "elapsed_ns": 403670
+      }
+    }
+  }
+}

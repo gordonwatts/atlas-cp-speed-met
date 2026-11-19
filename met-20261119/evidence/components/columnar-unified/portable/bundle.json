@@ -1,0 +1,138 @@
+{
+  "wheel": "atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+  "wheel_bytes": 2409393,
+  "wheel_sha256": "e24e2de48bdc94d98eaa9f2b42e859b2122820947e2964236ba9d8ef33c32901",
+  "core_commit": "3dcfa20ec01fb40c4d5fec58383785519dec1c00",
+  "core_patch_sha256": "18544b4850249256ffaf64c56b0f227bca6ebc01d3fe226913b6d24db2dbc05d",
+  "core_patched_correction_cc_sha256": "276b96e3e865d2abeea8c5473f93b782d9f591a69a2d1ce2bf8c8a5e75b2ad56",
+  "inputs": {
+    "atlas_met_columnar.py": {
+      "bytes": 10762,
+      "sha256": "61ad734fc3804a1aabe7415a97a338db360c7583696ff50c0c2b497f1e7afbd1"
+    },
+    "atlas_met_prepare.py": {
+      "bytes": 24222,
+      "sha256": "5ce4182e9d4c9d997f0a1a8f69291fbb54f99a176ad8e510aff731a3031b6ec4"
+    },
+    "atlas_met_portable/source-layout.json": {
+      "bytes": 11858,
+      "sha256": "38cce6d6b9c4d03330fc3977c6cc245d981e20d0a939fc842532b3065e414cd8"
+    },
+    "atlas_met_portable/__init__.py": {
+      "bytes": 280,
+      "sha256": "f0e8ecb77b1ad90d376ef44a6c9da63323854060c9d4b4341f0bff408c2c649d"
+    },
+    "atlas_met_portable/native/libatlas_met_columnar.so": {
+      "bytes": 711680,
+      "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666"
+    },
+    "atlas_met_portable/native/libatlas_met_maker_correction.so": {
+      "bytes": 153952,
+      "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9"
+    },
+    "atlas_met_portable/native/libatlas_met_maker_provider.so": {
+      "bytes": 90480,
+      "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76"
+    },
+    "atlas_met_portable/native/libmet_preparation_provider.so": {
+      "bytes": 212408,
+      "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4"
+    },
+    "atlas_met_portable/native/libcorrectionlib.so": {
+      "bytes": 1449680,
+      "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca"
+    },
+    "atlas_met_portable/native/libstdc++.so.6": {
+      "bytes": 2575440,
+      "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec"
+    },
+    "atlas_met_portable/native/libgcc_s.so.1": {
+      "bytes": 908488,
+      "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c"
+    },
+    "atlas_met_portable/payloads/maker.json": {
+      "bytes": 1211,
+      "sha256": "c4c745a527342d280edb3e8362d6653783112bb8d929fe4e9b98555b70eb5bf1"
+    },
+    "atlas_met_portable/payloads/nnjvt.json": {
+      "bytes": 8951,
+      "sha256": "aec0b9c949edaf7069f94af698532cfe47efa4c59f043ef62b09218275b21a1f"
+    },
+    "atlas_met_portable/payloads/soft.json": {
+      "bytes": 4691,
+      "sha256": "56787692c5a9ad90ed8e6cee83e0cf182b36bd6d8a7605e61c2e141d1dd5fdfb"
+    },
+    "atlas_met_portable/payloads/significance.json": {
+      "bytes": 200574,
+      "sha256": "6fa92432e4ada19659b772bac272ada6b51bc8db8e134e3b96dc5f489c5c9ff3"
+    },
+    "atlas_met_portable/payloads/preparation.json": {
+      "bytes": 679272,
+      "sha256": "1f5503011d754235e44bb54829a0a34200513dbecaa3d425ab5310629be7a709"
+    },
+    "atlas_met_portable/payloads/EventFormat.json": {
+      "bytes": 12293,
+      "sha256": "d7780f671eb8e6d3ed0f3a5af15450188cc5a44a2486b05bdac2695eb16583ef"
+    },
+    "atlas_met_columnar-0.1.0.dist-info/METADATA": {
+      "bytes": 272,
+      "sha256": "ae9204e68c59abe50c8e2cbc2da01ac0592c65bc3c6d6262c145957fc4330b56"
+    },
+    "atlas_met_columnar-0.1.0.dist-info/WHEEL": {
+      "bytes": 102,
+      "sha256": "ade465f561caf507159c3b58944319bcf1c5738baf22846e7ab6b19248322f4a"
+    }
+  },
+  "elf_needed": {
+    "libatlas_met_columnar.so": [
+      "libatlas_met_maker_correction.so",
+      "libcorrectionlib.so",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "libatlas_met_maker_correction.so": [
+      "libcorrectionlib.so",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "libatlas_met_maker_provider.so": [
+      "libatlas_met_maker_correction.so",
+      "libcorrectionlib.so",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "libmet_preparation_provider.so": [
+      "libcorrectionlib.so",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "libcorrectionlib.so": [
+      "libz.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "libstdc++.so.6": [
+      "libm.so.6",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2",
+      "libgcc_s.so.1"
+    ],
+    "libgcc_s.so.1": [
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ]
+  }
+}

@@ -1,0 +1,2124 @@
+{
+  "events": 20000,
+  "script_sha256": "2cbf393ddfda27771db50ed3f122a8483e70b06ea1118cd725674a03d71210f3",
+  "histogram_sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b",
+  "notes": "Process CPU in named diagnostic hooks. Basket reads include ROOT key parsing and decompression; interpretation counts outer value conversion. Visits include duplicates. Whole-phase residual includes branch dispatch, packing and array finalization. Use logical ROOT footprint for distinct stored byte extents.",
+  "process": {
+    "nominal_preparation_calls": 4,
+    "nominal_preparation_cpu_ns": 257574466,
+    "diagnostic_launcher_and_execution_cpu_ns": 2277832090,
+    "diagnostic_launcher_and_execution_wall_ns": 2279214545
+  },
+  "branch_groups": {
+    "AnalysisElectrons": {
+      "basket_materializations": 998,
+      "basket_materialization_cpu_ns": 15807034,
+      "compressed_bytes_visited_with_key": 1399100,
+      "uncompressed_bytes_visited_with_key": 5555714,
+      "outer_interpretations": 998,
+      "outer_interpretation_cpu_ns": 25603777
+    },
+    "AnalysisJets": {
+      "basket_materializations": 1906,
+      "basket_materialization_cpu_ns": 67214544,
+      "compressed_bytes_visited_with_key": 17095159,
+      "uncompressed_bytes_visited_with_key": 58470315,
+      "outer_interpretations": 1906,
+      "outer_interpretation_cpu_ns": 87184381
+    },
+    "AnalysisMuons": {
+      "basket_materializations": 3135,
+      "basket_materialization_cpu_ns": 49017368,
+      "compressed_bytes_visited_with_key": 3622167,
+      "uncompressed_bytes_visited_with_key": 12121106,
+      "outer_interpretations": 3135,
+      "outer_interpretation_cpu_ns": 35928863
+    },
+    "AnalysisPhotons": {
+      "basket_materializations": 1227,
+      "basket_materialization_cpu_ns": 20969030,
+      "compressed_bytes_visited_with_key": 3076604,
+      "uncompressed_bytes_visited_with_key": 9134598,
+      "outer_interpretations": 1227,
+      "outer_interpretation_cpu_ns": 33370799
+    },
+    "AnalysisTauJets": {
+      "basket_materializations": 1443,
+      "basket_materialization_cpu_ns": 26336892,
+      "compressed_bytes_visited_with_key": 2264856,
+      "uncompressed_bytes_visited_with_key": 16366152,
+      "outer_interpretations": 1443,
+      "outer_interpretation_cpu_ns": 42327614
+    },
+    "CombinedMuonTrackParticles": {
+      "basket_materializations": 964,
+      "basket_materialization_cpu_ns": 17760867,
+      "compressed_bytes_visited_with_key": 2794413,
+      "uncompressed_bytes_visited_with_key": 5969130,
+      "outer_interpretations": 964,
+      "outer_interpretation_cpu_ns": 19814278
+    },
+    "EventInfo": {
+      "basket_materializations": 994,
+      "basket_materialization_cpu_ns": 8481407,
+      "compressed_bytes_visited_with_key": 206469,
+      "uncompressed_bytes_visited_with_key": 988491,
+      "outer_interpretations": 994,
+      "outer_interpretation_cpu_ns": 1046911
+    },
+    "ExtrapolatedMuonTrackParticles": {
+      "basket_materializations": 518,
+      "basket_materialization_cpu_ns": 8909700,
+      "compressed_bytes_visited_with_key": 1724752,
+      "uncompressed_bytes_visited_with_key": 3369386,
+      "outer_interpretations": 518,
+      "outer_interpretation_cpu_ns": 11946532
+    },
+    "GSFConversionVertices": {
+      "basket_materializations": 400,
+      "basket_materialization_cpu_ns": 5408973,
+      "compressed_bytes_visited_with_key": 356455,
+      "uncompressed_bytes_visited_with_key": 1582024,
+      "outer_interpretations": 400,
+      "outer_interpretation_cpu_ns": 10413792
+    },
+    "GSFTrackParticles": {
+      "basket_materializations": 696,
+      "basket_materialization_cpu_ns": 11266131,
+      "compressed_bytes_visited_with_key": 1464797,
+      "uncompressed_bytes_visited_with_key": 3490694,
+      "outer_interpretations": 696,
+      "outer_interpretation_cpu_ns": 14562864
+    },
+    "InDetForwardTrackParticles": {
+      "basket_materializations": 1002,
+      "basket_materialization_cpu_ns": 13331956,
+      "compressed_bytes_visited_with_key": 794079,
+      "uncompressed_bytes_visited_with_key": 3785884,
+      "outer_interpretations": 1002,
+      "outer_interpretation_cpu_ns": 16608045
+    },
+    "InDetTrackParticles": {
+      "basket_materializations": 1388,
+      "basket_materialization_cpu_ns": 39537768,
+      "compressed_bytes_visited_with_key": 16776780,
+      "uncompressed_bytes_visited_with_key": 24601138,
+      "outer_interpretations": 1388,
+      "outer_interpretation_cpu_ns": 43520215
+    },
+    "METAssoc_AnalysisMETAux.cale": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1625046,
+      "compressed_bytes_visited_with_key": 463073,
+      "uncompressed_bytes_visited_with_key": 1408052,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7525376
+    },
+    "METAssoc_AnalysisMETAux.calkey": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1410781,
+      "compressed_bytes_visited_with_key": 210815,
+      "uncompressed_bytes_visited_with_key": 1665240,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7894570
+    },
+    "METAssoc_AnalysisMETAux.calpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1690664,
+      "compressed_bytes_visited_with_key": 473341,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7565120
+    },
+    "METAssoc_AnalysisMETAux.calpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1617475,
+      "compressed_bytes_visited_with_key": 473151,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7524363
+    },
+    "METAssoc_AnalysisMETAux.calpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1600807,
+      "compressed_bytes_visited_with_key": 474408,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7509636
+    },
+    "METAssoc_AnalysisMETAux.calsumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1672159,
+      "compressed_bytes_visited_with_key": 462342,
+      "uncompressed_bytes_visited_with_key": 1408212,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7614829
+    },
+    "METAssoc_AnalysisMETAux.isMisc": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1344409,
+      "compressed_bytes_visited_with_key": 85377,
+      "uncompressed_bytes_visited_with_key": 501206,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1092000
+    },
+    "METAssoc_AnalysisMETAux.jetLink": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1245471,
+      "compressed_bytes_visited_with_key": 100059,
+      "uncompressed_bytes_visited_with_key": 2137488
+    },
+    "METAssoc_AnalysisMETAux.jettrke": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1489869,
+      "compressed_bytes_visited_with_key": 663778,
+      "uncompressed_bytes_visited_with_key": 1151064,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1143433
+    },
+    "METAssoc_AnalysisMETAux.jettrkpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1698106,
+      "compressed_bytes_visited_with_key": 685704,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1347660
+    },
+    "METAssoc_AnalysisMETAux.jettrkpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1579420,
+      "compressed_bytes_visited_with_key": 685667,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1108920
+    },
+    "METAssoc_AnalysisMETAux.jettrkpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1481577,
+      "compressed_bytes_visited_with_key": 687247,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1151329
+    },
+    "METAssoc_AnalysisMETAux.jettrksumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1504177,
+      "compressed_bytes_visited_with_key": 664391,
+      "uncompressed_bytes_visited_with_key": 1151224,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1121735
+    },
+    "METAssoc_AnalysisMETAux.objectLinks": {
+      "basket_materializations": 48,
+      "basket_materialization_cpu_ns": 1979600,
+      "compressed_bytes_visited_with_key": 262684,
+      "uncompressed_bytes_visited_with_key": 3060888,
+      "outer_interpretations": 48,
+      "outer_interpretation_cpu_ns": 10412615
+    },
+    "METAssoc_AnalysisMETAux.overlapIndices": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1620290,
+      "compressed_bytes_visited_with_key": 206249,
+      "uncompressed_bytes_visited_with_key": 1671088,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 9674496
+    },
+    "METAssoc_AnalysisMETAux.overlapTypes": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1387844,
+      "compressed_bytes_visited_with_key": 199815,
+      "uncompressed_bytes_visited_with_key": 1454820,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 9591262
+    },
+    "METAssoc_AnalysisMETAux.trke": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1371029,
+      "compressed_bytes_visited_with_key": 248673,
+      "uncompressed_bytes_visited_with_key": 1241040,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7332600
+    },
+    "METAssoc_AnalysisMETAux.trkkey": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1278901,
+      "compressed_bytes_visited_with_key": 150144,
+      "uncompressed_bytes_visited_with_key": 1331216,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7567908
+    },
+    "METAssoc_AnalysisMETAux.trkpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1430874,
+      "compressed_bytes_visited_with_key": 252966,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7392569
+    },
+    "METAssoc_AnalysisMETAux.trkpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1340562,
+      "compressed_bytes_visited_with_key": 252925,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7341138
+    },
+    "METAssoc_AnalysisMETAux.trkpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1378817,
+      "compressed_bytes_visited_with_key": 253626,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7365219
+    },
+    "METAssoc_AnalysisMETAux.trksumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1386081,
+      "compressed_bytes_visited_with_key": 247912,
+      "uncompressed_bytes_visited_with_key": 1241200,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7292552
+    },
+    "MET_Core_AnalysisMET": {
+      "basket_materializations": 394,
+      "basket_materialization_cpu_ns": 7078529,
+      "compressed_bytes_visited_with_key": 790017,
+      "uncompressed_bytes_visited_with_key": 2785805,
+      "outer_interpretations": 394,
+      "outer_interpretation_cpu_ns": 11366132
+    },
+    "MET_Truth": {
+      "basket_materializations": 426,
+      "basket_materialization_cpu_ns": 7393232,
+      "compressed_bytes_visited_with_key": 1184770,
+      "uncompressed_bytes_visited_with_key": 3584797,
+      "outer_interpretations": 426,
+      "outer_interpretation_cpu_ns": 11983417
+    },
+    "MuonSpectrometerTrackParticles": {
+      "basket_materializations": 523,
+      "basket_materialization_cpu_ns": 9104809,
+      "compressed_bytes_visited_with_key": 1683636,
+      "uncompressed_bytes_visited_with_key": 3454081,
+      "outer_interpretations": 523,
+      "outer_interpretation_cpu_ns": 12253712
+    },
+    "PrimaryVertices": {
+      "basket_materializations": 179,
+      "basket_materialization_cpu_ns": 5234475,
+      "compressed_bytes_visited_with_key": 2166677,
+      "uncompressed_bytes_visited_with_key": 3738524,
+      "outer_interpretations": 179,
+      "outer_interpretation_cpu_ns": 3693901
+    },
+    "TauTracks": {
+      "basket_materializations": 86,
+      "basket_materialization_cpu_ns": 1503506,
+      "compressed_bytes_visited_with_key": 135701,
+      "uncompressed_bytes_visited_with_key": 671990,
+      "outer_interpretations": 86,
+      "outer_interpretation_cpu_ns": 1487113
+    },
+    "TruthTaus": {
+      "basket_materializations": 158,
+      "basket_materialization_cpu_ns": 2271085,
+      "compressed_bytes_visited_with_key": 140247,
+      "uncompressed_bytes_visited_with_key": 620465,
+      "outer_interpretations": 158,
+      "outer_interpretation_cpu_ns": 2358060
+    },
+    "egammaClusters": {
+      "basket_materializations": 576,
+      "basket_materialization_cpu_ns": 13545130,
+      "compressed_bytes_visited_with_key": 3858956,
+      "uncompressed_bytes_visited_with_key": 6013526,
+      "outer_interpretations": 576,
+      "outer_interpretation_cpu_ns": 20182122
+    }
+  },
+  "branches": {
+    "AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBL": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1014964,
+      "compressed_bytes_visited_with_key": 76309,
+      "uncompressed_bytes_visited_with_key": 305106,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1365703
+    },
+    "AnalysisElectronsAuxDyn.Eadded_Lr2": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1061809,
+      "compressed_bytes_visited_with_key": 91291,
+      "uncompressed_bytes_visited_with_key": 348428,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1456409
+    },
+    "AnalysisElectronsAuxDyn.Eadded_Lr3": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1062125,
+      "compressed_bytes_visited_with_key": 79197,
+      "uncompressed_bytes_visited_with_key": 348428,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1160675
+    },
+    "AnalysisElectronsAuxDyn.OQ": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1084046,
+      "compressed_bytes_visited_with_key": 80110,
+      "uncompressed_bytes_visited_with_key": 347820,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1252598
+    },
+    "AnalysisElectronsAuxDyn.author": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1061436,
+      "compressed_bytes_visited_with_key": 73175,
+      "uncompressed_bytes_visited_with_key": 318432,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1376385
+    },
+    "AnalysisElectronsAuxDyn.caloClusterLinks": {
+      "basket_materializations": 87,
+      "basket_materialization_cpu_ns": 1344955,
+      "compressed_bytes_visited_with_key": 82303,
+      "uncompressed_bytes_visited_with_key": 765947,
+      "outer_interpretations": 87,
+      "outer_interpretation_cpu_ns": 6345327
+    },
+    "AnalysisElectronsAuxDyn.eta": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1151004,
+      "compressed_bytes_visited_with_key": 140396,
+      "uncompressed_bytes_visited_with_key": 347896,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1148674
+    },
+    "AnalysisElectronsAuxDyn.phi": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1230185,
+      "compressed_bytes_visited_with_key": 140317,
+      "uncompressed_bytes_visited_with_key": 347896,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1087827
+    },
+    "AnalysisElectronsAuxDyn.pt": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1374189,
+      "compressed_bytes_visited_with_key": 138093,
+      "uncompressed_bytes_visited_with_key": 347820,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1205000
+    },
+    "AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1114506,
+      "compressed_bytes_visited_with_key": 111000,
+      "uncompressed_bytes_visited_with_key": 351848,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1231112
+    },
+    "AnalysisElectronsAuxDyn.topoetcone20": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1316190,
+      "compressed_bytes_visited_with_key": 142297,
+      "uncompressed_bytes_visited_with_key": 348580,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1135428
+    },
+    "AnalysisElectronsAuxDyn.topoetcone20ptCorrection": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1386670,
+      "compressed_bytes_visited_with_key": 142623,
+      "uncompressed_bytes_visited_with_key": 349492,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1098597
+    },
+    "AnalysisElectronsAuxDyn.trackParticleLinks": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1604955,
+      "compressed_bytes_visited_with_key": 101989,
+      "uncompressed_bytes_visited_with_key": 1028021,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 5740042
+    },
+    "AnalysisJetsAuxDyn.EMFrac": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1802668,
+      "compressed_bytes_visited_with_key": 820229,
+      "uncompressed_bytes_visited_with_key": 1074454,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1750213
+    },
+    "AnalysisJetsAuxDyn.JVFCorr": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 2410077,
+      "compressed_bytes_visited_with_key": 650536,
+      "uncompressed_bytes_visited_with_key": 1074527,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1869085
+    },
+    "AnalysisJetsAuxDyn.JetConstitScaleMomentum_eta": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1751319,
+      "compressed_bytes_visited_with_key": 855957,
+      "uncompressed_bytes_visited_with_key": 1076118,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1418115
+    },
+    "AnalysisJetsAuxDyn.JetConstitScaleMomentum_m": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1797756,
+      "compressed_bytes_visited_with_key": 834132,
+      "uncompressed_bytes_visited_with_key": 1075970,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1471235
+    },
+    "AnalysisJetsAuxDyn.JetConstitScaleMomentum_phi": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1781622,
+      "compressed_bytes_visited_with_key": 852153,
+      "uncompressed_bytes_visited_with_key": 1076118,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1526560
+    },
+    "AnalysisJetsAuxDyn.JetConstitScaleMomentum_pt": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1845592,
+      "compressed_bytes_visited_with_key": 825983,
+      "uncompressed_bytes_visited_with_key": 1076044,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1465565
+    },
+    "AnalysisJetsAuxDyn.NumTrkPt500": {
+      "basket_materializations": 513,
+      "basket_materialization_cpu_ns": 20507763,
+      "compressed_bytes_visited_with_key": 1862423,
+      "uncompressed_bytes_visited_with_key": 22785251,
+      "outer_interpretations": 513,
+      "outer_interpretation_cpu_ns": 29849798
+    },
+    "AnalysisJetsAuxDyn.PSFrac": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1893188,
+      "compressed_bytes_visited_with_key": 641572,
+      "uncompressed_bytes_visited_with_key": 1074454,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1331962
+    },
+    "AnalysisJetsAuxDyn.SumPtTrkPt500": {
+      "basket_materializations": 513,
+      "basket_materialization_cpu_ns": 23258322,
+      "compressed_bytes_visited_with_key": 5597978,
+      "uncompressed_bytes_visited_with_key": 22786277,
+      "outer_interpretations": 513,
+      "outer_interpretation_cpu_ns": 38756386
+    },
+    "AnalysisJetsAuxDyn.Width": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1806984,
+      "compressed_bytes_visited_with_key": 820451,
+      "uncompressed_bytes_visited_with_key": 1074381,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1421979
+    },
+    "AnalysisJetsAuxDyn.eta": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1865674,
+      "compressed_bytes_visited_with_key": 854016,
+      "uncompressed_bytes_visited_with_key": 1074235,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1559338
+    },
+    "AnalysisJetsAuxDyn.m": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 2024526,
+      "compressed_bytes_visited_with_key": 810516,
+      "uncompressed_bytes_visited_with_key": 1074089,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1474551
+    },
+    "AnalysisJetsAuxDyn.phi": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1770531,
+      "compressed_bytes_visited_with_key": 850229,
+      "uncompressed_bytes_visited_with_key": 1074235,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1489758
+    },
+    "AnalysisJetsAuxDyn.pt": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 2698522,
+      "compressed_bytes_visited_with_key": 818984,
+      "uncompressed_bytes_visited_with_key": 1074162,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1799836
+    },
+    "AnalysisMuonsAuxDyn.CaloMuonScore": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1209540,
+      "compressed_bytes_visited_with_key": 98623,
+      "uncompressed_bytes_visited_with_key": 348838,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1092801
+    },
+    "AnalysisMuonsAuxDyn.EnergyLoss": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1149359,
+      "compressed_bytes_visited_with_key": 133087,
+      "uncompressed_bytes_visited_with_key": 348613,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1093520
+    },
+    "AnalysisMuonsAuxDyn.InnerDetectorPt": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1134582,
+      "compressed_bytes_visited_with_key": 138983,
+      "uncompressed_bytes_visited_with_key": 348988,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1034583
+    },
+    "AnalysisMuonsAuxDyn.MMHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1046375,
+      "compressed_bytes_visited_with_key": 76640,
+      "uncompressed_bytes_visited_with_key": 303322,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1002861
+    },
+    "AnalysisMuonsAuxDyn.MuonSpectrometerPt": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1260002,
+      "compressed_bytes_visited_with_key": 138393,
+      "uncompressed_bytes_visited_with_key": 349213,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1048547
+    },
+    "AnalysisMuonsAuxDyn.allAuthors": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 982475,
+      "compressed_bytes_visited_with_key": 77872,
+      "uncompressed_bytes_visited_with_key": 318619,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1086678
+    },
+    "AnalysisMuonsAuxDyn.author": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 979221,
+      "compressed_bytes_visited_with_key": 71100,
+      "uncompressed_bytes_visited_with_key": 318319,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1094697
+    },
+    "AnalysisMuonsAuxDyn.combinedTrackOutBoundsPrecisionHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 2490435,
+      "compressed_bytes_visited_with_key": 72593,
+      "uncompressed_bytes_visited_with_key": 305497,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 979741
+    },
+    "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 860709,
+      "compressed_bytes_visited_with_key": 41117,
+      "uncompressed_bytes_visited_with_key": 149360,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 177064
+    },
+    "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 852788,
+      "compressed_bytes_visited_with_key": 35261,
+      "uncompressed_bytes_visited_with_key": 149228,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 177456
+    },
+    "AnalysisMuonsAuxDyn.energyLossType": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1010722,
+      "compressed_bytes_visited_with_key": 75319,
+      "uncompressed_bytes_visited_with_key": 303922,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1028544
+    },
+    "AnalysisMuonsAuxDyn.eta": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1181348,
+      "compressed_bytes_visited_with_key": 140369,
+      "uncompressed_bytes_visited_with_key": 348088,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1036745
+    },
+    "AnalysisMuonsAuxDyn.etaLayer1STGCHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 977625,
+      "compressed_bytes_visited_with_key": 77667,
+      "uncompressed_bytes_visited_with_key": 304147,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1026099
+    },
+    "AnalysisMuonsAuxDyn.etaLayer2STGCHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 955301,
+      "compressed_bytes_visited_with_key": 77341,
+      "uncompressed_bytes_visited_with_key": 304147,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 970941
+    },
+    "AnalysisMuonsAuxDyn.extendedLargeHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 2691531,
+      "compressed_bytes_visited_with_key": 73166,
+      "uncompressed_bytes_visited_with_key": 304147,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 997059
+    },
+    "AnalysisMuonsAuxDyn.extendedSmallHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 987768,
+      "compressed_bytes_visited_with_key": 73287,
+      "uncompressed_bytes_visited_with_key": 304147,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 972694
+    },
+    "AnalysisMuonsAuxDyn.extendedSmallHoles": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 971910,
+      "compressed_bytes_visited_with_key": 71253,
+      "uncompressed_bytes_visited_with_key": 304222,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 956021
+    },
+    "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 954690,
+      "compressed_bytes_visited_with_key": 42243,
+      "uncompressed_bytes_visited_with_key": 150680,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 189289
+    },
+    "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 966478,
+      "compressed_bytes_visited_with_key": 37258,
+      "uncompressed_bytes_visited_with_key": 150548,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 180798
+    },
+    "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 1097047,
+      "compressed_bytes_visited_with_key": 50245,
+      "uncompressed_bytes_visited_with_key": 149162,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 185181
+    },
+    "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 903941,
+      "compressed_bytes_visited_with_key": 35215,
+      "uncompressed_bytes_visited_with_key": 149030,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 191020
+    },
+    "AnalysisMuonsAuxDyn.innerLargeHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1023686,
+      "compressed_bytes_visited_with_key": 83968,
+      "uncompressed_bytes_visited_with_key": 303922,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 960496
+    },
+    "AnalysisMuonsAuxDyn.innerSmallHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1002421,
+      "compressed_bytes_visited_with_key": 81317,
+      "uncompressed_bytes_visited_with_key": 303922,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1073492
+    },
+    "AnalysisMuonsAuxDyn.isSmallGoodSectors": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1191070,
+      "compressed_bytes_visited_with_key": 75424,
+      "uncompressed_bytes_visited_with_key": 304222,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 964069
+    },
+    "AnalysisMuonsAuxDyn.middleLargeHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1040221,
+      "compressed_bytes_visited_with_key": 81282,
+      "uncompressed_bytes_visited_with_key": 303997,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1005605
+    },
+    "AnalysisMuonsAuxDyn.middleSmallHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1023351,
+      "compressed_bytes_visited_with_key": 78805,
+      "uncompressed_bytes_visited_with_key": 303997,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1019549
+    },
+    "AnalysisMuonsAuxDyn.momentumBalanceSignificance": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1091841,
+      "compressed_bytes_visited_with_key": 143272,
+      "uncompressed_bytes_visited_with_key": 349888,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1062876
+    },
+    "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 923851,
+      "compressed_bytes_visited_with_key": 43141,
+      "uncompressed_bytes_visited_with_key": 151076,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 212361
+    },
+    "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 873985,
+      "compressed_bytes_visited_with_key": 40010,
+      "uncompressed_bytes_visited_with_key": 150944,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 177167
+    },
+    "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 910602,
+      "compressed_bytes_visited_with_key": 42918,
+      "uncompressed_bytes_visited_with_key": 149888,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 175176
+    },
+    "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 912487,
+      "compressed_bytes_visited_with_key": 38121,
+      "uncompressed_bytes_visited_with_key": 149756,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 183824
+    },
+    "AnalysisMuonsAuxDyn.muonType": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1091118,
+      "compressed_bytes_visited_with_key": 69671,
+      "uncompressed_bytes_visited_with_key": 318469,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1069687
+    },
+    "AnalysisMuonsAuxDyn.numberOfGoodPrecisionLayers": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1042323,
+      "compressed_bytes_visited_with_key": 77452,
+      "uncompressed_bytes_visited_with_key": 304897,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 968660
+    },
+    "AnalysisMuonsAuxDyn.numberOfPrecisionHoleLayers": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 987335,
+      "compressed_bytes_visited_with_key": 73134,
+      "uncompressed_bytes_visited_with_key": 304897,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1020117
+    },
+    "AnalysisMuonsAuxDyn.numberOfPrecisionLayers": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1072227,
+      "compressed_bytes_visited_with_key": 77110,
+      "uncompressed_bytes_visited_with_key": 304597,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1160941
+    },
+    "AnalysisMuonsAuxDyn.outerLargeHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1005521,
+      "compressed_bytes_visited_with_key": 80477,
+      "uncompressed_bytes_visited_with_key": 303922,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1023716
+    },
+    "AnalysisMuonsAuxDyn.outerSmallHits": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 975947,
+      "compressed_bytes_visited_with_key": 78299,
+      "uncompressed_bytes_visited_with_key": 303922,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1024514
+    },
+    "AnalysisMuonsAuxDyn.phi": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1087491,
+      "compressed_bytes_visited_with_key": 140565,
+      "uncompressed_bytes_visited_with_key": 348088,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1043111
+    },
+    "AnalysisMuonsAuxDyn.pt": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 2477727,
+      "compressed_bytes_visited_with_key": 137894,
+      "uncompressed_bytes_visited_with_key": 348013,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1078917
+    },
+    "AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1141641,
+      "compressed_bytes_visited_with_key": 116170,
+      "uncompressed_bytes_visited_with_key": 351313,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1120260
+    },
+    "AnalysisMuonsAuxDyn.scatteringCurvatureSignificance": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1077500,
+      "compressed_bytes_visited_with_key": 142125,
+      "uncompressed_bytes_visited_with_key": 350188,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1036893
+    },
+    "AnalysisMuonsAuxDyn.scatteringNeighbourSignificance": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1266905,
+      "compressed_bytes_visited_with_key": 141925,
+      "uncompressed_bytes_visited_with_key": 350188,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1006652
+    },
+    "AnalysisMuonsAuxDyn.topoetcone20": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1134271,
+      "compressed_bytes_visited_with_key": 142055,
+      "uncompressed_bytes_visited_with_key": 348763,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1018441
+    },
+    "AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaning": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1042258,
+      "compressed_bytes_visited_with_key": 82221,
+      "uncompressed_bytes_visited_with_key": 342216,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1185634
+    },
+    "AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTight": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1112540,
+      "compressed_bytes_visited_with_key": 92045,
+      "uncompressed_bytes_visited_with_key": 342290,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1422457
+    },
+    "AnalysisPhotonsAuxDyn.Eadded_Lr2": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1183210,
+      "compressed_bytes_visited_with_key": 127286,
+      "uncompressed_bytes_visited_with_key": 499159,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1606845
+    },
+    "AnalysisPhotonsAuxDyn.Eadded_Lr3": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1228599,
+      "compressed_bytes_visited_with_key": 98136,
+      "uncompressed_bytes_visited_with_key": 499159,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1356466
+    },
+    "AnalysisPhotonsAuxDyn.OQ": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1163483,
+      "compressed_bytes_visited_with_key": 112835,
+      "uncompressed_bytes_visited_with_key": 498559,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1392981
+    },
+    "AnalysisPhotonsAuxDyn.author": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1128363,
+      "compressed_bytes_visited_with_key": 91358,
+      "uncompressed_bytes_visited_with_key": 393554,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1369332
+    },
+    "AnalysisPhotonsAuxDyn.caloClusterLinks": {
+      "basket_materializations": 97,
+      "basket_materialization_cpu_ns": 1964464,
+      "compressed_bytes_visited_with_key": 134990,
+      "uncompressed_bytes_visited_with_key": 1975003,
+      "outer_interpretations": 97,
+      "outer_interpretation_cpu_ns": 8252244
+    },
+    "AnalysisPhotonsAuxDyn.eta": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1340249,
+      "compressed_bytes_visited_with_key": 301755,
+      "uncompressed_bytes_visited_with_key": 498634,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1276546
+    },
+    "AnalysisPhotonsAuxDyn.phi": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1413195,
+      "compressed_bytes_visited_with_key": 301146,
+      "uncompressed_bytes_visited_with_key": 498634,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1308567
+    },
+    "AnalysisPhotonsAuxDyn.pt": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1570019,
+      "compressed_bytes_visited_with_key": 288047,
+      "uncompressed_bytes_visited_with_key": 498559,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1193748
+    },
+    "AnalysisPhotonsAuxDyn.ptcone20": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1289877,
+      "compressed_bytes_visited_with_key": 170491,
+      "uncompressed_bytes_visited_with_key": 499009,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1388725
+    },
+    "AnalysisPhotonsAuxDyn.topoetcone20": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1307470,
+      "compressed_bytes_visited_with_key": 302933,
+      "uncompressed_bytes_visited_with_key": 499309,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1322576
+    },
+    "AnalysisPhotonsAuxDyn.topoetcone20ptCorrection": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1309458,
+      "compressed_bytes_visited_with_key": 286142,
+      "uncompressed_bytes_visited_with_key": 500209,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1262181
+    },
+    "AnalysisPhotonsAuxDyn.topoetcone40": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1268320,
+      "compressed_bytes_visited_with_key": 303794,
+      "uncompressed_bytes_visited_with_key": 499309,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1249314
+    },
+    "AnalysisPhotonsAuxDyn.topoetcone40ptCorrection": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1306215,
+      "compressed_bytes_visited_with_key": 286006,
+      "uncompressed_bytes_visited_with_key": 500209,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1284646
+    },
+    "AnalysisPhotonsAuxDyn.vertexLinks": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1341310,
+      "compressed_bytes_visited_with_key": 97419,
+      "uncompressed_bytes_visited_with_key": 590786,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 6498537
+    },
+    "AnalysisTauJetsAuxDyn.PanTau_DecayMode": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1137621,
+      "compressed_bytes_visited_with_key": 93031,
+      "uncompressed_bytes_visited_with_key": 397350,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1127826
+    },
+    "AnalysisTauJetsAuxDyn.charge": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1117528,
+      "compressed_bytes_visited_with_key": 84608,
+      "uncompressed_bytes_visited_with_key": 396610,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1401744
+    },
+    "AnalysisTauJetsAuxDyn.eta": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1159606,
+      "compressed_bytes_visited_with_key": 193818,
+      "uncompressed_bytes_visited_with_key": 396388,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1088488
+    },
+    "AnalysisTauJetsAuxDyn.etaFinalCalib": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1145981,
+      "compressed_bytes_visited_with_key": 194622,
+      "uncompressed_bytes_visited_with_key": 397128,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1117494
+    },
+    "AnalysisTauJetsAuxDyn.etaTauEnergyScale": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1381740,
+      "compressed_bytes_visited_with_key": 194916,
+      "uncompressed_bytes_visited_with_key": 397424,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1106400
+    },
+    "AnalysisTauJetsAuxDyn.isTauFlags": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1061543,
+      "compressed_bytes_visited_with_key": 89742,
+      "uncompressed_bytes_visited_with_key": 396906,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1069551
+    },
+    "AnalysisTauJetsAuxDyn.m": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1028847,
+      "compressed_bytes_visited_with_key": 73465,
+      "uncompressed_bytes_visited_with_key": 396240,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1138175
+    },
+    "AnalysisTauJetsAuxDyn.phi": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1154384,
+      "compressed_bytes_visited_with_key": 193627,
+      "uncompressed_bytes_visited_with_key": 396388,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1116243
+    },
+    "AnalysisTauJetsAuxDyn.pt": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1407317,
+      "compressed_bytes_visited_with_key": 186749,
+      "uncompressed_bytes_visited_with_key": 396314,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1200166
+    },
+    "AnalysisTauJetsAuxDyn.ptFinalCalib": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1436208,
+      "compressed_bytes_visited_with_key": 187506,
+      "uncompressed_bytes_visited_with_key": 397054,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1191938
+    },
+    "AnalysisTauJetsAuxDyn.ptTauEnergyScale": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1130185,
+      "compressed_bytes_visited_with_key": 189524,
+      "uncompressed_bytes_visited_with_key": 397350,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1082408
+    },
+    "AnalysisTauJetsAuxDyn.tauTrackLinks": {
+      "basket_materializations": 365,
+      "basket_materialization_cpu_ns": 9484086,
+      "compressed_bytes_visited_with_key": 345383,
+      "uncompressed_bytes_visited_with_key": 11213028,
+      "outer_interpretations": 365,
+      "outer_interpretation_cpu_ns": 28801876
+    },
+    "AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 903738,
+      "compressed_bytes_visited_with_key": 64107,
+      "uncompressed_bytes_visited_with_key": 196894,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 192315
+    },
+    "AnalysisTauJetsAuxDyn.truthJetLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 903380,
+      "compressed_bytes_visited_with_key": 53535,
+      "uncompressed_bytes_visited_with_key": 196762,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 196631
+    },
+    "AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 886896,
+      "compressed_bytes_visited_with_key": 60602,
+      "uncompressed_bytes_visited_with_key": 197224,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 207400
+    },
+    "AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey": {
+      "basket_materializations": 66,
+      "basket_materialization_cpu_ns": 997832,
+      "compressed_bytes_visited_with_key": 59621,
+      "uncompressed_bytes_visited_with_key": 197092,
+      "outer_interpretations": 66,
+      "outer_interpretation_cpu_ns": 288959
+    },
+    "CombinedMuonTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1241455,
+      "compressed_bytes_visited_with_key": 257675,
+      "uncompressed_bytes_visited_with_key": 452084,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1260711
+    },
+    "CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 2023644,
+      "compressed_bytes_visited_with_key": 896177,
+      "uncompressed_bytes_visited_with_key": 1270548,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 5263629
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1038962,
+      "compressed_bytes_visited_with_key": 86884,
+      "uncompressed_bytes_visited_with_key": 331309,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1126936
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1224758,
+      "compressed_bytes_visited_with_key": 103695,
+      "uncompressed_bytes_visited_with_key": 330791,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1366696
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1012567,
+      "compressed_bytes_visited_with_key": 81469,
+      "uncompressed_bytes_visited_with_key": 330865,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1056357
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1110027,
+      "compressed_bytes_visited_with_key": 85052,
+      "uncompressed_bytes_visited_with_key": 331161,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1115392
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1048412,
+      "compressed_bytes_visited_with_key": 107814,
+      "uncompressed_bytes_visited_with_key": 330643,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1131214
+    },
+    "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 983344,
+      "compressed_bytes_visited_with_key": 88511,
+      "uncompressed_bytes_visited_with_key": 330717,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1107196
+    },
+    "CombinedMuonTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1229457,
+      "compressed_bytes_visited_with_key": 253172,
+      "uncompressed_bytes_visited_with_key": 452158,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1274547
+    },
+    "CombinedMuonTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1305232,
+      "compressed_bytes_visited_with_key": 253735,
+      "uncompressed_bytes_visited_with_key": 452380,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1413433
+    },
+    "CombinedMuonTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1259324,
+      "compressed_bytes_visited_with_key": 246280,
+      "uncompressed_bytes_visited_with_key": 452306,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1293666
+    },
+    "CombinedMuonTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1056490,
+      "compressed_bytes_visited_with_key": 79889,
+      "uncompressed_bytes_visited_with_key": 452084,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1204391
+    },
+    "CombinedMuonTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 3227195,
+      "compressed_bytes_visited_with_key": 254060,
+      "uncompressed_bytes_visited_with_key": 452084,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1200110
+    },
+    "EventInfoAuxDyn.RandomRunNumber": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 879105,
+      "compressed_bytes_visited_with_key": 47447,
+      "uncompressed_bytes_visited_with_key": 90044,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 94697
+    },
+    "EventInfoAuxDyn.actualInteractionsPerCrossing": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 788646,
+      "compressed_bytes_visited_with_key": 17520,
+      "uncompressed_bytes_visited_with_key": 91346,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 88678
+    },
+    "EventInfoAuxDyn.averageInteractionsPerCrossing": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 717539,
+      "compressed_bytes_visited_with_key": 17613,
+      "uncompressed_bytes_visited_with_key": 91439,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 105479
+    },
+    "EventInfoAuxDyn.beamPosSigmaX": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 699637,
+      "compressed_bytes_visited_with_key": 12618,
+      "uncompressed_bytes_visited_with_key": 89858,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 93745
+    },
+    "EventInfoAuxDyn.beamPosSigmaXY": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 666681,
+      "compressed_bytes_visited_with_key": 12528,
+      "uncompressed_bytes_visited_with_key": 89951,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 97874
+    },
+    "EventInfoAuxDyn.beamPosSigmaY": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 640238,
+      "compressed_bytes_visited_with_key": 12618,
+      "uncompressed_bytes_visited_with_key": 89858,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 90520
+    },
+    "EventInfoAuxDyn.eventNumber": {
+      "basket_materializations": 157,
+      "basket_materialization_cpu_ns": 1934196,
+      "compressed_bytes_visited_with_key": 48194,
+      "uncompressed_bytes_visited_with_key": 176328,
+      "outer_interpretations": 157,
+      "outer_interpretation_cpu_ns": 198083
+    },
+    "EventInfoAuxDyn.eventTypeBitmask": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 695886,
+      "compressed_bytes_visited_with_key": 12901,
+      "uncompressed_bytes_visited_with_key": 90137,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 90291
+    },
+    "EventInfoAuxDyn.mcChannelNumber": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 693479,
+      "compressed_bytes_visited_with_key": 12808,
+      "uncompressed_bytes_visited_with_key": 90044,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 90375
+    },
+    "EventInfoAuxDyn.runNumber": {
+      "basket_materializations": 93,
+      "basket_materialization_cpu_ns": 766000,
+      "compressed_bytes_visited_with_key": 12222,
+      "uncompressed_bytes_visited_with_key": 89486,
+      "outer_interpretations": 93,
+      "outer_interpretation_cpu_ns": 97169
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1183977,
+      "compressed_bytes_visited_with_key": 204071,
+      "uncompressed_bytes_visited_with_key": 401044,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1127723
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1807520,
+      "compressed_bytes_visited_with_key": 649083,
+      "uncompressed_bytes_visited_with_key": 962530,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 4829282
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1148804,
+      "compressed_bytes_visited_with_key": 199202,
+      "uncompressed_bytes_visited_with_key": 401118,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1146693
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1330617,
+      "compressed_bytes_visited_with_key": 200711,
+      "uncompressed_bytes_visited_with_key": 401340,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1288685
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1160783,
+      "compressed_bytes_visited_with_key": 194280,
+      "uncompressed_bytes_visited_with_key": 401266,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1228971
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1050696,
+      "compressed_bytes_visited_with_key": 76234,
+      "uncompressed_bytes_visited_with_key": 401044,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1189066
+    },
+    "ExtrapolatedMuonTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1227303,
+      "compressed_bytes_visited_with_key": 201171,
+      "uncompressed_bytes_visited_with_key": 401044,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1136112
+    },
+    "GSFConversionVerticesAuxDyn.pt1": {
+      "basket_materializations": 80,
+      "basket_materialization_cpu_ns": 1070454,
+      "compressed_bytes_visited_with_key": 69189,
+      "uncompressed_bytes_visited_with_key": 297760,
+      "outer_interpretations": 80,
+      "outer_interpretation_cpu_ns": 1068021
+    },
+    "GSFConversionVerticesAuxDyn.pt2": {
+      "basket_materializations": 80,
+      "basket_materialization_cpu_ns": 1010267,
+      "compressed_bytes_visited_with_key": 69200,
+      "uncompressed_bytes_visited_with_key": 297760,
+      "outer_interpretations": 80,
+      "outer_interpretation_cpu_ns": 1123756
+    },
+    "GSFConversionVerticesAuxDyn.trackParticleLinks": {
+      "basket_materializations": 80,
+      "basket_materialization_cpu_ns": 1155970,
+      "compressed_bytes_visited_with_key": 70612,
+      "uncompressed_bytes_visited_with_key": 391304,
+      "outer_interpretations": 80,
+      "outer_interpretation_cpu_ns": 5649330
+    },
+    "GSFConversionVerticesAuxDyn.x": {
+      "basket_materializations": 80,
+      "basket_materialization_cpu_ns": 1129488,
+      "compressed_bytes_visited_with_key": 73746,
+      "uncompressed_bytes_visited_with_key": 297600,
+      "outer_interpretations": 80,
+      "outer_interpretation_cpu_ns": 1428227
+    },
+    "GSFConversionVerticesAuxDyn.y": {
+      "basket_materializations": 80,
+      "basket_materialization_cpu_ns": 1042794,
+      "compressed_bytes_visited_with_key": 73708,
+      "uncompressed_bytes_visited_with_key": 297600,
+      "outer_interpretations": 80,
+      "outer_interpretation_cpu_ns": 1144458
+    },
+    "GSFTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1147674,
+      "compressed_bytes_visited_with_key": 156485,
+      "uncompressed_bytes_visited_with_key": 359488,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1174130
+    },
+    "GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 88,
+      "basket_materialization_cpu_ns": 1661021,
+      "compressed_bytes_visited_with_key": 449756,
+      "uncompressed_bytes_visited_with_key": 718632,
+      "outer_interpretations": 88,
+      "outer_interpretation_cpu_ns": 5219588
+    },
+    "GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1382306,
+      "compressed_bytes_visited_with_key": 84555,
+      "uncompressed_bytes_visited_with_key": 307339,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1338974
+    },
+    "GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1106062,
+      "compressed_bytes_visited_with_key": 85924,
+      "uncompressed_bytes_visited_with_key": 307187,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1085558
+    },
+    "GSFTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1203964,
+      "compressed_bytes_visited_with_key": 154352,
+      "uncompressed_bytes_visited_with_key": 359564,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1098074
+    },
+    "GSFTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1365310,
+      "compressed_bytes_visited_with_key": 155828,
+      "uncompressed_bytes_visited_with_key": 359792,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1340585
+    },
+    "GSFTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1149210,
+      "compressed_bytes_visited_with_key": 151145,
+      "uncompressed_bytes_visited_with_key": 359716,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1110218
+    },
+    "GSFTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1029877,
+      "compressed_bytes_visited_with_key": 72127,
+      "uncompressed_bytes_visited_with_key": 359488,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1111882
+    },
+    "GSFTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 76,
+      "basket_materialization_cpu_ns": 1220707,
+      "compressed_bytes_visited_with_key": 154625,
+      "uncompressed_bytes_visited_with_key": 359488,
+      "outer_interpretations": 76,
+      "outer_interpretation_cpu_ns": 1083855
+    },
+    "InDetForwardTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 991103,
+      "compressed_bytes_visited_with_key": 59590,
+      "uncompressed_bytes_visited_with_key": 290356,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1029074
+    },
+    "InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 78,
+      "basket_materialization_cpu_ns": 1063741,
+      "compressed_bytes_visited_with_key": 68164,
+      "uncompressed_bytes_visited_with_key": 298318,
+      "outer_interpretations": 78,
+      "outer_interpretation_cpu_ns": 4441781
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 952957,
+      "compressed_bytes_visited_with_key": 62091,
+      "uncompressed_bytes_visited_with_key": 291213,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 995477
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 963114,
+      "compressed_bytes_visited_with_key": 61746,
+      "uncompressed_bytes_visited_with_key": 290674,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1197827
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 1081852,
+      "compressed_bytes_visited_with_key": 61544,
+      "uncompressed_bytes_visited_with_key": 290751,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 940780
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 971684,
+      "compressed_bytes_visited_with_key": 61848,
+      "uncompressed_bytes_visited_with_key": 291059,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 903093
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 1111914,
+      "compressed_bytes_visited_with_key": 61361,
+      "uncompressed_bytes_visited_with_key": 290520,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 926719
+    },
+    "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 940771,
+      "compressed_bytes_visited_with_key": 61448,
+      "uncompressed_bytes_visited_with_key": 290597,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 920296
+    },
+    "InDetForwardTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 963465,
+      "compressed_bytes_visited_with_key": 59615,
+      "uncompressed_bytes_visited_with_key": 290433,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1030243
+    },
+    "InDetForwardTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 1147345,
+      "compressed_bytes_visited_with_key": 59882,
+      "uncompressed_bytes_visited_with_key": 290664,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1143560
+    },
+    "InDetForwardTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 997134,
+      "compressed_bytes_visited_with_key": 59572,
+      "uncompressed_bytes_visited_with_key": 290587,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1096129
+    },
+    "InDetForwardTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 1198719,
+      "compressed_bytes_visited_with_key": 57737,
+      "uncompressed_bytes_visited_with_key": 290356,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 966562
+    },
+    "InDetForwardTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 948157,
+      "compressed_bytes_visited_with_key": 59481,
+      "uncompressed_bytes_visited_with_key": 290356,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1016504
+    },
+    "InDetTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 2802745,
+      "compressed_bytes_visited_with_key": 1604670,
+      "uncompressed_bytes_visited_with_key": 1830310,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1836309
+    },
+    "InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 326,
+      "basket_materialization_cpu_ns": 13792557,
+      "compressed_bytes_visited_with_key": 7660567,
+      "uncompressed_bytes_visited_with_key": 9564420,
+      "outer_interpretations": 326,
+      "outer_interpretation_cpu_ns": 23663954
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1530066,
+      "compressed_bytes_visited_with_key": 173584,
+      "uncompressed_bytes_visited_with_key": 676127,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1442614
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1650513,
+      "compressed_bytes_visited_with_key": 233892,
+      "uncompressed_bytes_visited_with_key": 675546,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1871717
+    },
+    "InDetTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1385095,
+      "compressed_bytes_visited_with_key": 127401,
+      "uncompressed_bytes_visited_with_key": 675629,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1390011
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1453724,
+      "compressed_bytes_visited_with_key": 154582,
+      "uncompressed_bytes_visited_with_key": 675961,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1433770
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1745289,
+      "compressed_bytes_visited_with_key": 271147,
+      "uncompressed_bytes_visited_with_key": 675380,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1405035
+    },
+    "InDetTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 1465635,
+      "compressed_bytes_visited_with_key": 160770,
+      "uncompressed_bytes_visited_with_key": 675463,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 1431917
+    },
+    "InDetTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 3107107,
+      "compressed_bytes_visited_with_key": 1571480,
+      "uncompressed_bytes_visited_with_key": 1830404,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1832312
+    },
+    "InDetTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 3029259,
+      "compressed_bytes_visited_with_key": 1586203,
+      "uncompressed_bytes_visited_with_key": 1830686,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1880803
+    },
+    "InDetTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 2942223,
+      "compressed_bytes_visited_with_key": 1526230,
+      "uncompressed_bytes_visited_with_key": 1830592,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1830132
+    },
+    "InDetTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 1824129,
+      "compressed_bytes_visited_with_key": 128726,
+      "uncompressed_bytes_visited_with_key": 1830310,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1757072
+    },
+    "InDetTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 94,
+      "basket_materialization_cpu_ns": 2809426,
+      "compressed_bytes_visited_with_key": 1577528,
+      "uncompressed_bytes_visited_with_key": 1830310,
+      "outer_interpretations": 94,
+      "outer_interpretation_cpu_ns": 1744569
+    },
+    "METAssoc_AnalysisMETAux.cale": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1625046,
+      "compressed_bytes_visited_with_key": 463073,
+      "uncompressed_bytes_visited_with_key": 1408052,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7525376
+    },
+    "METAssoc_AnalysisMETAux.calkey": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1410781,
+      "compressed_bytes_visited_with_key": 210815,
+      "uncompressed_bytes_visited_with_key": 1665240,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7894570
+    },
+    "METAssoc_AnalysisMETAux.calpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1690664,
+      "compressed_bytes_visited_with_key": 473341,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7565120
+    },
+    "METAssoc_AnalysisMETAux.calpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1617475,
+      "compressed_bytes_visited_with_key": 473151,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7524363
+    },
+    "METAssoc_AnalysisMETAux.calpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1600807,
+      "compressed_bytes_visited_with_key": 474408,
+      "uncompressed_bytes_visited_with_key": 1408092,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7509636
+    },
+    "METAssoc_AnalysisMETAux.calsumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1672159,
+      "compressed_bytes_visited_with_key": 462342,
+      "uncompressed_bytes_visited_with_key": 1408212,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7614829
+    },
+    "METAssoc_AnalysisMETAux.isMisc": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1344409,
+      "compressed_bytes_visited_with_key": 85377,
+      "uncompressed_bytes_visited_with_key": 501206,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1092000
+    },
+    "METAssoc_AnalysisMETAux.jetLink": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1245471,
+      "compressed_bytes_visited_with_key": 100059,
+      "uncompressed_bytes_visited_with_key": 2137488
+    },
+    "METAssoc_AnalysisMETAux.jettrke": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1489869,
+      "compressed_bytes_visited_with_key": 663778,
+      "uncompressed_bytes_visited_with_key": 1151064,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1143433
+    },
+    "METAssoc_AnalysisMETAux.jettrkpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1698106,
+      "compressed_bytes_visited_with_key": 685704,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1347660
+    },
+    "METAssoc_AnalysisMETAux.jettrkpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1579420,
+      "compressed_bytes_visited_with_key": 685667,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1108920
+    },
+    "METAssoc_AnalysisMETAux.jettrkpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1481577,
+      "compressed_bytes_visited_with_key": 687247,
+      "uncompressed_bytes_visited_with_key": 1151104,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1151329
+    },
+    "METAssoc_AnalysisMETAux.jettrksumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1504177,
+      "compressed_bytes_visited_with_key": 664391,
+      "uncompressed_bytes_visited_with_key": 1151224,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 1121735
+    },
+    "METAssoc_AnalysisMETAux.objectLinks": {
+      "basket_materializations": 48,
+      "basket_materialization_cpu_ns": 1979600,
+      "compressed_bytes_visited_with_key": 262684,
+      "uncompressed_bytes_visited_with_key": 3060888,
+      "outer_interpretations": 48,
+      "outer_interpretation_cpu_ns": 10412615
+    },
+    "METAssoc_AnalysisMETAux.overlapIndices": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1620290,
+      "compressed_bytes_visited_with_key": 206249,
+      "uncompressed_bytes_visited_with_key": 1671088,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 9674496
+    },
+    "METAssoc_AnalysisMETAux.overlapTypes": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1387844,
+      "compressed_bytes_visited_with_key": 199815,
+      "uncompressed_bytes_visited_with_key": 1454820,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 9591262
+    },
+    "METAssoc_AnalysisMETAux.trke": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1371029,
+      "compressed_bytes_visited_with_key": 248673,
+      "uncompressed_bytes_visited_with_key": 1241040,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7332600
+    },
+    "METAssoc_AnalysisMETAux.trkkey": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1278901,
+      "compressed_bytes_visited_with_key": 150144,
+      "uncompressed_bytes_visited_with_key": 1331216,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7567908
+    },
+    "METAssoc_AnalysisMETAux.trkpx": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1430874,
+      "compressed_bytes_visited_with_key": 252966,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7392569
+    },
+    "METAssoc_AnalysisMETAux.trkpy": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1340562,
+      "compressed_bytes_visited_with_key": 252925,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7341138
+    },
+    "METAssoc_AnalysisMETAux.trkpz": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1378817,
+      "compressed_bytes_visited_with_key": 253626,
+      "uncompressed_bytes_visited_with_key": 1241080,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7365219
+    },
+    "METAssoc_AnalysisMETAux.trksumpt": {
+      "basket_materializations": 40,
+      "basket_materialization_cpu_ns": 1386081,
+      "compressed_bytes_visited_with_key": 247912,
+      "uncompressed_bytes_visited_with_key": 1241200,
+      "outer_interpretations": 40,
+      "outer_interpretation_cpu_ns": 7292552
+    },
+    "MET_Core_AnalysisMETAuxDyn.mpx": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1269996,
+      "compressed_bytes_visited_with_key": 224204,
+      "uncompressed_bytes_visited_with_key": 448395,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1190128
+    },
+    "MET_Core_AnalysisMETAuxDyn.mpy": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1305583,
+      "compressed_bytes_visited_with_key": 224172,
+      "uncompressed_bytes_visited_with_key": 448395,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1103102
+    },
+    "MET_Core_AnalysisMETAuxDyn.name": {
+      "basket_materializations": 88,
+      "basket_materialization_cpu_ns": 1604220,
+      "compressed_bytes_visited_with_key": 65927,
+      "uncompressed_bytes_visited_with_key": 830208,
+      "outer_interpretations": 88,
+      "outer_interpretation_cpu_ns": 6463910
+    },
+    "MET_Core_AnalysisMETAuxDyn.source": {
+      "basket_materializations": 87,
+      "basket_materialization_cpu_ns": 1513314,
+      "compressed_bytes_visited_with_key": 61767,
+      "uncompressed_bytes_visited_with_key": 610266,
+      "outer_interpretations": 87,
+      "outer_interpretation_cpu_ns": 1535392
+    },
+    "MET_Core_AnalysisMETAuxDyn.sumet": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1385416,
+      "compressed_bytes_visited_with_key": 213947,
+      "uncompressed_bytes_visited_with_key": 448541,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 1073600
+    },
+    "MET_TruthAuxDyn.mpx": {
+      "basket_materializations": 87,
+      "basket_materialization_cpu_ns": 1533757,
+      "compressed_bytes_visited_with_key": 356604,
+      "uncompressed_bytes_visited_with_key": 609048,
+      "outer_interpretations": 87,
+      "outer_interpretation_cpu_ns": 1203672
+    },
+    "MET_TruthAuxDyn.mpy": {
+      "basket_materializations": 87,
+      "basket_materialization_cpu_ns": 1510741,
+      "compressed_bytes_visited_with_key": 356426,
+      "uncompressed_bytes_visited_with_key": 609048,
+      "outer_interpretations": 87,
+      "outer_interpretation_cpu_ns": 1178885
+    },
+    "MET_TruthAuxDyn.name": {
+      "basket_materializations": 88,
+      "basket_materialization_cpu_ns": 1592686,
+      "compressed_bytes_visited_with_key": 65215,
+      "uncompressed_bytes_visited_with_key": 829240,
+      "outer_interpretations": 88,
+      "outer_interpretation_cpu_ns": 7071905
+    },
+    "MET_TruthAuxDyn.source": {
+      "basket_materializations": 77,
+      "basket_materialization_cpu_ns": 1252035,
+      "compressed_bytes_visited_with_key": 61485,
+      "uncompressed_bytes_visited_with_key": 928239,
+      "outer_interpretations": 77,
+      "outer_interpretation_cpu_ns": 1375565
+    },
+    "MET_TruthAuxDyn.sumet": {
+      "basket_materializations": 87,
+      "basket_materialization_cpu_ns": 1504013,
+      "compressed_bytes_visited_with_key": 345040,
+      "uncompressed_bytes_visited_with_key": 609222,
+      "outer_interpretations": 87,
+      "outer_interpretation_cpu_ns": 1153390
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.d0": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1233920,
+      "compressed_bytes_visited_with_key": 118473,
+      "uncompressed_bytes_visited_with_key": 408176,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1188676
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "basket_materializations": 73,
+      "basket_materialization_cpu_ns": 1853042,
+      "compressed_bytes_visited_with_key": 676755,
+      "uncompressed_bytes_visited_with_key": 1004425,
+      "outer_interpretations": 73,
+      "outer_interpretation_cpu_ns": 4791102
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.phi": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1201592,
+      "compressed_bytes_visited_with_key": 207045,
+      "uncompressed_bytes_visited_with_key": 408251,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1171777
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.qOverP": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1218257,
+      "compressed_bytes_visited_with_key": 190490,
+      "uncompressed_bytes_visited_with_key": 408476,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1587318
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.theta": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1245644,
+      "compressed_bytes_visited_with_key": 202056,
+      "uncompressed_bytes_visited_with_key": 408401,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1211473
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.vz": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1178016,
+      "compressed_bytes_visited_with_key": 170764,
+      "uncompressed_bytes_visited_with_key": 408176,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1163090
+    },
+    "MuonSpectrometerTrackParticlesAuxDyn.z0": {
+      "basket_materializations": 75,
+      "basket_materialization_cpu_ns": 1174338,
+      "compressed_bytes_visited_with_key": 118053,
+      "uncompressed_bytes_visited_with_key": 408176,
+      "outer_interpretations": 75,
+      "outer_interpretation_cpu_ns": 1140276
+    },
+    "PrimaryVerticesAuxDyn.vertexType": {
+      "basket_materializations": 74,
+      "basket_materialization_cpu_ns": 1597414,
+      "compressed_bytes_visited_with_key": 109181,
+      "uncompressed_bytes_visited_with_key": 1341500,
+      "outer_interpretations": 74,
+      "outer_interpretation_cpu_ns": 1633719
+    },
+    "PrimaryVerticesAuxDyn.z": {
+      "basket_materializations": 105,
+      "basket_materialization_cpu_ns": 3637061,
+      "compressed_bytes_visited_with_key": 2057496,
+      "uncompressed_bytes_visited_with_key": 2397024,
+      "outer_interpretations": 105,
+      "outer_interpretation_cpu_ns": 2060182
+    },
+    "TauTracksAuxDyn.flagSet": {
+      "basket_materializations": 86,
+      "basket_materialization_cpu_ns": 1503506,
+      "compressed_bytes_visited_with_key": 135701,
+      "uncompressed_bytes_visited_with_key": 671990,
+      "outer_interpretations": 86,
+      "outer_interpretation_cpu_ns": 1487113
+    },
+    "TruthTausAuxDyn.IsHadronicTau": {
+      "basket_materializations": 79,
+      "basket_materialization_cpu_ns": 1097129,
+      "compressed_bytes_visited_with_key": 70461,
+      "uncompressed_bytes_visited_with_key": 297623,
+      "outer_interpretations": 79,
+      "outer_interpretation_cpu_ns": 1086392
+    },
+    "TruthTausAuxDyn.pdgId": {
+      "basket_materializations": 79,
+      "basket_materialization_cpu_ns": 1173956,
+      "compressed_bytes_visited_with_key": 69786,
+      "uncompressed_bytes_visited_with_key": 322842,
+      "outer_interpretations": 79,
+      "outer_interpretation_cpu_ns": 1271668
+    },
+    "egammaClustersAuxDyn.ETACALOFRAME": {
+      "basket_materializations": 82,
+      "basket_materialization_cpu_ns": 1630188,
+      "compressed_bytes_visited_with_key": 362932,
+      "uncompressed_bytes_visited_with_key": 559444,
+      "outer_interpretations": 82,
+      "outer_interpretation_cpu_ns": 1353265
+    },
+    "egammaClustersAuxDyn.PHICALOFRAME": {
+      "basket_materializations": 82,
+      "basket_materialization_cpu_ns": 1539242,
+      "compressed_bytes_visited_with_key": 362065,
+      "uncompressed_bytes_visited_with_key": 559444,
+      "outer_interpretations": 82,
+      "outer_interpretation_cpu_ns": 1426650
+    },
+    "egammaClustersAuxDyn.calEta": {
+      "basket_materializations": 82,
+      "basket_materialization_cpu_ns": 1722644,
+      "compressed_bytes_visited_with_key": 362557,
+      "uncompressed_bytes_visited_with_key": 558952,
+      "outer_interpretations": 82,
+      "outer_interpretation_cpu_ns": 1777866
+    },
+    "egammaClustersAuxDyn.calPhi": {
+      "basket_materializations": 82,
+      "basket_materialization_cpu_ns": 1594118,
+      "compressed_bytes_visited_with_key": 361658,
+      "uncompressed_bytes_visited_with_key": 558952,
+      "outer_interpretations": 82,
+      "outer_interpretation_cpu_ns": 1388645
+    },
+    "egammaClustersAuxDyn.e_sampl": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 2829799,
+      "compressed_bytes_visited_with_key": 1142358,
+      "uncompressed_bytes_visited_with_key": 1608439,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 6473230
+    },
+    "egammaClustersAuxDyn.eta_sampl": {
+      "basket_materializations": 83,
+      "basket_materialization_cpu_ns": 2864797,
+      "compressed_bytes_visited_with_key": 1146673,
+      "uncompressed_bytes_visited_with_key": 1608605,
+      "outer_interpretations": 83,
+      "outer_interpretation_cpu_ns": 6425635
+    },
+    "egammaClustersAuxDyn.samplingPattern": {
+      "basket_materializations": 82,
+      "basket_materialization_cpu_ns": 1364342,
+      "compressed_bytes_visited_with_key": 120713,
+      "uncompressed_bytes_visited_with_key": 559690,
+      "outer_interpretations": 82,
+      "outer_interpretation_cpu_ns": 1336831
+    }
+  }
+}

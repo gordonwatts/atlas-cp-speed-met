@@ -1,0 +1,110 @@
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/python
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py
+/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/bin/g++
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/root-config
+Python 3.13.11
+6.40.02
+Traceback (most recent call last):
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/python3.13/importlib/metadata/__init__.py", line 407, in from_name
+    return next(iter(cls.discover(name=name)))
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import importlib.metadata as m; print(m.version("typer"))
+                                          ~~~~~~~~~^^^^^^^^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/python3.13/importlib/metadata/__init__.py", line 987, in version
+    return distribution(distribution_name).version
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/python3.13/importlib/metadata/__init__.py", line 960, in distribution
+    return Distribution.from_name(distribution_name)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/InstallArea/x86_64-el9-gcc15-opt/lib/python3.13/importlib/metadata/__init__.py", line 409, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for typer
+Py:CPBaseRunner      INFO EventLoopCPRunScript initialized
+usage: CPRun.py [-h] [-i INPUT_LIST] [-o OUTPUT_NAME] [-e MAX_EVENTS]
+                [-t TEXT_CONFIG] [--no-systematics]
+                [--skip-n-events SKIP_N_EVENTS] [--merge-output-files]
+                [--direct-driver] [--work-dir [WORK_DIR]] [--dump-full-config]
+                [--run-perf-stat] [--algorithm-timers]
+                [--algorithm-memory-monitoring]
+
+Runscript for CP Algorithm unit tests
+
+options:
+  -h, --help            show this help message and exit
+
+Base Script Options:
+  -i, --input-list INPUT_LIST
+                        path to text file containing list of input files, or a
+                        single root file
+  -o, --output-name OUTPUT_NAME
+                        output name of the analysis root file
+  -e, --max-events MAX_EVENTS
+                        Number of events to run
+  -t, --text-config TEXT_CONFIG
+                        path to the YAML configuration file. Tips: use
+                        atlas_install_data(path/to/*.yaml) in CMakeLists.txt
+                        can help locating the config just by the config file
+                        name.
+  --no-systematics      Disable systematics
+  --skip-n-events SKIP_N_EVENTS
+                        Skip the first N events in the run, not first N events
+                        for each file. This is meant for debugging only. In
+                        Eventloop, this option disable the cutbookkeeper
+                        algorithms due to technical reasons, and can only be
+                        ran in direct-driver.
+  --merge-output-files  Merge the output histogram and n-tuple files into a
+                        single file.
+
+EventLoop specific arguments:
+  --direct-driver       Run the job with the direct driver
+  --work-dir [WORK_DIR]
+                        The work directory for the EL job. defaults to
+                        "workDir".
+  --dump-full-config    Save the full CP configuration log to a json file.
+                        This can be useful for debugging purposes.
+
+Experts arguments:
+  --run-perf-stat       Run xAOD::PerfStats to get input branch access data.
+                        This is mostly useful for AMG experts wanting to
+                        understand branch access patterns.
+  --algorithm-timers    Enable algorithm timers. This is mostly useful for AMG
+                        experts wanting to understand tool performance.
+  --algorithm-memory-monitoring
+                        Enable algorithm memory monitoring. This is mostly
+                        useful for AMG experts wanting to understand tool
+                        memory usage. Note that this is imperfect and may in
+                        cases assign memory to the wrong algorithm.
+RELEASE=25.2.117
+SOURCE=/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/METUtilities/METMakerConfig.py
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/python/MetAnalysisAlgorithms/MetAnalysisConfig.py
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/PhysicsAnalysis/Algorithms/MetAnalysisAlgorithms/MetAnalysisAlgorithms/MetSignificanceAlg.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/PhysicsAnalysis/Algorithms/MetAnalysisAlgorithms/MetAnalysisAlgorithms/MetMakerAlg.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/PhysicsAnalysis/Algorithms/MetAnalysisAlgorithms/Root/MetMakerAlg.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/PhysicsAnalysis/Algorithms/MetAnalysisAlgorithms/Root/MetSignificanceAlg.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/PhysicsAnalysis/Algorithms/MetAnalysisAlgorithms/python/MetAnalysisConfig.py
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METInterface/METInterface/IMETMaker.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METInterface/METInterface/IMETSystematicsTool.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METInterface/METInterface/IMETSignificance.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/METUtilities/METSignificance.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/METUtilities/CutsMETMaker.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/METUtilities/ColumnarMETMaker.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/METUtilities/METMaker.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/METUtilities/METSystematicsTool.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/Root/METSignificance.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/Root/ColumnarMETMaker.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/Root/CutsMETMaker.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/Root/METSystematicsTool.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/Root/METMaker.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/python/METMakerConfig.py
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/src/METMakerAlg.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/src/METMakerAlg.h
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/test/gt_metSystematicsTool.cxx
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Reconstruction/MET/METUtilities/test/gt_metMaker.cxx
+241
+/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1 61

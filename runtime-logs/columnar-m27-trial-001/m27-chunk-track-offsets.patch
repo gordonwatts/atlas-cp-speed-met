@@ -1,0 +1,330 @@
+From e4c1b495f889cb7e931b2e746554e33536ad1940 Mon Sep 17 00:00:00 2001
+From: MET conversion <met-conversion@localhost>
+Date: Thu, 19 Nov 2026 06:04:35 -0800
+Subject: [PATCH] Trial one lazy jet track-count offset validation per C chunk
+
+Based on 6a0e894. Keep original flat-field precedence and per-row range checks. Compile constructor counts only for untimed diagnostics.
+---
+ components/columnar/CMakeLists.txt        |  4 +
+ components/columnar/M27.md                | 52 ++++++++++++
+ components/columnar/check_ntrk_offsets.py | 34 ++++++++
+ components/columnar/m27_offsets_check.inc | 96 +++++++++++++++++++++++
+ components/columnar/transport.cpp         | 46 ++++++++++-
+ 5 files changed, 228 insertions(+), 4 deletions(-)
+ create mode 100644 components/columnar/M27.md
+ create mode 100644 components/columnar/check_ntrk_offsets.py
+ create mode 100644 components/columnar/m27_offsets_check.inc
+
+diff --git a/components/columnar/CMakeLists.txt b/components/columnar/CMakeLists.txt
+index e25f24a..3fdce2d 100644
+--- a/components/columnar/CMakeLists.txt
++++ b/components/columnar/CMakeLists.txt
+@@ -16,6 +16,10 @@ target_include_directories(atlas_met_columnar PRIVATE "${ATLAS_MET_SMALL_JVT}"
+     "${ATLAS_MET_PINNED_SDK}/rapidjson/include")
+ target_link_libraries(atlas_met_columnar PRIVATE atlas_met_maker_correction atlas::met_soft "${ATLAS_MET_LWTNN}")
+ target_link_options(atlas_met_columnar PRIVATE -Wl,-z,defs)
++option(ATLAS_MET_M27_DIAGNOSTICS "Compile focused jet track-count validation diagnostics" OFF)
++if(ATLAS_MET_M27_DIAGNOSTICS)
++    target_compile_definitions(atlas_met_columnar PRIVATE ATLAS_MET_M27_DIAGNOSTICS)
++endif()
+ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+     target_compile_options(atlas_met_columnar PRIVATE -fno-fast-math -ffp-contract=off)
+ endif()
+diff --git a/components/columnar/M27.md b/components/columnar/M27.md
+new file mode 100644
+index 0000000..a5f4c21
+--- /dev/null
++++ b/components/columnar/M27.md
+@@ -0,0 +1,52 @@
++# M27 jet track-count offset validation
++
++The production diff changes only the lifetime of the checked `jet.ntrk.o`
++view. The full event entry owns one optional view per chunk. It performs the
++original first access from `prepare_views`, after the flat `jet.ntrk` lookup
++and before preparing objects. An empty chunk never binds the fields. Each
++jet still goes through the existing row and flat-length checks when reached,
++including rows with duplicated offsets. Jet sampling uses the original path.
++
++Build the normal immutable trial as before. The default library has no counters
++or fixture symbols. Build a separate untimed receipt with the same source and
++toolchain settings, adding only `-DATLAS_MET_M27_DIAGNOSTICS=ON`. For example,
++from a fresh pinned release build shell after setting `snapshot` to the normal
++immutable M27 archive and `diagnostic` to a new result directory:
++
++```bash
++repo=$PWD
++sdk="$repo/vendor/correctionlib-exact-001"
++core="$repo/results/core-exact-build-001/install/correctionlib"
++lwtnn="$repo/results/core-exact-build-001/build/lwtnn/lib/liblwtnn-stat.a"
++jvt=/home/gwatts/atlas-cp-speed/jets-skill-c8a2374-20261117/provider
++source="$snapshot/source/components/columnar"
++runtime="$diagnostic/runtime"
++mkdir -- "$diagnostic"
++taskset -c 0 cmake -S "$source" -B "$diagnostic/build" \
++    -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=23 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
++    -Dcorrectionlib_DIR="$core/cmake" -DATLAS_MET_PINNED_SDK="$sdk" \
++    -DATLAS_MET_LWTNN="$lwtnn" -DATLAS_MET_SMALL_JVT="$jvt" \
++    -DATLAS_MET_COLUMNAR_PREPARATION=ON -DATLAS_MET_M27_DIAGNOSTICS=ON
++taskset -c 0 cmake --build "$diagnostic/build" --parallel 1
++cmake --install "$diagnostic/build" --prefix "$runtime"
++cp "$snapshot/runtime/native"/lib{correctionlib.so,stdc++.so.6,gcc_s.so.1} "$runtime/native/"
++cp -a "$snapshot/runtime/payloads" "$runtime/payloads"
++env LD_LIBRARY_PATH="$runtime/native" taskset -c 0 \
++    "$python314" "$source/check_ntrk_offsets.py" "$runtime/native/libatlas_met_columnar.so"
++env LD_LIBRARY_PATH="$runtime/native" taskset -c 0 \
++    "$python314" "$source/met_demo.py" "$input" "$diagnostic/c.npz" \
++    --runtime "$runtime" --stop 16 --chunk-size 7 --trace "$diagnostic/trace.tsv"
++env LD_LIBRARY_PATH="$runtime/native" taskset -c 0 \
++    "$python314" "$source/check_ntrk_offsets.py" "$runtime/native/libatlas_met_columnar.so" \
++    --trace "$diagnostic/trace.tsv" --entries 16 --chunk-size 7
++```
++
++The fixture exercises empty and nonempty chunks, missing field precedence,
++duplicate and decreasing offsets, and an out-of-range row following a valid
++row. The diagnostic trace writes one row at the end of each completed chunk
++with its starting entry, size and observed constructor call count. The prefix
++above expects three calls for chunks of seven, seven and two entries. The
++existing trace comparator can ignore this diagnostic action while validating
++all physics rows. Keep the diagnostic library out of production timing and
++distribution. Use the unchanged full tuple and physics comparisons before
++timing the normal trial artifact.
+diff --git a/components/columnar/check_ntrk_offsets.py b/components/columnar/check_ntrk_offsets.py
+new file mode 100644
+index 0000000..92da0b5
+--- /dev/null
++++ b/components/columnar/check_ntrk_offsets.py
+@@ -0,0 +1,34 @@
++#!/usr/bin/env python3
++"""Run the M27 C++ fixture and check constructor calls in an untimed C trace."""
++import ctypes as c
++import json
++from pathlib import Path
++
++import typer
++
++
++def main(diagnostic_library: Path, trace: Path | None = None,
++         entries: int = typer.Option(16,min=0), chunk_size: int = typer.Option(7,min=1)):
++    module = c.CDLL(str(diagnostic_library.resolve(strict=True)))
++    module.met_columnar_error.argtypes = ()
++    module.met_columnar_error.restype = c.c_char_p
++    module.met_check_jet_ntrk_offsets.argtypes = ()
++    module.met_check_jet_ntrk_offsets.restype = c.c_int
++    if module.met_check_jet_ntrk_offsets() != 0:
++        raise RuntimeError(module.met_columnar_error().decode())
++    observed = []
++    if trace is not None:
++        with trace.open() as handle:
++            for line in handle:
++                entry,state,action,*values = line.rstrip("\n").split("\t")
++                if action == "ntrkOffsetConstructorCalls":
++                    observed.append((int(entry),int(state),*map(int,values)))
++        expected = [(end-1,0,begin,end-begin,1)
++                    for begin in range(0,entries,chunk_size) for end in [min(begin+chunk_size,entries)]]
++        if observed != expected:
++            raise ValueError(f"Unexpected jet.ntrk.o constructor calls {observed}, expected {expected}")
++    print(json.dumps({"synthetic_cases":"passed","chunk_constructor_calls":observed}))
++
++
++if __name__ == "__main__":
++    typer.run(main)
+diff --git a/components/columnar/m27_offsets_check.inc b/components/columnar/m27_offsets_check.inc
+new file mode 100644
+index 0000000..1f201d9
+--- /dev/null
++++ b/components/columnar/m27_offsets_check.inc
+@@ -0,0 +1,96 @@
++// SPDX-License-Identifier: Apache-2.0
++// Included only by the untimed M27 diagnostic library.
++extern "C" int met_check_jet_ntrk_offsets()
++{
++    try {
++        const auto require=[](bool condition,const char* message) {
++            if (!condition) throw std::logic_error(message);
++        };
++        const auto require_error=[]<class Error>(auto&& operation,std::string_view message,
++                                                 std::type_identity<Error>) {
++            try {
++                operation();
++            } catch (const Error& error) {
++                if (std::string_view(error.what())!=message) throw;
++                return;
++            }
++            throw std::logic_error("Expected track-count offset validation failure");
++        };
++        constexpr auto invalid=std::type_identity<std::invalid_argument>{};
++        constexpr auto range=std::type_identity<std::out_of_range>{};
++        constexpr auto missing_values="Missing or mistyped flat buffer jet.ntrk";
++        constexpr auto missing_offsets="Missing or mistyped flat buffer jet.ntrk.o";
++        constexpr auto malformed="Invalid jagged offsets jet.ntrk.o";
++        constexpr auto outside="Jagged row outside flat buffer";
++
++        const Columns absent(std::span<const MetColumn>{});
++        ChunkJetTrackCounts empty_chunk;
++        require(empty_chunk.constructor_calls()==0,"An empty chunk validated track offsets");
++        require_error([&] { empty_chunk.bind(absent); },missing_values,invalid);
++        require(empty_chunk.constructor_calls()==0,"Missing values did not win before offset validation");
++
++        const std::array values{std::int32_t{5},std::int32_t{7},std::int32_t{11}};
++        const MetColumn flat{"jet.ntrk","i4",values.size(),values.data()};
++        const std::array missing_specs{flat};
++        const Columns missing(missing_specs);
++        ChunkJetTrackCounts no_offsets;
++        require_error([&] { no_offsets.bind(missing); },missing_offsets,invalid);
++        require(no_offsets.constructor_calls()==1,"Missing offsets should be checked on first bind");
++
++        const auto offsets_column=[](auto& offsets) {
++            return MetColumn{"jet.ntrk.o","i8",offsets.size(),offsets.data()};
++        };
++        const std::array<std::int64_t,1> no_jet_offsets{0};
++        const std::array no_jet_specs{MetColumn{"jet.ntrk","i4",0,nullptr},offsets_column(no_jet_offsets)};
++        const Columns no_jets(no_jet_specs);
++        ChunkJetTrackCounts no_jet_chunk;
++        no_jet_chunk.bind(no_jets);
++        no_jet_chunk.bind(no_jets);
++        require(no_jet_chunk.constructor_calls()==1,"A nonempty chunk with no jets should validate once");
++
++        const std::array<std::int64_t,4> offsets{0,2,2,3};
++        const std::array good_specs{flat,offsets_column(offsets)};
++        const Columns good(good_specs);
++        ChunkJetTrackCounts good_chunk;
++        {
++            const auto [storage,rows]=good_chunk.bind(good);
++            const auto first=rows.row(storage,0);
++            require(first.size()==2 && first[0]==5 && first[1]==7,"First track-count row");
++            require(rows.row(storage,1).empty(),"Duplicate offsets must give an empty row");
++            require(rows.row(storage,2).size()==1 && rows.row(storage,2).front()==11,"Last track-count row");
++            const auto [again_storage,again_rows]=good_chunk.bind(good);
++            require(again_storage.data()==storage.data() && &again_rows==&rows &&
++                    good_chunk.constructor_calls()==1,"Repeated event should retain the validated view");
++        }
++        ChunkJetTrackCounts next_chunk;
++        next_chunk.bind(good);
++        require(next_chunk.constructor_calls()==1,"Next chunk should validate its own offsets");
++
++        const std::array<std::int64_t,3> decreasing{0,2,1};
++        const std::array malformed_specs{flat,offsets_column(decreasing)};
++        const Columns bad(malformed_specs);
++        ChunkJetTrackCounts bad_chunk;
++        require_error([&] { bad_chunk.bind(bad); },malformed,invalid);
++        require(bad_chunk.constructor_calls()==1,"Decreasing offsets validation count");
++
++        const std::array empty_specs{flat,MetColumn{"jet.ntrk.o","i8",0,nullptr}};
++        const Columns no_offset_rows(empty_specs);
++        ChunkJetTrackCounts empty_offsets;
++        require_error([&] { empty_offsets.bind(no_offset_rows); },malformed,invalid);
++
++        const std::array<std::int64_t,3> long_offsets{0,1,4};
++        const std::array long_specs{flat,offsets_column(long_offsets)};
++        const Columns too_long(long_specs);
++        ChunkJetTrackCounts excess;
++        const auto [storage,rows]=excess.bind(too_long);
++        require(rows.row(storage,0).size()==1 && rows.row(storage,0).front()==5,
++                "A later out-of-range row must not move ahead of earlier valid rows");
++        require_error([&] { rows.row(storage,1); },outside,range);
++        require_error([&] { rows.row(storage,2); },outside,range);
++        require(excess.constructor_calls()==1,"Per-row range failure must not revalidate offsets");
++        return 0;
++    } catch (const std::exception& error) {
++        error_message=error.what();
++        return 1;
++    }
++}
+diff --git a/components/columnar/transport.cpp b/components/columnar/transport.cpp
+index 10b477a..3becef1 100644
+--- a/components/columnar/transport.cpp
++++ b/components/columnar/transport.cpp
+@@ -18,6 +18,7 @@
+ #include <stdexcept>
+ #include <string>
+ #include <unordered_map>
++#include <utility>
+ 
+ namespace m = atlas::met::maker;
+ namespace a = atlas::met::adapter;
+@@ -103,6 +104,32 @@ private:
+     std::span<const std::int64_t> values_;
+ };
+ 
++class ChunkJetTrackCounts {
++public:
++    std::pair<std::span<const std::int32_t>, const Offset&> bind(const Columns& cols)
++    {
++        // Keep the flat-field error ahead of first offset validation, as before.
++        const auto values = cols.get<std::int32_t>("jet.ntrk");
++        if (!offsets_) {
++#ifdef ATLAS_MET_M27_DIAGNOSTICS
++            ++constructor_calls_;
++#endif
++            offsets_.emplace(cols,"jet.ntrk.o");
++        }
++        return {values,*offsets_};
++    }
++
++#ifdef ATLAS_MET_M27_DIAGNOSTICS
++    std::size_t constructor_calls() const { return constructor_calls_; }
++#endif
++
++private:
++    std::optional<Offset> offsets_;
++#ifdef ATLAS_MET_M27_DIAGNOSTICS
++    std::size_t constructor_calls_{};
++#endif
++};
++
+ template<class T>
+ T at(std::span<const T> values, std::size_t index)
+ {
+@@ -603,11 +630,11 @@ struct EventObjects {
+ };
+ 
+ EventObjects prepare_views(const Columns& cols, std::span<const ObjectRows> owners, std::size_t event,
+-                           const Jets& jet_input, const MetColumnar& bundle, std::span<float> scores)
++                           const Jets& jet_input, const MetColumnar& bundle, std::span<float> scores,
++                           ChunkJetTrackCounts& track_counts)
+ {
+     EventObjects packed;
+-    const auto ntrk=cols.get<std::int32_t>("jet.ntrk");
+-    const Offset ntrk_offsets(cols,"jet.ntrk.o");
++    const auto [ntrk,ntrk_offsets]=track_counts.bind(cols);
+     for (std::size_t i=0; i<owners.size(); ++i) {
+         const auto& owner=owners[i];
+         const auto start=owner.events.start(event);
+@@ -741,6 +768,10 @@ a::SignificanceResult calculate_significance(const Columns& cols,std::span<const
+ }
+ } // namespace
+ 
++#ifdef ATLAS_MET_M27_DIAGNOSTICS
++#include "m27_offsets_check.inc"
++#endif
++
+ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::uint64_t first_entry,
+     const char* const* states, std::size_t state_count, const MetColumn* columns,std::size_t column_count,
+     float* terms_out,std::uint64_t* sources_out,float* significance_out,const char* trace_path)
+@@ -778,8 +809,9 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+             trace.precision(std::numeric_limits<double>::max_digits10);
+         }
+         std::vector<float> scores(objects.front().events.length());
++        ChunkJetTrackCounts track_counts;
+         for (std::size_t event=0; event<events; ++event) {
+-            const auto view=prepare_views(cols,objects,event,jet_input,*bundle,scores);
++            const auto view=prepare_views(cols,objects,event,jet_input,*bundle,scores,track_counts);
+             if (trace_path) trace_prepared_rows(trace,cols,objects,*bundle,first_entry+event,event);
+             const auto core_rows=core.event(event);
+             const auto truth_rows=truth.event(event);
+@@ -878,6 +910,12 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+                 }
+             }
+         }
++#ifdef ATLAS_MET_M27_DIAGNOSTICS
++        if (trace_path) {
++            trace << (events ? first_entry+events-1 : first_entry) << "\t0\tntrkOffsetConstructorCalls\t"
++                  << first_entry << '\t' << events << '\t' << track_counts.constructor_calls() << '\n';
++        }
++#endif
+         if (trace_path && !trace) throw std::runtime_error("C trace write failed");
+         return 0;
+     } catch (const std::exception& error) { error_message=error.what(); return 1; }
+-- 
+2.39.3
+

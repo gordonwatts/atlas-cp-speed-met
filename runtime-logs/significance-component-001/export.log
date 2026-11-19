@@ -1,0 +1,29 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/components/significance/export_reso │
+│ lution.py:329 in main                                                        │
+│                                                                              │
+│   326 │   if ROOT.gSystem.Load("libPathResolverDict") < 0:                   │
+│   327 │   │   raise RuntimeError("Could not load the release PathResolver    │
+│       dictionary")                                                           │
+│   328 │   config = json.loads(reference_config.read_bytes())                 │
+│ ❱ 329 │   validate_config(config, algorithm)                                 │
+│   330 │   if output_dir.exists():                                            │
+│   331 │   │   raise FileExistsError(output_dir)                              │
+│   332 │   sources = Sources(ROOT)                                            │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/components/significance/export_reso │
+│ lution.py:59 in validate_config                                              │
+│                                                                              │
+│    56 │   │   "useFastSim": 0, "useMVACalibration": 0,                       │
+│    57 │   })                                                                 │
+│    58 │   check_fields(children["METSigAutoConf_TauPerfTool"]["Properties"], │
+│       {"WeightFileName": TAU_FILE})                                          │
+│ ❱  59 │   jet =                                                              │
+│       children["MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow"]["Properties"]   │
+│    60 │   check_fields(jet, {                                                │
+│    61 │   │   "CalibArea": "00-04-81", "CalibSequence":                      │
+│       "JetArea_Residual_EtaJES_GSC_Smear",                                   │
+│    62 │   │   "ConfigDir": "JetCalibTools/CalibrationConfigs/",              │
+│       "ConfigFile": JET_CONFIG,                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow'

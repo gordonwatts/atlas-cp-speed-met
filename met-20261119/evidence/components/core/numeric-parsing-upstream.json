@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-19 11:33:03 UTC",
+  "scope": "Read-only source and issue searches for correctionlib decimal-to-double parsing. The searched terms may miss differently worded discussions.",
+  "repositories": [
+    {
+      "repository": "cms-nanoAOD/correctionlib",
+      "branch": "master",
+      "path": "src/correction.cc",
+      "source_url": "https://github.com/cms-nanoAOD/correctionlib/blob/master/src/correction.cc",
+      "blob_sha": "2f9ade264d09a2971be0cc11be16407a94e12d23",
+      "parse_calls": [
+        {
+          "line": 259,
+          "full_precision_flag": false,
+          "nan_inf_flag": false
+        },
+        {
+          "line": 307,
+          "full_precision_flag": false,
+          "nan_inf_flag": false
+        },
+        {
+          "line": 786,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        },
+        {
+          "line": 793,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        },
+        {
+          "line": 808,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        }
+      ],
+      "searches": [
+        {
+          "query": "\"full precision\"",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "\"full precision\"",
+          "kind": "pull request",
+          "returned": []
+        },
+        {
+          "query": "rapidjson precision",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "rapidjson precision",
+          "kind": "pull request",
+          "returned": []
+        },
+        {
+          "query": "kParseFullPrecisionFlag",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "kParseFullPrecisionFlag",
+          "kind": "pull request",
+          "returned": []
+        }
+      ]
+    },
+    {
+      "repository": "gordonwatts/correctionlib",
+      "branch": "develop",
+      "path": "src/correction.cc",
+      "source_url": "https://github.com/gordonwatts/correctionlib/blob/develop/src/correction.cc",
+      "blob_sha": "8696cfbcb5be54ea64fba2401203e4bd8682fe30",
+      "parse_calls": [
+        {
+          "line": 270,
+          "full_precision_flag": false,
+          "nan_inf_flag": false
+        },
+        {
+          "line": 318,
+          "full_precision_flag": false,
+          "nan_inf_flag": false
+        },
+        {
+          "line": 888,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        },
+        {
+          "line": 895,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        },
+        {
+          "line": 910,
+          "full_precision_flag": false,
+          "nan_inf_flag": true
+        }
+      ],
+      "searches": [
+        {
+          "query": "\"full precision\"",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "\"full precision\"",
+          "kind": "pull request",
+          "returned": []
+        },
+        {
+          "query": "rapidjson precision",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "rapidjson precision",
+          "kind": "pull request",
+          "returned": []
+        },
+        {
+          "query": "kParseFullPrecisionFlag",
+          "kind": "issue",
+          "returned": []
+        },
+        {
+          "query": "kParseFullPrecisionFlag",
+          "kind": "pull request",
+          "returned": []
+        }
+      ]
+    }
+  ]
+}

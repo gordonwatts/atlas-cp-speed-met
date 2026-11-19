@@ -1,0 +1,87 @@
+met_significance_stock... INFO    Environment initialised for data access
+metsig_jet_witness       INFO    Initializing metsig_jet_witness to calibrate AntiKt4EMPFlowJets
+metsig_jet_witness       INFO    Reading global JES settings from: JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config
+metsig_jet_witness       INFO      Calibration sequence: JetArea_Residual_EtaJES_GSC_Smear
+metsig_jet_witness       INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_jet_witness       INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_jet_witness       INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_jet_witness       INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_egamma_witness    INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+metsig_egamma_witness    INFO    ESModel: es2024_Run3_v0
+metsig_egamma_witness    INFO    ResolutionType: SigmaEff90
+metsig_egamma_witness    INFO    decorrelation Model: 1NP_v1
+metsig_muon_witness      INFO    Initialising...
+metsig_muon_witness      INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.MCaST_Own_MST    INFO    Initialising...
+ToolSvc.MCaST_Own_MST    INFO    Is Run-3 geometry: 0
+ToolSvc.MCaST_Own_MST    INFO    Maximum muon |eta|: 2.7
+ToolSvc.MCaST_Own_MST    INFO    Muon quality: 1
+ToolSvc.MCaST_Own_MST    INFO    Initialising tight working point histograms...
+ToolSvc.MCaST_Own_MST    INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+ToolSvc.metsig_muon_wi...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.metsig_muon_wi...INFO    Initializing MuonCalibIntScaleSmearTool
+metsig_tau_witness       INFO    Initializing TauResolutionTool
+metsig_tau_witness       INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+metsig_event_witness     INFO    Initializing metsig_event_witness...
+metsig_event_witness     INFO    Set up JER tools
+metsig_event_witness.M...INFO    Initializing metsig_event_witness.MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow to calibrate AntiKt4EMPFlowJets
+metsig_event_witness.M...INFO    Reading global JES settings from: JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config
+metsig_event_witness.M...INFO      Calibration sequence: JetArea_Residual_EtaJES_GSC_Smear
+metsig_event_witness.M...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_event_witness.M...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_event_witness.M...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_event_witness.M...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+metsig_event_witness.M...INFO    Initialising...
+metsig_event_witness.M...INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.metsig_event_w...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.metsig_event_w...INFO    Initializing MuonCalibIntScaleSmearTool
+metsig_event_witness.M...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+metsig_event_witness.M...INFO    ESModel: es2024_Run3_v0
+metsig_event_witness.M...INFO    ResolutionType: SigmaEff90
+metsig_event_witness.M...INFO    decorrelation Model: 1NP_v1
+metsig_event_witness.M...INFO    Initializing TauResolutionTool
+metsig_event_witness.M...INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+metsig_expected_detect...INFO    Initializing MuonCalibIntScaleSmearTool
+egamma.ct.edge	75	0	0
+egamma.edge	1026	0	0
+electron.real	47	0	0
+event.directional	65	0	0
+event.met_sqrt_ht	65	0	0
+event.met_sqrt_sumet	65	0	0
+event.rho	65	0	0
+event.significance	65	0	0
+event.var_l	65	0	0
+event.var_t	65	0	0
+jet.data	13654	0	0
+jet.mc	13654	0	0
+jet.relative_float	13654	0	0
+muon.detector.1	43	0	0
+muon.detector.2	43	0	0
+muon.detector.3	43	0	0
+muon.detector.edge.1	956	0	0
+muon.detector.edge.2	797	0	0
+photon.real	187	0	0
+tau.edge	652	0	0
+tau.real	86	0	0
+xAOD::TFileAccessTracer   INFO    Sending file access statistics to http://rucio-lb-prod.cern.ch:18762/traces/

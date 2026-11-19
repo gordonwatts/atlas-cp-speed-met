@@ -1,0 +1,277 @@
+From f8408db2a281a0bff8bb0ed173f255ed66caf7e2 Mon Sep 17 00:00:00 2001
+From: Codex MET trial <codex-met@users.noreply.local>
+Date: Thu, 19 Nov 2026 05:18:33 -0800
+Subject: [PATCH] Trial chunk-local calorimeter sampling buffers
+
+---
+ components/columnar/atlas_met_prepare.py      |  67 ++++++--
+ .../tests/test_calorimeter_sampling.py        | 147 ++++++++++++++++++
+ 2 files changed, 204 insertions(+), 10 deletions(-)
+ create mode 100644 components/columnar/tests/test_calorimeter_sampling.py
+
+diff --git a/components/columnar/atlas_met_prepare.py b/components/columnar/atlas_met_prepare.py
+index 59486a4..86650cc 100644
+--- a/components/columnar/atlas_met_prepare.py
++++ b/components/columnar/atlas_met_prepare.py
+@@ -103,6 +103,27 @@ class Link:
+         self.index = dense(array[index], "u4", 0xffffffff)
+ 
+ 
++# The selected EM layers use slots 1 through 7. Rank counts lower set bits.
++SAMPLING_RANK = np.asarray([mask.bit_count() for mask in range(1 << 7)], dtype="i8")
++
++
++def pack_sampling_column(source):
++    layout = ak.to_layout(source)
++    if not isinstance(layout, (ak.contents.ListOffsetArray, ak.contents.ListArray)):
++        return None
++    if not isinstance(layout.content, ak.contents.NumpyArray):
++        return None
++    values = layout.content.data
++    if not isinstance(values, np.ndarray) or values.ndim != 1 or values.dtype.kind != "f":
++        return None
++    starts = np.asarray(layout.starts, dtype="i8")
++    stops = np.asarray(layout.stops, dtype="i8")
++    counts = stops - starts
++    if np.any((counts < 0) | ((counts > 0) & ((starts < 0) | (stops > len(values))))):
++        return None
++    return starts, counts, values
++
++
+ class Resolved:
+     def __init__(self, data, link, event_rows, candidates):
+         self.data = data
+@@ -169,25 +190,44 @@ class Resolved:
+         return keys, indices
+ 
+     def sampling(self, field, sampling_pattern, slot):
+-        # The packed array stores one value per set sampling bit, in enum order.
+         output = np.zeros(self.size, dtype="f4")
+         for target, local, rows in self.locations:
+-            source = ak.flatten(self.data.raw[target+"AuxDyn."+field], axis=1)[rows]
++            source, packed = self.data.sampling_column(target+"AuxDyn."+field)
++            if packed is not None:
++                starts, counts, content = packed
++                try:
++                    row_starts = starts[rows]
++                    row_counts = counts[rows]
++                except IndexError:
++                    # Ask Awkward to report the original invalid row selection.
++                    packed = None
++            if packed is None:
++                gathered = source[rows]
++
+             relevant = (sampling_pattern[local] & (1<<slot)) != 0
+             if not relevant.any():
+                 continue
+             chosen = local[relevant]
+             masks = sampling_pattern[chosen] & ((1<<slot)-1)
+-            rank = np.zeros(len(chosen), dtype="i8")
+-            for bit in range(slot):
+-                rank += (masks>>bit)&1
+-            selected = source[relevant]
+-            count = dense(ak.num(selected, axis=1), "i8")
+-            start = np.concatenate(([0], np.cumsum(count, dtype="i8")))
++            if slot <= 7:
++                rank = SAMPLING_RANK[masks]
++            else:
++                rank = np.zeros(len(chosen), dtype="i8")
++                for bit in range(slot):
++                    rank += (masks>>bit)&1
++
++            if packed is None:
++                selected = gathered[relevant]
++                count = dense(ak.num(selected, axis=1), "i8")
++                start = np.concatenate(([0], np.cumsum(count, dtype="i8")))[:-1]
++                content = dense(ak.flatten(selected, axis=1), "f4")
++            else:
++                count = row_counts[relevant]
++                start = row_starts[relevant]
++
+             good = rank < count
+             output[chosen] = -999
+-            content = dense(ak.flatten(selected, axis=1), "f4")
+-            output[chosen[good]] = content[start[:-1][good]+rank[good]]
++            output[chosen[good]] = content[start[good]+rank[good]]
+         return output
+ 
+ 
+@@ -206,6 +246,7 @@ class Data:
+         self.output, self.keys, self.evaluate = output, keys, evaluate
+         self.capture_preparation = capture_preparation
+         self.counts = {}
++        self.sampling_columns = {}
+         self.validated_empty_columns = set()
+         self.events = {owner: roles_for_events(output[short+".o"]) for short,owner in OWNERS.items()}
+ 
+@@ -214,6 +255,12 @@ class Data:
+             self.counts[anchor] = flat(self.raw[anchor], 1, "f4")[0][0]
+         return self.counts[anchor]
+ 
++    def sampling_column(self, name):
++        if name not in self.sampling_columns:
++            source = ak.flatten(self.raw[name], axis=1)
++            self.sampling_columns[name] = source, pack_sampling_column(source)
++        return self.sampling_columns[name]
++
+     def own(self, owner, field, dtype="f4", default=None):
+         n = len(self.events[owner])
+         name = owner+field
+diff --git a/components/columnar/tests/test_calorimeter_sampling.py b/components/columnar/tests/test_calorimeter_sampling.py
+new file mode 100644
+index 0000000..356ec20
+--- /dev/null
++++ b/components/columnar/tests/test_calorimeter_sampling.py
+@@ -0,0 +1,147 @@
++"""Compare packed cluster-sampling lookup with the original jagged path."""
++
++from pathlib import Path
++import os
++import sys
++import unittest
++from unittest.mock import patch
++
++import awkward as ak
++import numpy as np
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from atlas_met_prepare import CLUSTER, OWNERS, Data, Resolved, dense
++
++SLOTS = (1, 2, 3, 5, 6, 7)
++FIELDS = {"e_sampl": SLOTS, "eta_sampl": (1, 2, 5, 6)}
++
++
++def branch(field):
++    return CLUSTER + "AuxDyn." + field
++
++
++def view(raw, rows, size=None, local=None):
++    size = len(rows) if size is None else size
++    local = np.arange(len(rows), dtype="i8") if local is None else np.asarray(local, dtype="i8")
++    result = Resolved(raw, None, np.zeros(size, dtype="i8"), ())
++    result.locations = [(CLUSTER, local, np.asarray(rows, dtype="i8"))]
++    return result
++
++
++def data(e=None, eta=None):
++    raw = {branch(field): value for field, value in (("e_sampl", e), ("eta_sampl", eta)) if value is not None}
++    output = {owner + ".o": np.zeros(1, dtype="i8") for owner in OWNERS}
++    return Data(raw, output, {}, None, False)
++
++
++def old_sampling(resolved, field, patterns, slot):
++    output = np.zeros(resolved.size, dtype="f4")
++    for target, local, rows in resolved.locations:
++        source = ak.flatten(resolved.data.raw[target + "AuxDyn." + field], axis=1)[rows]
++        relevant = (patterns[local] & (1 << slot)) != 0
++        if not relevant.any():
++            continue
++        chosen = local[relevant]
++        masks = patterns[chosen] & ((1 << slot) - 1)
++        rank = np.zeros(len(chosen), dtype="i8")
++        for bit in range(slot):
++            rank += (masks >> bit) & 1
++        selected = source[relevant]
++        count = dense(ak.num(selected, axis=1), "i8")
++        start = np.concatenate(([0], np.cumsum(count, dtype="i8")))
++        good = rank < count
++        output[chosen] = -999
++        content = dense(ak.flatten(selected, axis=1), "f4")
++        output[chosen[good]] = content[start[:-1][good] + rank[good]]
++    return output
++
++
++class SamplingProjection(unittest.TestCase):
++    def assert_same(self, candidate, stock):
++        self.assertEqual(candidate.dtype, np.dtype("f4"))
++        np.testing.assert_array_equal(candidate.view("u4"), stock.view("u4"))
++
++    def test_repeated_species_views_share_each_column_and_keep_rank_and_sentinels(self):
++        original = data(
++            ak.Array([[[100., 101., 105.], [205.], []], [], [[-1.5, 8.75, float("nan"), -0.0]]]),
++            ak.Array([[[0.01, 0.04], [-1.0], []], [], [[0.02, 0.06, 0.08]]]),
++        )
++        electron = view(original, [0, 2, 3], size=4, local=[0, 2, 3])
++        photon = view(original, [3, 1, 0, 3], size=5, local=[0, 1, 3, 4])
++        e_pattern = np.array([0b10100111, 0xff, 0b00000010, 0b10100010], dtype="i8")
++        p_pattern = np.array([0b10100010, 0b01000010, 0xff, 0b10100111, 0b00000010], dtype="i8")
++        cases = [(linked, field, pattern, slot, old_sampling(linked, field, pattern, slot))
++                 for linked, pattern in ((electron, e_pattern), (photon, p_pattern))
++                 for field, slots in FIELDS.items() for slot in slots]
++        with patch("atlas_met_prepare.ak.flatten", wraps=ak.flatten) as flatten:
++            for linked, field, pattern, slot, stock in cases:
++                with self.subTest(field=field, slot=slot, species=len(pattern)):
++                    self.assert_same(linked.sampling(field, pattern, slot), stock)
++        self.assertEqual(flatten.call_count, 2)
++        self.assertEqual(set(original.sampling_columns), set(map(branch, FIELDS)))
++        self.assertTrue(all(packed is not None for _, packed in original.sampling_columns.values()))
++        np.testing.assert_array_equal(electron.sampling("e_sampl", e_pattern, 5),
++                                      np.array([-999., 0., 0., 8.75], dtype="f4"))
++
++    def test_noncontiguous_jagged_rows_and_source_offsets(self):
++        primitive = ak.contents.NumpyArray(np.arange(10, dtype="f4"))
++        for rows in (
++            ak.contents.ListArray(ak.index.Index64(np.array([6, 0, 5, 2])),
++                                  ak.index.Index64(np.array([8, 2, 5, 5])), primitive),
++            ak.contents.ListOffsetArray(ak.index.Index64(np.array([2, 4, 4, 7, 8])), primitive),
++        ):
++            tree = ak.Array(ak.contents.ListOffsetArray(ak.index.Index64(np.array([0, 3, 4])), rows))
++            original = data(tree)
++            linked = view(original, [3, 0, 1, 0, 2])
++            patterns = np.array([3, 34, 3, 36, 98], dtype="i8")
++            for slot in SLOTS:
++                self.assert_same(linked.sampling("e_sampl", patterns, slot),
++                                 old_sampling(linked, "e_sampl", patterns, slot))
++
++    def test_optional_and_empty_vectors_keep_original_behavior(self):
++        for tree in (
++            ak.Array([[None, [None, 2.]], [[4.]]]),
++            ak.Array([[[], []], [[]]]),
++        ):
++            original = data(tree)
++            linked = view(original, [0, 1, 2])
++            patterns = np.array([2, 2, 2], dtype="i8")
++            self.assert_same(linked.sampling("e_sampl", patterns, 1),
++                             old_sampling(linked, "e_sampl", patterns, 1))
++            self.assertIsNone(original.sampling_columns[branch("e_sampl")][1])
++        unresolved = Resolved(data(), None, np.array([0, 0]), ())
++        np.testing.assert_array_equal(unresolved.sampling("eta_sampl", np.array([0, 0]), 7),
++                                      np.zeros(2, dtype="f4"))
++
++    def test_missing_fields_and_out_of_range_gathers_fail_before_slot_filtering(self):
++        for original, rows, error in (
++            (data(), [0], KeyError),
++            (data(), [], KeyError),
++            (data(ak.Array([[[123.]]])), [1], IndexError),
++        ):
++            linked = view(original, rows)
++            patterns = np.zeros(len(rows), dtype="i8")
++            with self.assertRaises(error) as previous:
++                old_sampling(linked, "e_sampl", patterns, 7)
++            with self.assertRaises(error) as candidate:
++                linked.sampling("e_sampl", patterns, 7)
++            self.assertEqual(str(previous.exception), str(candidate.exception))
++
++    @unittest.skipUnless(os.environ.get("ATLAS_MET_SAMPLING_PILOT"), "Set ATLAS_MET_SAMPLING_PILOT to original PHYSLITE")
++    def test_original_numeric_layout_and_sample_values(self):
++        import uproot
++
++        with uproot.open(os.environ["ATLAS_MET_SAMPLING_PILOT"], handler=uproot.source.file.MemmapSource,
++                         num_workers=1, num_fallback_workers=1) as file:
++            self.assertEqual(str(file.file.uuid), "79ee6652-311f-11f1-aa37-0445010abeef")
++            raw = file["CollectionTree"].arrays([branch(f) for f in (*FIELDS, "samplingPattern")],
++                                               entry_stop=16, library="ak", how=dict)
++        patterns = dense(ak.flatten(raw[branch("samplingPattern")], axis=1), "i8")
++        self.assertGreater(len(patterns), 0)
++        original = data(raw[branch("e_sampl")], raw[branch("eta_sampl")])
++        linked = view(original, list(range(len(patterns))))
++        for field, slots in FIELDS.items():
++            for slot in slots:
++                self.assert_same(linked.sampling(field, patterns, slot),
++                                 old_sampling(linked, field, patterns, slot))
++            self.assertIsNotNone(original.sampling_columns[branch(field)][1])
+
+base-commit: 58fd566f8685ba34e200b3ca2efe1466b1c6c0b4
+-- 
+2.39.3
+

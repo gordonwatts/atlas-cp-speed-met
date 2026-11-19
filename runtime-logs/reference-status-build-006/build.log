@@ -1,0 +1,9 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+/cvmfs/sft.cern.ch/lcg/releases/binutils/2.40-acaab/x86_64-el9/bin/ld: /tmp/cc5yR9kd.o: in function `__static_initialization_and_destruction_0()':
+status_trace.cxx:(.text.startup+0x15): undefined reference to `TVersionCheck::TVersionCheck(int)'
+collect2: error: ld returned 1 exit status

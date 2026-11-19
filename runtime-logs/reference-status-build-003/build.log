@@ -1,0 +1,19 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+In file included from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODTracking/versions/Vertex_v1.h:18,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODTracking/Vertex.h:12,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODTracking/VertexContainer.h:9,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/versions/PFO_v1.h:22,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/PFO.h:12,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/PFOContainer.h:12,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METInterface/IMETMaker.h:25,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METUtilities/METMaker.h:24,
+                 from /home/gwatts/atlas-cp-speed/met-20261119/observer/status_trace.cxx:4:
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/EventPrimitives/EventPrimitives.h:16:10: fatal error: Eigen/Core: No such file or directory
+   16 | #include <Eigen/Core>
+      |          ^~~~~~~~~~~~
+compilation terminated.

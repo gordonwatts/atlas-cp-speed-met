@@ -1,0 +1,30 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/scripts/compare_columnar.py:132 in  │
+│ compare                                                                      │
+│                                                                              │
+│   129 │   │   histogram_equal = all(np.array_equal(saved_hist[key],          │
+│       np.stack(counts)) for key in ("counts", "sumw", "sumw2"))              │
+│   130 │   │   report["saved_histogram_equals_stock"] = histogram_equal       │
+│   131 │   │   report["numerical_validation_passed"] &= histogram_equal       │
+│ ❱ 132 │   with (candidate / "comparison.json").open("x") as output:          │
+│   133 │   │   json.dump(report, output, indent=2, allow_nan=False)           │
+│   134 │   │   output.write("\n")                                             │
+│   135 │   plot_fields(expected, actual, states, candidate /                  │
+│       "plot-comparison.npz", candidate / "plot-summary.json")                │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/muon-skill-c8a2374-20261117/results/checkpoint-0 │
+│ 2/columnar-bootstrap-01/python/cpython-3.14.10-linux-x86_64-gnu/lib/python3. │
+│ 14/pathlib/__init__.py:771 in open                                           │
+│                                                                              │
+│    768 │   │   """                                                           │
+│    769 │   │   if "b" not in mode:                                           │
+│    770 │   │   │   encoding = io.text_encoding(encoding)                     │
+│ ❱  771 │   │   return io.open(self, mode, buffering, encoding, errors,       │
+│        newline)                                                              │
+│    772 │                                                                     │
+│    773 │   def read_bytes(self):                                             │
+│    774 │   │   """                                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileExistsError: [Errno 17] File exists: 
+'/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m02-acceptance-001/co
+rr/comparison.json'

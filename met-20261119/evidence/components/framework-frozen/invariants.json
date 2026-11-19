@@ -1,0 +1,142 @@
+{
+  "events": 20000,
+  "states": {
+    "NOSYS": {
+      "stock_hard_terms_exact_vs_nominal": [
+        "RefEle",
+        "RefGamma",
+        "RefTau",
+        "Muons",
+        "MuonEloss",
+        "RefJet"
+      ],
+      "stock_ordered_constituent_links_and_weights_exact_vs_nominal": true,
+      "stock_association_and_jet_jvt_sequences_exact_vs_nominal": true,
+      "stock_seed_exact_vs_nominal": true,
+      "stock_first_gaussian_exact_across_active_states": false,
+      "stock_gaussian_calls": 0,
+      "stock_significance_changes_vs_nominal": {
+        "significance": 0,
+        "sigDirectional": 0,
+        "METOverSqrtSumET": 0,
+        "METOverSqrtHT": 0
+      },
+      "association_writes": 12915,
+      "jvt_decisions": 196606
+    },
+    "MET_SoftTrk_ResoPara": {
+      "stock_hard_terms_exact_vs_nominal": [
+        "RefEle",
+        "RefGamma",
+        "RefTau",
+        "Muons",
+        "MuonEloss",
+        "RefJet"
+      ],
+      "stock_ordered_constituent_links_and_weights_exact_vs_nominal": true,
+      "stock_association_and_jet_jvt_sequences_exact_vs_nominal": true,
+      "stock_seed_exact_vs_nominal": true,
+      "stock_first_gaussian_exact_across_active_states": true,
+      "stock_gaussian_calls": 20000,
+      "stock_significance_changes_vs_nominal": {
+        "significance": 19690,
+        "sigDirectional": 19690,
+        "METOverSqrtSumET": 19690,
+        "METOverSqrtHT": 19683
+      },
+      "association_writes": 12915,
+      "jvt_decisions": 196606
+    },
+    "MET_SoftTrk_ResoPerp": {
+      "stock_hard_terms_exact_vs_nominal": [
+        "RefEle",
+        "RefGamma",
+        "RefTau",
+        "Muons",
+        "MuonEloss",
+        "RefJet"
+      ],
+      "stock_ordered_constituent_links_and_weights_exact_vs_nominal": true,
+      "stock_association_and_jet_jvt_sequences_exact_vs_nominal": true,
+      "stock_seed_exact_vs_nominal": true,
+      "stock_first_gaussian_exact_across_active_states": true,
+      "stock_gaussian_calls": 20000,
+      "stock_significance_changes_vs_nominal": {
+        "significance": 19690,
+        "sigDirectional": 19690,
+        "METOverSqrtSumET": 19689,
+        "METOverSqrtHT": 19682
+      },
+      "association_writes": 12915,
+      "jvt_decisions": 196606
+    },
+    "MET_SoftTrk_Scale__1down": {
+      "stock_hard_terms_exact_vs_nominal": [
+        "RefEle",
+        "RefGamma",
+        "RefTau",
+        "Muons",
+        "MuonEloss",
+        "RefJet"
+      ],
+      "stock_ordered_constituent_links_and_weights_exact_vs_nominal": true,
+      "stock_association_and_jet_jvt_sequences_exact_vs_nominal": true,
+      "stock_seed_exact_vs_nominal": true,
+      "stock_first_gaussian_exact_across_active_states": true,
+      "stock_gaussian_calls": 20000,
+      "stock_significance_changes_vs_nominal": {
+        "significance": 19689,
+        "sigDirectional": 19690,
+        "METOverSqrtSumET": 19690,
+        "METOverSqrtHT": 19683
+      },
+      "association_writes": 12915,
+      "jvt_decisions": 196606
+    },
+    "MET_SoftTrk_Scale__1up": {
+      "stock_hard_terms_exact_vs_nominal": [
+        "RefEle",
+        "RefGamma",
+        "RefTau",
+        "Muons",
+        "MuonEloss",
+        "RefJet"
+      ],
+      "stock_ordered_constituent_links_and_weights_exact_vs_nominal": true,
+      "stock_association_and_jet_jvt_sequences_exact_vs_nominal": true,
+      "stock_seed_exact_vs_nominal": true,
+      "stock_first_gaussian_exact_across_active_states": true,
+      "stock_gaussian_calls": 20000,
+      "stock_significance_changes_vs_nominal": {
+        "significance": 19690,
+        "sigDirectional": 19690,
+        "METOverSqrtSumET": 19689,
+        "METOverSqrtHT": 19682
+      },
+      "association_writes": 12915,
+      "jvt_decisions": 196606
+    }
+  },
+  "B_ordered_stock_decision_agreement": {
+    "associationFlag": 64575,
+    "jetJvt": 983030
+  },
+  "B_scalar_outputs_exact_to_A": true,
+  "covariance": {
+    "observed_stock_soft_resolution": 8.5,
+    "stock_soft_term_model_parameter": 0,
+    "observed_complete_valid_final_and_soft_rows": 100000,
+    "dependence": "Longitudinal, transverse and mixed covariance projections use the Final MET direction in each state.",
+    "state_carry_source_conditions": [
+      "Wrong total-source mask returns before recomputing the significance.",
+      "When longitudinal variance equals zero, the release retains its prior squared significance and rho.",
+      "Within the matched valid sample the fixed track-soft term contributes nonzero isotropic variance; retain the release state across calls for the distinct sentinel paths."
+    ],
+    "source": "AnalysisBase 25.2.117 METUtilities/Root/METSignificance.cxx varianceMET and AddSoftTerm"
+  },
+  "raw_authority": {
+    "A": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-observer-full-001",
+    "A_status": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-status-full-001",
+    "B": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-frozen-rich-full-001"
+  }
+}

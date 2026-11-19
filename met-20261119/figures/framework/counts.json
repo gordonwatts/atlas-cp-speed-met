@@ -1,0 +1,866 @@
+{
+  "candidate": "B",
+  "events": 20000,
+  "states": [
+    "NOSYS",
+    "MET_SoftTrk_ResoPara",
+    "MET_SoftTrk_ResoPerp",
+    "MET_SoftTrk_Scale__1down",
+    "MET_SoftTrk_Scale__1up"
+  ],
+  "input_sha256": {
+    "plot-comparison.npz": "9410ffec1f4c4fd811df3de1cc3c8207435110ba78454bffcff953d143ae5de2",
+    "plot-summary.json": "55571c406ea43f5d31a1eda6e2364465b0fc2f9b5d695f9676c4d5cdda4a4068"
+  },
+  "panels": {
+    "nominal-mpx": [
+      {
+        "field": "mpx",
+        "term": "RefEle",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "RefGamma",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "RefTau",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "Muons",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "MuonEloss",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "RefJet",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          2,
+          3,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          2,
+          3,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "PVSoftTrk",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpx",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          2,
+          1,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          2,
+          1,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-mpy": [
+      {
+        "field": "mpy",
+        "term": "RefEle",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "RefGamma",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "RefTau",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "Muons",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "MuonEloss",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "RefJet",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          1,
+          4,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          1,
+          4,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "PVSoftTrk",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "mpy",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          1,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          1,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-sumet": [
+      {
+        "field": "sumet",
+        "term": "RefEle",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "RefGamma",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "RefTau",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "Muons",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "MuonEloss",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "RefJet",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          8,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          8,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "PVSoftTrk",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sumet",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          10,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          10,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-met": [
+      {
+        "field": "met",
+        "term": "RefEle",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "RefGamma",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "RefTau",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "Muons",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "MuonEloss",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "RefJet",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          19,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          19,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "PVSoftTrk",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          6,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          6,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-phi": [
+      {
+        "field": "phi",
+        "term": "RefEle",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "RefGamma",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "RefTau",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "Muons",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "MuonEloss",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "RefJet",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "PVSoftTrk",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "phi",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-significance": [
+      {
+        "field": "significance",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "sigDirectional",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "METOverSqrtSumET",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "METOverSqrtHT",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          9,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          9,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "nominal-final-met": [
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "NOSYS",
+        "response_to_nominal": false,
+        "a_under_over_nonfinite": [
+          0,
+          6,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          6,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ],
+    "responses-final-met": [
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "MET_SoftTrk_ResoPara",
+        "response_to_nominal": true,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "MET_SoftTrk_ResoPerp",
+        "response_to_nominal": true,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "MET_SoftTrk_Scale__1down",
+        "response_to_nominal": true,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      },
+      {
+        "field": "met",
+        "term": "Final",
+        "state": "MET_SoftTrk_Scale__1up",
+        "response_to_nominal": true,
+        "a_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "candidate_under_over_nonfinite": [
+          0,
+          0,
+          0
+        ],
+        "max_absolute_bin_count_difference_including_flows": 0
+      }
+    ]
+  }
+}

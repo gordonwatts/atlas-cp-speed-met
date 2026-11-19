@@ -1,0 +1,101 @@
+{
+  "events": 20000,
+  "state_order": [
+    "NOSYS",
+    "MET_SoftTrk_ResoPara",
+    "MET_SoftTrk_ResoPerp",
+    "MET_SoftTrk_Scale__1down",
+    "MET_SoftTrk_Scale__1up"
+  ],
+  "numerical_checks": {
+    "finalMet_met_NOSYS": {
+      "shape": [
+        20000
+      ],
+      "storage_dtype": "float32",
+      "values": 20000,
+      "exact_finite": 20000,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_ResoPara": {
+      "shape": [
+        20000
+      ],
+      "storage_dtype": "float32",
+      "values": 20000,
+      "exact_finite": 20000,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        20000
+      ],
+      "storage_dtype": "float32",
+      "values": 20000,
+      "exact_finite": 20000,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        20000
+      ],
+      "storage_dtype": "float32",
+      "values": 20000,
+      "exact_finite": 20000,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        20000
+      ],
+      "storage_dtype": "float32",
+      "values": 20000,
+      "exact_finite": 20000,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    }
+  },
+  "discrete_failures": [],
+  "histogram_per_event_bin_failures": {
+    "NOSYS": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_ResoPara": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_ResoPerp": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_Scale__1down": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_Scale__1up": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,282 @@
+{
+  "schema": 1,
+  "mode": "phases",
+  "success": true,
+  "pid": 1904516,
+  "worker_affinity": [
+    0
+  ],
+  "argv": [
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m27-portable-001/bundle/met_demo.py",
+    "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/.art/76315e7ffa8dd82d312e0ee59e71336fa4b01af5.art",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-offset-001/nominal/phase_timed/histogram.npz",
+    "-n",
+    "1",
+    "--chunk-size",
+    "5000",
+    "--nominal-only"
+  ],
+  "script_span": {
+    "wall_ns": 2062530807,
+    "cpu_ns": 2061543468
+  },
+  "script_start_monotonic_ns": 179251633117021,
+  "script_end_monotonic_ns": 179253695647828,
+  "worker_cpu_at_exec_finish_ns": 2081701920,
+  "exclusive": {
+    "book_histogram": {
+      "wall_ns": 260149,
+      "cpu_ns": 260361,
+      "calls": 1
+    },
+    "close_native": {
+      "wall_ns": 532386,
+      "cpu_ns": 532610,
+      "calls": 1
+    },
+    "fill_histogram": {
+      "wall_ns": 892457,
+      "cpu_ns": 893886,
+      "calls": 4
+    },
+    "imports": {
+      "wall_ns": 132449590,
+      "cpu_ns": 132442392,
+      "calls": 1
+    },
+    "initialize": {
+      "wall_ns": 15750549,
+      "cpu_ns": 15750795,
+      "calls": 2
+    },
+    "input_metadata": {
+      "wall_ns": 140402771,
+      "cpu_ns": 140394830,
+      "calls": 1
+    },
+    "input_read_decode": {
+      "wall_ns": 1286270128,
+      "cpu_ns": 1286281060,
+      "calls": 12
+    },
+    "nominal_node.electron_prepare": {
+      "wall_ns": 10059549,
+      "cpu_ns": 10059010,
+      "calls": 4
+    },
+    "nominal_node.met_track_pt": {
+      "wall_ns": 753119,
+      "cpu_ns": 749423,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_after_calibration": {
+      "wall_ns": 4607842,
+      "cpu_ns": 4607674,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_eta": {
+      "wall_ns": 135360,
+      "cpu_ns": 134447,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_track_roles": {
+      "wall_ns": 476338,
+      "cpu_ns": 473241,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_vertex": {
+      "wall_ns": 3696860,
+      "cpu_ns": 3695411,
+      "calls": 4
+    },
+    "nominal_node.photon_prepare": {
+      "wall_ns": 21806431,
+      "cpu_ns": 21805421,
+      "calls": 4
+    },
+    "nominal_node.tau_prepare": {
+      "wall_ns": 2135281,
+      "cpu_ns": 2133733,
+      "calls": 4
+    },
+    "nominal_node.tau_track_charged": {
+      "wall_ns": 1554121,
+      "cpu_ns": 1550110,
+      "calls": 4
+    },
+    "nominal_projection": {
+      "wall_ns": 214227678,
+      "cpu_ns": 213675444,
+      "calls": 4
+    },
+    "open_original": {
+      "wall_ns": 945978,
+      "cpu_ns": 566183,
+      "calls": 1
+    },
+    "pass_histogram_signature": {
+      "wall_ns": 123963,
+      "cpu_ns": 123359,
+      "calls": 1
+    },
+    "pass_reset": {
+      "wall_ns": 5603,
+      "cpu_ns": 5612,
+      "calls": 1
+    },
+    "raw_transport": {
+      "wall_ns": 13592602,
+      "cpu_ns": 13594024,
+      "calls": 4
+    },
+    "save_histogram": {
+      "wall_ns": 4454718,
+      "cpu_ns": 4455611,
+      "calls": 1
+    },
+    "shared_event_evaluation": {
+      "wall_ns": 168274931,
+      "cpu_ns": 168282673,
+      "calls": 4
+    }
+  },
+  "inclusive": {
+    "book_histogram": {
+      "wall_ns": 260149,
+      "cpu_ns": 260361,
+      "calls": 1
+    },
+    "close_native": {
+      "wall_ns": 532386,
+      "cpu_ns": 532610,
+      "calls": 1
+    },
+    "fill_histogram": {
+      "wall_ns": 892457,
+      "cpu_ns": 893886,
+      "calls": 4
+    },
+    "imports": {
+      "wall_ns": 132449590,
+      "cpu_ns": 132442392,
+      "calls": 1
+    },
+    "initialize": {
+      "wall_ns": 15750549,
+      "cpu_ns": 15750795,
+      "calls": 2
+    },
+    "input_metadata": {
+      "wall_ns": 140402771,
+      "cpu_ns": 140394830,
+      "calls": 1
+    },
+    "input_read_decode": {
+      "wall_ns": 1286270128,
+      "cpu_ns": 1286281060,
+      "calls": 12
+    },
+    "nominal_node.electron_prepare": {
+      "wall_ns": 10059549,
+      "cpu_ns": 10059010,
+      "calls": 4
+    },
+    "nominal_node.met_track_pt": {
+      "wall_ns": 753119,
+      "cpu_ns": 749423,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_after_calibration": {
+      "wall_ns": 4607842,
+      "cpu_ns": 4607674,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_eta": {
+      "wall_ns": 135360,
+      "cpu_ns": 134447,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_track_roles": {
+      "wall_ns": 476338,
+      "cpu_ns": 473241,
+      "calls": 4
+    },
+    "nominal_node.muon_selection_vertex": {
+      "wall_ns": 3696860,
+      "cpu_ns": 3695411,
+      "calls": 4
+    },
+    "nominal_node.photon_prepare": {
+      "wall_ns": 21806431,
+      "cpu_ns": 21805421,
+      "calls": 4
+    },
+    "nominal_node.tau_prepare": {
+      "wall_ns": 2135281,
+      "cpu_ns": 2133733,
+      "calls": 4
+    },
+    "nominal_node.tau_track_charged": {
+      "wall_ns": 1554121,
+      "cpu_ns": 1550110,
+      "calls": 4
+    },
+    "nominal_projection": {
+      "wall_ns": 259452579,
+      "cpu_ns": 258883914,
+      "calls": 4
+    },
+    "open_original": {
+      "wall_ns": 945978,
+      "cpu_ns": 566183,
+      "calls": 1
+    },
+    "pass_histogram_signature": {
+      "wall_ns": 123963,
+      "cpu_ns": 123359,
+      "calls": 1
+    },
+    "pass_reset": {
+      "wall_ns": 5603,
+      "cpu_ns": 5612,
+      "calls": 1
+    },
+    "raw_transport": {
+      "wall_ns": 16455305,
+      "cpu_ns": 16459616,
+      "calls": 4
+    },
+    "save_histogram": {
+      "wall_ns": 4454718,
+      "cpu_ns": 4455611,
+      "calls": 1
+    },
+    "shared_event_evaluation": {
+      "wall_ns": 168274931,
+      "cpu_ns": 168282673,
+      "calls": 4
+    }
+  },
+  "unassigned_in_script": {
+    "wall_ns": 39122403,
+    "cpu_ns": 39076158
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "entries": 20000,
+      "histogram_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9",
+      "objects": {
+        "jet": 196606,
+        "electron": 14846,
+        "photon": 52596,
+        "tau": 27062,
+        "muon": 14997
+      },
+      "start_monotonic_ns": 179251817185201,
+      "end_monotonic_ns": 179253690253284,
+      "wall_ns": 1873068083,
+      "cpu_ns": 1872091385
+    }
+  ]
+}

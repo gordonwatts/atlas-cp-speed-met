@@ -1,0 +1,132 @@
+From 064361158f2b2e8449ba509ff9b8dd2a83a5d8c5 Mon Sep 17 00:00:00 2001
+From: Codex MET trial <codex-met@users.noreply.local>
+Date: Thu, 19 Nov 2026 05:06:18 -0800
+Subject: [PATCH] Trial one metadata name walk per opened MET input
+
+---
+ components/columnar/met_demo.py               | 15 +++-
+ .../columnar/test_metadata_projection.py      | 74 +++++++++++++++++++
+ 2 files changed, 85 insertions(+), 4 deletions(-)
+ create mode 100644 components/columnar/test_metadata_projection.py
+
+diff --git a/components/columnar/met_demo.py b/components/columnar/met_demo.py
+index e88ed44..edd6b1e 100644
+--- a/components/columnar/met_demo.py
++++ b/components/columnar/met_demo.py
+@@ -56,8 +56,14 @@ def save(histogram, labels, entries, output):
+                  counts=counts, sumw=sumw, sumw2=sumw2)
+ 
+ 
+-def projected_fields(tree):
+-    additional = [name for name in ADDITIONAL if name in tree]
++def read_branch_names(tree):
++    # The configured names use exact ROOT fNames, including dots. Recursive
++    # unqualified keys reproduce lookup by those names in descendant branches.
++    return set(tree.keys(recursive=True, full_paths=False))
++
++
++def projected_fields(available):
++    additional = [name for name in ADDITIONAL if name in available]
+     sampling = JET + "EnergyPerSampling"
+     if JET + "PSFrac" in additional and sampling in additional:
+         additional.remove(sampling)
+@@ -159,11 +165,12 @@ def main(
+                     raise ValueError("This payload and the event-local link inventory are pinned to the original file")
+                 tree = original["CollectionTree"]
+                 end = tree.num_entries if stop is None else min(stop,tree.num_entries)
+-                fields = projected_fields(tree)
++                available = read_branch_names(tree)
++                fields = projected_fields(available)
+                 link_reader = MemberwiseJets(bridge,tree[ASSOC][ASSOC+"jetLink"])
+                 if runtime_record is not None:
+                     input_layout = {"tree":"CollectionTree","loaded_branches":fields,
+-                                    "supported_but_absent":[f for f in ADDITIONAL if f not in tree],
++                                    "supported_but_absent":[f for f in ADDITIONAL if f not in available],
+                                     "nested_associations":[ASSOC+f for f in ASSOC_FIELDS],
+                                     "memberwise_basket":[ASSOC+"jetLink"],"split_leaves":{}}
+                 for first in range(0,end,chunk_size):
+diff --git a/components/columnar/test_metadata_projection.py b/components/columnar/test_metadata_projection.py
+new file mode 100644
+index 0000000..3914427
+--- /dev/null
++++ b/components/columnar/test_metadata_projection.py
+@@ -0,0 +1,74 @@
++"""Verify exact-name projection on direct, nested and split ROOT metadata."""
++
++import unittest
++
++from atlas_met_columnar import RAW_BRANCHES
++from atlas_met_prepare import ADDITIONAL, JET
++from met_demo import projected_fields, read_branch_names
++
++PS = JET + "PSFrac"
++SAMPLES = JET + "EnergyPerSampling"
++TRUTH_LINK = "AnalysisTauJetsAuxDyn.truthParticleLink"
++ABSENT = "AnalysisTauJetsAuxDyn.TESCompatibility"
++
++
++class BranchMetadata:
++    def __init__(self, paths):
++        self.paths = paths
++        self.key_calls = []
++        self.contains_calls = []
++
++    def keys(self, *, recursive=True, full_paths=True):
++        self.key_calls.append((recursive, full_paths))
++        names = (path for path in self.paths if recursive or len(path) == 1)
++        return ["/".join(path) if full_paths else path[-1] for path in names]
++
++    def __contains__(self, name):
++        self.contains_calls.append(name)
++        return any(path[-1] == name for path in self.paths)
++
++
++class MetadataProjection(unittest.TestCase):
++    def compare_with_direct_lookup(self, paths):
++        metadata = BranchMetadata(paths)
++        previous = projected_fields(metadata)
++        previous_absent = [name for name in ADDITIONAL if name not in metadata]
++        previous_calls = metadata.contains_calls.copy()
++
++        available = read_branch_names(metadata)
++        fields = projected_fields(available)
++        absent = [name for name in ADDITIONAL if name not in available]
++        self.assertEqual(metadata.key_calls, [(True, False)])
++        self.assertEqual(metadata.contains_calls, previous_calls)
++        self.assertEqual(fields, previous)
++        self.assertEqual(absent, previous_absent)
++        self.assertEqual(fields[:len(RAW_BRANCHES)], RAW_BRANCHES)
++        return available, fields, absent
++
++    def test_recursive_exact_dotted_names_and_input_order(self):
++        # Metadata order differs from the projection order. A split parent
++        # must itself be selected, and its children remain distinct names.
++        available, fields, absent = self.compare_with_direct_lookup([
++            (SAMPLES,), ("EventInfoAuxDyn.runNumber",),
++            ("SomeParent.", PS), ("AnotherParent.", PS),
++            (TRUTH_LINK,), (TRUTH_LINK, TRUTH_LINK + ".m_persKey"),
++            (TRUTH_LINK, TRUTH_LINK + ".m_persIndex"),
++            (ABSENT + "_other",), ("MET_TruthAuxDyn.mpx",),
++        ])
++        self.assertIn(PS, fields)
++        self.assertNotIn(SAMPLES, fields)
++        self.assertNotIn(SAMPLES, absent)
++        self.assertIn(TRUTH_LINK, fields)
++        self.assertIn(TRUTH_LINK + ".m_persIndex", available)
++        self.assertNotIn(TRUTH_LINK + ".m_persIndex", fields)
++        self.assertIn(ABSENT, absent)
++        self.assertEqual(fields[len(RAW_BRANCHES):], [
++            "EventInfoAuxDyn.runNumber", "MET_TruthAuxDyn.mpx", PS, TRUTH_LINK,
++        ])
++
++    def test_nested_fallback_retained_when_psfrac_absent(self):
++        _, fields, absent = self.compare_with_direct_lookup([
++            ("SomeParent.", SAMPLES), (PS + "_other",),
++        ])
++        self.assertIn(SAMPLES, fields)
++        self.assertIn(PS, absent)
+
+base-commit: 3e29007210bb79805d5b9a613ec1548d2d21d0f6
+-- 
+2.39.3
+

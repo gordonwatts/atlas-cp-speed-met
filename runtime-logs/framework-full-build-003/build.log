@@ -1,0 +1,35 @@
+[  4%] Building CXX object soft/CMakeFiles/met_soft.dir/soft.cxx.o
+[  8%] Building CXX object soft/CMakeFiles/met_soft.dir/provider.cxx.o
+[ 12%] Linking CXX static library libmet_soft.a
+[ 12%] Built target met_soft
+[ 16%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/resolution.cxx.o
+[ 20%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/payload.cxx.o
+[ 25%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/reduction.cxx.o
+[ 29%] Linking CXX static library libmet_significance_numeric.a
+[ 29%] Built target met_significance_numeric
+[ 33%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_nodes.dir/plugin.cxx.o
+[ 37%] Linking CXX static library libmet_significance_nodes.a
+[ 37%] Built target met_significance_nodes
+[ 41%] Building CXX object maker_adapter/maker/CMakeFiles/atlas_met_maker.dir/src/maker.cpp.o
+[ 45%] Linking CXX static library libatlas_met_maker.a
+[ 45%] Built target atlas_met_maker
+[ 50%] Building CXX object maker_adapter/CMakeFiles/atlas_met_maker_correction.dir/src/maker_correction.cpp.o
+[ 54%] Building CXX object maker_adapter/CMakeFiles/atlas_met_maker_correction.dir/src/significance_correction.cpp.o
+[ 58%] Linking CXX shared library libatlas_met_maker_correction.so
+[ 58%] Built target atlas_met_maker_correction
+[ 62%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/bridge.cpp.o
+[ 66%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/execute_maker.cpp.o
+[ 70%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/maker_xaod.cpp.o
+[ 75%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/maker_trace.cpp.o
+[ 79%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/soft_xaod.cpp.o
+[ 83%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/execute_builder.cpp.o
+[ 87%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/execute_significance.cpp.o
+/home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/execute_significance.cpp: In function 'std::optional<atlas::met_significance::TrackParameters> {anonymous}::track(const xAOD::TrackParticle*)':
+/home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/execute_significance.cpp:46:68: warning: narrowing conversion of 'row->xAOD::TrackParticle_v1::phi()' from 'double' to 'float' [-Wnarrowing]
+   46 |     return s::TrackParameters{row->qOverP(), row->theta(), row->phi()};
+      |                                                            ~~~~~~~~^~
+[ 91%] Linking CXX shared library libAtlasMetFramework.so
+[ 91%] Built target AtlasMetFramework
+[ 95%] Building CXX object maker_adapter/CMakeFiles/atlas_met_maker_provider.dir/src/module.cpp.o
+[100%] Linking CXX shared module libatlas_met_maker_provider.so
+[100%] Built target atlas_met_maker_provider

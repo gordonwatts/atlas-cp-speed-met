@@ -1,0 +1,52 @@
+[  4%] Building CXX object soft/CMakeFiles/met_soft.dir/soft.cxx.o
+[  8%] Building CXX object soft/CMakeFiles/met_soft.dir/provider.cxx.o
+[ 12%] Linking CXX static library libmet_soft.a
+[ 12%] Built target met_soft
+[ 16%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/resolution.cxx.o
+[ 20%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/payload.cxx.o
+[ 25%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_numeric.dir/reduction.cxx.o
+[ 29%] Linking CXX static library libmet_significance_numeric.a
+[ 29%] Built target met_significance_numeric
+[ 33%] Building CXX object maker_adapter/significance/CMakeFiles/met_significance_nodes.dir/plugin.cxx.o
+[ 37%] Linking CXX static library libmet_significance_nodes.a
+[ 37%] Built target met_significance_nodes
+[ 41%] Building CXX object maker_adapter/maker/CMakeFiles/atlas_met_maker.dir/src/maker.cpp.o
+[ 45%] Linking CXX static library libatlas_met_maker.a
+[ 45%] Built target atlas_met_maker
+[ 50%] Building CXX object maker_adapter/CMakeFiles/atlas_met_maker_correction.dir/src/maker_correction.cpp.o
+[ 54%] Building CXX object maker_adapter/CMakeFiles/atlas_met_maker_correction.dir/src/significance_correction.cpp.o
+[ 58%] Linking CXX shared library libatlas_met_maker_correction.so
+[ 58%] Built target atlas_met_maker_correction
+[ 62%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/bridge.cpp.o
+[ 66%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/execute_maker.cpp.o
+[ 70%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/maker_xaod.cpp.o
+[ 75%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/maker_trace.cpp.o
+[ 79%] Building CXX object CMakeFiles/AtlasMetFramework.dir/src/soft_xaod.cpp.o
+/home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/soft_xaod.cpp: In function 'StatusCode atlas::met::framework::build_final(xAOD::MissingETContainer&)':
+/home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/soft_xaod.cpp:81:29: error: unable to deduce 'const auto*' from '((boost::iterators::detail::iterator_facade_base<DataModel_detail::iterator<DataVector<xAOD::MissingET_v1> >, xAOD::MissingET_v1*, std::random_access_iterator_tag, DataModel_detail::ElementProxy<DataVector<xAOD::MissingET_v1> >, long int, false, false>*)(& __for_begin ))->boost::iterators::detail::iterator_facade_base<DataModel_detail::iterator<DataVector<xAOD::MissingET_v1> >, xAOD::MissingET_v1*, std::random_access_iterator_tag, DataModel_detail::ElementProxy<DataVector<xAOD::MissingET_v1> >, long int, false, false>::operator*()'
+   81 |     for (const auto* term : met) {
+      |                             ^~~
+/home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/soft_xaod.cpp:81:29: note:   mismatched types 'const auto*' and 'DataModel_detail::ElementProxy<DataVector<xAOD::MissingET_v1> >'
+In file included from /cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include/c++/15.2.0/memory:80,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Control/CxxUtils/CxxUtils/ConcurrentBitset.h:28,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Control/AthContainersInterfaces/AthContainersInterfaces/AuxTypes.h:20,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Control/AthContainersInterfaces/AthContainersInterfaces/IConstAuxStore.h:17,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Control/AthContainers/AthContainers/AuxElement.h:18,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Event/xAOD/xAODMissingET/xAODMissingET/versions/MissingET_v1.h:10,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Event/xAOD/xAODMissingET/xAODMissingET/MissingET.h:10,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Event/xAOD/xAODMissingET/xAODMissingET/MissingETContainer.h:10,
+                 from /home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/soft_xaod.hpp:5,
+                 from /home/gwatts/atlas-cp-speed/met-20261119/components/framework/src/soft_xaod.cpp:3:
+/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include/c++/15.2.0/bits/unique_ptr.h: In instantiation of 'constexpr void std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = SG::VarHandleKey]':
+/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include/c++/15.2.0/bits/unique_ptr.h:399:17:   required from 'constexpr std::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = SG::VarHandleKey; _Dp = std::default_delete<SG::VarHandleKey>]'
+  399 |           get_deleter()(std::move(__ptr));
+      |           ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/src/Control/AthToolSupport/AsgDataHandles/AsgDataHandles/VarHandleBase.h:42:9:   required from here
+   42 |   class VarHandleBase
+      |         ^~~~~~~~~~~~~
+/cvmfs/sft.cern.ch/lcg/releases/gcc/15.2.0-35657/x86_64-el9/include/c++/15.2.0/bits/unique_ptr.h:91:23: error: invalid application of 'sizeof' to incomplete type 'SG::VarHandleKey'
+   91 |         static_assert(sizeof(_Tp)>0,
+      |                       ^~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/AtlasMetFramework.dir/build.make:135: CMakeFiles/AtlasMetFramework.dir/src/soft_xaod.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:190: CMakeFiles/AtlasMetFramework.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

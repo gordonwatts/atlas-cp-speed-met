@@ -1,0 +1,429 @@
+{
+  "release": "25.2.117",
+  "root": "6.40.02",
+  "athena": "6ce3f7ae7c41dd9eaec170c3c349df15faef7e5c",
+  "correctionlib": "3dcfa20ec01fb40c4d5fec58383785519dec1c00",
+  "plugin_api": 4,
+  "config": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-observer-full-001/full_config.json",
+  "config_sha256": "15b579204d8c4e5da00cccb48f0f29145b05c3bacf9e6897fbe7b991749e4231",
+  "algorithm": "seq1_MetSignificanceAlg_AnaMET",
+  "calibrations": {
+    "JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config",
+      "sha256": "ced43bb45dfb137f6bb2f4f86923137268b900e96cb1e2e5e34fd03adea45a20",
+      "size": 3080,
+      "objects": {},
+      "settings": {
+        "SmearType": "FourVec",
+        "SmearingCorrectionHistType": "PtAbsEta",
+        "SmearingCorrectionInterpType": "OnlyX",
+        "SmearingCorrectionFile": "JetCalibTools/CalibrationFactors/JER_Nominal_Aug2018.root",
+        "SmearingHistNameResolutionData": "JER_Nominal_data_AntiKt4EMPFlow",
+        "SmearingHistNameResolutionMC": "JER_Nominal_MC_AntiKt4EMPFlow"
+      }
+    },
+    "JetCalibTools/CalibArea-00-04-81/CalibrationFactors/JER_Nominal_Aug2018.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-81/CalibrationFactors/JER_Nominal_Aug2018.root",
+      "sha256": "7214de0ac36a7c994b7987c8eddb7d0c4aa0c9bb1271a2b54817df80206c324a",
+      "size": 60197,
+      "objects": {
+        "JER_Nominal_data_AntiKt4EMPFlow": {
+          "class": "TH2D",
+          "dimension": 2,
+          "x_axis_range": [
+            1,
+            200,
+            false
+          ],
+          "projection_y_bins": 9
+        },
+        "JER_Nominal_MC_AntiKt4EMPFlow": {
+          "class": "TH2D",
+          "dimension": 2,
+          "x_axis_range": [
+            1,
+            200,
+            false
+          ],
+          "projection_y_bins": 9
+        }
+      }
+    },
+    "ElectronPhotonFourMomentumCorrection/v20/resolutionFit_electron_run2_release21_es2017_R21_v1.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v20/resolutionFit_electron_run2_release21_es2017_R21_v1.root",
+      "sha256": "99d8a2e506869f88fbcfd04662dd4dca718ee0089d129f4ef375a5a0887ed222",
+      "size": 12686,
+      "objects": {
+        "hsamplingG": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hsampling90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hnoise90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hconst90": {
+          "class": "TH1F",
+          "dimension": 1
+        }
+      }
+    },
+    "ElectronPhotonFourMomentumCorrection/v20/resolutionFit_recoUnconv_run2_release21_es2017_R21_v1.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v20/resolutionFit_recoUnconv_run2_release21_es2017_R21_v1.root",
+      "sha256": "b714378f78e4db750babeebad7efebc5466b1bcd6b5b9bb157bf4eae4d65c9a8",
+      "size": 12711,
+      "objects": {
+        "hsampling90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hnoise90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hconst90": {
+          "class": "TH1F",
+          "dimension": 1
+        }
+      }
+    },
+    "ElectronPhotonFourMomentumCorrection/v20/resolutionFit_recoConv_run2_release21_es2017_R21_v1.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v20/resolutionFit_recoConv_run2_release21_es2017_R21_v1.root",
+      "sha256": "51acee2161db77ad3f3c9948a7e73ccee5e7cbd94c7144a04197983f4c35adc7",
+      "size": 12695,
+      "objects": {
+        "hsampling90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hnoise90": {
+          "class": "TH1F",
+          "dimension": 1
+        },
+        "hconst90": {
+          "class": "TH1F",
+          "dimension": 1
+        }
+      }
+    },
+    "ElectronPhotonFourMomentumCorrection/v38/egammaEnergyCorrectionData.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/egammaEnergyCorrectionData.root",
+      "sha256": "2214bd94e7270266ce0e2f79b8bb0d0d77f3f8777df7c5d0289b766342d043df",
+      "size": 807164,
+      "objects": {
+        "Resolution/es2024_Run3_v0/ctZee_errStat": {
+          "class": "TH1D",
+          "dimension": 1
+        }
+      }
+    },
+    "MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/MC_values_muons.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/MC_values_muons.root",
+      "sha256": "f4404132865cf7ac5c68739cc04775ea54c5110488c607605583e1cbacd0ebb4",
+      "size": 8944,
+      "objects": {
+        "r1_ID_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r2_ID_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r2_ID_TAN2_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r0_MS_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r1_MS_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r2_MS_MC": {
+          "class": "TH2D",
+          "dimension": 2
+        }
+      }
+    },
+    "MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/ID.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/ID.root",
+      "sha256": "d01ec1dce1413e40df00c4b994592a863e4ac4210d5a300abfc111ada8d5b55c",
+      "size": 14425,
+      "objects": {
+        "r1_nom": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r2_nom": {
+          "class": "TH2D",
+          "dimension": 2
+        }
+      }
+    },
+    "MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/ME.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonMomentumCorrections/Recs2025_12_11_Run2Run3/ScaleAndSmear/Data22/ME.root",
+      "sha256": "70b0f8f02ca67622ff64d3be2b00e6a31f41ff82df9463396626ef6a4ce43b65",
+      "size": 17598,
+      "objects": {
+        "r0_nom": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r1_nom": {
+          "class": "TH2D",
+          "dimension": 2
+        },
+        "r2_nom": {
+          "class": "TH2D",
+          "dimension": 2
+        }
+      }
+    },
+    "tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root",
+      "sha256": "3f8fd7aaa0aadc9c508663b4b16adfd04a3678a930a9e9e774fc45f833a0ff8f",
+      "size": 112068,
+      "objects": {
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p0n_0": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p0n_0": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p0n_1": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p0n_1": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p0n_2": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p0n_2": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p0n_3": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p0n_3": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p0n_4": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p0n_4": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p1n_0": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p1n_0": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p1n_1": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p1n_1": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p1n_2": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p1n_2": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p1n_3": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p1n_3": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1p1n_4": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1p1n_4": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1pXn_0": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1pXn_0": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1pXn_1": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1pXn_1": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1pXn_2": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1pXn_2": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1pXn_3": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1pXn_3": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_1pXn_4": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_1pXn_4": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3p0n_0": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3p0n_0": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3p0n_1": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3p0n_1": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3p0n_2": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3p0n_2": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3p0n_3": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3p0n_3": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3p0n_4": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3p0n_4": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3pXn_0": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3pXn_0": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3pXn_1": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3pXn_1": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3pXn_2": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3pXn_2": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3pXn_3": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3pXn_3": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        },
+        "tauRec/Graph_from_ResolutionEt_tauRec_3pXn_4": {
+          "class": "TGraph"
+        },
+        "FinalCalib/Graph_from_ResolutionEt_FinalCalib_3pXn_4": {
+          "class": "TGraph",
+          "sorted_x_flag": false,
+          "points": 8,
+          "max_pt_mev": 475000.0
+        }
+      }
+    }
+  },
+  "outputs_sha256": {
+    "jet.table": "9dac69ca6a418a064c6f06a9e92ee5483985284eb2510ac36e208d088e0b9236",
+    "egamma.table": "4046ff31eb3e3f3747b4b86ce234f4108b02f98a79a358b575cf6553085a56b3",
+    "muon.table": "68760287b5ac2682270aa2c33eda3480519c8f9aaf786e81edf5dc193b468f22",
+    "tau.table": "3b81650932671a24ee63654b58c695cec5390ae64e19cab7ad8667d5726b93e7",
+    "corrections.json": "f5e2baecfaf4b794eb41dbbc1c7c9ef850530e4a75d52fbe19cef54714d14ae9"
+  }
+}

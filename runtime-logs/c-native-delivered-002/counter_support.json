@@ -1,0 +1,47 @@
+{
+  "software": {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/usr/bin/perf",
+      "stat",
+      "-x",
+      ";",
+      "--no-big-num",
+      "-o",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/c-native-delivered-002/software.stat",
+      "-e",
+      "cpu-clock:u",
+      "--",
+      "/bin/true"
+    ],
+    "exit": 0,
+    "numeric_returned_counters": {
+      "cpu-clock:u": 0.53
+    }
+  },
+  "hardware": {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/usr/bin/perf",
+      "stat",
+      "-x",
+      ";",
+      "--no-big-num",
+      "-o",
+      "/home/gwatts/atlas-cp-speed/met-20261119/results/c-native-delivered-002/hardware.stat",
+      "-e",
+      "cycles:u,instructions:u",
+      "--",
+      "/bin/true"
+    ],
+    "exit": 0,
+    "numeric_returned_counters": {
+      "cycles:u": null,
+      "instructions:u": null
+    }
+  }
+}

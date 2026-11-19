@@ -1,0 +1,376 @@
+From 75bf30deab804e4be2b1cae7198db2dc2b4793d3 Mon Sep 17 00:00:00 2001
+From: Gordon Watts <gwatts@uw.edu>
+Date: Thu, 19 Nov 2026 04:51:18 -0800
+Subject: [PATCH] Trial one registered METMaker call per columnar event
+
+---
+ components/columnar/README.md                |  87 ++++++++++++++++
+ components/columnar/benchmark_maker_reuse.py | 101 +++++++++++++++++++
+ components/columnar/compare.py               |  34 ++++++-
+ components/columnar/transport.cpp            |  48 +++++----
+ 4 files changed, 250 insertions(+), 20 deletions(-)
+ create mode 100644 components/columnar/benchmark_maker_reuse.py
+
+diff --git a/components/columnar/README.md b/components/columnar/README.md
+index 001f6e0..659866e 100644
+--- a/components/columnar/README.md
++++ b/components/columnar/README.md
+@@ -104,3 +104,90 @@ hist="$PWD/results/reference-histogram-transport-001/histogram.npz"
+ The comparator records first failures and counts for original entry/run/event/DSID, term ordering, numerical tolerances and nonfinite classes, nominal p4 and exact gate bits per original object, ordered constituent links/weights, exact association writes and JVT decisions, tool success, soft seed and first Gaussian, per-event bin assignments, and saved histogram arrays. Stock shallow owner keys and C current keys are recorded together with their original owner. Retain both trace files independently. When supplied, the stock `IParticle` getter trace checks the real double `pt`, `eta`, `phi`, mass and energy, including bit patterns and selected rows. These checks use separate release getter values from the stored auxiliary p4 and selection gate readback. A signed seed plus Linux unsigned setter and uint32 effective seed witness the wrapping and zero fallback. Corr uses the independently collected two-state stock observer and its two-state status file. An optional runtime record lists actual original leaves loaded and missing, payload hashes, dependency versions and live mapped shared objects. The bundle manifest records both the patched parser file and patch hashes alongside the upstream pin and binary hashes.
+ 
+ Remove diagnostics from timed commands. For the nominal-only path use the independent stock nominal observer/histogram. The prepared p4 and selection gates are state-independent in this frozen recipe. The v2 prepared momentum node takes the native particle kind. Re-export `preparation.json` with `combine_preparation.py` when adopting it. `check_prepared_getter.py <runtime-directory>` exercises the shared registered node for massless photons, signed negative mass, the zero-pt eta encoding and exact fixed muon mass. The paired stock getter receipt also checks the actual energy passed to significance for every ordered egamma constituent.
++
++
++### M02 maker-reuse trial
++
++M02 has the same standalone command and payloads as the faithful checkpoint
++`6b19c477e8d5578bb2c8c3a5e0eccc11e3437759`. Archive the trial commit into
++a fresh source/build/runtime directory with `scripts/build_columnar_full.sh`.
++Keep `results/columnar-portable-002` and the faithful numerical and timing receipts.
++The trial evaluates the registered maker once per event and starts each soft
++correction and Final build from a fresh mutable copy of the maker terms.
++Significance runs in the original event/state order. The result and traces stay
++local to the event. The first state reports a maker failure before any result
++can be reused.
++
++In the candidate TSV, `makerInvocation` records an actual native call.
++Ordered association writes, JVT and rebuild rows appear only with this call.
++`makerReuse` gives the original ordinal and success for each later state.
++Contributor rows and downstream work are observed directly for every state.
++`compare.py --maker-reuse` validates invocation and reuse coverage, checks the
++nominal producer records, and compares their logical use to independent stock
++rows in every state. The report separates actual writes from logical reuses.
++Expect 20,000 actual invocations and 80,000 reused results with five states.
++The two-state diagnostic expects 20,000 actual invocations and 20,000 reuses.
++
++In the campaign WSL checkout, set `pin` to the trial commit. Use the same
++`python314` and `uv` executables as the faithful receipts.
++
++```bash
++repo=$PWD
++snapshot="$repo/results/columnar-m02-build-001"
++evidence="$repo/results/columnar-m02-acceptance-001"
++trial_portable="$repo/results/columnar-m02-portable-001"
++faithful_portable="$repo/results/columnar-portable-002"
++bash scripts/build_columnar_full.sh "$snapshot" "$pin"
++source="$snapshot/source/components/columnar"
++runtime="$snapshot/runtime"
++input=$(cat config/input.txt)
++clean=(env -i "HOME=$HOME" PATH=/usr/bin:/bin LANG=C.UTF-8 "LD_LIBRARY_PATH=$runtime/native"
++       OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
++       VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 RAYON_NUM_THREADS=1)
++mkdir "$evidence" "$evidence/smoke"
++audit() {
++    local dest=$1 stock=$2 histogram=$3 status=$4 entries=$5
++    shift 5
++    "${clean[@]}" taskset -c 0 "$python314" "$source/met_demo.py" "$input" "$dest/c.npz" \
++        --runtime "$runtime" --stop "$entries" --observables "$dest/c-observables.npz" \
++        --trace "$dest/c-status.tsv" --runtime-record "$dest/c-runtime.json" "$@"
++    "${clean[@]}" "PYTHONPATH=$repo/scripts" taskset -c 0 "$python314" "$source/compare.py" \
++        "$stock" "$histogram" "$dest/c-observables.npz" "$dest/c.npz" "$dest/compare.json" \
++        --stock-trace "$status" --candidate-trace "$dest/c-status.tsv" \
++        --stock-getters "$repo/results/reference-prepared-full-001/prepared-p4.tsv" \
++        --expected-events "$entries" --maker-reuse
++    cmp "$dest/c.npz" "$histogram"
++}
++stock_full="$repo/results/reference-observer-full-001"
++hist_full="$repo/results/reference-production-full-002/histogram.npz"
++hist_nominal="$repo/results/reference-production-nominal-002/histogram.npz"
++status_full="$repo/results/reference-status-full-001/status.tsv"
++audit "$evidence/smoke" "$stock_full" "$repo/results/columnar-full-ledger-smoke-001/stock.npz" \
++    "$status_full" 16 --chunk-size 7
++mkdir "$evidence/full" "$evidence/nominal" "$evidence/corr"
++audit "$evidence/full" "$stock_full" "$hist_full" "$status_full" 20000
++audit "$evidence/corr" "$repo/results/reference-observer-corr-001" \
++    "$repo/results/columnar-full-ledger-acceptance-002/corr/stock.npz" \
++    "$repo/results/reference-status-corr-001/status.tsv" 20000 --correlated-diagnostic
++"${clean[@]}" taskset -c 0 "$python314" "$source/met_demo.py" "$input" "$evidence/nominal/c.npz" \
++    --runtime "$runtime" --stop 20000 --nominal-only --observables "$evidence/nominal/c-observables.npz"
++"${clean[@]}" "PYTHONPATH=$repo/scripts" taskset -c 0 "$python314" "$source/compare.py" \
++    "$repo/results/reference-observer-nominal-001" "$hist_nominal" "$evidence/nominal/c-observables.npz" \
++    "$evidence/nominal/c.npz" "$evidence/nominal/compare.json" --expected-events 20000
++for scope in full nominal corr; do
++    cmp "$evidence/$scope/c-observables.npz" \
++        "$repo/results/columnar-full-ledger-acceptance-002/$scope/c-observables.npz"
++done
++bash scripts/run_columnar_portability.sh "$trial_portable" "$snapshot" "$python314" "$uv"
++PYTHONPATH="$repo/scripts" "$python314" "$source/benchmark_maker_reuse.py" \
++    "$input" "$faithful_portable" "$trial_portable" "$hist_full" "$hist_nominal" \
++    "$repo/results/columnar-m02-timing-001"
++```
++
++Run timing in an exclusive bracket. The harness uses the faithful worker
++controls, native identity and histogram checks. It alternates order within the
++pairs and discards the first round. Each variant has its own wheel, dependency
++cache, environment and runtime receipts. The summary gives all retained times,
++mean, spread, qualification and paired elapsed differences for both workloads.
++The faithful package remains the fallback if an acceptance check fails or
++the measured change is inconclusive.
+diff --git a/components/columnar/benchmark_maker_reuse.py b/components/columnar/benchmark_maker_reuse.py
+new file mode 100644
+index 0000000..c9d3854
+--- /dev/null
++++ b/components/columnar/benchmark_maker_reuse.py
+@@ -0,0 +1,101 @@
++#!/usr/bin/env python3
++"""Measure the isolated faithful and M02 C endpoints in matched serial pairs."""
++from datetime import datetime, timezone
++import json
++import os
++from pathlib import Path
++import statistics
++
++import typer
++
++# Run with the campaign scripts/ on PYTHONPATH. Share the faithful process and
++# qualification rules instead of introducing a second timing instrument.
++from benchmark_matched import NATIVE_C, PROBES, THREADS, quality, receipt
++from benchmark_reference import run
++
++SCOPES = ("full", "nominal")
++
++
++def observe_variant(portable):
++    bundle = portable/"bundle"
++    wheels = list((bundle/"wheels").glob("*.whl"))
++    if len(wheels)!=1:
++        raise ValueError(f"Expected one wheel in {bundle}")
++    python = portable/"pip-env"/"bin"/"python"
++    demo = bundle/"met_demo.py"
++    native = portable/"pip-env"/"lib"/"python3.14"/"site-packages"/"atlas_met_portable"/"native"
++    identity = {str(path):receipt(path) for path in (
++        python,demo,wheels[0],bundle/"bundle.json",portable/"installed-identities.json",
++        portable/"pip-freeze.txt",*(native/name for name in NATIVE_C)
++    )}
++    expected = {str((native/name).resolve(strict=True)) for name in NATIVE_C}
++    return python,demo,identity,expected
++
++
++def main(input_file: Path, baseline: Path, trial: Path, stock_full: Path, stock_nominal: Path,
++         output: Path):
++    original = input_file.absolute()
++    if not original.is_file():
++        raise FileNotFoundError(original)
++    variants = {name:observe_variant(path.resolve(strict=True))
++                for name,path in (("faithful",baseline),("m02",trial))}
++    if variants["faithful"][1]==variants["m02"][1]:
++        raise ValueError("Use distinct immutable portable bundles and environments")
++    expected_hist = {scope:receipt(path) for scope,path in zip(SCOPES,(stock_full,stock_nominal),strict=True)}
++    standalone = {k:os.environ[k] for k in ("HOME","LANG","LC_ALL","TMPDIR") if k in os.environ}
++    standalone.update(PATH="/usr/bin:/bin", **dict.fromkeys(THREADS,"1"))
++    output = output.resolve()
++    output.mkdir()
++    proceedings = {}
++    started = datetime.now(timezone.utc).isoformat()
++    for round_index in range(4):
++        scopes = SCOPES if round_index%2==0 else SCOPES[::-1]
++        for scope in scopes:
++            roles = tuple(variants) if round_index%2==0 else tuple(reversed(variants))
++            for role in roles:
++                dest = output/f"round-{round_index:02d}-{scope}-{role}"
++                dest.mkdir()
++                python,demo,_,expected = variants[role]
++                histogram = dest/"histogram.npz"
++                args = [str(python),str(demo),str(original),str(histogram),"--stop","20000"]
++                if scope=="nominal":
++                    args.append("--nominal-only")
++                observed = run(args,standalone,dest,dest/"direct.log",PROBES)
++                success = observed["exit_code"]==0 and histogram.exists()
++                observed["native_identity_verified"] = set(observed["mapped_named_libraries"])==expected
++                observed["histogram_verified"] = success and (
++                    receipt(histogram)["sha256"]==expected_hist[scope]["sha256"])
++                with (dest/"runtime.json").open("x") as handle:
++                    json.dump(observed,handle,indent=2)
++                    handle.write("\n")
++                proceedings[scope,role,round_index] = observed
++
++    summary = {}
++    for scope in SCOPES:
++        cohort = {}
++        for role in variants:
++            rows = [proceedings[scope,role,i] for i in range(4)]
++            valid = all(row["valid"] and row["native_identity_verified"] and row["histogram_verified"]
++                        for row in rows)
++            cohort[role] = quality([row["wall_seconds"] for row in rows[1:]],valid)
++        paired = [a-b for a,b in zip(cohort["faithful"]["retained_seconds"],
++                                     cohort["m02"]["retained_seconds"],strict=True)]
++        if all(row["qualified"] for row in cohort.values()):
++            difference, spread = statistics.mean(paired), statistics.stdev(paired)
++            cohort["paired_faithful_minus_m02_seconds"] = {
++                "values":paired,"mean":difference,"sample_sd":spread}
++            cohort["mean_fractional_savings"] = difference/cohort["faithful"]["mean"]
++        summary[scope] = cohort
++    with (output/"summary.json").open("x") as handle:
++        json.dump({"events":20000,"workload":"one direct-original histogram pass",
++                   "reader_cpu":0,"excluded_round":0,"start_utc":started,
++                   "end_utc":datetime.now(timezone.utc).isoformat(),
++                   "identities":{role:variant[2] for role,variant in variants.items()},
++                   "stock_histogram":expected_hist,"results":summary},handle,indent=2)
++        handle.write("\n")
++    if not all(summary[scope][role]["qualified"] for scope in SCOPES for role in variants):
++        raise typer.Exit(1)
++
++
++if __name__ == "__main__":
++    typer.run(main)
+diff --git a/components/columnar/compare.py b/components/columnar/compare.py
+index 64a2854..0334f7d 100644
+--- a/components/columnar/compare.py
++++ b/components/columnar/compare.py
+@@ -22,6 +22,7 @@ ROLES = dict(zip(COLLECTIONS, ("jet", "electron", "photon", "muon", "tau"), stri
+ EXACT = {"associationFlag", "jetJvt", "rebuildMET", "rebuildJetMET", "makerAlg",
+          "builderAlg", "significanceAlg", "setRandomSeed", "applySystematicVariation"}
+ NORMALIZED = EXACT | {"gaussian", "applyCorrection", "varianceMET"}
++MAKER_ACTIONS = {"associationFlag", "jetJvt", "rebuildMET", "rebuildJetMET"}
+ 
+ 
+ def summarize(test):
+@@ -83,7 +84,7 @@ def getter_rows(path, entries):
+             yield entry, [[reverse_roles[role],*fields] for _,role,*fields in group]
+ 
+ 
+-def trace_match(stock, config, entries, states, stock_file, given_file, stock_getters):
++def trace_match(stock, config, entries, states, stock_file, given_file, stock_getters, maker_reuse):
+     prepared, raw_key = prepared_fields(stock,config,entries)
+     # Stock's key is its shallow-container hash. C's current object key is the
+     # original owner with bit 31 set. The event-local index and original owner
+@@ -100,6 +101,9 @@ def trace_match(stock, config, entries, states, stock_file, given_file, stock_ge
+     examples = {}
+     worst_p4_delta = {}
+     accessor_mass = {"electron":0.510998910,"muon":105.658367}
++    maker_dispatch = Counter()
++    actual_maker_rows = Counter()
++    reused_maker_rows = Counter()
+     getter_stream = getter_rows(stock_getters,entries) if stock_getters is not None else None
+ 
+     def check(kind, entry, equal, reference=None, actual=None):
+@@ -120,6 +124,27 @@ def trace_match(stock, config, entries, states, stock_file, given_file, stock_ge
+             if reference is None or observed is None or reference[0] != entry or observed[0] != entry:
+                 raise ValueError(f"Missing or reordered trace event {entry}")
+             a, b = (normalize(row[1]) for row in (reference,observed))
++            if maker_reuse:
++                calls = [(state,values) for state,action,values in observed[1] if action=="makerInvocation"]
++                reuses = [(state,values) for state,action,values in observed[1] if action=="makerReuse"]
++                expected_calls = [(0,["1"])]
++                expected_reuses = [(state,["0","1"]) for state in range(1,len(states))]
++                maker_dispatch["actual_invocations"] += len(calls)
++                maker_dispatch["reused_state_results"] += len(reuses)
++                check("makerInvocation",entry,calls == expected_calls,expected_calls,calls)
++                check("makerReuse",entry,reuses == expected_reuses,expected_reuses,reuses)
++                actor_states = [state for state,action,_ in observed[1] if action=="associationActor"]
++                check("makerActorWriteOrigin",entry,all(state==0 for state in actor_states),0,actor_states)
++                for action in MAKER_ACTIONS:
++                    actual = b.get(action,[])
++                    nominal = [values for state,values in actual if state==0]
++                    check(action+"_producer_only",entry,len(nominal)==len(actual),len(nominal),len(actual))
++                    actual_maker_rows[action] += len(actual)
++                    # Replay is only used for the comparison, with recorded source-state provenance.
++                    logical = [(state,values) for state,binding in reuses
++                               if binding==["0","1"] for values in nominal]
++                    reused_maker_rows[action] += len(logical)
++                    b[action] = actual + logical
+             for action in EXACT:
+                 lhs, rhs = (rows.get(action,[]) for rows in (a,b))
+                 check(action+"_length",entry,len(lhs) == len(rhs),len(lhs),len(rhs))
+@@ -251,6 +276,8 @@ def trace_match(stock, config, entries, states, stock_file, given_file, stock_ge
+                             exact = struct.pack("=d",float.fromhex(want_value)) == struct.pack("=d",float.fromhex(got_value))
+                             check(f"significance_egamma_production_{name}",entry,exact,want_value,got_value)
+     return {"compared":compared,"failures":failures,"first_failures":examples,
++            "maker_dispatch":dict(maker_dispatch),"actual_maker_rows":dict(actual_maker_rows),
++            "logical_reused_maker_rows":dict(reused_maker_rows),
+             "stock_getters":str(stock_getters) if stock_getters is not None else None,
+             "worst_p4_delta":worst_p4_delta,
+             "owner_map":{role: {"original":key,"stock_shallow":stock_key.get(role),"columnar_current":key | 2**31}
+@@ -260,6 +287,7 @@ def trace_match(stock, config, entries, states, stock_file, given_file, stock_ge
+ def main(stock_dir: Path, stock_histogram: Path, candidate_observables: Path, candidate_histogram: Path,
+          output: Path, stock_trace: Path | None = None, candidate_trace: Path | None = None,
+          stock_getters: Path | None = None,
++         maker_reuse: bool = False,
+          expected_events: int | None = typer.Option(None,min=1)):
+     with root_file(stock_dir/"hist-reference.root") as file:
+         states = file["systematicsList"].axis().labels()
+@@ -299,9 +327,11 @@ def main(stock_dir: Path, stock_histogram: Path, candidate_observables: Path, ca
+             raise ValueError("Unexpected histogram fields")
+         if bool(stock_trace) != bool(candidate_trace) or (stock_getters is not None and stock_trace is None):
+             raise ValueError("Provide independent stock and candidate status traces, optionally with the stock getter trace")
++        if maker_reuse and stock_trace is None:
++            raise ValueError("Maker reuse verification requires both stock and candidate traces")
+         if stock_trace is not None:
+             config = json.loads((stock_dir/"full_config.json").read_text())
+-            report["trace"] = trace_match(stock,config,entries,states,stock_trace,candidate_trace,stock_getters)
++            report["trace"] = trace_match(stock,config,entries,states,stock_trace,candidate_trace,stock_getters,maker_reuse)
+     report["passed"] = (not any(row["total_failures"] for row in report["numerical"].values())
+                         and not any(row["count"] for row in (*report["exact"].values(),*report["event_bins"].values()))
+                         and all(report["histogram"].values())
+diff --git a/components/columnar/transport.cpp b/components/columnar/transport.cpp
+index 82fece9..3c293bc 100644
+--- a/components/columnar/transport.cpp
++++ b/components/columnar/transport.cpp
+@@ -679,20 +679,25 @@ void trace_maker_rows(std::ostream& output,std::uint64_t entry,std::size_t state
+     const auto prefix=[&](std::string_view action) -> std::ostream& {
+         return output << entry << '\t' << state << '\t' << action << '\t';
+     };
+-    for (const auto& flag:result.flag_writes) {
+-        prefix("associationFlag") << flag.association << '\t' << flag.slot << '\t' << flag.selected << '\n';
+-        prefix("associationActor") << flag.association << '\t' << flag.slot << '\t'
+-            << static_cast<int>(flag.term) << '\t' << flag.original.owner.value << '\t'
+-            << flag.original.index << '\n';
+-    }
+-    for (const auto& row:result.jet_decisions) {
+-        if (row.jvt_pass) prefix("jetJvt") << row.current.index << '\t' << *row.jvt_pass << '\n';
++    if (state==0) {
++        for (const auto& flag:result.flag_writes) {
++            prefix("associationFlag") << flag.association << '\t' << flag.slot << '\t' << flag.selected << '\n';
++            prefix("associationActor") << flag.association << '\t' << flag.slot << '\t'
++                << static_cast<int>(flag.term) << '\t' << flag.original.owner.value << '\t'
++                << flag.original.index << '\n';
++        }
++        for (const auto& row:result.jet_decisions) {
++            if (row.jvt_pass) prefix("jetJvt") << row.current.index << '\t' << *row.jvt_pass << '\n';
++        }
++        prefix("rebuildMET") << "RefEle\t" << input.electrons.selected.size() << "\t1\n";
++        prefix("rebuildMET") << "RefGamma\t" << input.photons.selected.size() << "\t1\n";
++        prefix("rebuildMET") << "RefTau\t" << input.taus.selected.size() << "\t1\n";
++        prefix("rebuildMET") << "Muons\t" << input.muons.selected.size() << "\t1\n";
++        prefix("rebuildJetMET") << "RefJet\tPVSoftTrk\t" << input.jets.size() << "\t1\t1\n";
++    } else {
++        // Only provenance is written. No flag setters or JVT decisions ran in this state.
++        prefix("makerReuse") << "0\t1\n";
+     }
+-    prefix("rebuildMET") << "RefEle\t" << input.electrons.selected.size() << "\t1\n";
+-    prefix("rebuildMET") << "RefGamma\t" << input.photons.selected.size() << "\t1\n";
+-    prefix("rebuildMET") << "RefTau\t" << input.taus.selected.size() << "\t1\n";
+-    prefix("rebuildMET") << "Muons\t" << input.muons.selected.size() << "\t1\n";
+-    prefix("rebuildJetMET") << "RefJet\tPVSoftTrk\t" << input.jets.size() << "\t1\t1\n";
+     for (const auto& term:result.terms) {
+         for (const auto& c:term.contributors) {
+             prefix("contributor") << term.name << '\t' << c.current.owner.value << '\t'
+@@ -802,13 +807,20 @@ extern "C" int met_columnar_full(MetColumnar* bundle, std::size_t events, std::u
+             input.vertex_types=jet_input.vertex_events.row(jet_input.vertex_types,event);
+             input.capture_flag_writes=trace_path!=nullptr;
+ 
++            // The bound maker has no systematic argument. These raw spans and selected
++            // current objects stay fixed while each state's downstream operations run.
++            const auto maker=a::invoke_maker(*bundle->rebuild,input);
++            const bool maker_ok=maker.status==m::Status::success && maker.terms.size()==7;
++            if (trace_path) {
++                trace << first_entry+event << "\t0\tmakerInvocation\t" << maker_ok << '\n';
++            }
++            if (!maker_ok) {
++                const auto issue=maker.diagnostics.empty() ? -1:static_cast<int>(maker.diagnostics.back().issue);
++                throw std::runtime_error("C maker issue "+std::to_string(issue)+" entry "+
++                                         std::to_string(first_entry+event)+" state "+states[0]);
++            }
+             for (std::size_t state=0; state<state_count; ++state) {
+                 const std::string stamp="entry "+std::to_string(first_entry+event)+" state "+states[state];
+-                const auto maker=a::invoke_maker(*bundle->rebuild,input);
+-                if (maker.status!=m::Status::success || maker.terms.size()!=7) {
+-                    const auto issue=maker.diagnostics.empty() ? -1:static_cast<int>(maker.diagnostics.back().issue);
+-                    throw std::runtime_error("C maker issue "+std::to_string(issue)+" "+stamp);
+-                }
+                 if (trace_path) trace_maker_rows(trace,first_entry+event,state,input,maker);
+                 auto rebuilt=soft_terms(maker.terms);
+                 if (!maker.constituent_links_available) {
+-- 
+2.39.3
+

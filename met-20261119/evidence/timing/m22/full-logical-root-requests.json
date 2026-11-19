@@ -1,0 +1,4937 @@
+{
+  "scope": "full",
+  "events": 20000,
+  "original_file": "/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1",
+  "unit": "bytes (KB is decimal 1000 bytes)",
+  "interpretation": {
+    "instrumented": "Actual MemmapSource chunk/chunks intervals intersected with planned leaf/direct TBasket intervals.",
+    "distinct_baskets": "Disjoint on-disk extents; compressed and decompressed TKey totals counted once.",
+    "excluded": "Metadata and other nonbasket source requests; logical request duplicates; no kernel readahead/page-cache or physical IO claim.",
+    "fLeaves": "ROOT branch fLeaves names and TLeaf::fLeafCount names from original metadata. Fetched count-branch test uses the same recorded branch census.",
+    "uncompressed": "Uncompressed payload bytes from TKey fObjlen; key-inclusive adds fKeylen. Includes actual on-disk basket record overhead in the key-inclusive compressed total."
+  },
+  "unique_branch_basket_extents": 17901,
+  "unique_actual_branches": 223,
+  "unique_basket_compressed_bytes_including_key": 69739982,
+  "unique_basket_uncompressed_bytes_including_key": 197127386,
+  "unique_basket_compressed_payload_bytes": 67698867,
+  "unique_basket_uncompressed_payload_bytes": 195086271,
+  "basket_compressed_KB_per_event_including_key": 3.4869991,
+  "basket_uncompressed_KB_per_event_including_key": 9.8563693,
+  "duplicate_basket_requests": 0,
+  "logical_duplicate_basket_requested_bytes": 0,
+  "planned_ranges_not_requested": 0,
+  "non_basket_range_count": 5,
+  "non_basket_bytes_outside_baskets": 527130,
+  "non_basket_range_bytes_overlapping_baskets": 0,
+  "all_logical_source_request_bytes": 70267120,
+  "all_unique_source_range_bytes": 70267112,
+  "branches": {
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBL": {
+      "name": "AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBL",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBL",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 76309,
+      "uncompressed_bytes_including_key": 305106,
+      "compressed_payload_bytes": 66657,
+      "uncompressed_payload_bytes": 295454,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.Eadded_Lr2": {
+      "name": "AnalysisElectronsAuxDyn.Eadded_Lr2",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.Eadded_Lr2",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 91291,
+      "uncompressed_bytes_including_key": 348428,
+      "compressed_payload_bytes": 82855,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.Eadded_Lr3": {
+      "name": "AnalysisElectronsAuxDyn.Eadded_Lr3",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.Eadded_Lr3",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 79197,
+      "uncompressed_bytes_including_key": 348428,
+      "compressed_payload_bytes": 70761,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.OQ": {
+      "name": "AnalysisElectronsAuxDyn.OQ",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.OQ",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 80110,
+      "uncompressed_bytes_including_key": 347820,
+      "compressed_payload_bytes": 72282,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.author": {
+      "name": "AnalysisElectronsAuxDyn.author",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.author",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 73175,
+      "uncompressed_bytes_including_key": 318432,
+      "compressed_payload_bytes": 65043,
+      "uncompressed_payload_bytes": 310300,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.caloClusterLinks": {
+      "name": "AnalysisElectronsAuxDyn.caloClusterLinks",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.caloClusterLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 87,
+      "requests": 87,
+      "compressed_bytes_including_key": 82303,
+      "uncompressed_bytes_including_key": 765947,
+      "compressed_payload_bytes": 72124,
+      "uncompressed_payload_bytes": 755768,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.eta": {
+      "name": "AnalysisElectronsAuxDyn.eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 140396,
+      "uncompressed_bytes_including_key": 347896,
+      "compressed_payload_bytes": 132492,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.phi": {
+      "name": "AnalysisElectronsAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 140317,
+      "uncompressed_bytes_including_key": 347896,
+      "compressed_payload_bytes": 132413,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.pt": {
+      "name": "AnalysisElectronsAuxDyn.pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 138093,
+      "uncompressed_bytes_including_key": 347820,
+      "compressed_payload_bytes": 130265,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000": {
+      "name": "AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 111000,
+      "uncompressed_bytes_including_key": 351848,
+      "compressed_payload_bytes": 99144,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.topoetcone20": {
+      "name": "AnalysisElectronsAuxDyn.topoetcone20",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.topoetcone20",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 142297,
+      "uncompressed_bytes_including_key": 348580,
+      "compressed_payload_bytes": 133709,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.topoetcone20ptCorrection": {
+      "name": "AnalysisElectronsAuxDyn.topoetcone20ptCorrection",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.topoetcone20ptCorrection",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 142623,
+      "uncompressed_bytes_including_key": 349492,
+      "compressed_payload_bytes": 133123,
+      "uncompressed_payload_bytes": 339992,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisElectronsAuxDyn.trackParticleLinks": {
+      "name": "AnalysisElectronsAuxDyn.trackParticleLinks",
+      "fLeaves": [
+        {
+          "name": "AnalysisElectronsAuxDyn.trackParticleLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 101989,
+      "uncompressed_bytes_including_key": 1028021,
+      "compressed_payload_bytes": 93064,
+      "uncompressed_payload_bytes": 1019096,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.EMFrac": {
+      "name": "AnalysisJetsAuxDyn.EMFrac",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.EMFrac",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 820229,
+      "uncompressed_bytes_including_key": 1074454,
+      "compressed_payload_bytes": 812783,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.JVFCorr": {
+      "name": "AnalysisJetsAuxDyn.JVFCorr",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.JVFCorr",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 650536,
+      "uncompressed_bytes_including_key": 1074527,
+      "compressed_payload_bytes": 643017,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.JetConstitScaleMomentum_eta": {
+      "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 855957,
+      "uncompressed_bytes_including_key": 1076118,
+      "compressed_payload_bytes": 846855,
+      "uncompressed_payload_bytes": 1067016,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.JetConstitScaleMomentum_m": {
+      "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_m",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_m",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 834132,
+      "uncompressed_bytes_including_key": 1075970,
+      "compressed_payload_bytes": 825178,
+      "uncompressed_payload_bytes": 1067016,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.JetConstitScaleMomentum_phi": {
+      "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 852153,
+      "uncompressed_bytes_including_key": 1076118,
+      "compressed_payload_bytes": 843051,
+      "uncompressed_payload_bytes": 1067016,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.JetConstitScaleMomentum_pt": {
+      "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.JetConstitScaleMomentum_pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 825983,
+      "uncompressed_bytes_including_key": 1076044,
+      "compressed_payload_bytes": 816955,
+      "uncompressed_payload_bytes": 1067016,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.NumTrkPt500": {
+      "name": "AnalysisJetsAuxDyn.NumTrkPt500",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.NumTrkPt500",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<int32_t>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 513,
+      "requests": 513,
+      "compressed_bytes_including_key": 1862423,
+      "uncompressed_bytes_including_key": 22785251,
+      "compressed_payload_bytes": 1807532,
+      "uncompressed_payload_bytes": 22730360,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.PSFrac": {
+      "name": "AnalysisJetsAuxDyn.PSFrac",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.PSFrac",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 641572,
+      "uncompressed_bytes_including_key": 1074454,
+      "compressed_payload_bytes": 634126,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.SumPtTrkPt500": {
+      "name": "AnalysisJetsAuxDyn.SumPtTrkPt500",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.SumPtTrkPt500",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 513,
+      "requests": 513,
+      "compressed_bytes_including_key": 5597978,
+      "uncompressed_bytes_including_key": 22786277,
+      "compressed_payload_bytes": 5542061,
+      "uncompressed_payload_bytes": 22730360,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.Width": {
+      "name": "AnalysisJetsAuxDyn.Width",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.Width",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 820451,
+      "uncompressed_bytes_including_key": 1074381,
+      "compressed_payload_bytes": 813078,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.eta": {
+      "name": "AnalysisJetsAuxDyn.eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 854016,
+      "uncompressed_bytes_including_key": 1074235,
+      "compressed_payload_bytes": 846789,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.m": {
+      "name": "AnalysisJetsAuxDyn.m",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.m",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 810516,
+      "uncompressed_bytes_including_key": 1074089,
+      "compressed_payload_bytes": 803435,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.phi": {
+      "name": "AnalysisJetsAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 850229,
+      "uncompressed_bytes_including_key": 1074235,
+      "compressed_payload_bytes": 843002,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisJetsAuxDyn.pt": {
+      "name": "AnalysisJetsAuxDyn.pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisJetsAuxDyn.pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 818984,
+      "uncompressed_bytes_including_key": 1074162,
+      "compressed_payload_bytes": 811830,
+      "uncompressed_payload_bytes": 1067008,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.CaloMuonScore": {
+      "name": "AnalysisMuonsAuxDyn.CaloMuonScore",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.CaloMuonScore",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 98623,
+      "uncompressed_bytes_including_key": 348838,
+      "compressed_payload_bytes": 90373,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.EnergyLoss": {
+      "name": "AnalysisMuonsAuxDyn.EnergyLoss",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.EnergyLoss",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 133087,
+      "uncompressed_bytes_including_key": 348613,
+      "compressed_payload_bytes": 125062,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.InnerDetectorPt": {
+      "name": "AnalysisMuonsAuxDyn.InnerDetectorPt",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.InnerDetectorPt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 138983,
+      "uncompressed_bytes_including_key": 348988,
+      "compressed_payload_bytes": 130583,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.MMHits": {
+      "name": "AnalysisMuonsAuxDyn.MMHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.MMHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 76640,
+      "uncompressed_bytes_including_key": 303322,
+      "compressed_payload_bytes": 68915,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.MuonSpectrometerPt": {
+      "name": "AnalysisMuonsAuxDyn.MuonSpectrometerPt",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.MuonSpectrometerPt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 138393,
+      "uncompressed_bytes_including_key": 349213,
+      "compressed_payload_bytes": 129768,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.allAuthors": {
+      "name": "AnalysisMuonsAuxDyn.allAuthors",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.allAuthors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 77872,
+      "uncompressed_bytes_including_key": 318619,
+      "compressed_payload_bytes": 69847,
+      "uncompressed_payload_bytes": 310594,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.author": {
+      "name": "AnalysisMuonsAuxDyn.author",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.author",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 71100,
+      "uncompressed_bytes_including_key": 318319,
+      "compressed_payload_bytes": 63375,
+      "uncompressed_payload_bytes": 310594,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackOutBoundsPrecisionHits": {
+      "name": "AnalysisMuonsAuxDyn.combinedTrackOutBoundsPrecisionHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.combinedTrackOutBoundsPrecisionHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 72593,
+      "uncompressed_bytes_including_key": 305497,
+      "compressed_payload_bytes": 62693,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.combinedTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 41117,
+      "uncompressed_bytes_including_key": 149360,
+      "compressed_payload_bytes": 32273,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.combinedTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 35261,
+      "uncompressed_bytes_including_key": 149228,
+      "compressed_payload_bytes": 26549,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.energyLossType": {
+      "name": "AnalysisMuonsAuxDyn.energyLossType",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.energyLossType",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 75319,
+      "uncompressed_bytes_including_key": 303922,
+      "compressed_payload_bytes": 66994,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.eta": {
+      "name": "AnalysisMuonsAuxDyn.eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 140369,
+      "uncompressed_bytes_including_key": 348088,
+      "compressed_payload_bytes": 132869,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.etaLayer1STGCHits": {
+      "name": "AnalysisMuonsAuxDyn.etaLayer1STGCHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.etaLayer1STGCHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 77667,
+      "uncompressed_bytes_including_key": 304147,
+      "compressed_payload_bytes": 69117,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.etaLayer2STGCHits": {
+      "name": "AnalysisMuonsAuxDyn.etaLayer2STGCHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.etaLayer2STGCHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 77341,
+      "uncompressed_bytes_including_key": 304147,
+      "compressed_payload_bytes": 68791,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extendedLargeHits": {
+      "name": "AnalysisMuonsAuxDyn.extendedLargeHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extendedLargeHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 73166,
+      "uncompressed_bytes_including_key": 304147,
+      "compressed_payload_bytes": 64616,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extendedSmallHits": {
+      "name": "AnalysisMuonsAuxDyn.extendedSmallHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extendedSmallHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 73287,
+      "uncompressed_bytes_including_key": 304147,
+      "compressed_payload_bytes": 64737,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extendedSmallHoles": {
+      "name": "AnalysisMuonsAuxDyn.extendedSmallHoles",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extendedSmallHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 71253,
+      "uncompressed_bytes_including_key": 304222,
+      "compressed_payload_bytes": 62628,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 42243,
+      "uncompressed_bytes_including_key": 150680,
+      "compressed_payload_bytes": 32079,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 37258,
+      "uncompressed_bytes_including_key": 150548,
+      "compressed_payload_bytes": 27226,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.inDetTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 50245,
+      "uncompressed_bytes_including_key": 149162,
+      "compressed_payload_bytes": 41599,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.inDetTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 35215,
+      "uncompressed_bytes_including_key": 149030,
+      "compressed_payload_bytes": 26701,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.innerLargeHits": {
+      "name": "AnalysisMuonsAuxDyn.innerLargeHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.innerLargeHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 83968,
+      "uncompressed_bytes_including_key": 303922,
+      "compressed_payload_bytes": 75643,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.innerSmallHits": {
+      "name": "AnalysisMuonsAuxDyn.innerSmallHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.innerSmallHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 81317,
+      "uncompressed_bytes_including_key": 303922,
+      "compressed_payload_bytes": 72992,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.isSmallGoodSectors": {
+      "name": "AnalysisMuonsAuxDyn.isSmallGoodSectors",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.isSmallGoodSectors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 75424,
+      "uncompressed_bytes_including_key": 304222,
+      "compressed_payload_bytes": 66799,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.middleLargeHits": {
+      "name": "AnalysisMuonsAuxDyn.middleLargeHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.middleLargeHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 81282,
+      "uncompressed_bytes_including_key": 303997,
+      "compressed_payload_bytes": 72882,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.middleSmallHits": {
+      "name": "AnalysisMuonsAuxDyn.middleSmallHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.middleSmallHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 78805,
+      "uncompressed_bytes_including_key": 303997,
+      "compressed_payload_bytes": 70405,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.momentumBalanceSignificance": {
+      "name": "AnalysisMuonsAuxDyn.momentumBalanceSignificance",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.momentumBalanceSignificance",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 143272,
+      "uncompressed_bytes_including_key": 349888,
+      "compressed_payload_bytes": 133972,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 43141,
+      "uncompressed_bytes_including_key": 151076,
+      "compressed_payload_bytes": 32581,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 40010,
+      "uncompressed_bytes_including_key": 150944,
+      "compressed_payload_bytes": 29582,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex": {
+      "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 42918,
+      "uncompressed_bytes_including_key": 149888,
+      "compressed_payload_bytes": 33546,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey": {
+      "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 38121,
+      "uncompressed_bytes_including_key": 149756,
+      "compressed_payload_bytes": 28881,
+      "uncompressed_payload_bytes": 140516,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.muonType": {
+      "name": "AnalysisMuonsAuxDyn.muonType",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.muonType",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 69671,
+      "uncompressed_bytes_including_key": 318469,
+      "compressed_payload_bytes": 61796,
+      "uncompressed_payload_bytes": 310594,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.numberOfGoodPrecisionLayers": {
+      "name": "AnalysisMuonsAuxDyn.numberOfGoodPrecisionLayers",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.numberOfGoodPrecisionLayers",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 77452,
+      "uncompressed_bytes_including_key": 304897,
+      "compressed_payload_bytes": 68152,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.numberOfPrecisionHoleLayers": {
+      "name": "AnalysisMuonsAuxDyn.numberOfPrecisionHoleLayers",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.numberOfPrecisionHoleLayers",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 73134,
+      "uncompressed_bytes_including_key": 304897,
+      "compressed_payload_bytes": 63834,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.numberOfPrecisionLayers": {
+      "name": "AnalysisMuonsAuxDyn.numberOfPrecisionLayers",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.numberOfPrecisionLayers",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 77110,
+      "uncompressed_bytes_including_key": 304597,
+      "compressed_payload_bytes": 68110,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.outerLargeHits": {
+      "name": "AnalysisMuonsAuxDyn.outerLargeHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.outerLargeHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 80477,
+      "uncompressed_bytes_including_key": 303922,
+      "compressed_payload_bytes": 72152,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.outerSmallHits": {
+      "name": "AnalysisMuonsAuxDyn.outerSmallHits",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.outerSmallHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 78299,
+      "uncompressed_bytes_including_key": 303922,
+      "compressed_payload_bytes": 69974,
+      "uncompressed_payload_bytes": 295597,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.phi": {
+      "name": "AnalysisMuonsAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 140565,
+      "uncompressed_bytes_including_key": 348088,
+      "compressed_payload_bytes": 133065,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.pt": {
+      "name": "AnalysisMuonsAuxDyn.pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 137894,
+      "uncompressed_bytes_including_key": 348013,
+      "compressed_payload_bytes": 130469,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000": {
+      "name": "AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 116170,
+      "uncompressed_bytes_including_key": 351313,
+      "compressed_payload_bytes": 105445,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.scatteringCurvatureSignificance": {
+      "name": "AnalysisMuonsAuxDyn.scatteringCurvatureSignificance",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.scatteringCurvatureSignificance",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 142125,
+      "uncompressed_bytes_including_key": 350188,
+      "compressed_payload_bytes": 132525,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.scatteringNeighbourSignificance": {
+      "name": "AnalysisMuonsAuxDyn.scatteringNeighbourSignificance",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.scatteringNeighbourSignificance",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 141925,
+      "uncompressed_bytes_including_key": 350188,
+      "compressed_payload_bytes": 132325,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisMuonsAuxDyn.topoetcone20": {
+      "name": "AnalysisMuonsAuxDyn.topoetcone20",
+      "fLeaves": [
+        {
+          "name": "AnalysisMuonsAuxDyn.topoetcone20",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 142055,
+      "uncompressed_bytes_including_key": 348763,
+      "compressed_payload_bytes": 133880,
+      "uncompressed_payload_bytes": 340588,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaning": {
+      "name": "AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaning",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaning",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 82221,
+      "uncompressed_bytes_including_key": 342216,
+      "compressed_payload_bytes": 73193,
+      "uncompressed_payload_bytes": 333188,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTight": {
+      "name": "AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTight",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTight",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 92045,
+      "uncompressed_bytes_including_key": 342290,
+      "compressed_payload_bytes": 82943,
+      "uncompressed_payload_bytes": 333188,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.Eadded_Lr2": {
+      "name": "AnalysisPhotonsAuxDyn.Eadded_Lr2",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.Eadded_Lr2",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 127286,
+      "uncompressed_bytes_including_key": 499159,
+      "compressed_payload_bytes": 119111,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.Eadded_Lr3": {
+      "name": "AnalysisPhotonsAuxDyn.Eadded_Lr3",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.Eadded_Lr3",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 98136,
+      "uncompressed_bytes_including_key": 499159,
+      "compressed_payload_bytes": 89961,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.OQ": {
+      "name": "AnalysisPhotonsAuxDyn.OQ",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.OQ",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 112835,
+      "uncompressed_bytes_including_key": 498559,
+      "compressed_payload_bytes": 105260,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.author": {
+      "name": "AnalysisPhotonsAuxDyn.author",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.author",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 91358,
+      "uncompressed_bytes_including_key": 393554,
+      "compressed_payload_bytes": 83588,
+      "uncompressed_payload_bytes": 385784,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.caloClusterLinks": {
+      "name": "AnalysisPhotonsAuxDyn.caloClusterLinks",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.caloClusterLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 97,
+      "requests": 97,
+      "compressed_bytes_including_key": 134990,
+      "uncompressed_bytes_including_key": 1975003,
+      "compressed_payload_bytes": 123835,
+      "uncompressed_payload_bytes": 1963848,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.eta": {
+      "name": "AnalysisPhotonsAuxDyn.eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 301755,
+      "uncompressed_bytes_including_key": 498634,
+      "compressed_payload_bytes": 294105,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.phi": {
+      "name": "AnalysisPhotonsAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 301146,
+      "uncompressed_bytes_including_key": 498634,
+      "compressed_payload_bytes": 293496,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.pt": {
+      "name": "AnalysisPhotonsAuxDyn.pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 288047,
+      "uncompressed_bytes_including_key": 498559,
+      "compressed_payload_bytes": 280472,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.ptcone20": {
+      "name": "AnalysisPhotonsAuxDyn.ptcone20",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.ptcone20",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 170491,
+      "uncompressed_bytes_including_key": 499009,
+      "compressed_payload_bytes": 162466,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.topoetcone20": {
+      "name": "AnalysisPhotonsAuxDyn.topoetcone20",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.topoetcone20",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 302933,
+      "uncompressed_bytes_including_key": 499309,
+      "compressed_payload_bytes": 294608,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.topoetcone20ptCorrection": {
+      "name": "AnalysisPhotonsAuxDyn.topoetcone20ptCorrection",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.topoetcone20ptCorrection",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 286142,
+      "uncompressed_bytes_including_key": 500209,
+      "compressed_payload_bytes": 276917,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.topoetcone40": {
+      "name": "AnalysisPhotonsAuxDyn.topoetcone40",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.topoetcone40",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 303794,
+      "uncompressed_bytes_including_key": 499309,
+      "compressed_payload_bytes": 295469,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.topoetcone40ptCorrection": {
+      "name": "AnalysisPhotonsAuxDyn.topoetcone40ptCorrection",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.topoetcone40ptCorrection",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 286006,
+      "uncompressed_bytes_including_key": 500209,
+      "compressed_payload_bytes": 276781,
+      "uncompressed_payload_bytes": 490984,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisPhotonsAuxDyn.vertexLinks": {
+      "name": "AnalysisPhotonsAuxDyn.vertexLinks",
+      "fLeaves": [
+        {
+          "name": "AnalysisPhotonsAuxDyn.vertexLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::Vertex_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 97419,
+      "uncompressed_bytes_including_key": 590786,
+      "compressed_payload_bytes": 88289,
+      "uncompressed_payload_bytes": 581656,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.PanTau_DecayMode": {
+      "name": "AnalysisTauJetsAuxDyn.PanTau_DecayMode",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.PanTau_DecayMode",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 93031,
+      "uncompressed_bytes_including_key": 397350,
+      "compressed_payload_bytes": 84521,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.charge": {
+      "name": "AnalysisTauJetsAuxDyn.charge",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.charge",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 84608,
+      "uncompressed_bytes_including_key": 396610,
+      "compressed_payload_bytes": 76838,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.eta": {
+      "name": "AnalysisTauJetsAuxDyn.eta",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.eta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 193818,
+      "uncompressed_bytes_including_key": 396388,
+      "compressed_payload_bytes": 186270,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.etaFinalCalib": {
+      "name": "AnalysisTauJetsAuxDyn.etaFinalCalib",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.etaFinalCalib",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 194622,
+      "uncompressed_bytes_including_key": 397128,
+      "compressed_payload_bytes": 186334,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.etaTauEnergyScale": {
+      "name": "AnalysisTauJetsAuxDyn.etaTauEnergyScale",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.etaTauEnergyScale",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 194916,
+      "uncompressed_bytes_including_key": 397424,
+      "compressed_payload_bytes": 186332,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.isTauFlags": {
+      "name": "AnalysisTauJetsAuxDyn.isTauFlags",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.isTauFlags",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 89742,
+      "uncompressed_bytes_including_key": 396906,
+      "compressed_payload_bytes": 81676,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.m": {
+      "name": "AnalysisTauJetsAuxDyn.m",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.m",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 73465,
+      "uncompressed_bytes_including_key": 396240,
+      "compressed_payload_bytes": 66065,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.phi": {
+      "name": "AnalysisTauJetsAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 193627,
+      "uncompressed_bytes_including_key": 396388,
+      "compressed_payload_bytes": 186079,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.pt": {
+      "name": "AnalysisTauJetsAuxDyn.pt",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.pt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 186749,
+      "uncompressed_bytes_including_key": 396314,
+      "compressed_payload_bytes": 179275,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.ptFinalCalib": {
+      "name": "AnalysisTauJetsAuxDyn.ptFinalCalib",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.ptFinalCalib",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 187506,
+      "uncompressed_bytes_including_key": 397054,
+      "compressed_payload_bytes": 179292,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.ptTauEnergyScale": {
+      "name": "AnalysisTauJetsAuxDyn.ptTauEnergyScale",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.ptTauEnergyScale",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 189524,
+      "uncompressed_bytes_including_key": 397350,
+      "compressed_payload_bytes": 181014,
+      "uncompressed_payload_bytes": 388840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.tauTrackLinks": {
+      "name": "AnalysisTauJetsAuxDyn.tauTrackLinks",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.tauTrackLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::TauTrack_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 365,
+      "requests": 365,
+      "compressed_bytes_including_key": 345383,
+      "uncompressed_bytes_including_key": 11213028,
+      "compressed_payload_bytes": 304503,
+      "uncompressed_payload_bytes": 11172148,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex": {
+      "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthJetLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 64107,
+      "uncompressed_bytes_including_key": 196894,
+      "compressed_payload_bytes": 55989,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey": {
+      "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthJetLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 53535,
+      "uncompressed_bytes_including_key": 196762,
+      "compressed_payload_bytes": 45549,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex": {
+      "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 60602,
+      "uncompressed_bytes_including_key": 197224,
+      "compressed_payload_bytes": 52154,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey": {
+      "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "fLeaves": [
+        {
+          "name": "AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+          "class": "TLeafElement",
+          "count_leaf": "AnalysisTauJetsAuxDyn.truthParticleLink_"
+        }
+      ],
+      "typename": "uint32_t[]",
+      "declared_count_branch": "/CollectionTree;1:AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey",
+      "distinct_baskets": 66,
+      "requests": 66,
+      "compressed_bytes_including_key": 59621,
+      "uncompressed_bytes_including_key": 197092,
+      "compressed_payload_bytes": 51305,
+      "uncompressed_payload_bytes": 188776,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": true
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.d0": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 257675,
+      "uncompressed_bytes_including_key": 452084,
+      "compressed_payload_bytes": 249387,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 896177,
+      "uncompressed_bytes_including_key": 1270548,
+      "compressed_payload_bytes": 885461,
+      "uncompressed_payload_bytes": 1259832,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 86884,
+      "uncompressed_bytes_including_key": 331309,
+      "compressed_payload_bytes": 76968,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 103695,
+      "uncompressed_bytes_including_key": 330791,
+      "compressed_payload_bytes": 94297,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfPixelHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 81469,
+      "uncompressed_bytes_including_key": 330865,
+      "compressed_payload_bytes": 71997,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 85052,
+      "uncompressed_bytes_including_key": 331161,
+      "compressed_payload_bytes": 75284,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 107814,
+      "uncompressed_bytes_including_key": 330643,
+      "compressed_payload_bytes": 98564,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.numberOfSCTHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 88511,
+      "uncompressed_bytes_including_key": 330717,
+      "compressed_payload_bytes": 79187,
+      "uncompressed_payload_bytes": 321393,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.phi": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 253172,
+      "uncompressed_bytes_including_key": 452158,
+      "compressed_payload_bytes": 244810,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.qOverP": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 253735,
+      "uncompressed_bytes_including_key": 452380,
+      "compressed_payload_bytes": 245151,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.theta": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 246280,
+      "uncompressed_bytes_including_key": 452306,
+      "compressed_payload_bytes": 237770,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.vz": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 79889,
+      "uncompressed_bytes_including_key": 452084,
+      "compressed_payload_bytes": 71601,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:CombinedMuonTrackParticlesAuxDyn.z0": {
+      "name": "CombinedMuonTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "CombinedMuonTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 254060,
+      "uncompressed_bytes_including_key": 452084,
+      "compressed_payload_bytes": 245772,
+      "uncompressed_payload_bytes": 443796,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.RandomRunNumber": {
+      "name": "EventInfoAuxDyn.RandomRunNumber",
+      "fLeaves": [
+        {
+          "name": "RandomRunNumber",
+          "class": "TLeafI",
+          "count_leaf": null
+        }
+      ],
+      "typename": "uint32_t",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 47447,
+      "uncompressed_bytes_including_key": 90044,
+      "compressed_payload_bytes": 37403,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.actualInteractionsPerCrossing": {
+      "name": "EventInfoAuxDyn.actualInteractionsPerCrossing",
+      "fLeaves": [
+        {
+          "name": "actualInteractionsPerCrossing",
+          "class": "TLeafF",
+          "count_leaf": null
+        }
+      ],
+      "typename": "float",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 17520,
+      "uncompressed_bytes_including_key": 91346,
+      "compressed_payload_bytes": 6174,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.averageInteractionsPerCrossing": {
+      "name": "EventInfoAuxDyn.averageInteractionsPerCrossing",
+      "fLeaves": [
+        {
+          "name": "averageInteractionsPerCrossing",
+          "class": "TLeafF",
+          "count_leaf": null
+        }
+      ],
+      "typename": "float",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 17613,
+      "uncompressed_bytes_including_key": 91439,
+      "compressed_payload_bytes": 6174,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.beamPosSigmaX": {
+      "name": "EventInfoAuxDyn.beamPosSigmaX",
+      "fLeaves": [
+        {
+          "name": "beamPosSigmaX",
+          "class": "TLeafF",
+          "count_leaf": null
+        }
+      ],
+      "typename": "float",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12618,
+      "uncompressed_bytes_including_key": 89858,
+      "compressed_payload_bytes": 2760,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.beamPosSigmaXY": {
+      "name": "EventInfoAuxDyn.beamPosSigmaXY",
+      "fLeaves": [
+        {
+          "name": "beamPosSigmaXY",
+          "class": "TLeafF",
+          "count_leaf": null
+        }
+      ],
+      "typename": "float",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12528,
+      "uncompressed_bytes_including_key": 89951,
+      "compressed_payload_bytes": 2577,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.beamPosSigmaY": {
+      "name": "EventInfoAuxDyn.beamPosSigmaY",
+      "fLeaves": [
+        {
+          "name": "beamPosSigmaY",
+          "class": "TLeafF",
+          "count_leaf": null
+        }
+      ],
+      "typename": "float",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12618,
+      "uncompressed_bytes_including_key": 89858,
+      "compressed_payload_bytes": 2760,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.eventNumber": {
+      "name": "EventInfoAuxDyn.eventNumber",
+      "fLeaves": [
+        {
+          "name": "eventNumber",
+          "class": "TLeafL",
+          "count_leaf": null
+        }
+      ],
+      "typename": "uint64_t",
+      "declared_count_branch": null,
+      "distinct_baskets": 157,
+      "requests": 157,
+      "compressed_bytes_including_key": 48194,
+      "uncompressed_bytes_including_key": 176328,
+      "compressed_payload_bytes": 31866,
+      "uncompressed_payload_bytes": 160000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.eventTypeBitmask": {
+      "name": "EventInfoAuxDyn.eventTypeBitmask",
+      "fLeaves": [
+        {
+          "name": "eventTypeBitmask",
+          "class": "TLeafI",
+          "count_leaf": null
+        }
+      ],
+      "typename": "uint32_t",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12901,
+      "uncompressed_bytes_including_key": 90137,
+      "compressed_payload_bytes": 2764,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.mcChannelNumber": {
+      "name": "EventInfoAuxDyn.mcChannelNumber",
+      "fLeaves": [
+        {
+          "name": "mcChannelNumber",
+          "class": "TLeafI",
+          "count_leaf": null
+        }
+      ],
+      "typename": "uint32_t",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12808,
+      "uncompressed_bytes_including_key": 90044,
+      "compressed_payload_bytes": 2764,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:EventInfoAuxDyn.runNumber": {
+      "name": "EventInfoAuxDyn.runNumber",
+      "fLeaves": [
+        {
+          "name": "runNumber",
+          "class": "TLeafI",
+          "count_leaf": null
+        }
+      ],
+      "typename": "uint32_t",
+      "declared_count_branch": null,
+      "distinct_baskets": 93,
+      "requests": 93,
+      "compressed_bytes_including_key": 12222,
+      "uncompressed_bytes_including_key": 89486,
+      "compressed_payload_bytes": 2736,
+      "uncompressed_payload_bytes": 80000,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.d0": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 204071,
+      "uncompressed_bytes_including_key": 401044,
+      "compressed_payload_bytes": 195487,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 649083,
+      "uncompressed_bytes_including_key": 962530,
+      "compressed_payload_bytes": 638353,
+      "uncompressed_payload_bytes": 951800,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.phi": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 199202,
+      "uncompressed_bytes_including_key": 401118,
+      "compressed_payload_bytes": 190544,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.qOverP": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 200711,
+      "uncompressed_bytes_including_key": 401340,
+      "compressed_payload_bytes": 191831,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.theta": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 194280,
+      "uncompressed_bytes_including_key": 401266,
+      "compressed_payload_bytes": 185474,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.vz": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 76234,
+      "uncompressed_bytes_including_key": 401044,
+      "compressed_payload_bytes": 67650,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:ExtrapolatedMuonTrackParticlesAuxDyn.z0": {
+      "name": "ExtrapolatedMuonTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "ExtrapolatedMuonTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 201171,
+      "uncompressed_bytes_including_key": 401044,
+      "compressed_payload_bytes": 192587,
+      "uncompressed_payload_bytes": 392460,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFConversionVerticesAuxDyn.pt1": {
+      "name": "GSFConversionVerticesAuxDyn.pt1",
+      "fLeaves": [
+        {
+          "name": "GSFConversionVerticesAuxDyn.pt1",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 80,
+      "requests": 80,
+      "compressed_bytes_including_key": 69189,
+      "uncompressed_bytes_including_key": 297760,
+      "compressed_payload_bytes": 60549,
+      "uncompressed_payload_bytes": 289120,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFConversionVerticesAuxDyn.pt2": {
+      "name": "GSFConversionVerticesAuxDyn.pt2",
+      "fLeaves": [
+        {
+          "name": "GSFConversionVerticesAuxDyn.pt2",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 80,
+      "requests": 80,
+      "compressed_bytes_including_key": 69200,
+      "uncompressed_bytes_including_key": 297760,
+      "compressed_payload_bytes": 60560,
+      "uncompressed_payload_bytes": 289120,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFConversionVerticesAuxDyn.trackParticleLinks": {
+      "name": "GSFConversionVerticesAuxDyn.trackParticleLinks",
+      "fLeaves": [
+        {
+          "name": "GSFConversionVerticesAuxDyn.trackParticleLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 80,
+      "requests": 80,
+      "compressed_bytes_including_key": 70612,
+      "uncompressed_bytes_including_key": 391304,
+      "compressed_payload_bytes": 60772,
+      "uncompressed_payload_bytes": 381464,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFConversionVerticesAuxDyn.x": {
+      "name": "GSFConversionVerticesAuxDyn.x",
+      "fLeaves": [
+        {
+          "name": "GSFConversionVerticesAuxDyn.x",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 80,
+      "requests": 80,
+      "compressed_bytes_including_key": 73746,
+      "uncompressed_bytes_including_key": 297600,
+      "compressed_payload_bytes": 65266,
+      "uncompressed_payload_bytes": 289120,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFConversionVerticesAuxDyn.y": {
+      "name": "GSFConversionVerticesAuxDyn.y",
+      "fLeaves": [
+        {
+          "name": "GSFConversionVerticesAuxDyn.y",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 80,
+      "requests": 80,
+      "compressed_bytes_including_key": 73708,
+      "uncompressed_bytes_including_key": 297600,
+      "compressed_payload_bytes": 65228,
+      "uncompressed_payload_bytes": 289120,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.d0": {
+      "name": "GSFTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 156485,
+      "uncompressed_bytes_including_key": 359488,
+      "compressed_payload_bytes": 148657,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 88,
+      "requests": 88,
+      "compressed_bytes_including_key": 449756,
+      "uncompressed_bytes_including_key": 718632,
+      "compressed_payload_bytes": 438140,
+      "uncompressed_payload_bytes": 707016,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.numberOfPixelHits": {
+      "name": "GSFTrackParticlesAuxDyn.numberOfPixelHits",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.numberOfPixelHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 84555,
+      "uncompressed_bytes_including_key": 307339,
+      "compressed_payload_bytes": 75587,
+      "uncompressed_payload_bytes": 298371,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.numberOfSCTHits": {
+      "name": "GSFTrackParticlesAuxDyn.numberOfSCTHits",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.numberOfSCTHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 85924,
+      "uncompressed_bytes_including_key": 307187,
+      "compressed_payload_bytes": 77108,
+      "uncompressed_payload_bytes": 298371,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.phi": {
+      "name": "GSFTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 154352,
+      "uncompressed_bytes_including_key": 359564,
+      "compressed_payload_bytes": 146448,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.qOverP": {
+      "name": "GSFTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 155828,
+      "uncompressed_bytes_including_key": 359792,
+      "compressed_payload_bytes": 147696,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.theta": {
+      "name": "GSFTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 151145,
+      "uncompressed_bytes_including_key": 359716,
+      "compressed_payload_bytes": 143089,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.vz": {
+      "name": "GSFTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 72127,
+      "uncompressed_bytes_including_key": 359488,
+      "compressed_payload_bytes": 64299,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:GSFTrackParticlesAuxDyn.z0": {
+      "name": "GSFTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "GSFTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 76,
+      "requests": 76,
+      "compressed_bytes_including_key": 154625,
+      "uncompressed_bytes_including_key": 359488,
+      "compressed_payload_bytes": 146797,
+      "uncompressed_payload_bytes": 351660,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.d0": {
+      "name": "InDetForwardTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 59590,
+      "uncompressed_bytes_including_key": 290356,
+      "compressed_payload_bytes": 50966,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 78,
+      "requests": 78,
+      "compressed_bytes_including_key": 68164,
+      "uncompressed_bytes_including_key": 298318,
+      "compressed_payload_bytes": 57166,
+      "uncompressed_payload_bytes": 287320,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 62091,
+      "uncompressed_bytes_including_key": 291213,
+      "compressed_payload_bytes": 51773,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfPixelHits": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61746,
+      "uncompressed_bytes_including_key": 290674,
+      "compressed_payload_bytes": 51967,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfPixelHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61544,
+      "uncompressed_bytes_including_key": 290751,
+      "compressed_payload_bytes": 51688,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61848,
+      "uncompressed_bytes_including_key": 291059,
+      "compressed_payload_bytes": 51684,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfSCTHits": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61361,
+      "uncompressed_bytes_including_key": 290520,
+      "compressed_payload_bytes": 51736,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.numberOfSCTHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61448,
+      "uncompressed_bytes_including_key": 290597,
+      "compressed_payload_bytes": 51746,
+      "uncompressed_payload_bytes": 280895,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.phi": {
+      "name": "InDetForwardTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 59615,
+      "uncompressed_bytes_including_key": 290433,
+      "compressed_payload_bytes": 50914,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.qOverP": {
+      "name": "InDetForwardTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 59882,
+      "uncompressed_bytes_including_key": 290664,
+      "compressed_payload_bytes": 50950,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.theta": {
+      "name": "InDetForwardTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 59572,
+      "uncompressed_bytes_including_key": 290587,
+      "compressed_payload_bytes": 50717,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.vz": {
+      "name": "InDetForwardTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 57737,
+      "uncompressed_bytes_including_key": 290356,
+      "compressed_payload_bytes": 49113,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetForwardTrackParticlesAuxDyn.z0": {
+      "name": "InDetForwardTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "InDetForwardTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 59481,
+      "uncompressed_bytes_including_key": 290356,
+      "compressed_payload_bytes": 50857,
+      "uncompressed_payload_bytes": 281732,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.d0": {
+      "name": "InDetTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 1604670,
+      "uncompressed_bytes_including_key": 1830310,
+      "compressed_payload_bytes": 1594800,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 326,
+      "requests": 326,
+      "compressed_bytes_including_key": 7660567,
+      "uncompressed_bytes_including_key": 9564420,
+      "compressed_payload_bytes": 7616883,
+      "uncompressed_payload_bytes": 9520736,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfPixelDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 173584,
+      "uncompressed_bytes_including_key": 676127,
+      "compressed_payload_bytes": 163043,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfPixelHits": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfPixelHits",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfPixelHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 233892,
+      "uncompressed_bytes_including_key": 675546,
+      "compressed_payload_bytes": 223932,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfPixelHoles": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfPixelHoles",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfPixelHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 127401,
+      "uncompressed_bytes_including_key": 675629,
+      "compressed_payload_bytes": 117358,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfSCTDeadSensors",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 154582,
+      "uncompressed_bytes_including_key": 675961,
+      "compressed_payload_bytes": 144207,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfSCTHits": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfSCTHits",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfSCTHits",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 271147,
+      "uncompressed_bytes_including_key": 675380,
+      "compressed_payload_bytes": 261353,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.numberOfSCTHoles": {
+      "name": "InDetTrackParticlesAuxDyn.numberOfSCTHoles",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.numberOfSCTHoles",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 160770,
+      "uncompressed_bytes_including_key": 675463,
+      "compressed_payload_bytes": 150893,
+      "uncompressed_payload_bytes": 665586,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.phi": {
+      "name": "InDetTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 1571480,
+      "uncompressed_bytes_including_key": 1830404,
+      "compressed_payload_bytes": 1561516,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.qOverP": {
+      "name": "InDetTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 1586203,
+      "uncompressed_bytes_including_key": 1830686,
+      "compressed_payload_bytes": 1575957,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.theta": {
+      "name": "InDetTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 1526230,
+      "uncompressed_bytes_including_key": 1830592,
+      "compressed_payload_bytes": 1516078,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.vz": {
+      "name": "InDetTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 128726,
+      "uncompressed_bytes_including_key": 1830310,
+      "compressed_payload_bytes": 118856,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:InDetTrackParticlesAuxDyn.z0": {
+      "name": "InDetTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "InDetTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 94,
+      "requests": 94,
+      "compressed_bytes_including_key": 1577528,
+      "uncompressed_bytes_including_key": 1830310,
+      "compressed_payload_bytes": 1567658,
+      "uncompressed_payload_bytes": 1820440,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.cale": {
+      "name": "METAssoc_AnalysisMETAux.cale",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.cale",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 463073,
+      "uncompressed_bytes_including_key": 1408052,
+      "compressed_payload_bytes": 458873,
+      "uncompressed_payload_bytes": 1403852,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calkey": {
+      "name": "METAssoc_AnalysisMETAux.calkey",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.calkey",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<uint64_t>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 210815,
+      "uncompressed_bytes_including_key": 1665240,
+      "compressed_payload_bytes": 206535,
+      "uncompressed_payload_bytes": 1660960,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpx": {
+      "name": "METAssoc_AnalysisMETAux.calpx",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.calpx",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 473341,
+      "uncompressed_bytes_including_key": 1408092,
+      "compressed_payload_bytes": 469101,
+      "uncompressed_payload_bytes": 1403852,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpy": {
+      "name": "METAssoc_AnalysisMETAux.calpy",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.calpy",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 473151,
+      "uncompressed_bytes_including_key": 1408092,
+      "compressed_payload_bytes": 468911,
+      "uncompressed_payload_bytes": 1403852,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpz": {
+      "name": "METAssoc_AnalysisMETAux.calpz",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.calpz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 474408,
+      "uncompressed_bytes_including_key": 1408092,
+      "compressed_payload_bytes": 470168,
+      "uncompressed_payload_bytes": 1403852,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calsumpt": {
+      "name": "METAssoc_AnalysisMETAux.calsumpt",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.calsumpt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 462342,
+      "uncompressed_bytes_including_key": 1408212,
+      "compressed_payload_bytes": 457982,
+      "uncompressed_payload_bytes": 1403852,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.isMisc": {
+      "name": "METAssoc_AnalysisMETAux.isMisc",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.isMisc",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 85377,
+      "uncompressed_bytes_including_key": 501206,
+      "compressed_payload_bytes": 81097,
+      "uncompressed_payload_bytes": 496926,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jetLink": {
+      "name": "METAssoc_AnalysisMETAux.jetLink",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jetLink",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<ElementLink<DataVector<xAOD::Jet_v1>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 100059,
+      "uncompressed_bytes_including_key": 2137488,
+      "compressed_payload_bytes": 95739,
+      "uncompressed_payload_bytes": 2133168,
+      "access": [
+        "direct_basket"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrke": {
+      "name": "METAssoc_AnalysisMETAux.jettrke",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jettrke",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 663778,
+      "uncompressed_bytes_including_key": 1151064,
+      "compressed_payload_bytes": 659458,
+      "uncompressed_payload_bytes": 1146744,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpx": {
+      "name": "METAssoc_AnalysisMETAux.jettrkpx",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jettrkpx",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 685704,
+      "uncompressed_bytes_including_key": 1151104,
+      "compressed_payload_bytes": 681344,
+      "uncompressed_payload_bytes": 1146744,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpy": {
+      "name": "METAssoc_AnalysisMETAux.jettrkpy",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jettrkpy",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 685667,
+      "uncompressed_bytes_including_key": 1151104,
+      "compressed_payload_bytes": 681307,
+      "uncompressed_payload_bytes": 1146744,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpz": {
+      "name": "METAssoc_AnalysisMETAux.jettrkpz",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jettrkpz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 687247,
+      "uncompressed_bytes_including_key": 1151104,
+      "compressed_payload_bytes": 682887,
+      "uncompressed_payload_bytes": 1146744,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrksumpt": {
+      "name": "METAssoc_AnalysisMETAux.jettrksumpt",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.jettrksumpt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 664391,
+      "uncompressed_bytes_including_key": 1151224,
+      "compressed_payload_bytes": 659911,
+      "uncompressed_payload_bytes": 1146744,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.objectLinks": {
+      "name": "METAssoc_AnalysisMETAux.objectLinks",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.objectLinks",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<ElementLink<DataVector<xAOD::IParticle>>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 48,
+      "requests": 48,
+      "compressed_bytes_including_key": 262684,
+      "uncompressed_bytes_including_key": 3060888,
+      "compressed_payload_bytes": 257308,
+      "uncompressed_payload_bytes": 3055512,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapIndices": {
+      "name": "METAssoc_AnalysisMETAux.overlapIndices",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.overlapIndices",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<std::vector<uint64_t>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 206249,
+      "uncompressed_bytes_including_key": 1671088,
+      "compressed_payload_bytes": 201649,
+      "uncompressed_payload_bytes": 1666488,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapTypes": {
+      "name": "METAssoc_AnalysisMETAux.overlapTypes",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.overlapTypes",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<std::vector<uint8_t>>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 199815,
+      "uncompressed_bytes_including_key": 1454820,
+      "compressed_payload_bytes": 195295,
+      "uncompressed_payload_bytes": 1450300,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trke": {
+      "name": "METAssoc_AnalysisMETAux.trke",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trke",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 248673,
+      "uncompressed_bytes_including_key": 1241040,
+      "compressed_payload_bytes": 244473,
+      "uncompressed_payload_bytes": 1236840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkkey": {
+      "name": "METAssoc_AnalysisMETAux.trkkey",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trkkey",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<uint64_t>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 150144,
+      "uncompressed_bytes_including_key": 1331216,
+      "compressed_payload_bytes": 145864,
+      "uncompressed_payload_bytes": 1326936,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpx": {
+      "name": "METAssoc_AnalysisMETAux.trkpx",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trkpx",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 252966,
+      "uncompressed_bytes_including_key": 1241080,
+      "compressed_payload_bytes": 248726,
+      "uncompressed_payload_bytes": 1236840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpy": {
+      "name": "METAssoc_AnalysisMETAux.trkpy",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trkpy",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 252925,
+      "uncompressed_bytes_including_key": 1241080,
+      "compressed_payload_bytes": 248685,
+      "uncompressed_payload_bytes": 1236840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpz": {
+      "name": "METAssoc_AnalysisMETAux.trkpz",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trkpz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 253626,
+      "uncompressed_bytes_including_key": 1241080,
+      "compressed_payload_bytes": 249386,
+      "uncompressed_payload_bytes": 1236840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trksumpt": {
+      "name": "METAssoc_AnalysisMETAux.trksumpt",
+      "fLeaves": [
+        {
+          "name": "METAssoc_AnalysisMETAux.trksumpt",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 40,
+      "requests": 40,
+      "compressed_bytes_including_key": 247912,
+      "uncompressed_bytes_including_key": 1241200,
+      "compressed_payload_bytes": 243552,
+      "uncompressed_payload_bytes": 1236840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_Core_AnalysisMETAuxDyn.mpx": {
+      "name": "MET_Core_AnalysisMETAuxDyn.mpx",
+      "fLeaves": [
+        {
+          "name": "MET_Core_AnalysisMETAuxDyn.mpx",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 224204,
+      "uncompressed_bytes_including_key": 448395,
+      "compressed_payload_bytes": 216393,
+      "uncompressed_payload_bytes": 440584,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_Core_AnalysisMETAuxDyn.mpy": {
+      "name": "MET_Core_AnalysisMETAuxDyn.mpy",
+      "fLeaves": [
+        {
+          "name": "MET_Core_AnalysisMETAuxDyn.mpy",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 224172,
+      "uncompressed_bytes_including_key": 448395,
+      "compressed_payload_bytes": 216361,
+      "uncompressed_payload_bytes": 440584,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_Core_AnalysisMETAuxDyn.name": {
+      "name": "MET_Core_AnalysisMETAuxDyn.name",
+      "fLeaves": [
+        {
+          "name": "MET_Core_AnalysisMETAuxDyn.name",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::string>",
+      "declared_count_branch": null,
+      "distinct_baskets": 88,
+      "requests": 88,
+      "compressed_bytes_including_key": 65927,
+      "uncompressed_bytes_including_key": 830208,
+      "compressed_payload_bytes": 56423,
+      "uncompressed_payload_bytes": 820704,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_Core_AnalysisMETAuxDyn.source": {
+      "name": "MET_Core_AnalysisMETAuxDyn.source",
+      "fLeaves": [
+        {
+          "name": "MET_Core_AnalysisMETAuxDyn.source",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint64_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 87,
+      "requests": 87,
+      "compressed_bytes_including_key": 61767,
+      "uncompressed_bytes_including_key": 610266,
+      "compressed_payload_bytes": 52197,
+      "uncompressed_payload_bytes": 600696,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_Core_AnalysisMETAuxDyn.sumet": {
+      "name": "MET_Core_AnalysisMETAuxDyn.sumet",
+      "fLeaves": [
+        {
+          "name": "MET_Core_AnalysisMETAuxDyn.sumet",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 213947,
+      "uncompressed_bytes_including_key": 448541,
+      "compressed_payload_bytes": 205990,
+      "uncompressed_payload_bytes": 440584,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_TruthAuxDyn.mpx": {
+      "name": "MET_TruthAuxDyn.mpx",
+      "fLeaves": [
+        {
+          "name": "MET_TruthAuxDyn.mpx",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 87,
+      "requests": 87,
+      "compressed_bytes_including_key": 356604,
+      "uncompressed_bytes_including_key": 609048,
+      "compressed_payload_bytes": 348252,
+      "uncompressed_payload_bytes": 600696,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_TruthAuxDyn.mpy": {
+      "name": "MET_TruthAuxDyn.mpy",
+      "fLeaves": [
+        {
+          "name": "MET_TruthAuxDyn.mpy",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 87,
+      "requests": 87,
+      "compressed_bytes_including_key": 356426,
+      "uncompressed_bytes_including_key": 609048,
+      "compressed_payload_bytes": 348074,
+      "uncompressed_payload_bytes": 600696,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_TruthAuxDyn.name": {
+      "name": "MET_TruthAuxDyn.name",
+      "fLeaves": [
+        {
+          "name": "MET_TruthAuxDyn.name",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::string>",
+      "declared_count_branch": null,
+      "distinct_baskets": 88,
+      "requests": 88,
+      "compressed_bytes_including_key": 65215,
+      "uncompressed_bytes_including_key": 829240,
+      "compressed_payload_bytes": 56679,
+      "uncompressed_payload_bytes": 820704,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_TruthAuxDyn.source": {
+      "name": "MET_TruthAuxDyn.source",
+      "fLeaves": [
+        {
+          "name": "MET_TruthAuxDyn.source",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint64_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 77,
+      "requests": 77,
+      "compressed_bytes_including_key": 61485,
+      "uncompressed_bytes_including_key": 928239,
+      "compressed_payload_bytes": 53862,
+      "uncompressed_payload_bytes": 920616,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MET_TruthAuxDyn.sumet": {
+      "name": "MET_TruthAuxDyn.sumet",
+      "fLeaves": [
+        {
+          "name": "MET_TruthAuxDyn.sumet",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 87,
+      "requests": 87,
+      "compressed_bytes_including_key": 345040,
+      "uncompressed_bytes_including_key": 609222,
+      "compressed_payload_bytes": 336514,
+      "uncompressed_payload_bytes": 600696,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.d0": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.d0",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.d0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 118473,
+      "uncompressed_bytes_including_key": 408176,
+      "compressed_payload_bytes": 109773,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.definingParametersCovMatrixDiag",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 73,
+      "requests": 73,
+      "compressed_bytes_including_key": 676755,
+      "uncompressed_bytes_including_key": 1004425,
+      "compressed_payload_bytes": 666170,
+      "uncompressed_payload_bytes": 993840,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.phi": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.phi",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.phi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 207045,
+      "uncompressed_bytes_including_key": 408251,
+      "compressed_payload_bytes": 198270,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.qOverP": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.qOverP",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.qOverP",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 190490,
+      "uncompressed_bytes_including_key": 408476,
+      "compressed_payload_bytes": 181490,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.theta": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.theta",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.theta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 202056,
+      "uncompressed_bytes_including_key": 408401,
+      "compressed_payload_bytes": 193131,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.vz": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.vz",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.vz",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 170764,
+      "uncompressed_bytes_including_key": 408176,
+      "compressed_payload_bytes": 162064,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:MuonSpectrometerTrackParticlesAuxDyn.z0": {
+      "name": "MuonSpectrometerTrackParticlesAuxDyn.z0",
+      "fLeaves": [
+        {
+          "name": "MuonSpectrometerTrackParticlesAuxDyn.z0",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 75,
+      "requests": 75,
+      "compressed_bytes_including_key": 118053,
+      "uncompressed_bytes_including_key": 408176,
+      "compressed_payload_bytes": 109353,
+      "uncompressed_payload_bytes": 399476,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:PrimaryVerticesAuxDyn.vertexType": {
+      "name": "PrimaryVerticesAuxDyn.vertexType",
+      "fLeaves": [
+        {
+          "name": "PrimaryVerticesAuxDyn.vertexType",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 74,
+      "requests": 74,
+      "compressed_bytes_including_key": 109181,
+      "uncompressed_bytes_including_key": 1341500,
+      "compressed_payload_bytes": 101115,
+      "uncompressed_payload_bytes": 1333434,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:PrimaryVerticesAuxDyn.z": {
+      "name": "PrimaryVerticesAuxDyn.z",
+      "fLeaves": [
+        {
+          "name": "PrimaryVerticesAuxDyn.z",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 105,
+      "requests": 105,
+      "compressed_bytes_including_key": 2057496,
+      "uncompressed_bytes_including_key": 2397024,
+      "compressed_payload_bytes": 2046996,
+      "uncompressed_payload_bytes": 2386524,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:TauTracksAuxDyn.flagSet": {
+      "name": "TauTracksAuxDyn.flagSet",
+      "fLeaves": [
+        {
+          "name": "TauTracksAuxDyn.flagSet",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint16_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 86,
+      "requests": 86,
+      "compressed_bytes_including_key": 135701,
+      "uncompressed_bytes_including_key": 671990,
+      "compressed_payload_bytes": 127101,
+      "uncompressed_payload_bytes": 663390,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:TruthTausAuxDyn.IsHadronicTau": {
+      "name": "TruthTausAuxDyn.IsHadronicTau",
+      "fLeaves": [
+        {
+          "name": "TruthTausAuxDyn.IsHadronicTau",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int8_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 79,
+      "requests": 79,
+      "compressed_bytes_including_key": 70461,
+      "uncompressed_bytes_including_key": 297623,
+      "compressed_payload_bytes": 62087,
+      "uncompressed_payload_bytes": 289249,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:TruthTausAuxDyn.pdgId": {
+      "name": "TruthTausAuxDyn.pdgId",
+      "fLeaves": [
+        {
+          "name": "TruthTausAuxDyn.pdgId",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<int32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 79,
+      "requests": 79,
+      "compressed_bytes_including_key": 69786,
+      "uncompressed_bytes_including_key": 322842,
+      "compressed_payload_bytes": 62044,
+      "uncompressed_payload_bytes": 315100,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.ETACALOFRAME": {
+      "name": "egammaClustersAuxDyn.ETACALOFRAME",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.ETACALOFRAME",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 82,
+      "requests": 82,
+      "compressed_bytes_including_key": 362932,
+      "uncompressed_bytes_including_key": 559444,
+      "compressed_payload_bytes": 353912,
+      "uncompressed_payload_bytes": 550424,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.PHICALOFRAME": {
+      "name": "egammaClustersAuxDyn.PHICALOFRAME",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.PHICALOFRAME",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 82,
+      "requests": 82,
+      "compressed_bytes_including_key": 362065,
+      "uncompressed_bytes_including_key": 559444,
+      "compressed_payload_bytes": 353045,
+      "uncompressed_payload_bytes": 550424,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.calEta": {
+      "name": "egammaClustersAuxDyn.calEta",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.calEta",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 82,
+      "requests": 82,
+      "compressed_bytes_including_key": 362557,
+      "uncompressed_bytes_including_key": 558952,
+      "compressed_payload_bytes": 354029,
+      "uncompressed_payload_bytes": 550424,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.calPhi": {
+      "name": "egammaClustersAuxDyn.calPhi",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.calPhi",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<float>",
+      "declared_count_branch": null,
+      "distinct_baskets": 82,
+      "requests": 82,
+      "compressed_bytes_including_key": 361658,
+      "uncompressed_bytes_including_key": 558952,
+      "compressed_payload_bytes": 353130,
+      "uncompressed_payload_bytes": 550424,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.e_sampl": {
+      "name": "egammaClustersAuxDyn.e_sampl",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.e_sampl",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 1142358,
+      "uncompressed_bytes_including_key": 1608439,
+      "compressed_payload_bytes": 1133643,
+      "uncompressed_payload_bytes": 1599724,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.eta_sampl": {
+      "name": "egammaClustersAuxDyn.eta_sampl",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.eta_sampl",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<std::vector<float>>",
+      "declared_count_branch": null,
+      "distinct_baskets": 83,
+      "requests": 83,
+      "compressed_bytes_including_key": 1146673,
+      "uncompressed_bytes_including_key": 1608605,
+      "compressed_payload_bytes": 1137792,
+      "uncompressed_payload_bytes": 1599724,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    },
+    "/CollectionTree;1:egammaClustersAuxDyn.samplingPattern": {
+      "name": "egammaClustersAuxDyn.samplingPattern",
+      "fLeaves": [
+        {
+          "name": "egammaClustersAuxDyn.samplingPattern",
+          "class": "TLeafElement",
+          "count_leaf": null
+        }
+      ],
+      "typename": "std::vector<uint32_t>",
+      "declared_count_branch": null,
+      "distinct_baskets": 82,
+      "requests": 82,
+      "compressed_bytes_including_key": 120713,
+      "uncompressed_bytes_including_key": 559690,
+      "compressed_payload_bytes": 111447,
+      "uncompressed_payload_bytes": 550424,
+      "access": [
+        "uproot_projection"
+      ],
+      "declared_count_branch_also_fetched": false
+    }
+  }
+}

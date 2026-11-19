@@ -1,0 +1,344 @@
+{
+  "result": "results/observer-corr-smoke-001",
+  "state_order": [
+    "NOSYS",
+    "MET_SoftTrk_ResoCorr"
+  ],
+  "entries": 16,
+  "runNumbers": [
+    410000
+  ],
+  "mcChannelNumbers": [
+    601229
+  ],
+  "identity_matches_raw_all_entries": true,
+  "upstream": {
+    "jet": {
+      "object_count": 192,
+      "original_link_keys": [
+        452794649
+      ],
+      "recomputed_NNJvtPass_mismatches": 2,
+      "recomputed_NNJvtPass_counts": 176,
+      "stored_NNJvt_score_available": false,
+      "original_vs_nominal": {
+        "pt": {
+          "changed": 0,
+          "changed_selected": null,
+          "max_absolute_difference": 0.0
+        },
+        "eta": {
+          "changed": 0,
+          "changed_selected": null,
+          "max_absolute_difference": 0.0
+        },
+        "phi": {
+          "changed": 0,
+          "changed_selected": null,
+          "max_absolute_difference": 0.0
+        },
+        "m": {
+          "changed": 0,
+          "changed_selected": null,
+          "max_absolute_difference": 0.0
+        }
+      }
+    },
+    "ele": {
+      "object_count": 19,
+      "original_link_keys": [
+        956497600
+      ],
+      "selection_expression": "selectEta,as_bits&&goodOQ,as_bits&&selectPt,as_bits&&trackSelection_loose,as_bits&&selectLikelihood_loose,as_char&&isolated_loose,as_char&&selectPtEta",
+      "gate_passing": {
+        "selectEta,as_bits": 19,
+        "goodOQ,as_bits": 19,
+        "selectPt,as_bits": 9,
+        "trackSelection_loose,as_bits": 9,
+        "selectLikelihood_loose,as_char": 8,
+        "isolated_loose,as_char": 7,
+        "selectPtEta": 9
+      },
+      "passing_working_point": 7,
+      "original_vs_nominal": {
+        "pt": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "eta": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "phi": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "m": {
+          "raw_aux_present": false
+        }
+      }
+    },
+    "pho": {
+      "object_count": 47,
+      "original_link_keys": [
+        902907695
+      ],
+      "selection_expression": "selectEta,as_bits&&goodOQ,as_bits&&isClean,as_bits&&selectPt,as_bits&&selectEM_tight,as_char&&isolated_tight,as_char&&selectPtEta",
+      "gate_passing": {
+        "selectEta,as_bits": 47,
+        "goodOQ,as_bits": 47,
+        "isClean,as_bits": 47,
+        "selectPt,as_bits": 2,
+        "selectEM_tight,as_char": 0,
+        "isolated_tight,as_char": 0,
+        "selectPtEta": 2
+      },
+      "passing_working_point": 0,
+      "original_vs_nominal": {
+        "pt": {
+          "changed": 6,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.001953125
+        },
+        "eta": {
+          "changed": 11,
+          "changed_selected": 0,
+          "max_absolute_difference": 1.1920928955078125e-07
+        },
+        "phi": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "m": {
+          "raw_aux_present": false
+        }
+      }
+    },
+    "mu": {
+      "object_count": 9,
+      "original_link_keys": [
+        980095599
+      ],
+      "selection_expression": "selectEta,as_bits&&selectPt,as_bits&&trackSelection_medium,as_bits&&good_muon_medium,as_char&&isolated_muon_medium,as_char",
+      "gate_passing": {
+        "selectEta,as_bits": 9,
+        "selectPt,as_bits": 9,
+        "trackSelection_medium,as_bits": 6,
+        "good_muon_medium,as_char": 6,
+        "isolated_muon_medium,as_char": 3
+      },
+      "passing_working_point": 3,
+      "original_vs_nominal": {
+        "pt": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "eta": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "phi": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "m": {
+          "raw_aux_present": false
+        }
+      }
+    },
+    "tau": {
+      "object_count": 24,
+      "original_link_keys": [
+        518718875
+      ],
+      "selection_expression": "selected_tau_tight,as_char",
+      "gate_passing": {
+        "selected_tau_tight,as_char": 3
+      },
+      "passing_working_point": 3,
+      "original_vs_nominal": {
+        "pt": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "eta": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "phi": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        },
+        "m": {
+          "changed": 0,
+          "changed_selected": 0,
+          "max_absolute_difference": 0.0
+        }
+      }
+    }
+  },
+  "states": {
+    "NOSYS": {
+      "invalid_or_nonfinite": {
+        "mpx": 0,
+        "mpy": 0,
+        "sumet": 0,
+        "met": 0,
+        "phi": 0,
+        "significance": 0,
+        "sigDirectional": 0,
+        "METOverSqrtSumET": 0,
+        "METOverSqrtHT": 0
+      },
+      "changed_from_nominal": {},
+      "counts_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 1,
+        "Muons": 3,
+        "MuonEloss": 0,
+        "RefJet": 83,
+        "PVSoftTrk": 109,
+        "Final": 0
+      }
+    },
+    "MET_SoftTrk_ResoCorr": {
+      "invalid_or_nonfinite": {
+        "mpx": 0,
+        "mpy": 0,
+        "sumet": 0,
+        "met": 0,
+        "phi": 0,
+        "significance": 0,
+        "sigDirectional": 0,
+        "METOverSqrtSumET": 0,
+        "METOverSqrtHT": 0
+      },
+      "changed_from_nominal": {
+        "mpx": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 16,
+          "Final": 16
+        },
+        "mpy": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 16,
+          "Final": 16
+        },
+        "sumet": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 0,
+          "Final": 0
+        },
+        "met": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 16,
+          "Final": 16
+        },
+        "phi": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 16,
+          "Final": 16
+        },
+        "significance": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 0,
+          "Final": 16
+        },
+        "sigDirectional": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 0,
+          "Final": 16
+        },
+        "METOverSqrtSumET": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 0,
+          "Final": 16
+        },
+        "METOverSqrtHT": {
+          "RefEle": 0,
+          "RefGamma": 0,
+          "RefTau": 0,
+          "Muons": 0,
+          "MuonEloss": 0,
+          "RefJet": 0,
+          "PVSoftTrk": 0,
+          "Final": 16
+        }
+      }
+    }
+  },
+  "prepared_link_keys": {
+    "ele": 306817582,
+    "jet": 768058684,
+    "mu": 679505508,
+    "tau": 748225722
+  },
+  "other_observer_common_branches_equal": 67,
+  "term_order_and_source": {
+    "RefEle": 65537,
+    "RefGamma": 65538,
+    "RefTau": 65540,
+    "Muons": 65544,
+    "MuonEloss": 262152,
+    "RefJet": 65552,
+    "PVSoftTrk": 81952,
+    "Final": 65600
+  },
+  "observed_statuses": {
+    "cp_job_success": "Completion and matching entry/state/term coverage; ANA_CHECK rejects failed stages.",
+    "constituent_absence": "Observed as ordered empty vectors, distinct from skipped/failed function calls.",
+    "individual_tool_statuses": "CP MET algorithms consume return codes and do not publish per-call codes.",
+    "internal_selection_flags": "The stock ntuple exposes upstream selection decorations, input association links, and output constituent choices. Transient flags inside METMaker require a separate stock observation."
+  }
+}

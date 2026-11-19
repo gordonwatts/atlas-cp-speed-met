@@ -1,0 +1,14 @@
+[  7%] Building CXX object significance/CMakeFiles/met_significance_numeric.dir/resolution.cxx.o
+[ 14%] Building CXX object significance/CMakeFiles/met_significance_numeric.dir/payload.cxx.o
+[ 21%] Building CXX object significance/CMakeFiles/met_significance_numeric.dir/reduction.cxx.o
+[ 28%] Linking CXX static library libmet_significance_numeric.a
+[ 28%] Built target met_significance_numeric
+[ 35%] Building CXX object CMakeFiles/met_preparation_nodes.dir/preparation.cxx.o
+[ 42%] Building CXX object CMakeFiles/met_preparation_nodes.dir/tau.cxx.o
+[ 50%] Building CXX object CMakeFiles/met_preparation_nodes.dir/muon.cxx.o
+/home/gwatts/atlas-cp-speed/met-20261119/results/preparation-tau-muon-002/source/components/preparation/muon.cxx:555:87: error: 'void atlas::met::preparation::register_muon_nodes(correction::PluginRegistry&)' should have been declared inside 'atlas::met::preparation'
+  555 | void atlas::met::preparation::register_muon_nodes(correction::PluginRegistry& registry) {
+      |                                                                                       ^
+gmake[2]: *** [CMakeFiles/met_preparation_nodes.dir/build.make:107: CMakeFiles/met_preparation_nodes.dir/muon.cxx.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:125: CMakeFiles/met_preparation_nodes.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

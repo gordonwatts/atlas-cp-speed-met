@@ -1,0 +1,225 @@
+{
+  "instrumentation": "phases",
+  "runner_summary": {
+    "output": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m02-phase-faithful-001/nominal/phase_timed/histogram.npz",
+    "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+    "entries": 20000,
+    "event_visits": 20000,
+    "repeats": 1,
+    "states": [
+      "NOSYS"
+    ],
+    "histogram_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+  },
+  "histogram": {
+    "arrays_bitwise_equal": [
+      "state_labels",
+      "bin_edges_gev",
+      "counts",
+      "sumw",
+      "sumw2"
+    ],
+    "saved_histogram": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m02-phase-faithful-001/nominal/phase_timed/histogram.npz",
+      "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+      "bytes": 4538
+    },
+    "accepted_stock": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+      "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+      "bytes": 4538
+    },
+    "runner_sumw_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+  },
+  "loaded_libraries": {
+    "libatlas_met_columnar.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+      "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666",
+      "bytes": 711680
+    },
+    "libatlas_met_maker_correction.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+      "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9",
+      "bytes": 153952
+    },
+    "libatlas_met_maker_provider.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+      "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76",
+      "bytes": 90480
+    },
+    "libcorrectionlib.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+      "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca",
+      "bytes": 1449680
+    },
+    "libgcc_s.so.1": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+      "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c",
+      "bytes": 908488
+    },
+    "libmet_preparation_provider.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+      "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4",
+      "bytes": 212408
+    },
+    "libstdc++.so.6": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+      "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec",
+      "bytes": 2575440
+    }
+  },
+  "process": {
+    "wall_ns": 3661996334,
+    "user_ns": 3553631000,
+    "system_ns": 103813000,
+    "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+  },
+  "scope_accounting": {
+    "original_objects": {
+      "jet": 196606,
+      "electron": 14846,
+      "photon": 52596,
+      "tau": 27062,
+      "muon": 14997
+    },
+    "object_visits": {
+      "jet": 196606,
+      "electron": 14846,
+      "photon": 52596,
+      "tau": 27062,
+      "muon": 14997
+    },
+    "processing_wall_ns": 3360111956,
+    "processing_cpu_ns": 3356847309,
+    "worker_span": {
+      "wall_ns": 3543219005,
+      "cpu_ns": 3539150792
+    },
+    "worker_cpu_at_exec_finish_ns": 3558764015,
+    "outside_worker_script_or_collector": {
+      "wall_ns": 118777329,
+      "cpu_ns": 118293208
+    },
+    "unassigned_in_script": {
+      "wall_ns": 37254738,
+      "cpu_ns": 37172866
+    }
+  },
+  "exclusive_phases": {
+    "book_histogram": {
+      "wall_ns": 191903,
+      "cpu_ns": 192118,
+      "calls": 1
+    },
+    "close_native": {
+      "wall_ns": 361995,
+      "cpu_ns": 362216,
+      "calls": 1
+    },
+    "fill_histogram": {
+      "wall_ns": 1200104,
+      "cpu_ns": 1201947,
+      "calls": 10
+    },
+    "imports": {
+      "wall_ns": 129281506,
+      "cpu_ns": 128486580,
+      "calls": 1
+    },
+    "initialize": {
+      "wall_ns": 14253550,
+      "cpu_ns": 14253615,
+      "calls": 2
+    },
+    "input_metadata": {
+      "wall_ns": 224148753,
+      "cpu_ns": 224151255,
+      "calls": 1
+    },
+    "input_read_decode": {
+      "wall_ns": 1470738218,
+      "cpu_ns": 1470775084,
+      "calls": 30
+    },
+    "nominal_node.electron_prepare": {
+      "wall_ns": 11579359,
+      "cpu_ns": 11577068,
+      "calls": 10
+    },
+    "nominal_node.met_track_pt": {
+      "wall_ns": 1075078,
+      "cpu_ns": 1066553,
+      "calls": 10
+    },
+    "nominal_node.muon_selection_after_calibration": {
+      "wall_ns": 5625193,
+      "cpu_ns": 5618421,
+      "calls": 10
+    },
+    "nominal_node.muon_selection_eta": {
+      "wall_ns": 252717,
+      "cpu_ns": 250223,
+      "calls": 10
+    },
+    "nominal_node.muon_selection_track_roles": {
+      "wall_ns": 773150,
+      "cpu_ns": 766649,
+      "calls": 10
+    },
+    "nominal_node.muon_selection_vertex": {
+      "wall_ns": 3466828,
+      "cpu_ns": 3460884,
+      "calls": 10
+    },
+    "nominal_node.photon_prepare": {
+      "wall_ns": 20077060,
+      "cpu_ns": 20073338,
+      "calls": 10
+    },
+    "nominal_node.tau_prepare": {
+      "wall_ns": 2515025,
+      "cpu_ns": 2508882,
+      "calls": 10
+    },
+    "nominal_node.tau_track_charged": {
+      "wall_ns": 1593198,
+      "cpu_ns": 1586149,
+      "calls": 10
+    },
+    "nominal_projection": {
+      "wall_ns": 1339748707,
+      "cpu_ns": 1336800376,
+      "calls": 10
+    },
+    "open_original": {
+      "wall_ns": 723431,
+      "cpu_ns": 472558,
+      "calls": 1
+    },
+    "pass_histogram_signature": {
+      "wall_ns": 87289,
+      "cpu_ns": 86959,
+      "calls": 1
+    },
+    "pass_reset": {
+      "wall_ns": 3148,
+      "cpu_ns": 3151,
+      "calls": 1
+    },
+    "raw_transport": {
+      "wall_ns": 24651961,
+      "cpu_ns": 24656514,
+      "calls": 10
+    },
+    "save_histogram": {
+      "wall_ns": 4036699,
+      "cpu_ns": 4037460,
+      "calls": 1
+    },
+    "shared_event_evaluation": {
+      "wall_ns": 249579395,
+      "cpu_ns": 249589926,
+      "calls": 10
+    }
+  }
+}

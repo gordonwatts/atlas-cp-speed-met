@@ -1,0 +1,142 @@
+{
+  "entries": 16,
+  "states": {
+    "NOSYS": {
+      "calls_by_action": {
+        "associationFlag": 11,
+        "rebuildMET": 64,
+        "jetJvt": 192,
+        "rebuildJetMET": 16,
+        "applySystematicVariation": 16,
+        "rootSeed": 17,
+        "setRandomSeed": 16,
+        "applyCorrection": 16,
+        "varianceMET": 16
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 7,
+      "jet_jvt_accept": 186,
+      "selected_leptons_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 3,
+        "Muons": 3
+      },
+      "lazy_constructor_seed": 4357
+    },
+    "MET_SoftTrk_ResoPara": {
+      "calls_by_action": {
+        "associationFlag": 11,
+        "rebuildMET": 64,
+        "jetJvt": 192,
+        "rebuildJetMET": 16,
+        "applySystematicVariation": 16,
+        "rootSeed": 16,
+        "setRandomSeed": 16,
+        "gaussian": 16,
+        "applyCorrection": 16,
+        "varianceMET": 16
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 7,
+      "jet_jvt_accept": 186,
+      "selected_leptons_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 3,
+        "Muons": 3
+      }
+    },
+    "MET_SoftTrk_ResoPerp": {
+      "calls_by_action": {
+        "associationFlag": 11,
+        "rebuildMET": 64,
+        "jetJvt": 192,
+        "rebuildJetMET": 16,
+        "applySystematicVariation": 16,
+        "rootSeed": 16,
+        "setRandomSeed": 16,
+        "gaussian": 16,
+        "applyCorrection": 16,
+        "varianceMET": 16
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 7,
+      "jet_jvt_accept": 186,
+      "selected_leptons_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 3,
+        "Muons": 3
+      }
+    },
+    "MET_SoftTrk_Scale__1down": {
+      "calls_by_action": {
+        "associationFlag": 11,
+        "rebuildMET": 64,
+        "jetJvt": 192,
+        "rebuildJetMET": 16,
+        "applySystematicVariation": 16,
+        "rootSeed": 16,
+        "setRandomSeed": 16,
+        "gaussian": 16,
+        "applyCorrection": 16,
+        "varianceMET": 16
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 7,
+      "jet_jvt_accept": 186,
+      "selected_leptons_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 3,
+        "Muons": 3
+      }
+    },
+    "MET_SoftTrk_Scale__1up": {
+      "calls_by_action": {
+        "associationFlag": 11,
+        "rebuildMET": 64,
+        "jetJvt": 192,
+        "rebuildJetMET": 16,
+        "applySystematicVariation": 16,
+        "rootSeed": 16,
+        "setRandomSeed": 16,
+        "gaussian": 16,
+        "applyCorrection": 16,
+        "varianceMET": 16
+      },
+      "zero_seed_fallbacks": 0,
+      "negative_signed_phi_seeds": 7,
+      "jet_jvt_accept": 186,
+      "selected_leptons_by_term": {
+        "RefEle": 7,
+        "RefGamma": 0,
+        "RefTau": 3,
+        "Muons": 3
+      }
+    }
+  },
+  "algorithm_calls": {
+    "makerAlg": 16,
+    "builderAlg": 16,
+    "significanceAlg": 16
+  },
+  "maximum_executed_association_flag_slot": 0,
+  "physics_branch_payloads_exact_to_stock": 153,
+  "trace_rows_aligned_with_entries_and_states": true,
+  "status_code": {
+    "SUCCESS": 1,
+    "FAILURE": 0,
+    "RECOVERABLE": 2
+  },
+  "correction_code": {
+    "Ok": 2,
+    "Error": 0,
+    "OutOfValidityRange": 1
+  },
+  "remaining_unobservables": [
+    "Individual private significance subtool return codes and covariance intermediates",
+    "Uncalled options and deliberately unexercised malformed-input failure paths"
+  ]
+}

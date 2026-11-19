@@ -1,0 +1,19 @@
+[ 14%] Building CXX object CMakeFiles/met_soft.dir/soft.cxx.o
+[ 28%] Building CXX object CMakeFiles/met_soft.dir/provider.cxx.o
+[ 42%] Linking CXX static library libmet_soft.a
+[ 42%] Built target met_soft
+[ 57%] Building CXX object CMakeFiles/met_soft_smoke.dir/smoke.cxx.o
+[ 71%] Linking CXX executable met_soft_smoke
+[ 71%] Built target met_soft_smoke
+[ 85%] Building CXX object CMakeFiles/met_soft_stock_compare.dir/stock_compare.cxx.o
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx: In function 'void {anonymous}::same(atlas::met::soft::Momentum, const xAOD::MissingET&, std::string_view)':
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx:57:85: error: expression cannot be used as a function
+   57 |                   << candidate.mpx << ',' << candidate.mpy << ',' << candidate.sumet() << '\n';
+      |                                                                      ~~~~~~~~~~~~~~~^~
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx: In function 'void {anonymous}::record_info(xAOD::TStore&, float, bool)':
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx:80:42: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+   80 |     info->setEventTypeBitmask(simulation ? xAOD::EventInfo::IS_SIMULATION : 0u);
+      |                               ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/met_soft_stock_compare.dir/build.make:79: CMakeFiles/met_soft_stock_compare.dir/stock_compare.cxx.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:157: CMakeFiles/met_soft_stock_compare.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

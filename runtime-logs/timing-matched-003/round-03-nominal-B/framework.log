@@ -1,0 +1,339 @@
+Py:CPBaseRunner      INFO EventLoopCPRunScript initialized
+Py:CPBaseRunner      INFO Initialized input files: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:CPBaseRunner      INFO Found YAML config at: /home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml
+Py:CPBaseRunner      INFO Setting up configuration based on YAML config:
+xAOD::Init                INFO    Environment initialised for data access
+Py:CPBaseRunner      INFO Adding files to the sample handler
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO ====================FLAG CONFIGURATION====================
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO     Input files:     ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1'
+Py:MetaReader        INFO Current mode used: lite
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     isMC:            True
+Py:CPBaseRunner      INFO     RunNumber:       [410000]
+Py:CPBaseRunner      INFO     MCCampaign:      Campaign.MC23a
+Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: generators 
+Py:MetaReader        INFO Current mode used: peeker
+Py:MetaReader        INFO Current filenames: ['/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+Py:CPBaseRunner      INFO     GeneratorInfo:   {'Powheg': '2_r3631', 'Pythia8': '308', 'EvtGen': '2.1.1'}
+Py:CPBaseRunner      INFO     MaxEvents:       20000
+Py:CPBaseRunner      INFO     SkipEvents:      0
+Py:CPBaseRunner      INFO =========================================================================
+Py:CPBaseRunner      INFO Configuring algorithms based on YAML file
+Py:CPBaseRunner      INFO Configuring common services
+Py:getRun3NavigationContainerFromInput    INFO Returning HLTNav_Summary_DAODSlimmed as the Run 3 trigger navigation collection to read in this job.
+Py:CPBaseRunner      INFO Configuring algorithms
+Py:CPAlgCfgSeq       INFO Moving MuonIPCalibration after MuonWorkingPointSelection
+Py:CPAlgCfgSeq       INFO Moving ElectronIPCalibration after ElectronWorkingPointSelection
+Py:CommonServices WARNING [91m
+  ________   _______  ______ _____ _______      __  __  ____  _____  ______       ______ _   _          ____  _      ______ _____
+ |  ____\ \ / /  __ \|  ____|  __ \__   __|    |  \/  |/ __ \|  __ \|  ____|     |  ____| \ | |   /\   |  _ \| |    |  ____|  __ \
+ | |__   \ V /| |__) | |__  | |__) | | |       | \  / | |  | | |  | | |__        | |__  |  \| |  /  \  | |_) | |    | |__  | |  | |
+ |  __|   > < |  ___/|  __| |  _  /  | |       | |\/| | |  | | |  | |  __|       |  __| | . ` | / /\ \ |  _ <| |    |  __| | |  | |
+ | |____ / . \| |    | |____| | \ \  | |       | |  | | |__| | |__| | |____      | |____| |\  |/ ____ \| |_) | |____| |____| |__| |
+ |______/_/ \_\_|    |______|_|  \_\ |_|       |_|  |_|\____/|_____/|______|     |______|_| \_/_/    \_\____/|______|______|_____/
+
+[0m
+Py:CommonServices WARNING [1m[93mThese settings are not recommended for analysis. Make sure you know what you're doing, or disable them with `enableExpertMode: False` in `CommonServices`.[0m
+Py:makePileupAnalysisSequence    INFO Physlite does not need pileup reweighting. Variables will be copied from input instead.
+Py:GeoModelConfigFlags    INFO Deducing LHC Run period from the geometry tag name "ATLAS-R3S-2021-03-02-00" as database access is not available in analysis releases
+Py:GeoModelConfigFlags    INFO Using LHC Run period "RUN3"
+Py:py.warnings    WARNING :0: Run2OnlyFeatureWarning: ECIDS is only available for Run 2 and will not have any effect in Run 3.
+
+Package.EventLoop        INFO    created submission directory /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/workDir-2026-11-19-0449-8a4c
+Package.EventLoop        INFO    created sym-link at: /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/workDir
+Package.EventLoop        INFO    submitting job in /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/workDir-2026-11-19-0449-8a4c
+Package.EventLoop        INFO    Running sample: reference
+Package.EventLoop        INFO    xAODInput = 1
+Package.EventLoop        INFO    calling firstInitialize on all modules
+Package.EventLoop        INFO    calling preFileInitialize on all modules
+Package.EventLoop        INFO    Opening file file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+Package.xAOD::Event      INFO    Using aux mode kClassAccess for file /cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+ELModule.DirectInputMo...INFO    Opened input file: file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+seq1_JetPileupLabelAlg...INFO    Initializing seq1_JetPileupLabelAlg_AnaJets.decorator
+seq1_JetPileupLabelAlg...INFO    Parameters for seq1_JetPileupLabelAlg_AnaJets.decorator :
+seq1_JetPileupLabelAlg...INFO    HS Truth Jet Container:           AntiKt4TruthDressedWZJets
+seq1_JetPileupLabelAlg...INFO    Name of isHS Label Decoration:    isJvtHS
+seq1_JetPileupLabelAlg...INFO    Name of isPU Label Decoration:    isJvtPU
+seq1_JetUncertaintiesA...INFO    Preparing to initialize the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesTool
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO      Initializing the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesTool
+seq1_JetUncertaintiesA...INFO      Path is: ""
+seq1_JetUncertaintiesA...INFO      CalibArea is: "CalibArea-08"
+seq1_JetUncertaintiesA...INFO      IsData is: "false"
+seq1_JetUncertaintiesA...INFO      Configuration file: "rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config
+seq1_JetUncertaintiesA...INFO      Uncertainty release: rel22_Winter2025_PreRec
+seq1_JetUncertaintiesA...INFO      Jet definition: AntiKt4EMPFlow
+seq1_JetUncertaintiesA...INFO      MC type: MC23
+seq1_JetUncertaintiesA...INFO      UncertaintyFile: "rel22/Winter2025_PreRec/R4_AllComponents.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_AllComponents.root
+seq1_JetUncertaintiesA...INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+seq1_JetUncertaintiesA...INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      ResolutionSmearOnlyMC: "false"
+seq1_JetUncertaintiesA...INFO    
+seq1_JetUncertaintiesA...INFO           JES uncert. comp.                        : Description
+seq1_JetUncertaintiesA...INFO           -----------------                         ------------
+seq1_JetUncertaintiesA...INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+seq1_JetUncertaintiesA...INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+seq1_JetUncertaintiesA...INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+seq1_JetUncertaintiesA...INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+seq1_JetUncertaintiesA...INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+seq1_JetUncertaintiesA...INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+seq1_JetUncertaintiesA...INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+seq1_JetUncertaintiesA...INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+seq1_JetUncertaintiesA...INFO        9. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+seq1_JetUncertaintiesA...INFO       10. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+seq1_JetUncertaintiesA...INFO       11. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+seq1_JetUncertaintiesA...INFO       12. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+seq1_JetUncertaintiesA...INFO       13. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+seq1_JetUncertaintiesA...INFO       14. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+seq1_JetUncertaintiesA...INFO       15. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+seq1_JetUncertaintiesA...INFO       16. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+seq1_JetUncertaintiesA...INFO       17. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+seq1_JetUncertaintiesA...INFO       18. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+seq1_JetUncertaintiesA...INFO       19. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+seq1_JetUncertaintiesA...INFO       20. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+seq1_JetUncertaintiesA...INFO       21. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+seq1_JetUncertaintiesA...INFO       22. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+seq1_JetUncertaintiesA...INFO       23. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+seq1_JetUncertaintiesA...INFO       24. JET_EtaIntercalibration_NonClosure_0p2_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3, Gaussian smoothing 0p2, absolute values
+seq1_JetUncertaintiesA...INFO       25. JET_FCal_MC23_NonClosure_PreRec          : FCal calibration uncertainty, early Run3
+seq1_JetUncertaintiesA...INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+seq1_JetUncertaintiesA...INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+seq1_JetUncertaintiesA...INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+seq1_JetUncertaintiesA...INFO       29. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       30. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+seq1_JetUncertaintiesA...INFO       31. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+seq1_JetUncertaintiesA...INFO       32. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+seq1_JetUncertaintiesA...INFO       33. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+seq1_JetUncertaintiesA...INFO       34. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+seq1_JetUncertaintiesA...INFO       35. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+seq1_JetUncertaintiesA...INFO       36. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+seq1_JetUncertaintiesA...INFO       37. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+seq1_JetUncertaintiesA...INFO       38. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+seq1_JetUncertaintiesA...INFO       39. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+seq1_JetUncertaintiesA...INFO       40. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+seq1_JetUncertaintiesA...INFO       41. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+seq1_JetUncertaintiesA...INFO       42. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+seq1_JetUncertaintiesA...INFO       43. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+seq1_JetUncertaintiesA...INFO       44. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       Found and read in 52 individual components into 44 component groups of which 44 are recommended
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO    Preparing to initialize the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesToolPD
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_JetUncertaintiesA...INFO      Initializing the JetUncertaintiesTool named seq1_JetUncertaintiesAlg_AnaJets.uncertaintiesToolPD
+seq1_JetUncertaintiesA...INFO      Path is: ""
+seq1_JetUncertaintiesA...INFO      CalibArea is: "CalibArea-08"
+seq1_JetUncertaintiesA...INFO      IsData is: "true"
+seq1_JetUncertaintiesA...INFO      Configuration file: "rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_CategoryReduction_FullJER.config
+seq1_JetUncertaintiesA...INFO      Uncertainty release: rel22_Winter2025_PreRec
+seq1_JetUncertaintiesA...INFO      Jet definition: AntiKt4EMPFlow
+seq1_JetUncertaintiesA...INFO      MC type: MC23
+seq1_JetUncertaintiesA...INFO      UncertaintyFile: "rel22/Winter2025_PreRec/R4_AllComponents.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Winter2025_PreRec/R4_AllComponents.root
+seq1_JetUncertaintiesA...INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+seq1_JetUncertaintiesA...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+seq1_JetUncertaintiesA...INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+seq1_JetUncertaintiesA...INFO      ResolutionSmearOnlyMC: "false"
+seq1_JetUncertaintiesA...INFO    
+seq1_JetUncertaintiesA...INFO           JES uncert. comp.                        : Description
+seq1_JetUncertaintiesA...INFO           -----------------                         ------------
+seq1_JetUncertaintiesA...INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+seq1_JetUncertaintiesA...INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+seq1_JetUncertaintiesA...INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+seq1_JetUncertaintiesA...INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+seq1_JetUncertaintiesA...INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+seq1_JetUncertaintiesA...INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+seq1_JetUncertaintiesA...INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+seq1_JetUncertaintiesA...INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+seq1_JetUncertaintiesA...INFO        9. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+seq1_JetUncertaintiesA...INFO       10. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+seq1_JetUncertaintiesA...INFO       11. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+seq1_JetUncertaintiesA...INFO       12. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+seq1_JetUncertaintiesA...INFO       13. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+seq1_JetUncertaintiesA...INFO       14. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+seq1_JetUncertaintiesA...INFO       15. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+seq1_JetUncertaintiesA...INFO       16. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+seq1_JetUncertaintiesA...INFO       17. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+seq1_JetUncertaintiesA...INFO       18. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+seq1_JetUncertaintiesA...INFO       19. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+seq1_JetUncertaintiesA...INFO       20. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+seq1_JetUncertaintiesA...INFO       21. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+seq1_JetUncertaintiesA...INFO       22. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+seq1_JetUncertaintiesA...INFO       23. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+seq1_JetUncertaintiesA...INFO       24. JET_EtaIntercalibration_NonClosure_0p2_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3, Gaussian smoothing 0p2, absolute values
+seq1_JetUncertaintiesA...INFO       25. JET_FCal_MC23_NonClosure_PreRec          : FCal calibration uncertainty, early Run3
+seq1_JetUncertaintiesA...INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+seq1_JetUncertaintiesA...INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+seq1_JetUncertaintiesA...INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+seq1_JetUncertaintiesA...INFO       29. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       30. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+seq1_JetUncertaintiesA...INFO       31. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+seq1_JetUncertaintiesA...INFO       32. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+seq1_JetUncertaintiesA...INFO       33. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+seq1_JetUncertaintiesA...INFO       34. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+seq1_JetUncertaintiesA...INFO       35. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+seq1_JetUncertaintiesA...INFO       36. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+seq1_JetUncertaintiesA...INFO       37. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+seq1_JetUncertaintiesA...INFO       38. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+seq1_JetUncertaintiesA...INFO       39. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+seq1_JetUncertaintiesA...INFO       40. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+seq1_JetUncertaintiesA...INFO       41. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+seq1_JetUncertaintiesA...INFO       42. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+seq1_JetUncertaintiesA...INFO       43. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+seq1_JetUncertaintiesA...INFO       44. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+seq1_JetUncertaintiesA...INFO       Found and read in 52 individual components into 44 component groups of which 58 are recommended
+seq1_JetUncertaintiesA...INFO    ================================================
+seq1_NNJvtUpdateAlg_An...INFO    Using Classic NN configuration.
+seq1_NNJvtUpdateAlg_An...INFO    Reading JVT NN file from: NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+seq1_NNJvtUpdateAlg_An...INFO    
+ Reading JVT likelihood histogram from:
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+seq1_NNJvtUpdateAlg_An...INFO    Reading JVT NN cut file from: NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+seq1_MuonCalibrationAn...INFO    Initialising...
+seq1_MuonCalibrationAn...INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.MCaST_Own_MST    INFO    Initialising...
+ToolSvc.MCaST_Own_MST    INFO    Is Run-3 geometry: 1
+ToolSvc.MCaST_Own_MST    INFO    Maximum muon |eta|: 2.7
+ToolSvc.MCaST_Own_MST    INFO    Muon quality: 1
+ToolSvc.MCaST_Own_MST    INFO    Initialising tight working point histograms...
+ToolSvc.MCaST_Own_MST    INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+ToolSvc.seq1_MuonCalib...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.seq1_MuonCalib...INFO    Initializing MuonCalibIntScaleSmearTool
+seq1_MuonSelectionAlg_...INFO    Initialising...
+seq1_MuonSelectionAlg_...INFO    Is Run-3 geometry: 1
+seq1_MuonSelectionAlg_...INFO    Maximum muon |eta|: 2.7
+seq1_MuonSelectionAlg_...INFO    Muon quality: 1
+seq1_MuonSelectionAlg_...INFO    Initialising tight working point histograms...
+seq1_MuonSelectionAlg_...INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+seq1_MuonSelectionAlg_...INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+seq1_MuonIsolationAlg_...INFO    Initialising...
+seq1_MuonIsolationAlg_...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_ElectronObjectQua...INFO    Selecting e/gamma objects with OQ mask: 0x'Mask': 1446
+seq1_ElectronCalibrati...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+service_mva_egamma_idA...INFO    'MaxConvRadius': 800
+service_mva_egamma_idA...INFO    'RemoveTRTConvBarrel': 0
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_ElectronCalibrati...INFO    ESModel: es2024_Run3_v0
+seq1_ElectronCalibrati...INFO    ResolutionType: SigmaEff90
+seq1_ElectronCalibrati...INFO    decorrelation Model: 1NP_v1
+seq1_ElectronIsolation...INFO    in initialize of seq1_ElectronIsolationCorrectionAlg_AnaElectrons.isolationCorrectionTool...
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v6/isolation_ptcorrections_rel22_mc20.root
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v3/isolation_ddcorrection_shift.root
+seq1_ElectronIsolation...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v1/isolation_ddcorrection_smearing.root
+seq1_ElectronIsolation...INFO    Initialising...
+seq1_ElectronIsolation...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_PhotonObjectQuali...INFO    Selecting e/gamma objects with OQ mask: 0x'Mask': 34214
+seq1_PhotonCalibration...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+service_mva_egamma_idA...INFO    'MaxConvRadius': 800
+service_mva_egamma_idA...INFO    'RemoveTRTConvBarrel': 1
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_PhotonCalibration...INFO    ESModel: es2024_Run3_v0
+seq1_PhotonCalibration...INFO    ResolutionType: SigmaEff90
+seq1_PhotonCalibration...INFO    decorrelation Model: 1NP_v1
+seq1_PhotonIsolationCo...INFO    in initialize of seq1_PhotonIsolationCorrectionAlg_AnaPhotons.isolationCorrectionTool...
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v5/isolation_ptcorrections_rel20_2.root
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v3/isolation_ddcorrection_shift.root
+seq1_PhotonIsolationCo...INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v1/isolation_ddcorrection_smearing.root
+seq1_PhotonIsolationSe...INFO    Initialising...
+seq1_PhotonIsolationSe...INFO    IsoDecSuffix: 'IsoDecSuffix': ''
+seq1_TauSmearingAlg_An...INFO    Initializing TauSmearingTool
+seq1_TauSmearingAlg_An...INFO    Initializing CommonSmearingTool
+seq1_TauSmearingAlg_An...INFO    data loaded from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/TauAnalysisTools/00-04-00/Smearing/TES_TrueHadTau_RNN_mc23_v3.root
+seq1_TauSmearingAlg_An...INFO    Initializing TauResolutionTool
+seq1_TauSmearingAlg_An...INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+seq1_TauSelectionAlg_A...INFO    Initializing TauSelectionTool
+seq1_MetMakerAlg_AnaME...INFO    Initializing seq1_MetMakerAlg_AnaMET.makerTool...
+seq1_MetMakerAlg_AnaME...INFO    Use jet selection criterion: Tight PFlow: 1
+seq1_MetMakerAlg_AnaME...INFO    Suppressing warnings of objects missing in METAssociationMap for objects with pT < 7 GeV.
+seq1_MetMakerAlg_AnaME...INFO    Searching for configFile: TrackSoftTerms-pflow_Dec24.config
+seq1_MetMakerAlg_AnaME...INFO    Configuring from file : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/TrackSoftTerms-pflow_Dec24.config
+seq1_MetMakerAlg_AnaME...INFO    Will read histograms from : METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+seq1_MetMakerAlg_AnaME...INFO    Extracted histogram path : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+seq1_MetMakerAlg_AnaME...INFO    AffectingSystematics are:
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoCorr
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoPara
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_ResoPerp
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_Scale__1down
+seq1_MetMakerAlg_AnaME...INFO    MET_SoftTrk_Scale__1up
+seq1_MetSignificanceAl...INFO    Initialising...
+seq1_MetSignificanceAl...INFO    Data will be corrected for sagitta bias and Montecarlo will be corrected using CB calibration
+ToolSvc.seq1_MetSignif...INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.seq1_MetSignif...INFO    Initializing MuonCalibIntScaleSmearTool
+seq1_MetSignificanceAl...INFO    Initializing seq1_MetSignificanceAlg_AnaMET.significanceTool...
+seq1_MetSignificanceAl...INFO    Set up JER tools
+seq1_MetSignificanceAl...INFO    Initializing seq1_MetSignificanceAlg_AnaMET.significanceTool.MetSigAutoConf_JetCalibTool_AntiKt4EMPFlow to calibrate AntiKt4EMPFlowJets
+seq1_MetSignificanceAl...INFO    Reading global JES settings from: JetCalibTools/CalibArea-00-04-81/CalibrationConfigs/JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config
+seq1_MetSignificanceAl...INFO      Calibration sequence: JetArea_Residual_EtaJES_GSC_Smear
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Have loaded metadata mcDSID:601229, generatorsInfo: Powheg(v.2_r3631)+Pythia8(v.308)+EvtGen(v.2.1.1), mcCampaign: MC23, simFlavour: FullG4_QS
+seq1_MetSignificanceAl...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v29/gain_uncertainty_specialRun.root
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v38/gain_uncertainty_specialRun.root
+egammaLayerRecalibTool   INFO    using scale es2024_run3_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale run3_partial_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale layer2_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale ps_run3_ofc_extrapolate_v0
+egammaLayerRecalibTool   INFO    using scale acc_zee_run3_v0
+ADCNonLinearityCorrectionINFO    Initialize LinearityADC with file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v25/linearity_ADC.root
+seq1_MetSignificanceAl...INFO    ESModel: es2024_Run3_v0
+seq1_MetSignificanceAl...INFO    ResolutionType: SigmaEff90
+seq1_MetSignificanceAl...INFO    decorrelation Model: 1NP_v1
+seq1_MetSignificanceAl...INFO    Initializing TauResolutionTool
+seq1_MetSignificanceAl...INFO    Using calibration file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root
+Package.EventLoop        INFO    Processing events 0-20000 in file file:///cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/ASG/DAOD_PHYSLITE/p7266/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.deriv.DAOD_PHYSLITE.e8514_e8528_s4162_s4114_r15540_r15516_p7266/DAOD_PHYSLITE.49568713._001693.pool.root.1
+Package.EventLoop        INFO    Processed 10000 events
+Package.EventLoop        INFO    Processed 20000 events
+ELModule.DirectInputMo...INFO    Reached maximum number of events, stopping.
+SystematicsSvc           INFO    no systematics were run.
+seq1_SystematicsPrinter  INFO    Systematics regex '' matched:
+seq1_SystematicsPrinter  INFO      ''
+seq1_OnlyWeightSystema...INFO    systematics regex '^(GEN_|EL_EFF_|MUON_EFF_|PH_EFF_|TAUS_TRUEHADTAU_EFF_|FT_EFF_|JET_.*JvtEfficiency_|PRW_).*' did not match any systematics
+ELModule.LeakCheckModule INFO    Memory increase/change during the job:
+ELModule.LeakCheckModule INFO      - resident: 0.706035 kB/event (14120 kB total)
+ELModule.LeakCheckModule INFO      - virtual : 0.372219 kB/event (7444 kB total)
+Real time 0:00:15, CP time 14.250
+Package.EventLoop        INFO    worker finished successfully
+Package.EventLoop        INFO    done
+Package.EventLoop        INFO    done
+Package.EventLoop        INFO    done
+Py:CPBaseRunner      INFO Moving the analysis root file and the hist file to the top level.
+Py:CPBaseRunner      INFO Moving /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/workDir-2026-11-19-0449-8a4c/data-ANALYSIS/reference.root to /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/reference.root
+Py:CPBaseRunner      INFO Moving /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/workDir-2026-11-19-0449-8a4c/hist-reference.root to /home/gwatts/atlas-cp-speed/met-20261119/results/timing-matched-003/round-03-nominal-B/hist-reference.root
+xAOD::TFileAccessTracer   INFO    Sending file access statistics to http://rucio-lb-prod.cern.ch:18762/traces/

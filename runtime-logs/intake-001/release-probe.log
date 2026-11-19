@@ -1,0 +1,109 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/scripts/inspect_release.py:90 in    │
+│ <module>                                                                     │
+│                                                                              │
+│   87                                                                         │
+│   88                                                                         │
+│   89 if __name__ == "__main__":                                              │
+│ ❱ 90 │   app()                                                               │
+│   91                                                                         │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/main.py:114 │
+│ 3 in __call__                                                                │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/main.py:112 │
+│ 6 in __call__                                                                │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_click/core │
+│ .py:809 in __call__                                                          │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/core.py:107 │
+│ 2 in main                                                                    │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/core.py:331 │
+│ in _main                                                                     │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_click/core │
+│ .py:715 in make_context                                                      │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_click/core │
+│ .py:726 in parse_args                                                        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_click/core │
+│ .py:1000 in handle_parse_result                                              │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/core.py:109 │
+│ in process_value                                                             │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/core.py:103 │
+│ in get_runtime_param                                                         │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_coercion.p │
+│ y:236 in build_runtime_param                                                 │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/typer/_adapters.p │
+│ y:10 in <module>                                                             │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/pydantic/__init__ │
+│ .py:5 in <module>                                                            │
+│                                                                              │
+│     2 from typing import TYPE_CHECKING                                       │
+│     3 from warnings import warn                                              │
+│     4                                                                        │
+│ ❱   5 from ._migration import getattr_migration                              │
+│     6 from .version import VERSION, _ensure_pydantic_core_version            │
+│     7                                                                        │
+│     8 _ensure_pydantic_core_version()                                        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/pydantic/_migrati │
+│ on.py:5 in <module>                                                          │
+│                                                                              │
+│     2 from collections.abc import Callable                                   │
+│     3 from typing import Any                                                 │
+│     4                                                                        │
+│ ❱   5 from pydantic.warnings import PydanticDeprecatedSince20                │
+│     6                                                                        │
+│     7 from .version import version_short                                     │
+│     8                                                                        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/pydantic/warnings │
+│ .py:5 in <module>                                                            │
+│                                                                              │
+│     2                                                                        │
+│     3 from __future__ import annotations as _annotations                     │
+│     4                                                                        │
+│ ❱   5 from .version import version_short                                     │
+│     6                                                                        │
+│     7 __all__ = (                                                            │
+│     8 │   'PydanticDeprecatedSince20',                                       │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/pydantic/version. │
+│ py:7 in <module>                                                             │
+│                                                                              │
+│     4                                                                        │
+│     5 import sys                                                             │
+│     6                                                                        │
+│ ❱   7 from pydantic_core import __version__ as __pydantic_core_version__     │
+│     8                                                                        │
+│     9 __all__ = 'VERSION', 'version_info'                                    │
+│    10                                                                        │
+│                                                                              │
+│ /home/gwatts/atlas-cp-speed/met-20261119/.venv/release-cli/pydantic_core/__i │
+│ nit__.py:8 in <module>                                                       │
+│                                                                              │
+│     5                                                                        │
+│     6 from typing_extensions import Sentinel                                 │
+│     7                                                                        │
+│ ❱   8 from ._pydantic_core import (                                          │
+│     9 │   ArgsKwargs,                                                        │
+│    10 │   MultiHostUrl,                                                      │
+│    11 │   PydanticCustomError,                                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ImportError: cannot import name 'ArgsKwargs' from 'pydantic_core._pydantic_core'
+(unknown location)

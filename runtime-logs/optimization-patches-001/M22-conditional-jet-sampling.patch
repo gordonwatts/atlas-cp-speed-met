@@ -1,0 +1,139 @@
+From 3e29007210bb79805d5b9a613ec1548d2d21d0f6 Mon Sep 17 00:00:00 2001
+From: Codex MET trial <codex-met@users.noreply.local>
+Date: Thu, 19 Nov 2026 04:55:12 -0800
+Subject: [PATCH] Trial conditional MET jet sampling projection
+
+Project EnergyPerSampling only when PSFrac is absent from the original tree. Keep the optional-column packer and native fallback intact.
+---
+ components/columnar/met_demo.py            | 12 +++-
+ components/columnar/test_jet_projection.py | 79 ++++++++++++++++++++++
+ 2 files changed, 89 insertions(+), 2 deletions(-)
+ create mode 100644 components/columnar/test_jet_projection.py
+
+diff --git a/components/columnar/met_demo.py b/components/columnar/met_demo.py
+index 8f34c62..e88ed44 100644
+--- a/components/columnar/met_demo.py
++++ b/components/columnar/met_demo.py
+@@ -26,7 +26,7 @@ import typer
+ import uproot
+ 
+ from atlas_met_columnar import ASSOC, ASSOC_FIELDS, RAW_BRANCHES, MemberwiseJets, Native, pack_raw, read_associations
+-from atlas_met_prepare import ADDITIONAL, prepare_chunk
++from atlas_met_prepare import ADDITIONAL, JET, prepare_chunk
+ 
+ UUID = "79ee6652-311f-11f1-aa37-0445010abeef"
+ STATES = ["NOSYS", "MET_SoftTrk_ResoPara", "MET_SoftTrk_ResoPerp",
+@@ -56,6 +56,14 @@ def save(histogram, labels, entries, output):
+                  counts=counts, sumw=sumw, sumw2=sumw2)
+ 
+ 
++def projected_fields(tree):
++    additional = [name for name in ADDITIONAL if name in tree]
++    sampling = JET + "EnergyPerSampling"
++    if JET + "PSFrac" in additional and sampling in additional:
++        additional.remove(sampling)
++    return list(dict.fromkeys([*RAW_BRANCHES, *additional]))
++
++
+ def read_owner_keys(runtime):
+     metadata = json.loads((runtime/"payloads"/"EventFormat.json").read_text())
+     if metadata["input_uuid"] != UUID:
+@@ -151,7 +159,7 @@ def main(
+                     raise ValueError("This payload and the event-local link inventory are pinned to the original file")
+                 tree = original["CollectionTree"]
+                 end = tree.num_entries if stop is None else min(stop,tree.num_entries)
+-                fields = list(dict.fromkeys([*RAW_BRANCHES,*(f for f in ADDITIONAL if f in tree)]))
++                fields = projected_fields(tree)
+                 link_reader = MemberwiseJets(bridge,tree[ASSOC][ASSOC+"jetLink"])
+                 if runtime_record is not None:
+                     input_layout = {"tree":"CollectionTree","loaded_branches":fields,
+diff --git a/components/columnar/test_jet_projection.py b/components/columnar/test_jet_projection.py
+new file mode 100644
+index 0000000..f17c7fe
+--- /dev/null
++++ b/components/columnar/test_jet_projection.py
+@@ -0,0 +1,79 @@
++"""Exercise the jet optional-branch projection through the real chunk packer."""
++
++from contextlib import ExitStack
++import unittest
++from unittest.mock import patch
++
++import awkward as ak
++import numpy as np
++
++from atlas_met_columnar import OWNERS, RAW_BRANCHES
++from atlas_met_prepare import EVENT, JET, TRUTH, prepare_chunk
++from met_demo import projected_fields
++
++PS = JET + "PSFrac"
++SAMPLES = JET + "EnergyPerSampling"
++JET_OFFSETS = [0, 2, 2, 3]
++SAMPLE_ROWS = [list(range(5)), list(range(6)), list(range(5))]
++
++
++class JetProjection(unittest.TestCase):
++    def project_and_pack(self, optional):
++        numeric_terms = ak.Array([[0.], [0.], [0.]])
++        raw = {
++            **{EVENT + name: np.zeros(3) for name in (
++                "runNumber", "eventTypeBitmask", "actualInteractionsPerCrossing",
++                "averageInteractionsPerCrossing", "eventNumber", "mcChannelNumber",
++            )},
++            **{TRUTH + name: numeric_terms for name in ("mpx", "mpy", "sumet")},
++            TRUTH + "source": ak.Array([[0x21000], [0x21000], [0x21000]]),
++            TRUTH + "name": ak.Array([["NonInt"], ["NonInt"], ["NonInt"]]),
++            JET + "NumTrkPt500": ak.Array([[[4], [2, 3]], [], [[1]]]),
++            JET + "EMFrac": ak.Array([[0.5, 0.75], [], [0.6]]),
++            JET + "Width": ak.Array([[0.13, 0.12], [], [0.11]]),
++            **optional,
++        }
++        fields = projected_fields(raw)
++        projected = {name: raw[name] for name in fields if name in raw}
++        output = {short + ".o": np.zeros(4, dtype="i8") for short in OWNERS}
++        output["jet.o"][:] = JET_OFFSETS
++        with ExitStack() as stack:
++            # Isolate the unrelated object preparation. Event/jet offsets,
++            # optional masks and fallback packing use their production code.
++            for name in ("primary_positions", "prepare_tau", "prepare_muon", "prepare_egamma"):
++                stack.enter_context(patch("atlas_met_prepare." + name))
++            prepare_chunk(output, projected, {}, None)
++        return fields, output
++
++    def test_present_psfrac_omits_the_fallback_even_if_stored(self):
++        ps = ak.Array([[0.1, 0.3], [], [0.2]])
++        fields, output = self.project_and_pack({PS: ps, SAMPLES: object()})
++        self.assertEqual(fields[:len(RAW_BRANCHES)], RAW_BRANCHES)
++        self.assertIn(PS, fields)
++        self.assertNotIn(SAMPLES, fields)
++        self.assertNotIn("jet.sample", output)
++        self.assertNotIn("jet.sample.o", output)
++        np.testing.assert_array_equal(output["jet.o"], JET_OFFSETS)
++        np.testing.assert_array_equal(output["jet.ps.valid"], np.ones(3, dtype="u1"))
++        np.testing.assert_array_equal(output["jet.ps.value"], np.array([0.1, 0.3, 0.2], dtype="f4"))
++
++        _, without_stored_fallback = self.project_and_pack({PS: ps})
++        self.assertEqual(output.keys(), without_stored_fallback.keys())
++        for name in output:
++            np.testing.assert_array_equal(output[name], without_stored_fallback[name])
++
++    def test_missing_psfrac_preserves_jagged_sampling_fallback(self):
++        samples = ak.Array([SAMPLE_ROWS[:2], [], SAMPLE_ROWS[2:]])
++        fields, output = self.project_and_pack({SAMPLES: samples})
++        self.assertNotIn(PS, fields)
++        self.assertIn(SAMPLES, fields)
++        np.testing.assert_array_equal(output["jet.o"], JET_OFFSETS)
++        np.testing.assert_array_equal(output["jet.ps.valid"], np.zeros(3, dtype="u1"))
++        np.testing.assert_array_equal(output["jet.ps.value"], np.zeros(3, dtype="f4"))
++        np.testing.assert_array_equal(output["jet.sample.o"], [0, 5, 11, 16])
++        np.testing.assert_array_equal(output["jet.sample"], np.concatenate(SAMPLE_ROWS).astype("f4"))
++
++    def test_missing_both_keeps_the_original_missing_branch_failure(self):
++        with self.assertRaises(KeyError) as error:
++            self.project_and_pack({})
++        self.assertEqual(error.exception.args, (SAMPLES,))
+
+base-commit: 75bf30deab804e4be2b1cae7198db2dc2b4793d3
+-- 
+2.39.3
+

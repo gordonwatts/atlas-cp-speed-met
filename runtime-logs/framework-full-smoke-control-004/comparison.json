@@ -1,0 +1,1046 @@
+{
+  "events": 16,
+  "state_order": [
+    "NOSYS",
+    "MET_SoftTrk_ResoPara",
+    "MET_SoftTrk_ResoPerp",
+    "MET_SoftTrk_Scale__1down",
+    "MET_SoftTrk_Scale__1up"
+  ],
+  "numerical_checks": {
+    "fullMet_METOverSqrtHT_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtSumET_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_met_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpx_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpy_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_phi_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sigDirectional_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_significance_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sumet_NOSYS": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtHT_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtSumET_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_met_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpx_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpy_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_phi_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sigDirectional_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_significance_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sumet_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtHT_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtSumET_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_met_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpx_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpy_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_phi_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sigDirectional_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_significance_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sumet_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtHT_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtSumET_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_met_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpx_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpy_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_phi_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sigDirectional_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_significance_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sumet_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtHT_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_METOverSqrtSumET_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_met_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpx_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_mpy_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_phi_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sigDirectional_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_significance_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "fullMet_sumet_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16,
+        8
+      ],
+      "storage_dtype": "float32",
+      "values": 128,
+      "exact_finite": 128,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtHT_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtSumET_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_phi_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sigDirectional_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_significance_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sumet_NOSYS": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtHT_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtSumET_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_phi_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sigDirectional_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_significance_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sumet_MET_SoftTrk_ResoPara": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtHT_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtSumET_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_phi_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sigDirectional_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_significance_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sumet_MET_SoftTrk_ResoPerp": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtHT_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtSumET_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_phi_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sigDirectional_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_significance_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sumet_MET_SoftTrk_Scale__1down": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtHT_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_METOverSqrtSumET_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_met_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_phi_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sigDirectional_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_significance_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    },
+    "finalMet_sumet_MET_SoftTrk_Scale__1up": {
+      "shape": [
+        16
+      ],
+      "storage_dtype": "float32",
+      "values": 16,
+      "exact_finite": 16,
+      "max_absolute_difference": 0.0,
+      "nonfinite_classification_failures": 0,
+      "total_failures": 0,
+      "first_failure_positions": []
+    }
+  },
+  "discrete_failures": [],
+  "histogram_per_event_bin_failures": {
+    "NOSYS": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_ResoPara": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_ResoPerp": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_Scale__1down": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    },
+    "MET_SoftTrk_Scale__1up": {
+      "count": 0,
+      "first_failure_entries": [],
+      "first_failure_event_numbers": []
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,25 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/gwatts/atlas-cp-speed/met-20261119/scripts/inspect_leakage_calibration │
+│ .py:22 in inspect                                                            │
+│                                                                              │
+│   19 │   ROOT.gSystem.Load("libPathResolverDict")                            │
+│   20 │   report = {}                                                         │
+│   21 │   for logical in SOURCES:                                             │
+│ ❱ 22 │   │   resolved = str(ROOT.PathResolverFindCalibFile(logical))         │
+│   23 │   │   root = ROOT.TFile.Open(resolved)                                │
+│   24 │   │   forms = {}                                                      │
+│   25 │   │   for key in root.GetListOfKeys():                                │
+│                                                                              │
+│ /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBaseExternals/25.2.117/In │
+│ stallArea/x86_64-el9-gcc15-opt/lib/ROOT/_facade.py:235 in _fallback_getattr  │
+│                                                                              │
+│   232 │   │   │   res = self.gROOT.FindObject(name)                          │
+│   233 │   │   │   if res:                                                    │
+│   234 │   │   │   │   return res                                             │
+│ ❱ 235 │   │   raise AttributeError("Failed to get attribute {} from          │
+│       ROOT".format(name))                                                    │
+│   236 │                                                                      │
+│   237 │   def _register_converters_and_executors(self):                      │
+│   238 │   │   converter_aliases = {                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+AttributeError: Failed to get attribute PathResolverFindCalibFile from ROOT

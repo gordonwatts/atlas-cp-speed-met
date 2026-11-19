@@ -1,0 +1,44 @@
+{
+  "wall_ns": 2663432123,
+  "user_ns": 2543098000,
+  "system_ns": 115958000,
+  "exit_code": 0,
+  "started_monotonic_ns": 177678808455871,
+  "finished_monotonic_ns": 177681471887994,
+  "worker_observations": {
+    "1890563": [
+      {
+        "affinity": "0",
+        "threads": 1
+      }
+    ]
+  },
+  "mapped_shared_objects": [
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/_ext.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/libawkward-cpu-kernels.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/libawkward.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/boost_histogram/_core.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/cramjam/cramjam.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/numpy.libs/libscipy_openblas64_-4b78795a.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/numpy/linalg/_umath_linalg.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/pydantic_core/_pydantic_core.cpython-314-x86_64-linux-gnu.so",
+    "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-m26-portable-001/pip-env/lib/python3.14/site-packages/xxhash/_xxhash.cpython-314-x86_64-linux-gnu.so",
+    "/usr/lib64/ld-linux-x86-64.so.2",
+    "/usr/lib64/libc.so.6",
+    "/usr/lib64/libdl.so.2",
+    "/usr/lib64/libm.so.6",
+    "/usr/lib64/libpthread.so.0",
+    "/usr/lib64/librt.so.1",
+    "/usr/lib64/libutil.so.1",
+    "/usr/lib64/libz.so.1.2.11"
+  ],
+  "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+}

@@ -1,0 +1,363 @@
+['##Params;3', '##Params;2', '##Shapes;3', '##Shapes;2', '##Links;3', '##Links;2', 'MetaData;1', 'MetaDataHdr;1', 'MetaDataHdrForm;1', 'CollectionTree;1', 'POOLContainer;1', 'POOLContainerForm;1', 'POOLCollectionTree;1']
+BRANCH METAssoc_AnalysisMETAux. xAOD::MissingETAuxAssociationMap_v2
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.xAOD::AuxContainerBase unknown
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jetLink std::vector<ElementLink<DataVector<xAOD::Jet_v1>>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jetLink 16 * var * struct[{m_persKey: uint32, m_persIndex: uint32}, parameters={"__record__": "ElementLink<DataVector<xAOD::Jet_v1>>"}]
+LINK [[{'m_persKey': 1879769088, 'm_persIndex': 989949}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421075709}, {'m_persKey': 421075709, 'm_persIndex': 421068800}, {'m_persKey': 0, 'm_persIndex': 0}, {'m_persKey': 65536, 'm_persIndex': 131072}, {'m_persKey': 196608, 'm_persIndex': 262144}, {'m_persKey': 327680, 'm_persIndex': 393216}, {'m_persKey': 458752, 'm_persIndex': 524288}, {'m_persKey': 589824, 'm_persIndex': 655360}, {'m_persKey': 720896, 'm_persIndex': 786432}]]
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.objectLinks std::vector<std::vector<ElementLink<DataVector<xAOD::IParticle>>>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.objectLinks 16 * var * var * struct[{m_persKey: uint32, m_persIndex: uint32}, parameters={"__record__": "ElementLink<DataVector<xAOD::IParticle>>"}]
+LINK [[[], [{'m_persKey': 956497600, 'm_persIndex': 0}, {'m_persKey': 518718875, 'm_persIndex': 0}], [], [], [], [], [], [], [], [], [], [], [], [], []]]
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpx std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpx 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpy std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpy 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpz std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calpz 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.cale std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.cale 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calsumpt std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calsumpt 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calkey std::vector<std::vector<uint64_t>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.calkey 16 * var * var * uint64
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpx std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpx 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpy std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpy 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpz std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkpz 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trke std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trke 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trksumpt std::vector<std::vector<float>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trksumpt 16 * var * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkkey std::vector<std::vector<uint64_t>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.trkkey 16 * var * var * uint64
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpx std::vector<float>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpx 16 * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpy std::vector<float>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpy 16 * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpz std::vector<float>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrkpz 16 * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrke std::vector<float>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrke 16 * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrksumpt std::vector<float>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.jettrksumpt 16 * var * float32
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapIndices std::vector<std::vector<std::vector<uint64_t>>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapIndices 16 * var * var * var * uint64
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapTypes std::vector<std::vector<std::vector<uint8_t>>>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.overlapTypes 16 * var * var * var * uint8
+BRANCH METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.isMisc std::vector<int8_t>
+READ METAssoc_AnalysisMETAux./METAssoc_AnalysisMETAux.isMisc 16 * var * int8
+BRANCH METAssoc_AnalysisMET xAOD::MissingETAssociationMap_v1
+BRANCH AnalysisElectrons DataVector<xAOD::Electron_v1>
+BRANCH PrimaryVertices DataVector<xAOD::Vertex_v1>
+BRANCH MET_Core_AnalysisMET xAOD::MissingETContainer_v1
+BRANCH MET_Truth xAOD::MissingETContainer_v1
+BRANCH AnalysisPhotons DataVector<xAOD::Photon_v1>
+BRANCH AnalysisTauJets DataVector<xAOD::TauJet_v3>
+BRANCH AnalysisMuons DataVector<xAOD::Muon_v1>
+BRANCH AnalysisElectronsAux. xAOD::AuxContainerBase
+BRANCH AnalysisJetsAux. xAOD::AuxContainerBase
+BRANCH AnalysisMuonsAux. xAOD::AuxContainerBase
+BRANCH AnalysisPhotonsAux. xAOD::AuxContainerBase
+BRANCH AnalysisTauJetsAux. xAOD::AuxContainerBase
+BRANCH MET_Core_AnalysisMETAux. xAOD::AuxContainerBase
+BRANCH MET_TruthAux. xAOD::AuxContainerBase
+BRANCH PrimaryVerticesAux. xAOD::AuxContainerBase
+BRANCH TruthPrimaryVerticesAux. xAOD::AuxContainerBase
+BRANCH TruthPrimaryVertices DataVector<xAOD::TruthVertex_v1>
+BRANCH AnalysisJets DataVector<xAOD::Jet_v1>
+BRANCH AnalysisElectronsAuxDyn.trackParticleLinks std::vector<std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>>>
+BRANCH AnalysisElectronsAuxDyn.ambiguityLink vector<ElementLink<DataVector<xAOD::Egamma_v1> > >
+BRANCH AnalysisElectronsAuxDyn.ambiguityLink/AnalysisElectronsAuxDyn.ambiguityLink.m_persKey uint32_t[]
+BRANCH AnalysisElectronsAuxDyn.ambiguityLink/AnalysisElectronsAuxDyn.ambiguityLink.m_persIndex uint32_t[]
+BRANCH AnalysisElectronsAuxDyn.pt std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.eta std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.phi std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.charge std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.topoetcone20 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.f1 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.neflowisol20 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.topoetcone20_CloseByCorr std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt1000_CloseByCorr std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.truthType std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.truthOrigin std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.author std::vector<uint16_t>
+BRANCH AnalysisElectronsAuxDyn.caloClusterLinks std::vector<std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1>>>>
+BRANCH AnalysisElectronsAuxDyn.E_mva_only std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHLoose std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNLoose std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBLIsEMValue std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.TruthLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisElectronsAuxDyn.TruthLink/AnalysisElectronsAuxDyn.TruthLink.m_persKey uint32_t[]
+BRANCH AnalysisElectronsAuxDyn.TruthLink/AnalysisElectronsAuxDyn.TruthLink.m_persIndex uint32_t[]
+BRANCH AnalysisElectronsAuxDyn.OQ std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.ambiguityType std::vector<uint8_t>
+BRANCH AnalysisElectronsAuxDyn.topoetcone20ptCorrection std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptcone20_Nonprompt_All_MaxWeightTTVALooseCone_pt500 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVALooseCone_pt500 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHVeryLoose std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHVeryLooseIsEMValue std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseIsEMValue std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHLooseBL std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHMedium std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHMediumIsEMValue std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHTight std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsLHTightIsEMValue std::vector<uint32_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNMedium std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNTight std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNVeryLooseNoCF97 std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNMediumNoCF std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsDNNTightNoCF std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonAddAmbiguity std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsECIDS std::vector<int8_t>
+BRANCH AnalysisElectronsAuxDyn.DFCommonElectronsECIDSResult std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.Eadded_Lr2 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.Eadded_Lr3 std::vector<float>
+BRANCH AnalysisElectronsAuxDyn.truthPdgId std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherTruthType std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherTruthOrigin std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherPdgId std::vector<int32_t>
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherTruthParticleLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherTruthParticleLink/AnalysisElectronsAuxDyn.firstEgMotherTruthParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisElectronsAuxDyn.firstEgMotherTruthParticleLink/AnalysisElectronsAuxDyn.firstEgMotherTruthParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisJetsAuxDyn.pt std::vector<float>
+BRANCH AnalysisJetsAuxDyn.eta std::vector<float>
+BRANCH AnalysisJetsAuxDyn.phi std::vector<float>
+BRANCH AnalysisJetsAuxDyn.m std::vector<float>
+BRANCH AnalysisJetsAuxDyn.numConstit std::vector<int32_t>
+BRANCH AnalysisJetsAuxDyn.JetConstitScaleMomentum_pt std::vector<float>
+BRANCH AnalysisJetsAuxDyn.JetConstitScaleMomentum_eta std::vector<float>
+BRANCH AnalysisJetsAuxDyn.JetConstitScaleMomentum_phi std::vector<float>
+BRANCH AnalysisJetsAuxDyn.JetConstitScaleMomentum_m std::vector<float>
+BRANCH AnalysisJetsAuxDyn.ActiveArea4vec_eta std::vector<float>
+BRANCH AnalysisJetsAuxDyn.ActiveArea4vec_m std::vector<float>
+BRANCH AnalysisJetsAuxDyn.ActiveArea4vec_phi std::vector<float>
+BRANCH AnalysisJetsAuxDyn.ActiveArea4vec_pt std::vector<float>
+BRANCH AnalysisJetsAuxDyn.DetectorEta std::vector<float>
+BRANCH AnalysisJetsAuxDyn.EMFrac std::vector<float>
+BRANCH AnalysisJetsAuxDyn.JVFCorr std::vector<float>
+BRANCH AnalysisJetsAuxDyn.Timing std::vector<float>
+BRANCH AnalysisJetsAuxDyn.NumTrkPt1000 std::vector<std::vector<int32_t>>
+BRANCH AnalysisJetsAuxDyn.NumTrkPt500 std::vector<std::vector<int32_t>>
+BRANCH AnalysisJetsAuxDyn.EnergyPerSampling std::vector<std::vector<float>>
+BRANCH AnalysisJetsAuxDyn.SumPtChargedPFOPt500 std::vector<std::vector<float>>
+BRANCH AnalysisJetsAuxDyn.SumPtTrkPt500 std::vector<std::vector<float>>
+BRANCH AnalysisJetsAuxDyn.TrackWidthPt1000 std::vector<std::vector<float>>
+BRANCH AnalysisJetsAuxDyn.PSFrac std::vector<float>
+BRANCH AnalysisJetsAuxDyn.Width std::vector<float>
+BRANCH AnalysisJetsAuxDyn.DFCommonJets_fJvt std::vector<float>
+BRANCH AnalysisJetsAuxDyn.HadronConeExclTruthLabelID std::vector<int32_t>
+BRANCH AnalysisJetsAuxDyn.HadronConeExclExtendedTruthLabelID std::vector<int32_t>
+BRANCH AnalysisJetsAuxDyn.QGTransformer_ConstScore std::vector<float>
+BRANCH AnalysisJetsAuxDyn.GN2v01_pb std::vector<float>
+BRANCH AnalysisJetsAuxDyn.GN2v01_pc std::vector<float>
+BRANCH AnalysisJetsAuxDyn.GN2v01_pu std::vector<float>
+BRANCH AnalysisJetsAuxDyn.GN2v01_ptau std::vector<float>
+BRANCH AnalysisJetsAuxDyn.GhostTrack std::vector<std::vector<ElementLink<DataVector<xAOD::IParticle>>>>
+BRANCH AnalysisJetsAuxDyn.DFCommonJets_jetClean_LooseBad std::vector<int8_t>
+BRANCH AnalysisJetsAuxDyn.DFCommonJets_jetClean_TightBad std::vector<int8_t>
+BRANCH AnalysisJetsAuxDyn.PartonTruthLabelID std::vector<int32_t>
+BRANCH AnalysisJetsAuxDyn.GhostMuonSegmentCount std::vector<int32_t>
+BRANCH AnalysisJetsAuxDyn.DetectorY std::vector<float>
+BRANCH AnalysisJetsAuxDyn.NNJvtPass std::vector<int8_t>
+BRANCH AnalysisJetsAuxDyn.isJvtHS std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.pt std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.eta std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.phi std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.m std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.vertexLink vector<ElementLink<DataVector<xAOD::Vertex_v1> > >
+BRANCH AnalysisTauJetsAuxDyn.vertexLink/AnalysisTauJetsAuxDyn.vertexLink.m_persKey uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.vertexLink/AnalysisTauJetsAuxDyn.vertexLink.m_persIndex uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.tauTrackLinks std::vector<std::vector<ElementLink<DataVector<xAOD::TauTrack_v1>>>>
+BRANCH AnalysisTauJetsAuxDyn.charge std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.EleRNNLoose_v1 std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.EleRNNMedium_v1 std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.EleRNNTight_v1 std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.GNTauVL_v0prune std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.GNTauL_v0prune std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.GNTauM_v0prune std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.GNTauT_v0prune std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.truthParticleLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.truthParticleLink/AnalysisTauJetsAuxDyn.truthParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.IsTruthMatched std::vector<int8_t>
+BRANCH AnalysisTauJetsAuxDyn.truthJetLink vector<ElementLink<DataVector<xAOD::Jet_v1> > >
+BRANCH AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persKey uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.truthJetLink/AnalysisTauJetsAuxDyn.truthJetLink.m_persIndex uint32_t[]
+BRANCH AnalysisTauJetsAuxDyn.ptTauEnergyScale std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.etaTauEnergyScale std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.ptFinalCalib std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.etaFinalCalib std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.isTauFlags std::vector<uint32_t>
+BRANCH AnalysisTauJetsAuxDyn.PanTau_DecayMode std::vector<int32_t>
+BRANCH AnalysisTauJetsAuxDyn.RNNJetScoreSigTrans std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.NNDecayMode std::vector<int32_t>
+BRANCH AnalysisTauJetsAuxDyn.RNNEleScoreSigTrans_v1 std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.GNTauScoreSigTrans_v0prune std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.trackWidth std::vector<float>
+BRANCH AnalysisTauJetsAuxDyn.passTATTauMuonOLR std::vector<int8_t>
+BRANCH MET_Core_AnalysisMETAuxDyn.mpx std::vector<float>
+BRANCH MET_Core_AnalysisMETAuxDyn.mpy std::vector<float>
+BRANCH MET_Core_AnalysisMETAuxDyn.sumet std::vector<float>
+BRANCH MET_Core_AnalysisMETAuxDyn.source std::vector<uint64_t>
+BRANCH MET_Core_AnalysisMETAuxDyn.name std::vector<std::string>
+BRANCH MET_TruthAuxDyn.mpx std::vector<float>
+BRANCH MET_TruthAuxDyn.mpy std::vector<float>
+BRANCH MET_TruthAuxDyn.sumet std::vector<float>
+BRANCH MET_TruthAuxDyn.source std::vector<uint64_t>
+BRANCH MET_TruthAuxDyn.name std::vector<std::string>
+BRANCH PrimaryVerticesAuxDyn.trackParticleLinks std::vector<std::vector<ElementLink<DataVector<xAOD::TrackParticle_v1>>>>
+BRANCH PrimaryVerticesAuxDyn.neutralParticleLinks std::vector<std::vector<ElementLink<DataVector<xAOD::NeutralParticle_v1>>>>
+BRANCH PrimaryVerticesAuxDyn.sumPt2 std::vector<float>
+BRANCH PrimaryVerticesAuxDyn.vertexType std::vector<int16_t>
+BRANCH PrimaryVerticesAuxDyn.x std::vector<float>
+BRANCH PrimaryVerticesAuxDyn.y std::vector<float>
+BRANCH PrimaryVerticesAuxDyn.z std::vector<float>
+BRANCH TruthPrimaryVerticesAuxDyn.x std::vector<float>
+BRANCH TruthPrimaryVerticesAuxDyn.y std::vector<float>
+BRANCH TruthPrimaryVerticesAuxDyn.z std::vector<float>
+BRANCH TruthPrimaryVerticesAuxDyn.t std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.pt std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.eta std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.phi std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.muonSegmentLinks std::vector<std::vector<ElementLink<DataVector<xAOD::MuonSegment_v1>>>>
+BRANCH AnalysisMuonsAuxDyn.charge std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptcone20 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone20 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptcone30 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone30 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.topoetcone20 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.topoetcone40 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.topoetcone30 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.EnergyLoss std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.MuonSpectrometerPt std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.InnerDetectorPt std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.etaLayer1STGCHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.etaLayer2STGCHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.MMHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.neflowisol20 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.topoetcone20_CloseByCorr std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500_CloseByCorr std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.neflowisol20_CloseByCorr std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt1000_CloseByCorr std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.inDetTrackParticleLink vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.inDetTrackParticleLink/AnalysisMuonsAuxDyn.inDetTrackParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.muonType std::vector<uint16_t>
+BRANCH AnalysisMuonsAuxDyn.truthType std::vector<int32_t>
+BRANCH AnalysisMuonsAuxDyn.truthOrigin std::vector<int32_t>
+BRANCH AnalysisMuonsAuxDyn.truthParticleLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.truthParticleLink/AnalysisMuonsAuxDyn.truthParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.truthParticleLink/AnalysisMuonsAuxDyn.truthParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.author std::vector<uint16_t>
+BRANCH AnalysisMuonsAuxDyn.combinedTrackParticleLink vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.combinedTrackParticleLink/AnalysisMuonsAuxDyn.combinedTrackParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.extrapolatedMuonSpectrometerTrackParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.TruthLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.TruthLink/AnalysisMuonsAuxDyn.TruthLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.TruthLink/AnalysisMuonsAuxDyn.TruthLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.numberOfPrecisionLayers std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.numberOfPrecisionHoleLayers std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.DFCommonMuonPassIDCuts std::vector<int8_t>
+BRANCH AnalysisMuonsAuxDyn.DFCommonMuonPassPreselection std::vector<int8_t>
+BRANCH AnalysisMuonsAuxDyn.ptcone20_Nonprompt_All_MaxWeightTTVA_pt500 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.allAuthors std::vector<uint16_t>
+BRANCH AnalysisMuonsAuxDyn.quality std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.energyLossType std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerSmallHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerLargeHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleSmallHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleLargeHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerSmallHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerLargeHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedSmallHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedLargeHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerSmallHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerLargeHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleSmallHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleLargeHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerSmallHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerLargeHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedSmallHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedLargeHoles std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.phiLayer1STGCHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.phiLayer2STGCHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.muonSpectrometerTrackParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink vector<ElementLink<DataVector<xAOD::TrackParticle_v1> > >
+BRANCH AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink/AnalysisMuonsAuxDyn.msOnlyExtrapolatedMuonSpectrometerTrackParticleLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.clusterLink vector<ElementLink<DataVector<xAOD::CaloCluster_v1> > >
+BRANCH AnalysisMuonsAuxDyn.clusterLink/AnalysisMuonsAuxDyn.clusterLink.m_persKey uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.clusterLink/AnalysisMuonsAuxDyn.clusterLink.m_persIndex uint32_t[]
+BRANCH AnalysisMuonsAuxDyn.spectrometerFieldIntegral std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.scatteringCurvatureSignificance std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.scatteringNeighbourSignificance std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.momentumBalanceSignificance std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.segmentDeltaEta std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.CaloLRLikelihood std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.CaloMuonScore std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.CaloMuonIDTag std::vector<int32_t>
+BRANCH AnalysisMuonsAuxDyn.combinedTrackOutBoundsPrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedClosePrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.extendedOutBoundsPrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerClosePrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.innerOutBoundsPrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.isEndcapGoodLayers std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.isSmallGoodSectors std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleClosePrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.middleOutBoundsPrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.numberOfGoodPrecisionLayers std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerClosePrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.outerOutBoundsPrecisionHits std::vector<uint8_t>
+BRANCH AnalysisMuonsAuxDyn.ptcone40 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptvarcone40 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.ptcone20_Nonprompt_All_MaxWeightTTVA_pt1000 std::vector<float>
+BRANCH AnalysisMuonsAuxDyn.DFCommonJetDr std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.ambiguityLink vector<ElementLink<DataVector<xAOD::Egamma_v1> > >
+BRANCH AnalysisPhotonsAuxDyn.ambiguityLink/AnalysisPhotonsAuxDyn.ambiguityLink.m_persKey uint32_t[]
+BRANCH AnalysisPhotonsAuxDyn.ambiguityLink/AnalysisPhotonsAuxDyn.ambiguityLink.m_persIndex uint32_t[]
+BRANCH AnalysisPhotonsAuxDyn.pt std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.eta std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.phi std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.ptcone20 std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone20 std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone40 std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.f1 std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone20_CloseByCorr std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.ptcone20_CloseByCorr std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone40_CloseByCorr std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.truthType std::vector<int32_t>
+BRANCH AnalysisPhotonsAuxDyn.truthOrigin std::vector<int32_t>
+BRANCH AnalysisPhotonsAuxDyn.author std::vector<uint16_t>
+BRANCH AnalysisPhotonsAuxDyn.caloClusterLinks std::vector<std::vector<ElementLink<DataVector<xAOD::CaloCluster_v1>>>>
+BRANCH AnalysisPhotonsAuxDyn.E_mva_only std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaning std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMLoose std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.TruthLink vector<ElementLink<DataVector<xAOD::TruthParticle_v1> > >
+BRANCH AnalysisPhotonsAuxDyn.TruthLink/AnalysisPhotonsAuxDyn.TruthLink.m_persKey uint32_t[]
+BRANCH AnalysisPhotonsAuxDyn.TruthLink/AnalysisPhotonsAuxDyn.TruthLink.m_persIndex uint32_t[]
+BRANCH AnalysisPhotonsAuxDyn.OQ std::vector<uint32_t>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone20ptCorrection std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.topoetcone40ptCorrection std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.vertexLinks std::vector<std::vector<ElementLink<DataVector<xAOD::Vertex_v1>>>>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMMedium std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTight std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTightIsEMValue std::vector<uint32_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTightNF std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsIsEMTightNFIsEMValue std::vector<uint32_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsNFBDTTight std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsNFBDTTightIsEMValue std::vector<uint32_t>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsNFBDTScore std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.DFCommonPhotonsCleaningNoTime std::vector<int8_t>
+BRANCH AnalysisPhotonsAuxDyn.Eadded_Lr2 std::vector<float>
+BRANCH AnalysisPhotonsAuxDyn.Eadded_Lr3 std::vector<float>

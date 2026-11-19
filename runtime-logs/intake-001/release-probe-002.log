@@ -1,0 +1,19 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+xAOD::Init                INFO    Environment initialised for data access
+IntakeMETSystematicsTool INFO    Searching for configFile: TrackSoftTerms-pflow_Dec24.config
+IntakeMETSystematicsTool INFO    Configuring from file : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/TrackSoftTerms-pflow_Dec24.config
+IntakeMETSystematicsTool INFO    Will read histograms from : METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+IntakeMETSystematicsTool INFO    Extracted histogram path : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/R22_PreRecs_Run2Run3_TSTSystematics_Dec24.root
+IntakeMETSystematicsTool INFO    AffectingSystematics are:
+IntakeMETSystematicsTool INFO    MET_SoftTrk_ResoCorr
+IntakeMETSystematicsTool INFO    MET_SoftTrk_ResoPara
+IntakeMETSystematicsTool INFO    MET_SoftTrk_ResoPerp
+IntakeMETSystematicsTool INFO    MET_SoftTrk_Scale__1down
+IntakeMETSystematicsTool INFO    MET_SoftTrk_Scale__1up
+xAOD::MakeTransientTree   INFO    Created transient tree "CollectionTree" in ROOT's common memory
+xAOD::TFileAccessTracer   INFO    Sending file access statistics to http://rucio-lb-prod.cern.ch:18762/traces/

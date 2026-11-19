@@ -1,0 +1,17 @@
+exec_path 	/usr/bin/perf
+kernel 	6.18.33.2-microsoft-standard-WSL2
+perf_event_paranoid 	2
+cpu0_siblings 	0
+perf version 5.14.0-687.61.1.el9_8.x86_64
+
+ Performance counter stats for 'taskset -c 0 /usr/bin/true':
+
+              0.93 msec cpu-clock:u                      #    0.283 CPUs utilized             
+
+       0.003280500 seconds time elapsed
+
+       0.001380000 seconds user
+       0.000000000 seconds sys
+
+
+software_perf_exit 	0

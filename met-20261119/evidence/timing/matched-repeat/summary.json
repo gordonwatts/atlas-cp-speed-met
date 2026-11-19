@@ -1,0 +1,349 @@
+{
+  "label": "faithful-bounded-repeat",
+  "start_utc": "2026-11-19T12:43:51.142119+00:00",
+  "end_utc": "2026-11-19T12:50:13.587977+00:00",
+  "events": 20000,
+  "cpu": 0,
+  "first_round_excluded": true,
+  "identities": {
+    "production.yaml": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/config/production.yaml",
+      "sha256": "b2382ae5fef752f3fc58374bd99d0fa3e1304f587fd7cf15543d7e9092cfbd19"
+    },
+    "stored-core.yaml": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/config/stored-core.yaml",
+      "sha256": "a9efb70815aaf1c26066299cdec170da9df426e6b091225e2419e2b7409c63cc"
+    },
+    "CPRun.py": {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/bin/CPRun.py",
+      "sha256": "33b466f4d041425262d68bb7d6cc79c8698955b46d4109fcf2fda49dceb9d637"
+    },
+    "bridge_entry.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/source/components/framework/bridge_entry.py",
+      "sha256": "a2c1343e1f08eff71c019996f58151a994cf2e60ae357c15f2534296ad066d25"
+    },
+    "libAtlasMetFramework.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/libAtlasMetFramework.so",
+      "sha256": "8d16f5b1026a905c0c6f7ecbde1785a9ec95c5821e3166414fc01b6c1c8867a3"
+    },
+    "libatlas_met_maker_provider.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/framework-full-frozen-001/build/maker_adapter/libatlas_met_maker_provider.so",
+      "sha256": "18661d976c7e839e56e1d035e978f654b01ded3b2594ad25069c09397936d107"
+    },
+    "libcorrectionlib.so": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/core-exact-build-001/install/correctionlib/lib/libcorrectionlib.so",
+      "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca"
+    },
+    "maker.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/maker-component-001/maker.json",
+      "sha256": "c4c745a527342d280edb3e8362d6653783112bb8d929fe4e9b98555b70eb5bf1"
+    },
+    "corrections.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/soft-component-001/bundle/corrections.json",
+      "sha256": "56787692c5a9ad90ed8e6cee83e0cf182b36bd6d8a7605e61c2e141d1dd5fdfb"
+    },
+    "met_significance_event.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/significance-event-payload-001/met_significance_event.json",
+      "sha256": "6fa92432e4ada19659b772bac272ada6b51bc8db8e134e3b96dc5f489c5c9ff3"
+    },
+    "met_demo.py": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/met_demo.py",
+      "sha256": "f885d334539f4c1f17257d46fddc973be6fb22da3013b5e7c337fa1676796a0b"
+    },
+    "bundle.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/bundle.json",
+      "sha256": "ff6df1e7a89ec2dfac8fd3472cc3a848e1c1236c5aef3a066b2283e56c796a56"
+    },
+    "pip-freeze.txt": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-freeze.txt",
+      "sha256": "cbd2b7437084b28d449334f759a4ea46ab09f5a0ac4cfd0b84c8841282a8cd8e"
+    },
+    "installed-identities.json": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/installed-identities.json",
+      "sha256": "a0f36ad4f0ebb57905cdc8a5cc6f3b38e19892cc3983afbfbad31b1628a9db04"
+    },
+    "atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/bundle/wheels/atlas_met_columnar-0.1.0-cp314-cp314-linux_x86_64.whl",
+      "sha256": "e24e2de48bdc94d98eaa9f2b42e859b2122820947e2964236ba9d8ef33c32901"
+    }
+  },
+  "histogram_reference": {
+    "nominal": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+      "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c"
+    },
+    "full": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-full-002/histogram.npz",
+      "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b"
+    },
+    "stored": {
+      "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-stored-002/histogram.npz",
+      "sha256": "629fa8fa4e76b41a44ef7175116f48aae30a794bb47c61f297b42cee8a225b8c"
+    }
+  },
+  "cohorts": {
+    "nominal": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            18.539110253,
+            18.509279627,
+            18.145863935
+          ],
+          "mean": 18.398084605,
+          "sample_sd": 0.21893815643538372,
+          "sd_over_mean": 0.011900051616018955,
+          "max_relative_median_distance": 0.019634242894568173,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.255546272,
+            0.235106383,
+            0.236003927
+          ],
+          "mean": 0.24221886066666667,
+          "sample_sd": 0.011550598077323986,
+          "sd_over_mean": 0.04768661715909697,
+          "max_relative_median_distance": 0.0828051687461964,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            18.794656525,
+            18.744386010000003,
+            18.381867862
+          ],
+          "mean": 18.64030346566667,
+          "sample_sd": 0.22521878718594399,
+          "sd_over_mean": 0.012082356255667807,
+          "max_relative_median_distance": 0.019340091897734182,
+          "process_and_output_valid": false,
+          "qualified": false
+        }
+      },
+      "B": {
+        "framework_seconds": {
+          "retained_seconds": [
+            18.725044855,
+            18.913616009000002,
+            20.154748646
+          ],
+          "mean": 19.264469836666667,
+          "sample_sd": 0.7767477317580058,
+          "sd_over_mean": 0.04032022362118669,
+          "max_relative_median_distance": 0.06562111847937536,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.233898972,
+            0.23680915500000002,
+            0.248119567
+          ],
+          "mean": 0.23960923133333334,
+          "sample_sd": 0.007512433104053328,
+          "sd_over_mean": 0.03135285340322459,
+          "max_relative_median_distance": 0.047761717658255196,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            18.958943827,
+            19.150425164,
+            20.402868213
+          ],
+          "mean": 19.504079068,
+          "sample_sd": 0.784240218926702,
+          "sd_over_mean": 0.040209036078683216,
+          "max_relative_median_distance": 0.06540027379415105,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            3.6494413850000003,
+            3.6278614420000004,
+            3.699018224
+          ],
+          "mean": 3.658773683666667,
+          "sample_sd": 0.03648480169812862,
+          "sd_over_mean": 0.009971866218728542,
+          "max_relative_median_distance": 0.013584774701073807,
+          "process_and_output_valid": false,
+          "qualified": false
+        }
+      },
+      "framework_ratio_B_over_A": null,
+      "framework_budget_1_20": null,
+      "endpoint_ratio_A_over_C": null
+    },
+    "full": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            21.363287846000002,
+            21.676434572,
+            22.193970349
+          ],
+          "mean": 21.744564255666667,
+          "sample_sd": 0.41951113876150614,
+          "sd_over_mean": 0.019292690064009025,
+          "max_relative_median_distance": 0.023875502923737888,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.24734554700000003,
+            0.248622166,
+            0.240177246
+          ],
+          "mean": 0.245381653,
+          "sample_sd": 0.004552123480753462,
+          "sd_over_mean": 0.01855119739026887,
+          "max_relative_median_distance": 0.028980917938255888,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            21.610633393,
+            21.925056738000002,
+            22.434147595
+          ],
+          "mean": 21.989945908666666,
+          "sample_sd": 0.41557413728031634,
+          "sd_over_mean": 0.018898370146355408,
+          "max_relative_median_distance": 0.023219591314336364,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "B": {
+        "framework_seconds": {
+          "retained_seconds": [
+            22.124470637,
+            21.991441531000003,
+            21.357854821
+          ],
+          "mean": 21.824588996333336,
+          "sample_sd": 0.4096398156659773,
+          "sd_over_mean": 0.01876964627992762,
+          "max_relative_median_distance": 0.028810603848177675,
+          "process_and_output_valid": true,
+          "qualified": true
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.246586471,
+            0.24448708900000002,
+            0.267513182
+          ],
+          "mean": 0.25286224733333335,
+          "sample_sd": 0.012731428284001855,
+          "sd_over_mean": 0.050349264938782126,
+          "max_relative_median_distance": 0.08486560886789289,
+          "process_and_output_valid": true,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            22.371057108000002,
+            22.235928620000003,
+            21.625368003
+          ],
+          "mean": 22.07745124366667,
+          "sample_sd": 0.39730261695092045,
+          "sd_over_mean": 0.017995855253667207,
+          "max_relative_median_distance": 0.027458291822849194,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            3.9808580940000002,
+            4.0236868370000005,
+            4.028089584
+          ],
+          "mean": 4.010878171666667,
+          "sample_sd": 0.026091183235357973,
+          "sd_over_mean": 0.006505104896894969,
+          "max_relative_median_distance": 0.010644154163829692,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "framework_ratio_B_over_A": 1.0036802181789324,
+      "framework_budget_1_20": true,
+      "endpoint_ratio_A_over_C": 5.48257637541981
+    },
+    "stored": {
+      "A": {
+        "framework_seconds": {
+          "retained_seconds": [
+            4.648211409,
+            5.282216567000001,
+            4.680541866
+          ],
+          "mean": 4.870323280666667,
+          "sample_sd": 0.3570761460911558,
+          "sd_over_mean": 0.07331672365746489,
+          "max_relative_median_distance": 0.12854808657318828,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "histogram_seconds": {
+          "retained_seconds": [
+            0.23316415000000001,
+            0.23482682200000002,
+            0.236095154
+          ],
+          "mean": 0.23469537533333334,
+          "sample_sd": 0.0014699165900272423,
+          "sd_over_mean": 0.006263082891767884,
+          "max_relative_median_distance": 0.007080417755685523,
+          "process_and_output_valid": false,
+          "qualified": false
+        },
+        "total_seconds": {
+          "retained_seconds": [
+            4.881375559,
+            5.517043389,
+            4.9166370200000005
+          ],
+          "mean": 5.105018656,
+          "sample_sd": 0.3572591889801501,
+          "sd_over_mean": 0.0699819556115154,
+          "max_relative_median_distance": 0.12211728597365519,
+          "process_and_output_valid": false,
+          "qualified": false
+        }
+      },
+      "C": {
+        "total_seconds": {
+          "retained_seconds": [
+            0.456010307,
+            0.46112436700000003,
+            0.45357044700000004
+          ],
+          "mean": 0.45690170700000005,
+          "sample_sd": 0.003855045046636939,
+          "sd_over_mean": 0.008437361882381715,
+          "max_relative_median_distance": 0.011214790370955434,
+          "process_and_output_valid": true,
+          "qualified": true
+        }
+      },
+      "endpoint_ratio_A_over_C": null
+    }
+  }
+}

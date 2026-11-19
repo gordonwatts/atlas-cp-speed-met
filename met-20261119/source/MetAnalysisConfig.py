@@ -1,0 +1,244 @@
+# Copyright (C) 2002-2026 CERN for the benefit of the ATLAS collaboration
+
+# AnaAlgorithm import(s):
+from AnalysisAlgorithmsConfig.ConfigBlock import ConfigBlock
+from AnalysisAlgorithmsConfig.ConfigAccumulator import DataType
+
+
+class MetAnalysisConfig (ConfigBlock):
+    """the ConfigBlock for the MET configuration"""
+
+    def __init__ (self) :
+        super().__init__ ()
+        self.addOption('containerName', '', type=str,
+            noneAction='error',
+            info="the name of the output container.",
+            meta={'role':'container'})
+        self.addOption ('useJVT', True, type=bool,
+            info="whether to use the JVT decision in the MET calculation.")
+        self.addOption ('useFJVT', False, type=bool,
+            info="whether to use the forward JVT decision in the MET calculation.")
+        self.addOption ('selectionNameFJVT', "", type=str,
+            info="name of the forward JVT selection to be used if `useFJVT` is activated.",
+            meta={'role':'selection'})
+        self.addOption ('treatPUJets', False, type=bool,
+            info="whether to treat pile-up jets in the MET significance calculation.")
+        self.addOption ('setMuonJetEMScale', True, type=bool,
+            info="enables the handling of muons in jets for the MET calculation. "
+            "Should be turned off for analyses where muons are not reconstructed "
+            "at all.")
+        self.addOption ('jets', "", type=str,
+            info="the input jet container.",
+            meta={'role':'containerRef'})
+        self.addOption ('electrons', "", type=str,
+            info="the input electron container, with a possible selection, in "
+            "the format `container` or `container.selection`.",
+            meta={'role':'containerRef'})
+        self.addOption ('muons', "", type=str,
+            info="the input muon container, with a possible selection, in the "
+            "format `container` or `container.selection`.",
+            meta={'role':'containerRef'})
+        self.addOption ('photons', "", type=str,
+            info="the input photon container, with a possible selection, in "
+            "the format `container` or `container.selection`.",
+            meta={'role':'containerRef'})
+        self.addOption ('taus', "", type=str,
+            info="the input tau-jet container, with a possible selection, in "
+            "the format `container` or `container.selection`.",
+            meta={'role':'containerRef'})
+        self.addOption ('invisible', [], type=None,
+            info="any input containers to be treated as invisible particles, "
+            "as a single string or a list of strings in the format `container` or `container.selection`.",
+            meta={'role':'containerRef'})
+        self.addOption ('metWP', "Tight", type=str,
+            info="the MET working point to use: `Loose`, `Tight`, `Tighter`, "
+            "`Tenacious`.",
+            meta={'choices':(['Loose','Tight','Tighter','Tenacious'],1)})
+        self.addOption ('skipSystematicJetSelection', False, type=bool,
+            info="EXPERIMENTAL: whether to use simplified OR based on nominal jets "
+            "and for jet-related systematics only. "
+            "WARNING: this option is strictly for doing physics studies of the feasibility "
+            "of this OR scheme, it should not be used in a regular analysis.",
+            expertMode=True)
+        self.addOption ('saveSignificance', True, type=bool,
+            info="whether to save the MET significance.")
+        self.addOption ('jetCalibConfig', "", type=str,
+            info="config file used in jet calibration (for MET significance).")
+        self.addOption ('jetCalibSequence', "", type=str,
+            info="jet calibration sequence (for MET significance).")
+        self.addOption ('jetCalibArea', "", type=str,
+            info="name of the CalibArea used in jet calibration (for MET significance).")
+        self.addOption ('egammaESModel', "", type=str,
+            info="ESModel for EGamma calibration (for MET significance).")
+        self.addOption ('egammaDecorrelationModel', "", type=str,
+            info="decorrelation model for EGamma calibration (for MET significance).")
+        self.addOption ('tauTESConfig', "tauRecTools/R22_preprod/CombinedTES_R22_Round2.5_v2.root", type=str,
+            info="config file for tau energy scale calibration (for MET significance).")
+        self.addOption ('addExtraSignificanceVars', False, type=bool,
+            info="whether to save some additional (event-based) MET significance variables.")
+        self.addOption ('useLRT', False, type=bool,
+            info="whether to use LRT MET Core and association map.")
+        self.addOption ('useCaloSoftTerm', False, type=bool,
+            info="whether to use calo- instead of track-based soft term.",
+            expertMode=True)
+        self.addOption ('softTermResolution', -1.0, type=float,
+            info="override the default soft term resolution in METSignificance.",
+            expertMode=True)
+        self.addOption ('switchTauMuOrder', False, type=bool,
+            info="whether to switch order of taus and muons",
+            expertMode=True)
+        self.addOption ('useNN', False, type=bool,
+            info="use the METNet neural-network MET tool (met::METNet) instead of "
+            "met::METMaker. Produces the NN MET as the container's Final term.")
+        self.addOption ('networkFile', "", type=str,
+            info="path to the METNet ONNX network file (required when useNN=True).")
+
+    def instanceName (self) :
+        """Return the instance name for this block"""
+        return self.containerName
+
+    def makeAlgs (self, config) :
+
+        if config.isPhyslite() :
+            metSuffix = 'AnalysisMET'
+        else :
+            jetContainer = config.originalName (self.jets)
+            btIndex = jetContainer.find('_BTagging')
+            if btIndex != -1:
+                jetContainer = jetContainer[:btIndex]
+            if not jetContainer.endswith('Jets'):
+                raise ValueError(f"MissingET: jet container name \"{jetContainer}\" does not end in \"Jets\", cannot determine MET suffix.")
+            metSuffix = jetContainer.removesuffix('Jets')
+        if self.useLRT:
+            metSuffix += "_LRT"
+
+        # Set up the met maker algorithm:
+        alg = config.createAlgorithm( 'CP::MetMakerAlg', 'MetMakerAlg' )
+        if self.useNN:
+            if not self.networkFile:
+                raise ValueError("MissingET: useNN=True requires 'networkFile'.")
+            config.addPrivateTool( 'makerTool', 'met::METNet' )
+            alg.makerTool.NetworkFile  = self.networkFile
+            alg.makerTool.JetContainer = config.readName (self.jets)
+            alg.evaluateNNMET = True
+            alg.doJetJVT = self.useJVT
+            # NOTE: no met::METSystematicsTool for the NN path — soft-term
+            # systematics are not defined for the network output.
+        else:
+            config.addPrivateTool( 'makerTool', 'met::METMaker' )
+            alg.makerTool.skipSystematicJetSelection = self.skipSystematicJetSelection
+
+            alg.doJetJVT = self.useJVT
+            if self.useJVT:
+                config.addPrivateTool( 'makerTool.JvtSelTool', 'CP::NNJvtSelectionTool' )
+                alg.makerTool.JvtSelTool.JetContainer = config.readName (self.jets)
+                alg.makerTool.JvtSelTool.JvtMomentName = "NNJvt"
+            if self.useFJVT:
+                # for backwards compatibility with "old" FJVT handling in JetAnalysisConfig.py
+                if not self.selectionNameFJVT:
+                    alg.makerTool.JetRejectionDec = 'fjvt_selection'
+                # otherwise get the decoration from the selection
+                else:
+                    fjvt_decoration = config.getFullSelection(self.jets, self.selectionNameFJVT, skipBase=True).replace(",as_char", "")
+                    alg.makerTool.JetRejectionDec = fjvt_decoration
+
+            alg.makerTool.JetSelection = self.metWP
+            alg.makerTool.DoPFlow = 'PFlow' in metSuffix or metSuffix=="AnalysisMET"
+            alg.makerTool.DoSetMuonJetEMScale = self.setMuonJetEMScale if self.muons else False
+            alg.switchTauMu = self.switchTauMuOrder
+
+            if config.dataType() is not DataType.Data :
+                config.addPrivateTool( 'systematicsTool', 'met::METSystematicsTool' )
+
+        alg.metCore = 'MET_Core_' + metSuffix
+        alg.metAssociation = 'METAssoc_' + metSuffix
+        alg.jets = config.readName (self.jets)
+        alg.softTermKey = "PVSoftTrk" if not self.useCaloSoftTerm else "SoftClus"
+        if self.muons != "" :
+            alg.muons, alg.muonsSelection = config.readNameAndSelection (self.muons, excludeFrom={'or'})
+        if self.electrons != "" :
+            alg.electrons, alg.electronsSelection = config.readNameAndSelection (self.electrons, excludeFrom={'or'})
+        if self.photons != "" :
+            alg.photons, alg.photonsSelection = config.readNameAndSelection (self.photons, excludeFrom={'or'})
+        if self.taus != "" :
+            alg.taus, alg.tausSelection = config.readNameAndSelection (self.taus, excludeFrom={'or'})
+        if self.invisible:
+            invisible = [self.invisible] if isinstance(self.invisible, str) else self.invisible
+            invisibleContainers, invisibleSelections = zip(*[config.readNameAndSelection (container, excludeFrom={'or'}) for container in invisible])
+            alg.invisible = list(invisibleContainers)
+            alg.invisibleSelection = list(invisibleSelections)
+        alg.met = config.writeName (self.containerName, isMet = True)
+
+        # met/phi are decorated on every term by the maker alg (for the NN path
+        # directly via evaluateNNMET), so they are output on both paths.
+        config.addOutputVar (self.containerName, 'met', 'met', auxType='float')
+        config.addOutputVar (self.containerName, 'phi', 'phi', auxType='float')
+        config.addOutputVar (self.containerName, 'name', 'name', noSys=True, enabled=False)
+
+        # The NN path writes the Final term directly (a builder sum would clobber
+        # it) and produces no meaningful sumet/significance, so it needs neither
+        # the met builder nor the significance algorithm.
+        if self.useNN:
+            return
+
+        config.addOutputVar (self.containerName, 'sumet', 'sumet', auxType='float')
+
+        # Set up the met builder algorithm:
+        alg = config.createAlgorithm( 'CP::MetBuilderAlg', 'MetBuilderAlg' )
+        alg.softTerm = "PVSoftTrk" if not self.useCaloSoftTerm else "SoftClus"
+        alg.met = config.readName (self.containerName)
+
+
+        # Set up the met significance algorithm:
+        if self.saveSignificance:
+            alg = config.createAlgorithm( 'CP::MetSignificanceAlg', 'MetSignificanceAlg' )
+            config.addPrivateTool( 'significanceTool', 'met::METSignificance' )
+            if self.muons != "" :
+                config.addPrivateTool( 'significanceTool.MuonCalibTool', 'CP::MuonCalibTool' )
+                # Retrieve the calibMode from the container name.selections
+                alg.significanceTool.MuonCalibTool.calibMode = (
+                    config.getContainerMeta(self.muons.split(".")[0], 'calibMode', failOnMiss=True))
+
+            # Preliminary R22 recommendation is to use R21 jet resolutions from 2018 for MET significance.
+            # See Jet/Etmiss recommendation documentation for details.
+            jetCalibConfig = self.jetCalibConfig
+            jetCalibSequence = self.jetCalibSequence
+            jetCalibArea = self.jetCalibArea
+            if jetCalibConfig == "":
+                jetCalibConfig = "JES_data2017_2016_2015_Recommendation_PFlow_Aug2018_rel21.config"
+                jetCalibArea = "00-04-81"
+                # Include Smear and not InSitu, even when running on data.
+                # This is for technical reasons and allows access to the correct resolutions for both data and MC.
+                jetCalibSequence = 'JetArea_Residual_EtaJES_GSC_Smear'
+
+            # Standard e/gamma calibration. Must be kept in agreement with ElectronAnalysisConfig.py
+            egammaESModel = self.egammaESModel
+            egammaDecorrelationModel = self.egammaDecorrelationModel
+            if self.electrons != "" :
+                if egammaESModel == "":
+                    egammaESModel = (
+                        config.getContainerMeta(self.electrons.split(".")[0], 'ESModel', failOnMiss=True))
+                if egammaDecorrelationModel == "":
+                    egammaDecorrelationModel = (
+                        config.getContainerMeta(self.electrons.split(".")[0], 'decorrelationModel', failOnMiss=True))
+
+            alg.significanceTool.SoftTermParam = 0
+            if self.softTermResolution > 0:
+                alg.significanceTool.SoftTermReso = self.softTermResolution
+            alg.significanceTool.TreatPUJets = self.treatPUJets
+            alg.significanceTool.JetCalibConfig = jetCalibConfig
+            alg.significanceTool.JetCalibSequence = jetCalibSequence
+            alg.significanceTool.JetCalibArea = jetCalibArea
+            alg.significanceTool.EgammaESModel = egammaESModel
+            alg.significanceTool.EgammaDecorrelationModel = egammaDecorrelationModel
+            alg.significanceTool.EgammaUseFastsim = (config.dataType() is DataType.FastSim)
+            alg.significanceTool.TauTESConfig = self.tauTESConfig
+            alg.met = config.readName (self.containerName)
+            config.addOutputVar (self.containerName, 'significance_%SYS%', 'significance', auxType='float')
+            if self.addExtraSignificanceVars:
+                alg.sigDirectionalDecoration = "sigDirectional_%SYS%"
+                alg.METOverSqrtSumETDecoration = "METOverSqrtSumET_%SYS%"
+                alg.METOverSqrtHTDecoration = "METOverSqrtHT_%SYS%"
+                config.addOutputVar (self.containerName, 'sigDirectional_%SYS%', 'sigDirectional', auxType='float')
+                config.addOutputVar (self.containerName, 'METOverSqrtSumET_%SYS%', 'METOverSqrtSumET', auxType='float')
+                config.addOutputVar (self.containerName, 'METOverSqrtHT_%SYS%', 'METOverSqrtHT', auxType='float')

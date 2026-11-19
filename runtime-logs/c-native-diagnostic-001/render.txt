@@ -1,0 +1,143 @@
+## Nominal phase accounting
+
+Elapsed and process CPU values are for one complete original-file pass. Phase rows are exclusive within the diagnostic worker. The control runs the visible script directly.
+
+| Phase | Elapsed ms | Process CPU ms | Calls |
+| --- | --- | --- | --- |
+| Python and package imports | 127.56 | 127.55 | 1 |
+| Resolve payloads and initialize native context | 13.89 | 13.89 | 2 |
+| Reset per-pass native state | 0.00 | 0.00 | 1 |
+| Book histogram | 0.18 | 0.18 | 1 |
+| Open original PHYSLITE | 0.76 | 0.41 | 1 |
+| Select branches and initialize association reader | 223.86 | 223.84 | 1 |
+| Read and decode original branches and associations | 1,478.37 | 1,478.41 | 30 |
+| Pack raw typed buffers | 24.61 | 24.61 | 10 |
+| Project original nominal inputs and links | 1,345.46 | 1,344.06 | 10 |
+| Native nominal call electron_prepare | 11.75 | 11.74 | 10 |
+| Native nominal call met_track_pt | 1.08 | 1.07 | 10 |
+| Native nominal call muon_selection_after_calibration | 5.81 | 5.80 | 10 |
+| Native nominal call muon_selection_eta | 0.26 | 0.26 | 10 |
+| Native nominal call muon_selection_track_roles | 0.77 | 0.77 | 10 |
+| Native nominal call muon_selection_vertex | 3.44 | 3.43 | 10 |
+| Native nominal call photon_prepare | 20.70 | 20.70 | 10 |
+| Native nominal call tau_prepare | 2.48 | 2.47 | 10 |
+| Native nominal call tau_track_charged | 1.66 | 1.65 | 10 |
+| Evaluate shared MET event and state nodes | 250.80 | 250.81 | 10 |
+| Fill histogram | 1.21 | 1.21 | 10 |
+| Compute repeat agreement digest | 0.10 | 0.10 | 1 |
+| Close native context | 0.37 | 0.37 | 1 |
+| Validate and save histogram | 4.27 | 4.27 | 1 |
+| Unassigned inside visible script | 37.14 | 37.04 |  |
+| Diagnostic visible script total | 3,556.52 | 3,554.65 |  |
+| Diagnostic subprocess outside visible script | 123.69 | 121.29 |  |
+| Direct subprocess total | 3,687.39 | 3,670.14 |  |
+
+## Full phase accounting
+
+Elapsed and process CPU values are for one complete original-file pass. Phase rows are exclusive within the diagnostic worker. The control runs the visible script directly.
+
+| Phase | Elapsed ms | Process CPU ms | Calls |
+| --- | --- | --- | --- |
+| Python and package imports | 126.13 | 126.13 | 1 |
+| Resolve payloads and initialize native context | 13.87 | 13.87 | 2 |
+| Reset per-pass native state | 0.00 | 0.00 | 1 |
+| Book histogram | 0.20 | 0.20 | 1 |
+| Open original PHYSLITE | 0.79 | 0.40 | 1 |
+| Select branches and initialize association reader | 221.20 | 221.20 | 1 |
+| Read and decode original branches and associations | 1,471.82 | 1,471.85 | 30 |
+| Pack raw typed buffers | 25.17 | 25.17 | 10 |
+| Project original nominal inputs and links | 1,307.05 | 1,307.11 | 10 |
+| Native nominal call electron_prepare | 11.48 | 11.48 | 10 |
+| Native nominal call met_track_pt | 1.06 | 1.06 | 10 |
+| Native nominal call muon_selection_after_calibration | 5.59 | 5.57 | 10 |
+| Native nominal call muon_selection_eta | 0.25 | 0.25 | 10 |
+| Native nominal call muon_selection_track_roles | 0.75 | 0.75 | 10 |
+| Native nominal call muon_selection_vertex | 3.49 | 3.49 | 10 |
+| Native nominal call photon_prepare | 19.87 | 19.87 | 10 |
+| Native nominal call tau_prepare | 2.49 | 2.49 | 10 |
+| Native nominal call tau_track_charged | 1.64 | 1.63 | 10 |
+| Evaluate shared MET event and state nodes | 570.20 | 570.21 | 10 |
+| Fill histogram | 2.52 | 2.52 | 10 |
+| Compute repeat agreement digest | 0.09 | 0.09 | 1 |
+| Close native context | 0.37 | 0.37 | 1 |
+| Validate and save histogram | 4.11 | 4.11 | 1 |
+| Unassigned inside visible script | 36.07 | 35.99 |  |
+| Diagnostic visible script total | 3,826.21 | 3,825.81 |  |
+| Diagnostic subprocess outside visible script | 114.62 | 114.12 |  |
+| Direct subprocess total | 3,982.91 | 3,980.76 |  |
+
+## Native stack observations
+
+The full worker completed 20 original-file passes over 20,000 unique events and 400,000 event visits. Recorded processing windows total 77.390 s elapsed and 77.340 s process CPU.
+
+| Object | Original rows | Profile visits |
+| --- | --- | --- |
+| jet | 196,606 | 3,932,120 |
+| electron | 14,846 | 296,920 |
+| photon | 52,596 | 1,051,920 |
+| tau | 27,062 | 541,240 |
+| muon | 14,997 | 299,940 |
+
+The native denominator is 7,623 processing-window CPU-clock samples weighted by 76,999,999,230 ns of recorded periods. Exclusive share uses the executing leaf. Inclusive tables count a symbol wherever it appears on a stack and overlap across symbols. Sample shares describe observed CPU activity.
+
+| Library | Top self symbol | Samples | Exclusive CPU share |
+| --- | --- | --- | --- |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/libawkward.so | awkward::ForthMachineOf<long, int>::internal_run(bool, long) | 201 | 2.64% |
+| /usr/lib64/libc.so.6 | _int_malloc | 171 | 2.24% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | (anonymous namespace)::Offset::Offset((anonymous namespace)::Columns const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) | 147 | 1.93% |
+| /usr/lib64/libc.so.6 | __memmove_avx_unaligned_erms | 112 | 1.47% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | atlas::met::soft::root_rng::first_gaussian(unsigned int) | 111 | 1.46% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so | atlas::met::maker::evaluate(atlas::met::maker::Config const&, atlas::met::maker::EventInput const&) | 79 | 1.04% |
+| /usr/lib64/libm.so.6 | sincosf32x | 65 | 0.85% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() | 58 | 0.76% |
+| /usr/lib64/libc.so.6 | _int_free | 50 | 0.66% |
+| /usr/lib64/libc.so.6 | malloc | 48 | 0.63% |
+| /usr/lib64/libc.so.6 | __memcmp_avx2_movbe | 47 | 0.62% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-x86_64-linux-gnu.so | mapiter_trivial_set | 42 | 0.55% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-x86_64-linux-gnu.so | array_boolean_subscript | 40 | 0.52% |
+| /usr/lib64/libc.so.6 | unlink_chunk.constprop.0 | 40 | 0.52% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | met_columnar_full | 33 | 0.43% |
+| /usr/lib64/libc.so.6 | __memset_avx2_unaligned_erms | 29 | 0.38% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | float (anonymous namespace)::at<float>(std::span<float const, 18446744073709551615ul>, unsigned long) | 26 | 0.34% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6 | std::_Hash_bytes(void const*, unsigned long, unsigned long) | 25 | 0.33% |
+| (any) | Unresolved leaf | 5125 | 67.23% |
+
+| Library | Remaining named leaf samples | Exclusive CPU share |
+| --- | --- | --- |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-x86_64-linux-gnu.so | 478 | 6.27% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so | 241 | 3.16% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so | 111 | 1.46% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/libawkward.so | 110 | 1.44% |
+| /usr/lib64/libc.so.6 | 92 | 1.21% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so | 66 | 0.87% |
+| /usr/lib64/libm.so.6 | 23 | 0.30% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so | 14 | 0.18% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6 | 14 | 0.18% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/libawkward-cpu-kernels.so | 13 | 0.17% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1 | 7 | 0.09% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/awkward_cpp/lib/_ext.cpython-314-x86_64-linux-gnu.so | 2 | 0.03% |
+| /usr/lib64/ld-linux-x86-64.so.2 | 2 | 0.03% |
+| /home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/boost_histogram/_core.cpython-314-x86_64-linux-gnu.so | 1 | 0.01% |
+
+| Recognized stack operation | Samples | Exclusive allocated sample share |
+| --- | --- | --- |
+| stage_unattributed | 6424 | 84.27% |
+| track_soft_final | 396 | 5.19% |
+| shared_event_unattributed | 360 | 4.72% |
+| maker | 221 | 2.90% |
+| significance | 127 | 1.67% |
+| nnjvt | 45 | 0.59% |
+| nominal_preparation | 33 | 0.43% |
+| histogram | 17 | 0.22% |
+
+Stage assignment uses explicit native stack anchors. The unattributed stage includes known leaf functions whose workflow caller could not be identified. The unresolved-leaf row is a separate symbol-coverage measure.
+
+Perf diagnostics {}. Resolved frame depths {"0": 5047, "1": 257, "10": 11, "11": 10, "12": 7, "13": 1, "14": 2, "15": 3, "16": 2, "17": 1, "18": 1, "2": 563, "3": 515, "4": 450, "5": 239, "6": 280, "7": 164, "8": 49, "9": 21}. Hardware counters unsupported.
+
+| Matched diagnostic overhead ratio | Ratio |
+| --- | --- |
+| pass marker over direct wall | 1.044 |
+| sampling over pass marker wall | 0.962 |
+| sampled over pass marker worker cpu | 0.961 |
+
+The profiler observes the sustained repeated-input workload. The direct single-pass benchmark has its own timing ledger.

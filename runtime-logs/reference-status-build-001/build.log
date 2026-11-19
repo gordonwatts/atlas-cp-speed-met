@@ -1,0 +1,24 @@
+Using AnalysisBase/25.2.117 [cmake] with platform x86_64-el9-gcc15-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.2
+Info: CERN ROOT Certificates may not be installed on machine
+      if you have SSL issues, install it https://cern.ch/fudpr
+      or use a container setupATLAS -c <container>
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+In file included from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METUtilities/METMaker.h:21,
+                 from /home/gwatts/atlas-cp-speed/met-20261119/observer/status_trace.cxx:4:
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/ColumnarMode/ColumnarMode.h:11:2: error: #error "COLUMNAR_MODE_NAME was not defined in the build configuration"
+   11 | #error "COLUMNAR_MODE_NAME was not defined in the build configuration"
+      |  ^~~~~
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/ColumnarMode/ColumnarMode.h:14:2: error: #error "COLUMNAR_MODE_SUFFIX was not defined in the build configuration"
+   14 | #error "COLUMNAR_MODE_SUFFIX was not defined in the build configuration"
+      |  ^~~~~
+In file included from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODCaloEvent/CaloCluster.h:14,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/versions/PFO_v1.h:20,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/PFO.h:12,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODPFlow/PFOContainer.h:12,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METInterface/IMETMaker.h:25,
+                 from /cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/METUtilities/METMaker.h:24:
+/cvmfs/atlas.cern.ch/repo/sw/software/25.2/AnalysisBase/25.2.117/InstallArea/x86_64-el9-gcc15-opt/include/xAODCaloEvent/versions/CaloCluster_v1.h:32:10: fatal error: CaloEvent/CaloClusterCellLinkContainer.h: No such file or directory
+   32 | #include "CaloEvent/CaloClusterCellLinkContainer.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.

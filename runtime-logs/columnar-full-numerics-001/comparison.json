@@ -1,0 +1,650 @@
+{
+  "events": 20000,
+  "states": [
+    "NOSYS",
+    "MET_SoftTrk_ResoPara",
+    "MET_SoftTrk_ResoPerp",
+    "MET_SoftTrk_Scale__1down",
+    "MET_SoftTrk_Scale__1up"
+  ],
+  "identity_observation_coverage": {
+    "event_number": true,
+    "run_number": true,
+    "mc_channel_number": true
+  },
+  "states_checked": {
+    "NOSYS": {
+      "mpx": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "mpy": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sumet": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "met": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "phi": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "significance": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sigDirectional": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtSumET": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtHT": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "histogram": {
+        "per_event_bin_mismatches": 0,
+        "stock_flow": [
+          0,
+          6
+        ],
+        "candidate_flow": [
+          0,
+          6
+        ]
+      }
+    },
+    "MET_SoftTrk_ResoPara": {
+      "mpx": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "mpy": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sumet": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "met": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "phi": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "significance": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sigDirectional": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtSumET": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtHT": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "histogram": {
+        "per_event_bin_mismatches": 0,
+        "stock_flow": [
+          0,
+          6
+        ],
+        "candidate_flow": [
+          0,
+          6
+        ]
+      }
+    },
+    "MET_SoftTrk_ResoPerp": {
+      "mpx": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "mpy": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sumet": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "met": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "phi": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "significance": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sigDirectional": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtSumET": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtHT": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "histogram": {
+        "per_event_bin_mismatches": 0,
+        "stock_flow": [
+          0,
+          6
+        ],
+        "candidate_flow": [
+          0,
+          6
+        ]
+      }
+    },
+    "MET_SoftTrk_Scale__1down": {
+      "mpx": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "mpy": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sumet": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "met": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "phi": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "significance": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sigDirectional": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtSumET": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtHT": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "histogram": {
+        "per_event_bin_mismatches": 0,
+        "stock_flow": [
+          0,
+          6
+        ],
+        "candidate_flow": [
+          0,
+          6
+        ]
+      }
+    },
+    "MET_SoftTrk_Scale__1up": {
+      "mpx": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "mpy": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sumet": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "met": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "phi": {
+        "shape": [
+          20000,
+          8
+        ],
+        "storage_dtype": "float32",
+        "values": 160000,
+        "exact_finite": 160000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "significance": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "sigDirectional": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtSumET": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "METOverSqrtHT": {
+        "shape": [
+          20000
+        ],
+        "storage_dtype": "float32",
+        "values": 20000,
+        "exact_finite": 20000,
+        "max_absolute_difference": 0.0,
+        "nonfinite_classification_failures": 0,
+        "total_failures": 0,
+        "first_failure_positions": []
+      },
+      "histogram": {
+        "per_event_bin_mismatches": 0,
+        "stock_flow": [
+          0,
+          6
+        ],
+        "candidate_flow": [
+          0,
+          6
+        ]
+      }
+    }
+  },
+  "first_bin_event_mismatch": null,
+  "numerical_validation_passed": true,
+  "saved_histogram_equals_stock": true
+}

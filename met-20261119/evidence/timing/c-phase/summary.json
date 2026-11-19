@@ -1,0 +1,620 @@
+{
+  "nominal": {
+    "control": {
+      "instrumentation": null,
+      "runner_summary": {
+        "output": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/nominal/control/histogram.npz",
+        "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+        "entries": 20000,
+        "event_visits": 20000,
+        "repeats": 1,
+        "states": [
+          "NOSYS"
+        ],
+        "histogram_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+      },
+      "histogram": {
+        "arrays_bitwise_equal": [
+          "state_labels",
+          "bin_edges_gev",
+          "counts",
+          "sumw",
+          "sumw2"
+        ],
+        "saved_histogram": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/nominal/control/histogram.npz",
+          "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+          "bytes": 4538
+        },
+        "accepted_stock": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+          "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+          "bytes": 4538
+        },
+        "runner_sumw_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+      },
+      "loaded_libraries": {
+        "libatlas_met_columnar.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+          "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666",
+          "bytes": 711680
+        },
+        "libatlas_met_maker_correction.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+          "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9",
+          "bytes": 153952
+        },
+        "libatlas_met_maker_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+          "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76",
+          "bytes": 90480
+        },
+        "libcorrectionlib.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+          "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca",
+          "bytes": 1449680
+        },
+        "libgcc_s.so.1": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+          "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c",
+          "bytes": 908488
+        },
+        "libmet_preparation_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+          "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4",
+          "bytes": 212408
+        },
+        "libstdc++.so.6": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+          "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec",
+          "bytes": 2575440
+        }
+      },
+      "process": {
+        "wall_ns": 3687388549,
+        "user_ns": 3550201000,
+        "system_ns": 119939000,
+        "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+      }
+    },
+    "phase_timed": {
+      "instrumentation": "phases",
+      "runner_summary": {
+        "output": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/nominal/phase_timed/histogram.npz",
+        "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+        "entries": 20000,
+        "event_visits": 20000,
+        "repeats": 1,
+        "states": [
+          "NOSYS"
+        ],
+        "histogram_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+      },
+      "histogram": {
+        "arrays_bitwise_equal": [
+          "state_labels",
+          "bin_edges_gev",
+          "counts",
+          "sumw",
+          "sumw2"
+        ],
+        "saved_histogram": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/nominal/phase_timed/histogram.npz",
+          "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+          "bytes": 4538
+        },
+        "accepted_stock": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-production-nominal-002/histogram.npz",
+          "sha256": "454509a3a67684ffe48217b776a373a2cb5d01777b707b50cff3b40795a6363c",
+          "bytes": 4538
+        },
+        "runner_sumw_sha256": "05fdd0d6ee1a516145947eca547bef179f1cd1ed2f23f63a886b0b5e816482d9"
+      },
+      "loaded_libraries": {
+        "libatlas_met_columnar.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+          "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666",
+          "bytes": 711680
+        },
+        "libatlas_met_maker_correction.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+          "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9",
+          "bytes": 153952
+        },
+        "libatlas_met_maker_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+          "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76",
+          "bytes": 90480
+        },
+        "libcorrectionlib.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+          "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca",
+          "bytes": 1449680
+        },
+        "libgcc_s.so.1": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+          "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c",
+          "bytes": 908488
+        },
+        "libmet_preparation_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+          "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4",
+          "bytes": 212408
+        },
+        "libstdc++.so.6": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+          "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec",
+          "bytes": 2575440
+        }
+      },
+      "process": {
+        "wall_ns": 3680211950,
+        "user_ns": 3600028000,
+        "system_ns": 75916000,
+        "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+      },
+      "scope_accounting": {
+        "original_objects": {
+          "jet": 196606,
+          "electron": 14846,
+          "photon": 52596,
+          "tau": 27062,
+          "muon": 14997
+        },
+        "object_visits": {
+          "jet": 196606,
+          "electron": 14846,
+          "photon": 52596,
+          "tau": 27062,
+          "muon": 14997
+        },
+        "processing_wall_ns": 3375454515,
+        "processing_cpu_ns": 3373614519,
+        "worker_span": {
+          "wall_ns": 3556521035,
+          "cpu_ns": 3554653731
+        },
+        "worker_cpu_at_exec_finish_ns": 3581140873,
+        "outside_worker_script_or_collector": {
+          "wall_ns": 123690915,
+          "cpu_ns": 121290269
+        },
+        "unassigned_in_script": {
+          "wall_ns": 37137208,
+          "cpu_ns": 37043314
+        }
+      },
+      "exclusive_phases": {
+        "book_histogram": {
+          "wall_ns": 183438,
+          "cpu_ns": 183599,
+          "calls": 1
+        },
+        "close_native": {
+          "wall_ns": 374041,
+          "cpu_ns": 374274,
+          "calls": 1
+        },
+        "fill_histogram": {
+          "wall_ns": 1206690,
+          "cpu_ns": 1208523,
+          "calls": 10
+        },
+        "imports": {
+          "wall_ns": 127560520,
+          "cpu_ns": 127553122,
+          "calls": 1
+        },
+        "initialize": {
+          "wall_ns": 13888739,
+          "cpu_ns": 13888549,
+          "calls": 2
+        },
+        "input_metadata": {
+          "wall_ns": 223862200,
+          "cpu_ns": 223840097,
+          "calls": 1
+        },
+        "input_read_decode": {
+          "wall_ns": 1478366600,
+          "cpu_ns": 1478407981,
+          "calls": 30
+        },
+        "nominal_node.electron_prepare": {
+          "wall_ns": 11745158,
+          "cpu_ns": 11740668,
+          "calls": 10
+        },
+        "nominal_node.met_track_pt": {
+          "wall_ns": 1082827,
+          "cpu_ns": 1074051,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_after_calibration": {
+          "wall_ns": 5810984,
+          "cpu_ns": 5803437,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_eta": {
+          "wall_ns": 261420,
+          "cpu_ns": 258086,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_track_roles": {
+          "wall_ns": 771261,
+          "cpu_ns": 765063,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_vertex": {
+          "wall_ns": 3437848,
+          "cpu_ns": 3432987,
+          "calls": 10
+        },
+        "nominal_node.photon_prepare": {
+          "wall_ns": 20704418,
+          "cpu_ns": 20699315,
+          "calls": 10
+        },
+        "nominal_node.tau_prepare": {
+          "wall_ns": 2478789,
+          "cpu_ns": 2472509,
+          "calls": 10
+        },
+        "nominal_node.tau_track_charged": {
+          "wall_ns": 1659623,
+          "cpu_ns": 1652089,
+          "calls": 10
+        },
+        "nominal_projection": {
+          "wall_ns": 1345458385,
+          "cpu_ns": 1344057855,
+          "calls": 10
+        },
+        "open_original": {
+          "wall_ns": 756797,
+          "cpu_ns": 407901,
+          "calls": 1
+        },
+        "pass_histogram_signature": {
+          "wall_ns": 96446,
+          "cpu_ns": 96483,
+          "calls": 1
+        },
+        "pass_reset": {
+          "wall_ns": 3344,
+          "cpu_ns": 3339,
+          "calls": 1
+        },
+        "raw_transport": {
+          "wall_ns": 24605687,
+          "cpu_ns": 24610249,
+          "calls": 10
+        },
+        "save_histogram": {
+          "wall_ns": 4270361,
+          "cpu_ns": 4271088,
+          "calls": 1
+        },
+        "shared_event_evaluation": {
+          "wall_ns": 250798251,
+          "cpu_ns": 250809152,
+          "calls": 10
+        }
+      }
+    },
+    "diagnostic_over_direct_wall_ratio": 0.998053744837401
+  },
+  "full": {
+    "control": {
+      "instrumentation": null,
+      "runner_summary": {
+        "output": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/full/control/histogram.npz",
+        "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+        "entries": 20000,
+        "event_visits": 20000,
+        "repeats": 1,
+        "states": [
+          "NOSYS",
+          "MET_SoftTrk_ResoPara",
+          "MET_SoftTrk_ResoPerp",
+          "MET_SoftTrk_Scale__1down",
+          "MET_SoftTrk_Scale__1up"
+        ],
+        "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d"
+      },
+      "histogram": {
+        "arrays_bitwise_equal": [
+          "state_labels",
+          "bin_edges_gev",
+          "counts",
+          "sumw",
+          "sumw2"
+        ],
+        "saved_histogram": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/full/control/histogram.npz",
+          "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b",
+          "bytes": 14790
+        },
+        "accepted_stock": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-histogram-transport-001/histogram.npz",
+          "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b",
+          "bytes": 14790
+        },
+        "runner_sumw_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d"
+      },
+      "loaded_libraries": {
+        "libatlas_met_columnar.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+          "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666",
+          "bytes": 711680
+        },
+        "libatlas_met_maker_correction.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+          "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9",
+          "bytes": 153952
+        },
+        "libatlas_met_maker_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+          "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76",
+          "bytes": 90480
+        },
+        "libcorrectionlib.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+          "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca",
+          "bytes": 1449680
+        },
+        "libgcc_s.so.1": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+          "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c",
+          "bytes": 908488
+        },
+        "libmet_preparation_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+          "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4",
+          "bytes": 212408
+        },
+        "libstdc++.so.6": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+          "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec",
+          "bytes": 2575440
+        }
+      },
+      "process": {
+        "wall_ns": 3982914439,
+        "user_ns": 3868735000,
+        "system_ns": 112021000,
+        "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+      }
+    },
+    "phase_timed": {
+      "instrumentation": "phases",
+      "runner_summary": {
+        "output": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/full/phase_timed/histogram.npz",
+        "input_uuid": "79ee6652-311f-11f1-aa37-0445010abeef",
+        "entries": 20000,
+        "event_visits": 20000,
+        "repeats": 1,
+        "states": [
+          "NOSYS",
+          "MET_SoftTrk_ResoPara",
+          "MET_SoftTrk_ResoPerp",
+          "MET_SoftTrk_Scale__1down",
+          "MET_SoftTrk_Scale__1up"
+        ],
+        "histogram_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d"
+      },
+      "histogram": {
+        "arrays_bitwise_equal": [
+          "state_labels",
+          "bin_edges_gev",
+          "counts",
+          "sumw",
+          "sumw2"
+        ],
+        "saved_histogram": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/c-phase-diagnostic-001/full/phase_timed/histogram.npz",
+          "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b",
+          "bytes": 14790
+        },
+        "accepted_stock": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/reference-histogram-transport-001/histogram.npz",
+          "sha256": "5b3b211179934c9845c66692f9a584bdc7ec57cd293ad288821826753ac70a7b",
+          "bytes": 14790
+        },
+        "runner_sumw_sha256": "1381cd6a19b105831a9d89721c954ddc192819e8470c45d33eda1e0c0f98a32d"
+      },
+      "loaded_libraries": {
+        "libatlas_met_columnar.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_columnar.so",
+          "sha256": "f2b07a9dbbbd88cc252ef3606139ce5a12b989c1446531b43f163fa5637a6666",
+          "bytes": 711680
+        },
+        "libatlas_met_maker_correction.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_correction.so",
+          "sha256": "2af3062e4d3a33199cc1f990059633399ece4f4535db1497204f8b3879fabaa9",
+          "bytes": 153952
+        },
+        "libatlas_met_maker_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libatlas_met_maker_provider.so",
+          "sha256": "b7e1646b6e730386cb5be408eab0b534b25d68488c30e6c61d42d329e9da1d76",
+          "bytes": 90480
+        },
+        "libcorrectionlib.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libcorrectionlib.so",
+          "sha256": "6ba50b3eb3104c6600bd370e2812012b482804858a79b1007006d589b4d495ca",
+          "bytes": 1449680
+        },
+        "libgcc_s.so.1": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libgcc_s.so.1",
+          "sha256": "bcb03f2ffabd8890cb54200e2dbb3d271e8877d8ce51cf95fa73e0cc53c4ac7c",
+          "bytes": 908488
+        },
+        "libmet_preparation_provider.so": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libmet_preparation_provider.so",
+          "sha256": "20949dd6782f2497a13a0c7ae9785d226a925d50c60ca919b9f053ba5b2233a4",
+          "bytes": 212408
+        },
+        "libstdc++.so.6": {
+          "path": "/home/gwatts/atlas-cp-speed/met-20261119/results/columnar-portable-002/pip-env/lib/python3.14/site-packages/atlas_met_portable/native/libstdc++.so.6",
+          "sha256": "a1247c7333c8cfbd9aecc0bef0b71dd6cc573047d004afc3722972d878b770ec",
+          "bytes": 2575440
+        }
+      },
+      "process": {
+        "wall_ns": 3940829889,
+        "user_ns": 3847931000,
+        "system_ns": 91998000,
+        "usage_scope": "Launched process plus waited descendants. Includes perf for sampled mode."
+      },
+      "scope_accounting": {
+        "original_objects": {
+          "jet": 196606,
+          "electron": 14846,
+          "photon": 52596,
+          "tau": 27062,
+          "muon": 14997
+        },
+        "object_visits": {
+          "jet": 196606,
+          "electron": 14846,
+          "photon": 52596,
+          "tau": 27062,
+          "muon": 14997
+        },
+        "processing_wall_ns": 3647837877,
+        "processing_cpu_ns": 3647436363,
+        "worker_span": {
+          "wall_ns": 3826207263,
+          "cpu_ns": 3825805142
+        },
+        "worker_cpu_at_exec_finish_ns": 3845348831,
+        "outside_worker_script_or_collector": {
+          "wall_ns": 114622626,
+          "cpu_ns": 114123858
+        },
+        "unassigned_in_script": {
+          "wall_ns": 36069316,
+          "cpu_ns": 35993286
+        }
+      },
+      "exclusive_phases": {
+        "book_histogram": {
+          "wall_ns": 196494,
+          "cpu_ns": 196582,
+          "calls": 1
+        },
+        "close_native": {
+          "wall_ns": 372142,
+          "cpu_ns": 372661,
+          "calls": 1
+        },
+        "fill_histogram": {
+          "wall_ns": 2516508,
+          "cpu_ns": 2519957,
+          "calls": 10
+        },
+        "imports": {
+          "wall_ns": 126130591,
+          "cpu_ns": 126132378,
+          "calls": 1
+        },
+        "initialize": {
+          "wall_ns": 13871537,
+          "cpu_ns": 13871476,
+          "calls": 2
+        },
+        "input_metadata": {
+          "wall_ns": 221195550,
+          "cpu_ns": 221197940,
+          "calls": 1
+        },
+        "input_read_decode": {
+          "wall_ns": 1471815997,
+          "cpu_ns": 1471852166,
+          "calls": 30
+        },
+        "nominal_node.electron_prepare": {
+          "wall_ns": 11481944,
+          "cpu_ns": 11478563,
+          "calls": 10
+        },
+        "nominal_node.met_track_pt": {
+          "wall_ns": 1064950,
+          "cpu_ns": 1056722,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_after_calibration": {
+          "wall_ns": 5586778,
+          "cpu_ns": 5573198,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_eta": {
+          "wall_ns": 252666,
+          "cpu_ns": 250348,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_track_roles": {
+          "wall_ns": 754181,
+          "cpu_ns": 747540,
+          "calls": 10
+        },
+        "nominal_node.muon_selection_vertex": {
+          "wall_ns": 3491770,
+          "cpu_ns": 3486314,
+          "calls": 10
+        },
+        "nominal_node.photon_prepare": {
+          "wall_ns": 19873088,
+          "cpu_ns": 19870706,
+          "calls": 10
+        },
+        "nominal_node.tau_prepare": {
+          "wall_ns": 2491362,
+          "cpu_ns": 2485453,
+          "calls": 10
+        },
+        "nominal_node.tau_track_charged": {
+          "wall_ns": 1636394,
+          "cpu_ns": 1629124,
+          "calls": 10
+        },
+        "nominal_projection": {
+          "wall_ns": 1307047689,
+          "cpu_ns": 1307105721,
+          "calls": 10
+        },
+        "open_original": {
+          "wall_ns": 793242,
+          "cpu_ns": 402400,
+          "calls": 1
+        },
+        "pass_histogram_signature": {
+          "wall_ns": 90081,
+          "cpu_ns": 89697,
+          "calls": 1
+        },
+        "pass_reset": {
+          "wall_ns": 3216,
+          "cpu_ns": 3199,
+          "calls": 1
+        },
+        "raw_transport": {
+          "wall_ns": 25167738,
+          "cpu_ns": 25171638,
+          "calls": 10
+        },
+        "save_histogram": {
+          "wall_ns": 4105521,
+          "cpu_ns": 4106252,
+          "calls": 1
+        },
+        "shared_event_evaluation": {
+          "wall_ns": 570198508,
+          "cpu_ns": 570211821,
+          "calls": 10
+        }
+      }
+    },
+    "diagnostic_over_direct_wall_ratio": 0.9894337298366453
+  }
+}

@@ -1,0 +1,14 @@
+[ 14%] Building CXX object CMakeFiles/met_soft.dir/soft.cxx.o
+[ 28%] Building CXX object CMakeFiles/met_soft.dir/provider.cxx.o
+[ 42%] Linking CXX static library libmet_soft.a
+[ 42%] Built target met_soft
+[ 57%] Building CXX object CMakeFiles/met_soft_smoke.dir/smoke.cxx.o
+[ 71%] Linking CXX executable met_soft_smoke
+[ 71%] Built target met_soft_smoke
+[ 85%] Building CXX object CMakeFiles/met_soft_stock_compare.dir/stock_compare.cxx.o
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx: In function 'void {anonymous}::record_info(xAOD::TStore&, float, bool)':
+/home/gwatts/atlas-cp-speed/met-20261119/components/soft/stock_compare.cxx:80:42: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+   80 |     info->setEventTypeBitmask(simulation ? xAOD::EventInfo::IS_SIMULATION : 0u);
+      |                               ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[100%] Linking CXX executable met_soft_stock_compare
+[100%] Built target met_soft_stock_compare

@@ -1,0 +1,139 @@
+From 36a4f69b68dae79d275ccacb2e367a9728865d0b Mon Sep 17 00:00:00 2001
+From: MET conversion <met-conversion@localhost>
+Date: Thu, 19 Nov 2026 04:57:44 -0800
+Subject: [PATCH] Skip repeated empty linked-column projections
+
+Based on 75bf30deab804e4be2b1cae7198db2dc2b4793d3. Preserve the first actual shape, conversion and scatter check for every empty leaf projection in each raw chunk.
+---
+ components/columnar/atlas_met_prepare.py      |  8 ++
+ .../columnar/tests/test_empty_projection.py   | 85 +++++++++++++++++++
+ 2 files changed, 93 insertions(+)
+ create mode 100644 components/columnar/tests/test_empty_projection.py
+
+diff --git a/components/columnar/atlas_met_prepare.py b/components/columnar/atlas_met_prepare.py
+index 1ec79ce..59486a4 100644
+--- a/components/columnar/atlas_met_prepare.py
++++ b/components/columnar/atlas_met_prepare.py
+@@ -134,6 +134,11 @@ class Resolved:
+             name = target+"AuxDyn."+field
+             if name not in self.data.raw:
+                 continue
++            # A later resolution can ask for the same unreachable branch. Check
++            # its exact empty gather and scatter once per chunk and projection.
++            empty_projection = (name,dtype,type(default),default,slot,lengths) if not rows.size else None
++            if empty_projection is not None and empty_projection in self.data.validated_empty_columns:
++                continue
+             source = ak.flatten(self.data.raw[name], axis=1)[rows]
+             if lengths:
+                 source = ak.num(source, axis=1)
+@@ -142,6 +147,8 @@ class Resolved:
+             missing = np.asarray(ak.is_none(source, axis=0))
+             output[local] = dense(source, dtype, default)
+             present[local] = ~missing
++            if empty_projection is not None:
++                self.data.validated_empty_columns.add(empty_projection)
+         return output, present
+ 
+     def nested_link(self, field, slot):
+@@ -199,6 +206,7 @@ class Data:
+         self.output, self.keys, self.evaluate = output, keys, evaluate
+         self.capture_preparation = capture_preparation
+         self.counts = {}
++        self.validated_empty_columns = set()
+         self.events = {owner: roles_for_events(output[short+".o"]) for short,owner in OWNERS.items()}
+ 
+     def offset(self, anchor):
+diff --git a/components/columnar/tests/test_empty_projection.py b/components/columnar/tests/test_empty_projection.py
+new file mode 100644
+index 0000000..480e1a0
+--- /dev/null
++++ b/components/columnar/tests/test_empty_projection.py
+@@ -0,0 +1,85 @@
++"""Exercise empty linked-column validation and fallback without a physics input."""
++from unittest import TestCase, mock
++
++import awkward as ak
++import numpy as np
++from numpy.exceptions import AxisError
++
++from atlas_met_columnar import OWNERS
++from atlas_met_prepare import Data, Link, Resolved
++
++ID = "InDetTrackParticles"
++GSF = "GSFTrackParticles"
++OWNERS_BY_KEY = {ID: 11, GSF: 12}
++
++
++def branch(target, field):
++    return target + "AuxDyn." + field
++
++
++def link(keys, indices):
++    return Link(ak.zip({"m_persKey": np.asarray(keys, dtype="u4"),
++                        "m_persIndex": np.asarray(indices, dtype="u4")}))
++
++
++def dataset(raw, events=2):
++    output = {name+".o": np.zeros(events+1, dtype="i8") for name in OWNERS}
++    return Data(raw,output,OWNERS_BY_KEY,None,False)
++
++
++class EmptyProjection(TestCase):
++    def test_empty_target_repeat_retains_default_and_false_presence(self):
++        scalar = ak.unflatten(np.empty(0,"f4"),[0,0])
++        vector = ak.unflatten(ak.unflatten(np.empty(0,"f4"),np.empty(0,"i8")),[0,0])
++        data = dataset({branch(ID,"qOverP"):scalar, branch(ID,"cov"):vector})
++        event_rows = np.array([0,1])
++        elements = link([11,11],[0,0xffffffff])
++        first = Resolved(data,elements,event_rows,(ID,))
++        again = Resolved(data,elements,event_rows,(ID,))
++        self.assertFalse(first.valid.any())
++        with mock.patch("atlas_met_prepare.ak.flatten", wraps=ak.flatten) as flatten:
++            for resolved in (first,again):
++                got, present = resolved.column("cov","f4",-1.,slot=1)
++                np.testing.assert_array_equal(got,np.array([-1.,-1.],"f4"))
++                np.testing.assert_array_equal(present,[False,False])
++            self.assertEqual(flatten.call_count,1)
++
++    def test_unreachable_first_target_keeps_alternate_defaults(self):
++        data = dataset({
++            branch(ID,"qOverP"):ak.Array([[3.],[]]),
++            branch(ID,"cov"):ak.Array([[[2.,7.]],[]]),
++            branch(GSF,"qOverP"):ak.Array([[],[8.,9.]]),
++            branch(GSF,"cov"):ak.Array([[],[[12.,None],[18.,19.]]]),
++        })
++        events = np.array([1,1,1,0])
++        elements = link([11,12,12,12],[0,0,1,0])
++        resolved = Resolved(data,elements,events,(ID,GSF))
++        np.testing.assert_array_equal(resolved.valid,[False,True,True,False])
++        for _ in range(2):
++            got, present = resolved.column("cov","f4",-1.,slot=1)
++            np.testing.assert_array_equal(got,[-1.,-1.,19.,-1.])
++            np.testing.assert_array_equal(present,[False,False,True,False])
++            sizes, present = resolved.column("cov","i8",-1,lengths=True)
++            np.testing.assert_array_equal(sizes,[-1,2,2,-1])
++            np.testing.assert_array_equal(present,[False,True,True,False])
++        missing, present = resolved.column("absent","i8",-7)
++        np.testing.assert_array_equal(missing,[-7,-7,-7,-7])
++        self.assertFalse(present.any())
++
++    def test_empty_projection_still_rejects_malformed_axis_and_scatter(self):
++        data = dataset({
++            branch(ID,"qOverP"):ak.Array([[3.],[]]),
++            branch(ID,"theta"):ak.Array([[0.5],[]]),
++            branch(ID,"cov"):ak.unflatten(ak.Array(np.array([[3.,4.]])),[1,0]),
++        })
++        resolved = Resolved(data,link([11],[0]),np.array([1]),(ID,))
++        ordinary, present = resolved.column("theta","f4",-1.)
++        np.testing.assert_array_equal(ordinary,[-1.])
++        self.assertFalse(present.any())
++        # Successful scalar or slot validation must not certify a different view.
++        resolved.column("cov","f4",-1.,slot=0)
++        for _ in range(2):
++            with self.assertRaises(AxisError):
++                resolved.column("theta","f4",-1.,slot=0)
++            with self.assertRaises(ValueError):
++                resolved.column("cov","f4",-1.)
+-- 
+2.39.3
+
